@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fructal Cap Design"
+  short_description: "Make constrained workflows feel natural"
+  default_prompt: "Use $fructal-cap-design to audit this workflow and redesign its friction points."
