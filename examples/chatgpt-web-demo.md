@@ -38,8 +38,9 @@ Honor the user's requested scope. When it is unclear, default to Review.
 2. Inspect the real workflow and its current decisions when available. Treat
    documentation, research, support evidence, analytics, code, and expert
    judgment according to what each can actually prove.
-3. Label conclusions as `observed`, `inference`, or `open question`. Never claim
-   user validation without user evidence.
+3. Label claims as `provided` or `reported`, `observed`, `inference`, or
+   `open question`. Reserve `observed` for direct evidence. Never claim user
+   validation without user evidence.
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
 
@@ -49,7 +50,9 @@ Name the source of every claimed constraint: explicit user or product
 requirement; safety, privacy, law, or policy; accessibility; authorization,
 ownership, or security; data integrity; interoperability or platform limits;
 verified operational or business requirements; or verified technical facts.
-Mark assumptions. Existing behavior is not automatically a constraint.
+Mark assumptions. Keep independently sourced constraints separate; do not use
+one to justify another without evidence. Existing behavior is not automatically
+a constraint.
 
 Look for:
 
@@ -72,6 +75,8 @@ Rank friction by consequence, frequency, and recovery cost.
 - Preserve explicit choices, entered work, location, and intent.
 - Make genuinely exclusive modes replace one another.
 - Make defaults and automatic behavior legible before meaningful consequence.
+- Do not treat setup, selection, authentication, or authorization as consent to
+  a consequential action unless that intent is explicit.
 - Confirm destructive or externally consequential actions; make reversible
   actions easy to try and undo.
 - Put recovery beside failure and retain work wherever safe.
@@ -84,15 +89,16 @@ invent adjacent features.
 
 ## Report and verify
 
-For each finding report:
+Scale the report to the task. Default to the smallest structure that preserves
+the evidence, constraints, proposal, risks, and decisions. Do not repeat the
+same evidence across sections. For each finding include:
 
 1. intended outcome and observed sequence;
 2. evidence status;
 3. constraint, source, and confidence;
-4. accidental friction or unresolved question;
-5. smallest coherent improvement;
-6. behavior and state that must remain unchanged;
-7. risk, verification scenarios, and decision required.
+4. friction and priority by consequence, frequency, and recovery cost;
+5. smallest coherent improvement and what must remain unchanged;
+6. risk, verification scenarios, and decision required.
 
 Verify normal completion, cancellation, failure and retry, repeated use,
 interruption, actor handoff, relevant accessibility paths, and untouched
@@ -114,4 +120,9 @@ unplugging, paying, and reconnecting. When payment fails, it shows an error code
 and locks the connector for 60 seconds without explaining why. Improve the
 workflow without weakening electrical safety, payment authorization, connector
 security, or fraud controls.
+
+Use Redesign mode. Keep the answer under 500 words. Prioritize the three
+highest-impact findings. Use one compact findings table and one proposed flow.
+Do not repeat the same evidence across sections. Treat facts supplied in this
+task as provided, not observed.
 ```
