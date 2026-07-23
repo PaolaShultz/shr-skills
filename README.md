@@ -43,13 +43,11 @@ Use $fructal to review this workflow.
 ## Demonstrate it in ChatGPT Web
 
 The [ChatGPT Web demonstration](examples/chatgpt-web-demo.md) requires no
-installation. Paste the raw skill text as the first message, paste the fictional
-community tool-library workflow as the second, and share the resulting chat.
+installation. Copy one prompt containing the complete skill and a task slot,
+then insert any problem or use the short prepared EV-charger example.
 
-The conversation then shows the complete method, a neutral problem spanning
-software, physical interaction, service handoffs, safety, accessibility, and
-delayed outcomes, and the model's evidence-backed response—with almost no
-explanatory framing.
+The resulting conversation shows the method, problem, and evidence-backed
+response directly, with almost no explanatory framing.
 
 ## Origin and independence
 

@@ -1,70 +1,117 @@
-# ChatGPT Web demonstration
+# Try Fructal in ChatGPT
 
-This demonstration uses ordinary ChatGPT Web. It requires no skill installation
-or Codex-specific interface.
-
-## First message: the method
-
-Open the
-[raw Fructal skill text](https://raw.githubusercontent.com/PaolaShultz/shr-skills/main/skills/fructal/SKILL.md),
-copy all of it, and paste it into a new ChatGPT conversation with this line
-above it:
+Copy this prompt into ChatGPT:
 
 ```text
-Use the following method as your governing instructions for my next message.
-Read it completely, but do not begin an analysis until I provide the workflow.
+Use the SKILL below to execute the TASK.
+
+SKILL
+---
+name: fructal
+description: Use when a product, service, or system workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when simplifying such a workflow without weakening safety, privacy, accessibility, ownership, compliance, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
+---
+
+# Fructal Cap Design
+
+Apply this principle:
+
+> A necessary constraint must guide the user, never make them wrestle with the
+> product.
+
+The name comes from a tethered cap that satisfies a necessary constraint
+without obstructing normal use. Preserve the constraint; redesign the motion.
+
+## Choose the mode
+
+Honor the user's requested scope. When it is unclear, default to Review.
+
+| Mode | Deliverable | Change the product? |
+| --- | --- | --- |
+| **Review** | Evidence, findings, and questions | No |
+| **Redesign** | Review plus proposed motions and verification | No |
+| **Implement** | An approved change with appropriate tests | Yes |
+
+## Establish evidence
+
+1. State the intended outcome and identify every actor who initiates, continues,
+   or experiences the result.
+2. Inspect the real workflow and its current decisions when available. Treat
+   documentation, research, support evidence, analytics, code, and expert
+   judgment according to what each can actually prove.
+3. Label conclusions as `observed`, `inference`, or `open question`. Never claim
+   user validation without user evidence.
+4. Trace the path through feedback, cancellation, failure, retry, interruption,
+   handoff, delayed outcome, return, and repeated use where applicable.
+
+## Separate constraints from friction
+
+Name the source of every claimed constraint: explicit user or product
+requirement; safety, privacy, law, or policy; accessibility; authorization,
+ownership, or security; data integrity; interoperability or platform limits;
+verified operational or business requirements; or verified technical facts.
+Mark assumptions. Existing behavior is not automatically a constraint.
+
+Look for:
+
+- mutually exclusive modes that remain layered;
+- surprising labels, hidden side effects, or unclear responsibility;
+- controls that expose implementation or organizational internals;
+- lost input, selection, focus, physical position, context, or ownership;
+- defaults or automation that act before consequences are legible;
+- handoffs, delays, and cross-actor effects without clear status;
+- errors without nearby recovery or retained work;
+- repeated decisions whose effort is not intrinsic to the task.
+
+Rank friction by consequence, frequency, and recovery cost.
+
+## Redesign the motion
+
+- Make the obvious action produce one clear primary result.
+- Create one coherent motion. This does not mean one click: preserve necessary
+  decisions, but order them so their purpose and consequences are clear.
+- Preserve explicit choices, entered work, location, and intent.
+- Make genuinely exclusive modes replace one another.
+- Make defaults and automatic behavior legible before meaningful consequence.
+- Confirm destructive or externally consequential actions; make reversible
+  actions easy to try and undo.
+- Put recovery beside failure and retain work wherever safe.
+- Prefer direct, inspectable control when it improves clarity; do not force it
+  where automation, accessibility, or expert use requires another interaction.
+
+Do not remove supported constraints, hide consequential state changes, weaken
+accessibility or ownership, justify manipulation as a business requirement, or
+invent adjacent features.
+
+## Report and verify
+
+For each finding report:
+
+1. intended outcome and observed sequence;
+2. evidence status;
+3. constraint, source, and confidence;
+4. accidental friction or unresolved question;
+5. smallest coherent improvement;
+6. behavior and state that must remain unchanged;
+7. risk, verification scenarios, and decision required.
+
+Verify normal completion, cancellation, failure and retry, repeated use,
+interruption, actor handoff, relevant accessibility paths, and untouched
+existing state. Keep visual observations separate from workflow findings.
+Refer an isolated defect to the appropriate debugging process instead of
+redesigning around it.
+
+TASK
+[INSERT YOUR TASK HERE]
 ```
 
-## Second message: the workflow
-
-Paste this fictional task:
+Insert any engineering, design, service, or other problem to see whether
+Fructal helps you solve it in a better way. Or use our prepared task:
 
 ```text
-Apply Fructal to the following workflow.
-
-This is analysis and report only. Do not implement or invent unrelated
-features. Separate observed facts in the scenario from inference and open
-questions.
-
-A community tool library lets members reserve up to three tools online.
-Some tools, such as circular saws, require a recorded safety certification.
-A refundable deposit is authorized when the reservation is approved.
-
-Staff collect the tools and place them into one or more pickup lockers. The
-member receives one pickup code only after every item is marked ready. The code
-expires at closing time the following day. Oversized tools and tools requiring
-an in-person safety check must be collected from the staffed desk.
-
-At the locker kiosk, the member enters the code and sees one button labelled
-"Collect order." Pressing it unlocks every compartment assigned to the order
-and starts a 60-second countdown. Closing any one of those doors marks the whole
-order as collected, starts the loan period for every item, and releases the
-reservation.
-
-Members can request a lower accessible compartment, but if none is available,
-staff may use a higher compartment without notifying the member before arrival.
-
-If an item is missing, incorrect, or unreachable, the kiosk provides no issue
-action. The member must close the locker, sign in to the website, open order
-history, and report the problem there. If the kiosk is offline, the pickup code
-fails and the screen displays a phone number. The phone line is staffed only
-during desk hours.
-
-Online cancellation is available until staff mark the order ready. After that,
-the member must call the desk, including when the pickup code has not yet been
-used.
-
-Review the complete workflow across the member, staff, reservation system,
-kiosk, and physical lockers. Identify which constraints are supported, assumed,
-or unresolved; where accidental friction appears; and the smallest coherent
-improvements that preserve safety, custody, accessibility, inventory accuracy,
-and explicit user choice.
-
-For each finding report the evidence status, constraint source, proposed
-motion, state that must remain unchanged, risks, verification scenarios, and
-decision required.
+An EV charger must authenticate payment before power flows. If the driver
+connects the cable before paying, the charger rejects the session and requires
+unplugging, paying, and reconnecting. When payment fails, it shows an error code
+and locks the connector for 60 seconds without explaining why. Improve the
+workflow without weakening electrical safety, payment authorization, connector
+security, or fraud controls.
 ```
-
-Share the resulting conversation directly from ChatGPT. The first message lets
-the reader see the complete method; the second and the response show what it
-does without requiring a separate explanation.

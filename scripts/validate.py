@@ -67,12 +67,27 @@ require(
     "README does not explain that the demo needs no installation",
 )
 
-require("First message" in demo_text and "Second message" in demo_text, "demonstration lacks the two-message sequence")
-require(
-    "raw.githubusercontent.com/PaolaShultz/shr-skills/main/skills/fructal/SKILL.md" in demo_text,
-    "demonstration does not link the raw skill text",
+prompt_blocks = re.findall(r"```text\n(.*?)\n```", demo_text, re.DOTALL)
+require(len(prompt_blocks) == 2, "demonstration must contain one template and one prepared task")
+
+expected_template = (
+    "Use the SKILL below to execute the TASK.\n\n"
+    f"SKILL\n{skill_text.rstrip()}\n\n"
+    "TASK\n[INSERT YOUR TASK HERE]"
 )
-require("analysis and report only" in demo_text.lower(), "demonstration is not explicitly review-only")
+require(
+    bool(prompt_blocks) and prompt_blocks[0] == expected_template,
+    "demonstration template does not embed the exact current skill",
+)
+
+prepared_task = prompt_blocks[1] if len(prompt_blocks) > 1 else ""
+require(len(prepared_task.split()) <= 90, "prepared demonstration task exceeds 90 words")
+for term in ("EV charger", "payment", "electrical safety", "connector"):
+    require(term.lower() in prepared_task.lower(), f"prepared task does not cover {term}")
+
+require("Insert any engineering" in demo_text, "demonstration lacks the open task invitation")
+require("First message" not in demo_text and "Second message" not in demo_text, "old two-message demo remains")
+require("tool library" not in demo_text.lower(), "old tool-library scenario remains")
 require("expected answer" not in demo_text.lower(), "demonstration leaks an expected answer")
 
 require(len(skill_text.split()) <= 650, "SKILL.md exceeds the 650-word portability budget")
