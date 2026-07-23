@@ -1,30 +1,64 @@
-# SHR Skills
+# Fructal Cap Design
 
-Reusable Codex skills shaped through practical product work on
-[SHR-DAW](https://github.com/PaolaShultz/shr-daw).
+Fructal is an open, constraint-aware product-design method packaged as a Codex
+skill.
 
-## Skills
+> A necessary constraint must guide the user, never make them wrestle with the
+> product.
 
-### Fructal Cap Design
+It separates necessary constraints from accidental friction, traces the real
+workflow across actors and interruptions, and proposes a more natural motion
+without weakening safety, privacy, accessibility, ownership, compliance, or
+data integrity.
 
-Audit constrained workflows and redesign friction without weakening safety,
-ownership, compliance, or other essential constraints.
+Fructal applies to:
 
-Install it by asking Codex:
+- software and digital interfaces;
+- physical products and controls;
+- services and operational processes;
+- multi-actor, approval, permission, and handoff workflows.
+
+It supports three explicit modes: review, redesign, and implementation. Review
+is the safe default when the requested mode is unclear.
+
+## Read the method
+
+- [Skill source](skills/fructal/SKILL.md)
+- [Raw skill text](https://raw.githubusercontent.com/PaolaShultz/shr-skills/main/skills/fructal/SKILL.md)
+
+## Install
+
+Ask Codex:
 
 ```text
-Install the skill from https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal-cap-design
+Install the skill from https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal
 ```
 
 Then invoke it with:
 
 ```text
-Use $fructal-cap-design to audit this workflow.
+Use $fructal to review this workflow.
 ```
 
-The name is an independent product-design metaphor inspired by a particularly
-well-designed tethered juice-bottle cap. This project is not affiliated with or
-endorsed by Fructal.
+## Demonstrate it in ChatGPT Web
+
+The [ChatGPT Web demonstration](examples/chatgpt-web-demo.md) requires no
+installation. Paste the raw skill text as the first message, paste the fictional
+community tool-library workflow as the second, and share the resulting chat.
+
+The conversation then shows the complete method, a neutral problem spanning
+software, physical interaction, service handoffs, safety, accessibility, and
+delayed outcomes, and the model's evidence-backed response—with almost no
+explanatory framing.
+
+## Origin and independence
+
+The method was shaped through practical product work, including
+[SHR-DAW](https://github.com/PaolaShultz/shr-daw). Its name is inspired by a
+particularly effective tethered juice-bottle cap: the constraint remains, but
+the motion no longer fights the user.
+
+This independent project is not affiliated with or endorsed by Fructal.
 
 ## Licence
 
