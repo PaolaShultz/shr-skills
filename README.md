@@ -1,10 +1,10 @@
 # Fructal Cap Design
 
-Fructal Cap Design is an open, constraint-aware product-design method packaged
-as a Codex skill.
+Fructal Cap Design is an open engineering method for constrained workflows,
+packaged as a Codex skill.
 
-> A necessary constraint must guide the user, never make them wrestle with the
-> product.
+> A necessary constraint must guide the motion, never make the actor wrestle
+> with the system.
 
 It separates necessary constraints from accidental friction, traces the real
 workflow across actors and interruptions, and proposes a more natural motion
@@ -13,8 +13,8 @@ data integrity.
 
 Fructal Cap Design applies to:
 
-- software and digital interfaces;
-- physical products and controls;
+- software and technical systems;
+- physical tools, machines, and controls;
 - services and operational processes;
 - multi-actor, approval, permission, and handoff workflows.
 
@@ -54,10 +54,10 @@ response directly, with almost no explanatory framing.
 
 ## Origin and independence
 
-The method was shaped through practical product work, including
+The method was shaped through practical engineering work, including
 [SHR-DAW](https://github.com/PaolaShultz/shr-daw). Its name is inspired by a
 particularly effective tethered juice-bottle cap: the constraint remains, but
-the motion no longer fights the user.
+the motion remains natural.
 
 This independent project is not affiliated with or endorsed by
 [FRUCTAL Živilska industrija d.o.o.](https://www.fructal.si/).

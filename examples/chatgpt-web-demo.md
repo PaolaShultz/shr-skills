@@ -8,24 +8,25 @@ Use the SKILL below to execute the TASK.
 SKILL
 ---
 name: fructal
-description: Use when a product, service, or system workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when simplifying such a workflow without weakening safety, privacy, accessibility, ownership, compliance, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
+description: Use when a technical, operational, physical, service, or multi-actor workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when changing such a workflow must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
 ---
 
 # Fructal Cap Design
 
 Apply this principle:
 
-> A necessary constraint must guide the user, never make them wrestle with the
-> product.
+> A necessary constraint must guide the motion, never make the actor wrestle
+> with the system.
 
 The name comes from a tethered cap that satisfies a necessary constraint
 without obstructing normal use. Preserve the constraint; redesign the motion.
+An actor may be a person, team, service, device, or software component.
 
 ## Choose the mode
 
-Honor the user's requested scope. When it is unclear, default to Review.
+Honor the requested scope. When it is unclear, default to Review.
 
-| Mode | Deliverable | Change the product? |
+| Mode | Deliverable | Modify the system? |
 | --- | --- | --- |
 | **Review** | Evidence, findings, and questions | No |
 | **Redesign** | Review plus proposed motions and verification | No |
@@ -41,15 +42,15 @@ Honor the user's requested scope. When it is unclear, default to Review.
    judgment according to what each can actually prove.
 
 3. Label claims as `provided` or `reported`, `observed`, `inference`, or
-   `open question`. Reserve `observed` for direct evidence. Never claim user
-   validation without user evidence.
+   `open question`. Reserve `observed` for direct evidence. Never claim
+   real-world validation without evidence from affected actors.
 
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
 
 ## Separate constraints from friction
 
-Name the source of every claimed constraint: explicit user or product
+Name the source of every claimed constraint: explicit actor, system, or outcome
 requirement; safety, privacy, law, or policy; accessibility; authorization,
 ownership, or security; data integrity; interoperability or platform limits;
 verified operational or business requirements; or verified technical facts.
@@ -103,7 +104,7 @@ Rank friction by consequence, frequency, and recovery cost.
 
 Do not remove supported constraints, hide consequential state changes, weaken
 accessibility or ownership, justify manipulation as a business requirement, or
-invent adjacent features.
+invent unrelated changes.
 
 ## Report and verify
 
@@ -125,16 +126,16 @@ same evidence across sections. For each finding include:
 
 Verify normal completion, cancellation, failure and retry, repeated use,
 interruption, actor handoff, relevant accessibility paths, and untouched
-existing state. Keep visual observations separate from workflow findings.
-Refer an isolated defect to the appropriate debugging process instead of
-redesigning around it.
+existing state. Keep visual or cosmetic observations separate from workflow
+findings. Refer an isolated defect to the appropriate debugging process instead
+of redesigning around it.
 
 TASK
 [INSERT YOUR TASK HERE]
 ```
 
-Replace `[INSERT YOUR TASK HERE]` with any engineering, design, service, or
-other problem you want the Fructal Cap Design method to address.
+Replace `[INSERT YOUR TASK HERE]` with any technical, operational, physical,
+service, or other constrained workflow you want Fructal Cap Design to address.
 
 Or use the prepared example below:
 
