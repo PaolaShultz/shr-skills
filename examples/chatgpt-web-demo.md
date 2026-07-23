@@ -1,6 +1,6 @@
-# Try Fructal in ChatGPT
+# See Fructal in action
 
-Copy this prompt into ChatGPT:
+Copy the prompt below into ChatGPT.
 
 ```text
 Use the SKILL below to execute the TASK.
@@ -35,12 +35,15 @@ Honor the user's requested scope. When it is unclear, default to Review.
 
 1. State the intended outcome and identify every actor who initiates, continues,
    or experiences the result.
+
 2. Inspect the real workflow and its current decisions when available. Treat
    documentation, research, support evidence, analytics, code, and expert
    judgment according to what each can actually prove.
+
 3. Label claims as `provided` or `reported`, `observed`, `inference`, or
    `open question`. Reserve `observed` for direct evidence. Never claim user
    validation without user evidence.
+
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
 
@@ -57,12 +60,19 @@ a constraint.
 Look for:
 
 - mutually exclusive modes that remain layered;
+
 - surprising labels, hidden side effects, or unclear responsibility;
+
 - controls that expose implementation or organizational internals;
+
 - lost input, selection, focus, physical position, context, or ownership;
+
 - defaults or automation that act before consequences are legible;
+
 - handoffs, delays, and cross-actor effects without clear status;
+
 - errors without nearby recovery or retained work;
+
 - repeated decisions whose effort is not intrinsic to the task.
 
 Rank friction by consequence, frequency, and recovery cost.
@@ -70,16 +80,24 @@ Rank friction by consequence, frequency, and recovery cost.
 ## Redesign the motion
 
 - Make the obvious action produce one clear primary result.
+
 - Create one coherent motion. This does not mean one click: preserve necessary
   decisions, but order them so their purpose and consequences are clear.
+
 - Preserve explicit choices, entered work, location, and intent.
+
 - Make genuinely exclusive modes replace one another.
+
 - Make defaults and automatic behavior legible before meaningful consequence.
+
 - Do not treat setup, selection, authentication, or authorization as consent to
   a consequential action unless that intent is explicit.
+
 - Confirm destructive or externally consequential actions; make reversible
   actions easy to try and undo.
+
 - Put recovery beside failure and retain work wherever safe.
+
 - Prefer direct, inspectable control when it improves clarity; do not force it
   where automation, accessibility, or expert use requires another interaction.
 
@@ -94,10 +112,15 @@ the evidence, constraints, proposal, risks, and decisions. Do not repeat the
 same evidence across sections. For each finding include:
 
 1. intended outcome and observed sequence;
+
 2. evidence status;
+
 3. constraint, source, and confidence;
+
 4. friction and priority by consequence, frequency, and recovery cost;
+
 5. smallest coherent improvement and what must remain unchanged;
+
 6. risk, verification scenarios, and decision required.
 
 Verify normal completion, cancellation, failure and retry, repeated use,
@@ -110,8 +133,10 @@ TASK
 [INSERT YOUR TASK HERE]
 ```
 
-Insert any engineering, design, service, or other problem to see whether
-Fructal helps you solve it in a better way. Or use our prepared task:
+Replace `[INSERT YOUR TASK HERE]` with any engineering, design, service, or
+other problem you want Fructal to address.
+
+Or use the prepared example below:
 
 ```text
 An EV charger must authenticate payment before power flows. If the driver
