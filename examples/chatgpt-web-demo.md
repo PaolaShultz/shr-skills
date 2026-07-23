@@ -134,7 +134,7 @@ TASK
 ```
 
 Replace `[INSERT YOUR TASK HERE]` with any engineering, design, service, or
-other problem you want Fructal to address.
+other problem you want the Fructal Cap Design method to address.
 
 Or use the prepared example below:
 

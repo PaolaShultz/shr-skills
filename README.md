@@ -1,7 +1,7 @@
 # Fructal Cap Design
 
-Fructal is an open, constraint-aware product-design method packaged as a Codex
-skill.
+Fructal Cap Design is an open, constraint-aware product-design method packaged
+as a Codex skill.
 
 > A necessary constraint must guide the user, never make them wrestle with the
 > product.
@@ -11,7 +11,7 @@ workflow across actors and interruptions, and proposes a more natural motion
 without weakening safety, privacy, accessibility, ownership, compliance, or
 data integrity.
 
-Fructal applies to:
+Fructal Cap Design applies to:
 
 - software and digital interfaces;
 - physical products and controls;
@@ -40,6 +40,9 @@ Then invoke it with:
 Use $fructal to review this workflow.
 ```
 
+The method is named **Fructal Cap Design**. Lowercase `fructal` is only its
+short Codex skill identifier and invocation name.
+
 ## Demonstrate it in ChatGPT Web
 
 The [ChatGPT Web demonstration](examples/chatgpt-web-demo.md) requires no
@@ -56,7 +59,8 @@ The method was shaped through practical product work, including
 particularly effective tethered juice-bottle cap: the constraint remains, but
 the motion no longer fights the user.
 
-This independent project is not affiliated with or endorsed by Fructal.
+This independent project is not affiliated with or endorsed by
+[FRUCTAL Živilska industrija d.o.o.](https://www.fructal.si/).
 
 ## Licence
 
