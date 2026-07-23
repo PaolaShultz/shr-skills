@@ -1,4 +1,4 @@
-# See Fructal in action
+# See it in action
 
 Copy the prompt below into ChatGPT.
 
