@@ -649,6 +649,14 @@ acoustic trials, electrical checks, cable trials, repeated service, and
 affected-musician use remain necessary before claiming that any enclosure works
 physically.
 
+**Open question:** [Protocol amendment
+03](evaluations/physical-product-comparison/protocol-amendment-03.md) records
+two further needs: evaluate prompt authorship, written design, image
+instruction, image compliance, and complete-package quality as distinct
+layers; and add a prospectively frozen Fructal Cap Design plus Superpowers arm
+to test the claim that their strengths are complementary. No fourth execution
+has been run.
+
 ## Overall limits
 
 These cases provide:

@@ -244,6 +244,11 @@ Current run state:
 - [protocol amendment
   02](evaluations/physical-product-comparison/protocol-amendment-02.md) records
   the host-skill isolation defect, dual-home recovery, and three-arm extension;
+- [protocol amendment
+  03](evaluations/physical-product-comparison/protocol-amendment-03.md) records
+  the need to score prompt, written design, image instruction, rendered image,
+  and complete package separately, and reserves a combined Fructal Cap Design
+  plus Superpowers arm;
 - the [`ppd-002` three-arm
   comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
   preserves no-user-skill, Superpowers-only, and Fructal Cap Design-only
