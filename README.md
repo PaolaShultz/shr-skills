@@ -1,7 +1,7 @@
 # Fructal Cap Design
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill.
+packaged as a Codex skill. The current package version is **1.0.0**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
@@ -69,6 +69,32 @@ then insert any problem or use the short prepared EV-charger example.
 
 The resulting conversation shows the method, problem, and evidence-backed
 response directly, with almost no explanatory framing.
+
+## Validate and evaluate
+
+Run deterministic package, contract-case, documentation, and demo checks:
+
+```bash
+scripts/validate.sh
+tests/test-validation.sh
+```
+
+After synchronizing an installed copy, include its absolute skill directory:
+
+```bash
+scripts/validate.sh --installed /absolute/path/to/installed/fructal
+```
+
+Run the isolated live Codex evaluation matrix:
+
+```bash
+tests/test-live-eval-harness.sh
+scripts/evaluate.sh
+```
+
+Deterministic checks are the commit gate. Live evaluations exercise the
+Review, Redesign, Implement, mixed-mode, confirmation, evidence, and diagnostic
+contracts against a model in disposable read-only or workspace-write fixtures.
 
 ## Origin and independence
 

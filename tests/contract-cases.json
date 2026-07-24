@@ -1,0 +1,58 @@
+[
+  {
+    "id": "implicit_review",
+    "explicit_mode": null,
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_mode": "Review"
+  },
+  {
+    "id": "implicit_redesign",
+    "explicit_mode": null,
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign"
+  },
+  {
+    "id": "implicit_implement",
+    "explicit_mode": null,
+    "requested_outcome": "modification",
+    "no_modification": false,
+    "expected_mode": "Implement"
+  },
+  {
+    "id": "explicit_review_caps_fix",
+    "explicit_mode": "Review",
+    "requested_outcome": "modification",
+    "no_modification": false,
+    "expected_mode": "Review"
+  },
+  {
+    "id": "explicit_redesign_caps_fix",
+    "explicit_mode": "Redesign",
+    "requested_outcome": "modification",
+    "no_modification": false,
+    "expected_mode": "Redesign"
+  },
+  {
+    "id": "implement_capped_by_no_modification",
+    "explicit_mode": "Implement",
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign"
+  },
+  {
+    "id": "implementation_is_subject_only",
+    "explicit_mode": null,
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_mode": "Review"
+  },
+  {
+    "id": "mode_change_to_review",
+    "explicit_mode": "Review",
+    "requested_outcome": "modification",
+    "no_modification": true,
+    "expected_mode": "Review"
+  }
+]

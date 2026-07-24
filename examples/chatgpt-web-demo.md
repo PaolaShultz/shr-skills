@@ -9,6 +9,9 @@ SKILL
 ---
 name: fructal
 description: Use when a technical, operational, physical, service, or multi-actor workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when changing such a workflow must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
+metadata:
+  version: "1.0.0"
+  source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 ---
 
 # Fructal Cap Design
@@ -33,25 +36,30 @@ example prompt that invoked the skill.
 | **Redesign** | Evidence plus a replacement motion and verification plan | No |
 | **Implement** | An authorized change plus verification evidence | Yes |
 
-- Select Review when the requested outcome is assessment or explanation without
-  a replacement motion or change.
+- Review is the outcome for assessment or explanation without a replacement
+  motion or change.
 
-- Select Redesign when the requested outcome includes a proposal or plan but
-  modification is not authorized.
+- Redesign is the outcome for a proposal or plan without authorized
+  modification.
 
-- Select Implement when the requested outcome includes actual in-scope
-  modification or approval of a prior proposal. Review or design work requested
-  alongside the change remains analysis inside Implement.
+- Implement is the outcome for actual in-scope modification or approval of a
+  prior proposal. Review or design work requested alongside the change remains
+  analysis inside Implement.
 
-- For mixed requests, select the highest authorized outcome: Implement, then
-  Redesign, then Review. A no-modification boundary caps the mode at Redesign
-  when a replacement motion is requested, otherwise Review. Do not select a
-  mode from a verb or noun that merely describes the subject; "review our
-  implementation" selects Review.
+- An explicit instruction to use Review, Redesign, or Implement selects that
+  mode as a binding maximum outcome. A mode word that only describes the subject
+  does not select a mode; "review our implementation" selects Review.
 
-- When a boundary caps the mode, deliver the useful result allowed by that mode
-  and state which requested outcome cannot be completed. Do not ask unless a
-  material choice blocks that result.
+- A stricter explicit boundary always wins. A no-modification boundary caps
+  Implement at Redesign when a replacement motion is requested, otherwise at
+  Review.
+
+- Without an explicit mode instruction, select the highest authorized requested
+  outcome: Implement, then Redesign, then Review.
+
+- When an explicit mode or boundary prevents a requested higher outcome,
+  complete the allowed deliverable and state which outcome was not completed.
+  Do not ask unless a material choice blocks that deliverable.
 
 - When the requested outcome remains unclear, default to Review.
 
@@ -80,12 +88,16 @@ preferences.
 
 Establish evidence, separate constraints from friction, rank the findings, and
 report only material decisions that remain open. Do not prescribe a replacement
-motion, localized remediation, or other solution. Do not modify target, live,
-persistent, or external state. Read-only inspection and disposable isolated
-diagnostics are allowed when they leave target, live, and external state
-unchanged; clean up their temporary state when safe. A stricter requester
-boundary such as "no writes" overrides this allowance. Stop after the review
-deliverable.
+motion, localized remediation, or other solution. Do not change workflow or
+business state, permissions, content, actor-visible outcomes, or consequential
+external state. Already-authorized read-only inspection may proceed when its
+only unavoidable effects are ordinary access metadata such as logs, request
+counters, or last-access timestamps. Treat the read as unavailable evidence
+when it is costly, sensitive, rate-limited, operationally consequential, or has
+unknown material effects. Disposable isolated diagnostics are allowed; clean up
+their temporary state when safe. A stricter requester boundary such as "no
+external requests" or "no writes of any kind" overrides this allowance. Stop
+after the review deliverable.
 
 ### Redesign
 
@@ -116,11 +128,15 @@ changes, scope covered, evidence, and remaining uncertainty.
    documentation, research, support evidence, analytics, code, and expert
    judgment according to what each can actually prove.
 
-3. Label direct task facts or supplied artifacts as `provided`; unverified
-   claims attributed to an actor or source as `reported`; direct evidence as
-   `observed`; derived claims as `inference`; and unresolved gaps as
-   `open question`. Never claim real-world validation without evidence from
-   affected actors.
+3. Classify provenance and evidentiary status separately. Label material or a
+   task fact supplied directly by the requester as `provided`; an unverified
+   claim attributed to another actor or source as `reported`; evidence directly
+   inspected or measured in the task as `observed`; a derived conclusion as
+   `inference`; and an unresolved material gap as `open question`. Labels may
+   combine: a supplied support document is a `provided artifact` containing a
+   `reported claim`. Observing the document proves that it contains the claim,
+   not that the claim is true. Never claim real-world validation without
+   evidence from affected actors.
 
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
@@ -195,7 +211,10 @@ prescribing a replacement motion.
 - Reveal advanced choices, exception handling, and escalation progressively
   instead of forcing them through the normal path.
 
-- Provide immediate feedback through a form every affected actor can perceive.
+- Provide immediate feedback through a channel each affected actor can perceive
+  or observe. Use accessible sensory or assistive-technology feedback for people
+  and inspectable state, events, responses, or telemetry for services, devices,
+  and software components.
 
 - Prefer direct, inspectable control when it improves clarity; do not force it
   where automation, accessibility, or expert use requires another interaction.

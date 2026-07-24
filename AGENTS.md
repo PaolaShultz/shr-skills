@@ -7,7 +7,10 @@
 - Keep the ChatGPT demonstration task natural and short. Do not add response
   formatting, prioritization, evidence-labeling, or other instructions already
   supplied by the skill.
-- Run `scripts/validate.sh` before committing a skill change.
+- Run `tests/test-validation.sh`, `tests/test-live-eval-harness.sh`, and
+  `scripts/validate.sh` before committing a skill change. Run
+  `scripts/evaluate.sh` before publishing a release.
 - Repository validation cannot prove an installed copy is current. After a
   source change, deliberately synchronize or reinstall the active copy and
-  compare its skill and metadata with the source.
+  compare its skill and metadata with the source by running
+  `scripts/validate.sh --installed /absolute/path/to/installed/fructal`.
