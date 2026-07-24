@@ -1,6 +1,6 @@
 # Real-world usage and testing
 
-Fructal Cap Design has three distinct kinds of practical evidence:
+Fructal Cap Design has four distinct kinds of practical evidence:
 
 1. it was applied to its own execution contract and produced regression-tested
    improvements;
@@ -8,7 +8,10 @@ Fructal Cap Design has three distinct kinds of practical evidence:
    already using a disciplined software-delivery skill suite;
 3. it drove a public musician/operator workflow audit and repair across the
    software, controllers, audio services, storage, and Raspberry Pi environment
-   of [SHR-DAW](https://github.com/PaolaShultz/shr-daw).
+   of [SHR-DAW](https://github.com/PaolaShultz/shr-daw);
+4. its capability cluster independently appeared in the experimental workflow
+   of [Moj Sint](https://github.com/PaolaShultz/moj-sint), without evidence that
+   the Fructal skill itself was invoked there.
 
 These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
@@ -400,6 +403,110 @@ acceptance may reveal different results. The public SHR-DAW documentation
 correctly retains those gates rather than presenting machine evidence as owner
 observation.
 
+## Case 4: Moj Sint as a convergent workflow
+
+### Why this case is different
+
+[Moj Sint](https://github.com/PaolaShultz/moj-sint) is an MIT-licensed,
+low-level headless Rust synthesizer under active sound research for later use
+as a distinct external SHR-DAW instrument.
+
+This is not presented as another direct Fructal application.
+
+**Observed:** A search across the complete 106-commit local repository history
+found no reference to `Fructal`. A separate search across the original Codex
+session logs for the project's foundation, oscillator research, experimental
+policy, and first five-family listening gate found no Fructal or
+`fructal-cap-design` invocation. Those sessions explicitly used general
+software-delivery workflows including brainstorming, planning, test-driven
+development, and verification.
+
+**Observed:** Fructal's
+[first public commit](https://github.com/PaolaShultz/shr-skills/commit/814898424a53767a9e1b49975a748c891da1f614)
+predates Moj Sint's
+[initial design and handoff](https://github.com/PaolaShultz/moj-sint/commit/1d828b57a9a48de8d6e1476bf6bb75168faa9043)
+by about fifteen hours. The case therefore does not show that Moj Sint
+independently invented the method before Fructal existed. It shows that a
+Fructal-like execution pattern emerged in another difficult workflow without a
+recorded invocation of the skill.
+
+### The primordial Fructal-like pattern
+
+The
+[portable foundation](https://github.com/PaolaShultz/moj-sint/commit/1aa6a6bd9f8074c8391621820684267524365b67)
+already separated necessary real-time, ownership, provenance, platform,
+human-acceptance, modification, and verification constraints from the mechanics
+of individual sound experiments.
+
+The later
+[experimental artifact policy](https://github.com/PaolaShultz/moj-sint/commit/6e10c95bb26ae48ba83193d59ba7343bbf1bdcab)
+made recovery and continuity unusually explicit:
+
+- generated audio, measurement tables, manifests, and batch-specific reports
+  were disposable by default;
+- a rejected experiment retained its durable conclusion while its generated
+  batch was deleted;
+- preserving an exact tone, batch, report, parameter file, or preset required
+  explicit authorization;
+- parameter variations inside one graph could not be presented as genuinely
+  different sound mechanisms;
+- reproducible source, tests, and durable evidence could remain even when the
+  reviewed output was discarded.
+
+The
+[multi-family listening gate](https://github.com/PaolaShultz/moj-sint/commit/882492e5b22f5cb1033ad5b2f8977734e6a6bf53)
+then kept five experimental sources outside the production engine, gave each a
+distinct perceptual hypothesis and audible failure condition, used automated
+measurements only to reject defects and characterize behavior, and reserved
+musical acceptance for human listening. The
+[recorded verdict](https://github.com/PaolaShultz/moj-sint/commit/da526a940c58a4893a1e3d564d1a1587dcc0c7f9)
+retained a cautiously positive direction without selecting, integrating,
+ranking, or macro-mapping a source.
+
+### Capability correspondence
+
+| Moj Sint execution behavior | Corresponding Fructal capability |
+| --- | --- |
+| Real-time, ownership, provenance, hardware-evidence, and listening rules are separated from experimental mechanics | Constraint-source analysis |
+| Disposable research sources remain isolated from the production `Engine` | Explicit modification and mode boundaries |
+| Automated, x86 workstation, AArch64 compile, native Pi, and human-listening claims remain distinct | Evidence provenance and evidentiary status |
+| Listener, engine, host, SHR-DAW, JACK, Raspberry Pi, and audio hardware are treated as affected actors | People, services, devices, and software actor coverage |
+| Rejected audio is removed while conclusions and reproducible generators remain | Recovery beside failure |
+| Unusual sound premises are preserved rather than normalized into conventional synthesizer categories | Context and intent preservation |
+| Engine, presets, stable macros, host integration, and hardware claims are repeatedly recorded as unchanged | Before/after and untouched-state verification |
+| Rejected batches constrain later experiments without being mislabeled as success | Failure, delayed outcome, return, and repeated-use tracing |
+
+### Current local evidence
+
+**Observed:** The local repository is currently clean at `bab9a7a`, contains 106
+commits, and is 50 commits ahead of its public remote. Its most recent
+experimental sequence preserved the first strongly positive `Coupled Wire`
+reference, rejected later envelope/motion variants, kept the production engine
+and integration boundaries untouched, and produced one controlled-thump
+successor awaiting human listening.
+
+Those 50 later commits are not yet public, so this paragraph is direct local
+repository evidence rather than independently reproducible public evidence.
+The public links above intentionally stop at history already available on the
+remote.
+
+**Provided/reported:** The creator reports that this preservation-first
+experimental flow turned several previously messy sound-development motions
+into useful and coherent ones.
+
+**Inference:** Moj Sint is evidence that the capability cluster formalized by
+Fructal can be valuable outside conventional product-interface work. It also
+shows that parts of the cluster can emerge from a careful combination of domain
+constraints, human acceptance, disciplined implementation, and durable
+handoffs.
+
+**Unsupported claim:** Moj Sint was built by invoking Fructal, or proves that
+Fructal caused the improvement.
+
+**Open question:** A future explicitly logged Fructal Review, Redesign, or
+Implement cycle could compare the existing workflow with a deliberately
+Fructal-routed one and provide stronger causal evidence.
+
 ## Combined evidence
 
 | Evidence layer | What it demonstrates | Main limitation |
@@ -407,13 +514,16 @@ observation.
 | Fructal applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
 | Anonymous private software project | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
 | Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
+| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal invocation | Convergence is not causal proof; the newest 50 commits are not yet public |
 
 Together, the cases support a narrower, evidence-backed conclusion:
 
 > Fructal Cap Design has demonstrated value as a discovery and preservation
 > layer above disciplined implementation—first on itself, then in a private
 > software product, and then across a public Raspberry Pi
-> musician/operator system.
+> musician/operator system. Moj Sint separately shows the same capability
+> cluster emerging in experimental sound research without proving that Fructal
+> caused it.
 
 The cases do not show that Fructal replaces debugging, test-driven development,
 human-centered research, accessibility standards, safety analysis, or durable
@@ -453,6 +563,8 @@ These cases provide:
 - direct repository evidence of self-correction;
 - direct public source, test, screenshot, machine, audio, and recovery evidence;
 - one anonymous private-project implementation;
+- one public-project convergence case whose newest local history is not yet
+  published;
 - qualitative evidence from one affected creator/operator.
 
 They do not yet provide:

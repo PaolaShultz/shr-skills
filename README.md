@@ -76,7 +76,9 @@ Read the [real-world usage and testing
 account](docs/real-world-usage-and-testing.md) for Fructal's self-application,
 an anonymized private software case, and the public
 [SHR-DAW](https://github.com/PaolaShultz/shr-daw) Raspberry Pi workflow audit,
-repair, and acceptance evidence.
+repair, and acceptance evidence, plus the
+[Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
+workflow and its explicit claim boundaries.
 
 ## Validate and evaluate
 
