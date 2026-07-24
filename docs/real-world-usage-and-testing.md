@@ -1,22 +1,145 @@
 # Real-world usage and testing
 
-## Case context
+Fructal Cap Design has three distinct kinds of practical evidence:
 
-**Observed:** A substantial software project was already being developed with
-[`Superpowers`](https://github.com/obra/superpowers), a structured
+1. it was applied to its own execution contract and produced regression-tested
+   improvements;
+2. it found latent workflow failures in an anonymous private software project
+   already using a disciplined software-delivery skill suite;
+3. it drove a public musician/operator workflow audit and repair across the
+   software, controllers, audio services, storage, and Raspberry Pi environment
+   of [SHR-DAW](https://github.com/PaolaShultz/shr-daw).
+
+These cases demonstrate practical utility at different boundaries. They do not
+establish a universal success rate or independent validation across every
+technical, physical, service, or operational domain.
+
+## Evidence vocabulary
+
+This document keeps provenance and evidentiary status separate:
+
+- `provided/reported` records a statement from a creator, operator, or other
+  affected actor;
+- `observed` records repository history, source, tests, machine behavior, or
+  another artifact inspected directly;
+- `inference` records a conclusion derived from that evidence;
+- `open question` records what still requires affected-actor, physical,
+  longitudinal, or independent evidence.
+
+Repository evidence can prove that a change and its checks exist. It cannot by
+itself prove that a musician, operator, customer, or other affected person finds
+the resulting workflow better.
+
+## Case 1: Fructal applied to itself
+
+### Initial method and refinement
+
+**Observed:** The
+[first published contract](https://github.com/PaolaShultz/shr-skills/blob/814898424a53767a9e1b49975a748c891da1f614/skills/fructal-cap-design/SKILL.md)
+already contained the constraint-and-motion principle, workflow tracing,
+recovery beside failure, state preservation, a six-question acceptance test,
+and before/after verification.
+
+The public history then records successive refinements:
+
+| Commit | Observed change |
+| --- | --- |
+| [`19768e3`](https://github.com/PaolaShultz/shr-skills/commit/19768e3e347c859dec97d33f2008647cb1a9bf18) | Refined the initial audit method |
+| [`2b5aa37`](https://github.com/PaolaShultz/shr-skills/commit/2b5aa3786446f6dfb7899a5e6f9a55718bbe20ca) | Generalized the method from user-interface workflows to technical, physical, service, and multi-actor systems |
+| [`aaa9770`](https://github.com/PaolaShultz/shr-skills/commit/aaa97703422aa4a2ceb5ab7d3f6ff7e27ccc075d) | Tightened evidence classification and reporting |
+| [`c70eacc`](https://github.com/PaolaShultz/shr-skills/commit/c70eaccb73470e784c700d8fa5ff39c0a0a9fe45) | Defined Review, Redesign, and Implement execution paths |
+| [`d54224b`](https://github.com/PaolaShultz/shr-skills/commit/d54224b9aaa217662ac91d405dbe2ae4549aa6f7) | Hardened mode changes, authorization, persistence, and all-path behavior |
+| [`3814c5e`](https://github.com/PaolaShultz/shr-skills/commit/3814c5e2a97ee90479b8591ea1871f71074edc6b) | Restored the six-question design intelligence and deterministic validation |
+
+This history alone shows iterative development. The stronger self-application
+case begins when Fructal was explicitly used to review its own contract.
+
+### The self-review
+
+**Observed:** A Fructal Review identified six material weaknesses:
+
+1. validation did not exercise Review, Redesign, Implement, or mixed-mode
+   behavior;
+2. explicit mode instructions could conflict with outcome-based routing;
+3. Review and Redesign could deadlock when real inspection had harmless
+   incidental read effects;
+4. a supplied artifact and an attributed claim inside it could collapse into one
+   evidence label;
+5. the installed skill could not identify its exact source package, and source
+   validation could not detect installed-copy drift;
+6. human-oriented feedback language was ambiguous for teams, services, devices,
+   and software components.
+
+The resulting
+[contract-evaluation design](https://github.com/PaolaShultz/shr-skills/blob/a03c709fe503d58f016613c777fdaaaa52316bd5/docs/superpowers/specs/2026-07-24-fructal-contract-validation-design.md)
+preserved the broad workflow-engineering scope, exclusive modes, Review's
+no-solution boundary, Redesign's no-modification boundary, Implement
+persistence, consequential-action safeguards, accessibility, and the
+Fructal-cap test.
+
+The review therefore did not treat every existing behavior as a defect. It
+separated protected capabilities from friction in the method's own execution
+motion.
+
+### From findings to executable contract
+
+The self-improvement sequence followed Fructal's own mode boundaries:
+
+1. **Review:** inspect the existing skill, identify evidence, separate
+   constraints from friction, and report six findings without changing the
+   contract;
+2. **Redesign:** specify mode precedence, diagnostic read boundaries,
+   two-dimensional evidence handling, actor-appropriate feedback, package
+   provenance, deterministic validation, and isolated live evaluation;
+3. **Implement:** change the owning skill and package, add contract fixtures,
+   add deliberately broken regression packages, and verify both permitted and
+   prohibited behavior.
+
+The implementation landed in:
+
+- [Harden Fructal execution contracts](https://github.com/PaolaShultz/shr-skills/commit/c04722092035b27f624b30d7ee5cec9e4be22c56),
+  which added the package validator, 11 contract cases, deterministic regression
+  tests, package provenance, installed-copy comparison, and the revised skill
+  contract;
+- [Add Fructal live contract evaluations](https://github.com/PaolaShultz/shr-skills/commit/5c16bb548023bbd198c5b3e30b6cc8cebb3b635e),
+  which added isolated Codex execution, structured result validation,
+  disposable read-only and workspace-write fixtures, an offline fake runner,
+  fixture-state verification, and classified runner, transport, schema,
+  contract, and fixture failures.
+
+**Inference:** This demonstrates self-hosting capability. Fructal can inspect
+and improve the workflow through which Fructal itself is selected, authorized,
+executed, and verified.
+
+### What self-application proves and does not prove
+
+The Git history and passing regressions demonstrate that the review produced
+specific, executable improvements rather than favorable prose alone.
+
+**Open question:** Self-evaluation can still be circular. A method may optimize
+for its own criteria, and a test suite may encode those same criteria. The case
+therefore supports contract integrity and productive self-correction, not
+universal correctness or independent validation of the method.
+
+## Case 2: Anonymous software-project review
+
+### Case context
+
+**Observed:** A substantial private software project was already being developed
+with [`Superpowers`](https://github.com/obra/superpowers), a structured
 software-delivery skill suite covering design, planning, debugging, test-driven
 development, verification, review, and branch completion.
 
-A separate read-only Fructal Cap Design review then inspected several connected
-workflows as complete constrained motions rather than as a collection of known
-features or defects. The review and the later authorized implementation were
-separate stages.
+A separate read-only Fructal review inspected several connected workflows as
+complete constrained motions rather than as a collection of known features or
+defects. The review and the later authorized implementation were separate
+stages.
 
-The project is intentionally anonymous. Its name, organization, domain,
-repository, routes, implementation identifiers, and test counts are not part of
-this account.
+The project remains intentionally anonymous. Its name, organization, private
+repository, routes, implementation identifiers, and unpublished test evidence
+are not linked from this public account.
 
-## What the Fructal review found
+### What the Fructal review found
 
 **Observed:** The review identified multiple workflow-contract failures that the
 existing software-delivery process had not surfaced. The individual components
@@ -37,7 +160,7 @@ These were not all conventional defects. Some were gaps between individually
 valid components, some required clarification of the intended product contract,
 and some became reproducible behavioral failures.
 
-## Why the existing delivery workflow had not found it
+### Why the existing delivery workflow had not found it
 
 **Inference:** A software-delivery skill suite usually begins with a framed
 feature, defect, or implementation goal and asks how to execute that work
@@ -60,7 +183,7 @@ Fructal begins earlier and at a different boundary. It asks:
 This broader inspection can reveal unreported workflow friction even when local
 tests pass and no single component appears broken.
 
-## Division of responsibility
+### Division of responsibility
 
 **Observed:** Fructal supplied the discovery and preservation boundary. It
 separated necessary constraints from existing behavior, distinguished observed
@@ -77,7 +200,7 @@ The practical sequence was:
 > Fructal discovers and bounds the right workflow problem; software-delivery
 > skills help implement the resulting change reliably.
 
-## Capability comparison
+### Capability comparison
 
 | Capability | Fructal Cap Design | Structured software-delivery skills |
 | --- | --- | --- |
@@ -96,7 +219,7 @@ This table compares primary responsibilities, not absolute capability. Either
 method can contribute outside its strongest area when the task and environment
 provide the necessary evidence.
 
-## Practical result
+### Practical result
 
 **Inference:** Fructal and structured software-delivery skills are more
 complementary than interchangeable.
@@ -111,13 +234,236 @@ The case demonstrates why passing local tests does not prove that a complete
 workflow remains coherent. It also demonstrates why a broad workflow review is
 not a substitute for disciplined implementation. Both layers were needed.
 
-## Limits of the evidence
+## Case 3: SHR-DAW on Raspberry Pi
 
-**Open question:** One substantial use does not establish a universal success
-rate, numerical superiority, or equal effectiveness in other technical,
-physical, service, operational, or safety-critical settings.
+### System and actor scope
 
-The case is direct evidence that Fructal found material workflow problems not
-previously surfaced by the existing delivery process in this project. It is
-evidence of practical complementarity, not proof that Fructal will outperform
-every alternative method or skill suite.
+[SHR-DAW](https://github.com/PaolaShultz/shr-daw) is an MIT-licensed compact
+Raspberry Pi music workstation for a 40×13 terminal, optional MIDI controllers,
+software instruments, FT2-style sequencing, WAV loops, effects, JACK routing,
+and audio recording.
+
+**Observed:** Its constrained workflows span:
+
+- the musician and system operator;
+- keyboard, mouse, and four-, five-, or eight-button MIDI controllers;
+- a compact terminal interface with strict geometry and position constraints;
+- Rust application and Project state;
+- software instruments, JACK clients, MIDI routes, and external processes;
+- private Projects, Ideas, presets, loops, recordings, and configuration;
+- install, setup, diagnosis, interruption, shutdown, and recovery;
+- bounded real-time audio behavior and physical equipment safety.
+
+This makes it a materially different test from a conventional web or desktop
+software workflow. The actor's physical position, musical position, live notes,
+routes, audio ownership, unfinished work, and external equipment state can all
+matter at once.
+
+### The complete musician/operator audit
+
+The public
+[workflow audit and repair ledger](https://github.com/PaolaShultz/shr-daw/blob/6c2313609e03ecf9289de452d38abf56cf7ac72b/docs/WORKFLOW_AUDIT_HANDOFF.md)
+records the first complete musician/operator workflow audit.
+
+**Observed:** The ledger:
+
+- preserves the original findings after repair instead of rewriting history;
+- distinguishes `READY`, `DECISION`, `PHYSICAL`, `VERIFIED`, and `DONE` work;
+- separates provided/reported evidence, observed artifacts, inference, and open
+  questions;
+- registers each necessary privacy, ownership, safety, interoperability,
+  portability, accessibility, and data-integrity constraint with its source;
+- inventories install, setup, launch, shutdown, navigation, Help, routing,
+  instruments, Projects, Files, Patterns, Tracks, loops, effects, recording,
+  diagnosis, failure, return, and repeated-use paths;
+- ranks findings by consequence, frequency, and recovery cost;
+- separates 15 unambiguous repairs from 10 owner decisions and eight
+  physical/user evidence gates;
+- verifies normal completion, cancellation, failure and retry, repeated use,
+  interruption and handoff, accessibility and controller parity, untouched
+  state, and separately authorized physical paths.
+
+### What the audit found
+
+The largest initial risks were at workflow boundaries rather than inside
+isolated components:
+
+1. unsaved Project edits could be lost through Load or keyboard quit;
+2. a Tracks screen described as a draft could mutate the Project and live
+   routing before completion;
+3. recording or transport could continue on Home without authoritative
+   ownership and status;
+4. editing one Routing input could collapse several configured performance
+   inputs into one;
+5. FT2 order navigation could reset the musician's row despite an explicit
+   position-preservation rule;
+6. install and setup actions were individually careful but did not behave as one
+   interruption-safe journey;
+7. Loop Library browsing could stop transport before the musician committed a
+   selection;
+8. controller-visible naming workflows actually required keyboard text entry;
+9. effect and transport ownership could be unclear across screens;
+10. diagnostics could present optional audio absence as whole-product failure.
+
+Other open findings concerned automatic LAN publication when opening Help,
+privileged network binding, controller character entry, Project ownership during
+audition, and the difference between status visibility and direct control.
+Those decisions were retained instead of being silently chosen to make
+implementation convenient.
+
+### Repair sequence
+
+The [audit handoff commit](https://github.com/PaolaShultz/shr-daw/commit/3c65e11a6297e6a922da2a7953bebec3b1cc688b)
+created the durable ledger before implementation.
+
+[Repair audited musician workflows](https://github.com/PaolaShultz/shr-daw/commit/6d55069cbc4e803c27416de04ec055acbc2d1aa8)
+then changed the owning UI, navigation, setup, installation, and documentation
+surfaces. The first repair queue:
+
+- added dirty Project tracking and Save/Discard/Cancel protection;
+- made Home report authoritative background transport and recording ownership;
+- restored exact nested draft values on cancellation;
+- preserved every configured performance input during a Routing edit;
+- preserved and clamped FT2 row, page, lane, and column across navigation;
+- exposed installer consequences before system changes and reported
+  interruption/completion state;
+- grouped diagnostic capability status without hiding exact failures;
+- made keyboard-required naming honest in the controller-visible workflow;
+- delayed transport changes until Loop Library preview or commitment;
+- clarified effects ownership and reconciled UI, Help, and documentation;
+- removed stale paths only after their replacement behavior was proven.
+
+The source-only pass remained separate from the later authorized build,
+connected-system, screenshot, and physical checks.
+
+### Combined acceptance evidence
+
+[Complete workflow audit acceptance](https://github.com/PaolaShultz/shr-daw/commit/ae0298718694a3e8c3dc2954f1545fa07986ecff)
+recorded the combined acceptance.
+
+**Observed machine evidence included:**
+
+- locked checks, debug and release builds, and warning-denied Clippy;
+- 662 passing tests plus four intentionally ignored private renderers in each
+  complete test profile;
+- 16 focused workflow and JACK lifecycle tests;
+- regeneration and exact drift validation of all 105 real terminal-interface
+  screenshots;
+- shell, Python, XML, JSON, demo, static, documentation, and diff checks;
+- isolated installer and setup trees, interactive and noninteractive setup,
+  idempotent rerun, interruption recovery, preflight, and grouped diagnosis;
+- 60-second synthetic 18-channel raw capture and three-source final-mix stress
+  with full PCM equality and zero drop, overflow, callback, or xrun faults;
+- real synchronized 24-bit/48 kHz capture and real three-source final-bus
+  recording;
+- live source-loss, real-xrun, JACK-loss, low-space, and forced-interruption
+  recording drills;
+- conservative recovery of an interrupted partial take followed by a clean
+  replacement recording;
+- discovery and repair of a synth teardown defect during acceptance;
+- final connected release checkpoints with no new xruns, missed deadlines,
+  oversized callbacks, route drift, or owned-process residue.
+
+Later public changes continued the same constrained-workflow pattern:
+
+- [Repair menu navigation and recovery contracts](https://github.com/PaolaShultz/shr-daw/commit/95d53145be8ef9397543c4afa16ddc5d874c45fe)
+  aligned controller profiles, overlays, navigation, caller return, Files,
+  Projects, tracker, effect, and Help behavior;
+- [Complete menu repair acceptance](https://github.com/PaolaShultz/shr-daw/commit/62a3bc57418cb111d2008ee064965414cb215505)
+  reconciled implementation, documentation, and generated interface evidence;
+- [Repair Raspberry Pi audio setup and diagnosis](https://github.com/PaolaShultz/shr-daw/commit/8e9a964f18505bf291a4d269969d5e2dc9427af8)
+  made performance tuning, configuration ownership, interruption recovery,
+  diagnosis, rollback, and untouched administrator state explicit and added a
+  dedicated 528-line regression harness;
+- [Document Raspberry Pi 5 NVMe installation](https://github.com/PaolaShultz/shr-daw/commit/6c2313609e03ecf9289de452d38abf56cf7ac72b)
+  recorded the current clean-machine installation boundary without overstating
+  incomplete physical acceptance.
+
+### Affected-actor evidence
+
+**Provided/reported:** The creator, product owner, musician, and Raspberry Pi
+operator reports that the repaired flows changed the system from a confusing
+state into workflows that now feel notably coherent and effective.
+
+This is affected-actor evidence under Fructal's own evidence contract. It is
+qualitative and comes from one deeply involved creator/operator, but it is
+stronger than an inference derived from tests or screenshots alone.
+
+**Inference:** The positive experience is plausibly connected to the
+preservation-first repairs because the reported improvement corresponds to
+observable changes in position, work retention, ownership, feedback,
+navigation, cancellation, and recovery—not merely to additional features.
+
+**Open question:** Independent musicians, different controllers, long-term
+repeated use, clean-machine installation, and later physical-interface
+acceptance may reveal different results. The public SHR-DAW documentation
+correctly retains those gates rather than presenting machine evidence as owner
+observation.
+
+## Combined evidence
+
+| Evidence layer | What it demonstrates | Main limitation |
+| --- | --- | --- |
+| Fructal applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
+| Anonymous private software project | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
+| Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
+
+Together, the cases support a narrower, evidence-backed conclusion:
+
+> Fructal Cap Design has demonstrated value as a discovery and preservation
+> layer above disciplined implementation—first on itself, then in a private
+> software product, and then across a public Raspberry Pi
+> musician/operator system.
+
+The cases do not show that Fructal replaces debugging, test-driven development,
+human-centered research, accessibility standards, safety analysis, or durable
+workflow runtimes. They show that Fructal can find and bound the complete
+workflow problem those specialist processes then help analyze, implement, or
+verify.
+
+## Future production comparison
+
+**Open question:** The anonymous private software case currently has extensive
+local behavioral and browser evidence but no published before/after production
+comparison.
+
+A future validation pass is reserved to:
+
+1. capture the existing public production workflow before the next deployment;
+2. build and deploy the already tested replacement state through the private
+   project's normal production process;
+3. capture the same public paths, actors, browser states, URLs, submitted
+   values, recovery paths, accessibility paths, and untouched state after
+   deployment;
+4. compare production before/after evidence with the complete local
+   cross-browser and server-state evidence;
+5. keep all private repository paths, source, credentials, operational details,
+   and unpublished data out of this public repository;
+6. report differences honestly instead of assuming local and production
+   behavior are identical.
+
+This will strengthen the anonymous case only after both production states have
+been directly observed. Until then, the current public account makes no
+production-effectiveness claim.
+
+## Overall limits
+
+These cases provide:
+
+- direct repository evidence of self-correction;
+- direct public source, test, screenshot, machine, audio, and recovery evidence;
+- one anonymous private-project implementation;
+- qualitative evidence from one affected creator/operator.
+
+They do not yet provide:
+
+- independent evaluation of Fructal by an unrelated team;
+- controlled comparison against another method on identical work;
+- multiple affected actors across unrelated domains;
+- longitudinal outcome measurements;
+- a general success rate;
+- professional certification for accessibility, safety, legal, clinical, or
+  regulated work.
+
+The evidence is therefore substantial enough to support practical use and
+continued evaluation, but not a universal superiority claim.

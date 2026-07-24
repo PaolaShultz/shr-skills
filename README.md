@@ -72,10 +72,11 @@ response directly, with almost no explanatory framing.
 
 ## Real-world usage and testing
 
-Read the [anonymized real-world usage and testing
-account](docs/real-world-usage-and-testing.md) to see what Fructal Cap Design
-found beside an established software-delivery skill suite and how the two
-methods complemented one another.
+Read the [real-world usage and testing
+account](docs/real-world-usage-and-testing.md) for Fructal's self-application,
+an anonymized private software case, and the public
+[SHR-DAW](https://github.com/PaolaShultz/shr-daw) Raspberry Pi workflow audit,
+repair, and acceptance evidence.
 
 ## Validate and evaluate
 
