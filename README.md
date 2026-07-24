@@ -76,7 +76,10 @@ Read the [real-world usage and testing
 account](docs/real-world-usage-and-testing.md) for Fructal Cap Design's
 self-application, an anonymized private software case, and the public
 [SHR-DAW](https://github.com/PaolaShultz/shr-daw) Raspberry Pi workflow audit,
-repair, and acceptance evidence, plus the
+repair, and acceptance evidence. The SHR-DAW case also records a low-power-first
+development position: its editing, builds, tests, QA, and release work ran
+directly on the target Raspberry Pi rather than requiring a desktop
+workstation. The account also covers the
 [Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
 workflow and its explicit claim boundaries.
 

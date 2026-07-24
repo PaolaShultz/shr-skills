@@ -263,6 +263,39 @@ software workflow. The actor's physical position, musical position, live notes,
 routes, audio ownership, unfinished work, and external equipment state can all
 matter at once.
 
+### Low-power-first development position
+
+**Provided/reported:** The creator deliberately develops SHR-DAW on its target
+Raspberry Pi and describes the broader principle as a roughly
+20-watt-class development path: use Raspberry Pi-class computers for
+development and servers when they can reliably satisfy the real workload,
+rather than treating Xeon- or workstation-class hardware as the default. This
+is a principle of computational sufficiency, not a claim that small hardware is
+appropriate for every workload.
+
+**Observed:** The public
+[SHR-DAW README](https://github.com/PaolaShultz/shr-daw/blob/927eb05888951f9955c7d46e856ef7208149bc00/README.md#built-with-codex)
+states that the project was extended through Codex CLI directly on the target
+Raspberry Pi. The more detailed
+[development record](https://github.com/PaolaShultz/shr-daw/blob/927eb05888951f9955c7d46e856ef7208149bc00/docs/BUILD_WEEK.md#division-of-work)
+records that editing, inspection, Cargo compilation, tests, warning-denied
+Clippy, optimized release builds, QA, and release work all happened on the
+instrument's Raspberry Pi rather than through desktop development and
+cross-compilation.
+
+**Inference:** This is environmentally relevant because it demonstrates a
+working sufficiency path: a serious Rust, audio, MIDI, hardware, and systems
+project can be developed and accepted on the compact computer that owns the
+real workload. It supports evaluating compute and energy as design constraints
+instead of assuming that every development or server task requires
+workstation- or server-class hardware.
+
+**Open question:** The project has not measured wall-power consumption,
+comparative energy per completed task, embodied hardware impact, network and
+storage energy, or the server-side energy used by remote model inference.
+“Roughly 20-watt-class” therefore describes the local hardware path and
+engineering position; it is not a measured end-to-end energy or carbon claim.
+
 ### The complete musician/operator audit
 
 The public
