@@ -1,5 +1,7 @@
 # Fructal Contract and Evaluation Design
 
+This is the durable public design record for Fructal's executable contract.
+
 ## Purpose
 
 Resolve the six findings from the 2026-07-24 Review of Fructal Cap Design:

@@ -74,7 +74,7 @@ case begins when Fructal was explicitly used to review its own contract.
    and software components.
 
 The resulting
-[contract-evaluation design](https://github.com/PaolaShultz/shr-skills/blob/a03c709fe503d58f016613c777fdaaaa52316bd5/docs/superpowers/specs/2026-07-24-fructal-contract-validation-design.md)
+[contract-evaluation design](fructal-contract-validation-design.md)
 preserved the broad workflow-engineering scope, exclusive modes, Review's
 no-solution boundary, Redesign's no-modification boundary, Implement
 persistence, consequential-action safeguards, accessibility, and the
