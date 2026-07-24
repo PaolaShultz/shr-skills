@@ -70,6 +70,13 @@ then insert any problem or use the short prepared EV-charger example.
 The resulting conversation shows the method, problem, and evidence-backed
 response directly, with almost no explanatory framing.
 
+## Real-world usage and testing
+
+Read the [anonymized real-world usage and testing
+account](docs/real-world-usage-and-testing.md) to see what Fructal Cap Design
+found beside an established software-delivery skill suite and how the two
+methods complemented one another.
+
 ## Validate and evaluate
 
 Run deterministic package, contract-case, documentation, and demo checks:
