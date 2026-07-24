@@ -82,10 +82,10 @@ directly on the target Raspberry Pi rather than requiring a desktop
 workstation. The account also covers the
 [Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
 workflow and its explicit claim boundaries. A
-[prospective physical-product comparison
-protocol](docs/physical-product-comparison-protocol.md) records the planned
-skill-on/skill-off Raspberry Pi enclosure evaluation before either result is
-seen.
+[physical-product comparison
+record](docs/physical-product-comparison-protocol.md) preserves the prospective
+protocol, prompt-contamination recovery, frozen enclosure runs, and a blind
+three-arm comparison of no user skill, Superpowers, and Fructal Cap Design.
 
 ## Validate and evaluate
 

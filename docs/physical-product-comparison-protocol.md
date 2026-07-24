@@ -1,7 +1,7 @@
 # Physical-product design comparison protocol
 
-Status: **control and treatment execution runs frozen; blinded evaluation
-pending**
+Status: **first execution pair frozen with evaluation pending; three-arm
+execution extension frozen and blindly evaluated**
 
 This prospective protocol records how Fructal Cap Design is expected to affect
 the design of a real Raspberry Pi music-workstation enclosure before either
@@ -240,16 +240,27 @@ Current run state:
   of the frozen control result;
 - treatment run `ppd-001-treatment` is frozen in
   [`docs/evaluations/physical-product-comparison/ppd-001-treatment/`](evaluations/physical-product-comparison/ppd-001-treatment/);
-- both execution runs are frozen and blinded evaluation is pending; and
-- no blinded scoring or comparison finding has been produced.
+- both `ppd-001` execution runs are frozen and blinded evaluation is pending;
+- [protocol amendment
+  02](evaluations/physical-product-comparison/protocol-amendment-02.md) records
+  the host-skill isolation defect, dual-home recovery, and three-arm extension;
+- the [`ppd-002` three-arm
+  comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
+  preserves no-user-skill, Superpowers-only, and Fructal Cap Design-only
+  executions from a byte-identical prompt; and
+- its separate blind evaluator scored the three arms `38/40`, `39/40`, and
+  `38/40` respectively and treated the one-point spread as within judgment
+  uncertainty.
 
-After the runs, add immutable links or repository artifacts for:
+The preserved records include:
 
 - the frozen treatment and control prompts;
 - raw responses and original images;
 - model and tool metadata;
-- blinded and creator scores;
+- blind scores and the revealed arm mapping;
 - comparison findings; and
-- any physical prototype evidence produced later.
+- sanitized compressed execution traces.
+
+Any physical prototype evidence remains future work.
 
 Append results without rewriting these pre-run expectations or scoring rules.

@@ -1,6 +1,6 @@
 # Real-world usage and testing
 
-Fructal Cap Design has four distinct kinds of practical evidence:
+Fructal Cap Design has five distinct kinds of practical evidence:
 
 1. it was applied to its own execution contract and produced regression-tested
    improvements;
@@ -11,7 +11,10 @@ Fructal Cap Design has four distinct kinds of practical evidence:
    of [SHR-DAW](https://github.com/PaolaShultz/shr-daw);
 4. its capability cluster independently appeared in the experimental workflow
    of [Moj Sint](https://github.com/PaolaShultz/moj-sint), without evidence that
-   the Fructal Cap Design skill itself was invoked there.
+   the Fructal Cap Design skill itself was invoked there; and
+5. it was executed in a frozen three-arm physical-product comparison against
+   Superpowers and a no-user-skill control, then scored by a separate blind
+   evaluator.
 
 These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
@@ -592,22 +595,13 @@ This will strengthen the anonymous case only after both production states have
 been directly observed. Until then, the current public account makes no
 production-effectiveness claim.
 
-## Planned physical-product comparison
+## Physical-product comparison
 
 **Observed:** A
 [prospective comparison protocol](physical-product-comparison-protocol.md)
-records, before either result is evaluated, how the same Raspberry Pi
-music-workstation enclosure task will be run in isolated Fructal Cap Design and
-skill-off threads. It freezes the starting sources and skill hash, defines the
-expected Fructal Cap Design contribution, keeps one shared neutral task, and
-predefines equal-weight scoring for hardware fidelity, constraints, airflow,
-fan interaction, connectors, maintenance, musician interaction, evidence,
-verification, and visual-product coherence.
-
-**Inference:** This can become stronger evidence than another retrospective
-success account because the expected differentiators and scoring rules exist
-before the outputs. The written design contract is the primary comparison;
-render quality remains secondary because image generation is stochastic.
+recorded the initial Raspberry Pi music-workstation enclosure task, source
+commit, skill hash, expected contribution, and equal-weight scoring dimensions
+before the outputs were evaluated.
 
 **Observed:** Before the frozen control result was deliberately inspected, the
 creator noticed that the method-loaded prompt author had already shaped the
@@ -617,11 +611,43 @@ preserves that discovery without rewriting the protocol. It narrows the first
 pair to an execution comparison over a strong method-influenced brief and
 reserves a second raw-brief pair for testing constraint discovery.
 
-**Open question:** No run has been evaluated yet. One paired result would be a
-controlled case study, not general physical-product proof. Exact hardware
-measurements, CAD, printing, thermal and acoustic trials, electrical checks,
-cable trials, repeated service, and affected-musician use remain necessary
-before claiming that either enclosure works physically.
+**Observed:** A second isolation check found that a temporary `CODEX_HOME` did
+not remove host-discovered Superpowers skills. [Protocol amendment
+02](evaluations/physical-product-comparison/protocol-amendment-02.md) records
+the recovery: isolate both `HOME` and `CODEX_HOME`, verify the actual available
+skill set, preserve the contaminated output under its real condition, and run
+three arms from one byte-identical prompt.
+
+**Observed:** The completed [`ppd-002` three-arm
+comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
+preserves the prompts, responses, images, metadata, checksums, sanitized
+compressed session traces, anonymized judge inputs, and blind evaluation for:
+
+- no user skill;
+- Superpowers only; and
+- Fructal Cap Design only.
+
+The blind evaluator scored the arms `38/40`, `39/40`, and `38/40`
+respectively, with Superpowers receiving the 39. It explicitly treated the
+one-point spread as judgment uncertainty rather than superiority.
+
+**Observed:** Fructal Cap Design produced the strongest image-to-text
+agreement, explicit fan ownership and fail-full-speed behavior, and the only
+backlight-after-soft-shutdown check. It also chose a four-inch display that
+created a repeated-use/readability concern and did not fully express its own
+explicit untouched-state verification requirement.
+
+**Inference:** This run demonstrates viable execution and exposes useful
+differences, but it does not demonstrate a Fructal Cap Design score advantage.
+The 981-word prompt already demanded most of the eventual rubric, creating a
+likely ceiling effect before the skill conditions diverged.
+
+**Open question:** A direct comparison from the creator's rough request,
+without a model-authored comprehensive intermediate prompt, may better test
+constraint discovery. Exact hardware measurements, CAD, printing, thermal and
+acoustic trials, electrical checks, cable trials, repeated service, and
+affected-musician use remain necessary before claiming that any enclosure works
+physically.
 
 ## Overall limits
 
@@ -632,12 +658,13 @@ These cases provide:
 - one anonymous private-project implementation;
 - one public-project convergence case whose newest local history is not yet
   published;
+- one frozen, blindly evaluated three-arm physical-product case;
 - qualitative evidence from one affected creator/operator.
 
 They do not yet provide:
 
 - independent evaluation of Fructal Cap Design by an unrelated team;
-- controlled comparison against another method on identical work;
+- replicated comparisons or a demonstrated advantage over another method;
 - multiple affected actors across unrelated domains;
 - longitudinal outcome measurements;
 - a general success rate;
