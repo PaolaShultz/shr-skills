@@ -255,7 +255,11 @@ Current run state:
   executions from a byte-identical prompt; and
 - its separate blind evaluator scored the three arms `38/40`, `39/40`, and
   `38/40` respectively and treated the one-point spread as within judgment
-  uncertainty.
+  uncertainty; and
+- the [2026-07-24 workflow
+  postmortem](workflow-postmortem-2026-07-24.md) reconstructs the complete
+  experiment motion, ownership failures, recoveries, and remaining work without
+  rewriting the frozen records.
 
 The preserved records include:
 

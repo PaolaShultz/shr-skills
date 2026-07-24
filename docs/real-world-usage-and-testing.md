@@ -20,6 +20,11 @@ These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
 technical, physical, service, or operational domain.
 
+The [2026-07-24 workflow
+postmortem](workflow-postmortem-2026-07-24.md) separately reconstructs how this
+evidence was developed, where the working process failed, how the failures were
+detected and recovered, and which intended results remain incomplete.
+
 ## Evidence vocabulary
 
 This document keeps provenance and evidentiary status separate:

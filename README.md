@@ -85,7 +85,11 @@ workflow and its explicit claim boundaries. A
 [physical-product comparison
 record](docs/physical-product-comparison-protocol.md) preserves the prospective
 protocol, prompt-contamination recovery, frozen enclosure runs, and a blind
-three-arm comparison of no user skill, Superpowers, and Fructal Cap Design.
+three-arm comparison of no user skill, Superpowers, and Fructal Cap Design. The
+[2026-07-24 workflow
+postmortem](docs/workflow-postmortem-2026-07-24.md) reconstructs the complete
+motion, including missed assumptions, recovery decisions, ownership failures,
+preserved boundaries, and open work.
 
 ## Validate and evaluate
 
