@@ -22,15 +22,59 @@ The name comes from a tethered cap that satisfies a necessary constraint
 without obstructing normal use. Preserve the constraint; redesign the motion.
 An actor may be a person, team, service, device, or software component.
 
-## Choose the mode
+## Choose and hold the mode
 
-Honor the requested scope. When it is unclear, default to Review.
+Select the mode from the requested outcome and boundaries, not from the example
+prompt that invoked the skill.
 
 | Mode | Deliverable | Modify the system? |
 | --- | --- | --- |
-| **Review** | Evidence, findings, and questions | No |
-| **Redesign** | Review plus proposed motions and verification | No |
-| **Implement** | An approved change with appropriate tests | Yes |
+| **Review** | Evidence, findings, and decision questions | No |
+| **Redesign** | Review plus a replacement motion and verification plan | No |
+| **Implement** | An authorized change plus verification evidence | Yes |
+
+- Requests to review, audit, assess, or explain select Review.
+
+- Requests to propose, redesign, or plan without modification select Redesign.
+
+- Requests to fix, change, build, apply, or implement select Implement. An
+  explicit request to do the work, or approval of a prior proposal, authorizes
+  in-scope modification; do not ask for the same approval again.
+
+- When wording and boundaries conflict, honor the boundary. For example,
+  "redesign, but do not modify" selects Redesign.
+
+- When the requested outcome remains unclear, default to Review.
+
+State the selected mode. Hold its boundary: Review and Redesign never modify
+the system. Implement includes the analysis needed for a sound change and must
+not stop after reporting while safe, authorized work remains. Ask only when a
+material decision, missing authority, or consequential action remains outside
+the approved scope.
+
+## Execute the selected mode
+
+### Review
+
+Establish evidence, separate constraints from friction, rank the findings, and
+report decision questions. Do not prescribe a replacement motion or modify the
+system. Stop after the review deliverable.
+
+### Redesign
+
+Perform the Review analysis without stopping at its deliverable, then design
+the smallest coherent replacement motion and its verification plan. Do not
+modify the system or present the proposed motion as validated. Stop after the
+redesign deliverable.
+
+### Implement
+
+Complete enough Review and Redesign work to avoid a blind change. Inspect the
+owning system, its current decisions, and applicable instructions. Implement
+the smallest coherent improvement, preserving supported constraints and
+unrelated state. Add and run appropriate tests, trials, or checks. Verify the
+changed motion across relevant normal and recovery paths, then report the exact
+change, evidence, and residual uncertainty.
 
 ## Establish evidence
 
@@ -78,7 +122,10 @@ Look for:
 
 Rank friction by consequence, frequency, and recovery cost.
 
-## Redesign the motion
+## Redesign the motion in Redesign and Implement
+
+Apply this section only in Redesign and Implement. Review stops before
+prescribing a replacement motion.
 
 - Make the obvious action produce one clear primary result.
 
@@ -108,27 +155,33 @@ invent unrelated changes.
 
 ## Report and verify
 
-Scale the report to the task. Default to the smallest structure that preserves
-the evidence, constraints, proposal, risks, and decisions. Do not repeat the
-same evidence across sections. For each finding include:
+Scale the report to the task and selected mode. Use the smallest structure that
+preserves the necessary evidence without repeating it.
 
-1. intended outcome and observed sequence;
+For every mode, include:
+
+1. intended outcome and current sequence;
 
 2. evidence status;
 
 3. constraint, source, and confidence;
 
-4. friction and priority by consequence, frequency, and recovery cost;
+4. friction and priority by consequence, frequency, and recovery cost.
 
-5. smallest coherent improvement and what must remain unchanged;
+For Redesign, add the replacement motion, what must remain unchanged, risks,
+verification scenarios, and decisions required. Treat verification as a plan;
+do not claim the proposed motion has been validated.
 
-6. risk, verification scenarios, and decision required.
+For Implement, add the exact change, what remained unchanged, tests or other
+checks run, observed results, and residual risks or open questions. Verification
+must cover the applicable normal completion, cancellation, failure and retry,
+repeated use, interruption, actor handoff, accessibility, and untouched-state
+paths. Never claim real-world or affected-actor validation without that
+evidence.
 
-Verify normal completion, cancellation, failure and retry, repeated use,
-interruption, actor handoff, relevant accessibility paths, and untouched
-existing state. Keep visual or cosmetic observations separate from workflow
-findings. Refer an isolated defect to the appropriate debugging process instead
-of redesigning around it.
+Keep visual or cosmetic observations separate from workflow findings. Refer an
+isolated defect to the appropriate debugging process instead of redesigning
+around it.
 
 TASK
 [INSERT YOUR TASK HERE]

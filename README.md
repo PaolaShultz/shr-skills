@@ -18,8 +18,8 @@ Fructal Cap Design applies to:
 - services and operational processes;
 - multi-actor, approval, permission, and handoff workflows.
 
-It supports three explicit modes: review, redesign, and implementation. Review
-is the safe default when the requested mode is unclear.
+It supports three explicit modes: Review, Redesign, and Implement. Review is the
+safe default when the requested mode is unclear.
 
 ## Read the method
 
@@ -38,6 +38,8 @@ Then invoke it with:
 
 ```text
 Use $fructal to review this workflow.
+Use $fructal to redesign this workflow without modifying the system.
+Use $fructal to implement this workflow improvement and verify the change.
 ```
 
 The method is named **Fructal Cap Design**. Lowercase `fructal` is only its

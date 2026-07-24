@@ -1,4 +1,4 @@
 interface:
   display_name: "Fructal Cap Design"
   short_description: "Make constrained workflows feel natural"
-  default_prompt: "Use $fructal to review this workflow and report evidence-backed improvements without modifying the system."
+  default_prompt: "Use $fructal in Review, Redesign, or Implement mode according to my requested scope."
