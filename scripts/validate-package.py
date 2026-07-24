@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Fructal source package and an optional installed copy."""
+"""Validate the Fructal Cap Design source package and an optional installed copy."""
 
 from __future__ import annotations
 
@@ -17,6 +17,7 @@ EXPECTED_VERSION = "1.0.0"
 EXPECTED_SOURCE = (
     "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 )
+PUBLIC_DISPLAY_NAME = "Fructal Cap Design"
 EXPECTED_CASES = {
     "implicit_review": "Review",
     "implicit_redesign": "Redesign",
@@ -70,8 +71,8 @@ REQUIRED_SKILL_TEXT = {
     "actor-appropriate feedback contract is missing": (
         "services, devices,\n  and software components"
     ),
-    "Fructal-cap acceptance loop is missing": (
-        "## Run the Fructal-cap test in Redesign and Implement"
+    "Six-question cap acceptance loop is missing": (
+        "## Run the six-question cap test in Redesign and Implement"
     ),
     "concrete accessibility verification is missing": "assistive technology",
     "before-and-after behavior contract is missing": "before-and-after behavior",
@@ -168,6 +169,28 @@ def extract_demo_skill(text: str, validation: Validation) -> str:
 
     validation.failures.append("ChatGPT demo TASK slot is missing")
     return ""
+
+
+def validate_public_naming(repo: Path, validation: Validation) -> None:
+    public_paths = [
+        repo / "AGENTS.md",
+        repo / "README.md",
+        repo / "examples/chatgpt-web-demo.md",
+        repo / "scripts/run-live-evals.py",
+        repo / "skills/fructal/SKILL.md",
+        repo / "skills/fructal/agents/openai.yaml",
+        *sorted((repo / "docs").rglob("*.md")),
+    ]
+    short_name = re.escape(PUBLIC_DISPLAY_NAME.split()[0])
+    shortened = re.compile(rf"\b{short_name}\b(?! Cap Design)")
+
+    for path in public_paths:
+        text = load_text(path, validation, str(path.relative_to(repo)))
+        if shortened.search(text):
+            validation.failures.append(
+                "public prose shortens the Fructal Cap Design name: "
+                f"{path.relative_to(repo)}"
+            )
 
 
 def validate_contract_cases(
@@ -371,6 +394,7 @@ def validate_package(repo: Path, installed: Path | None) -> None:
         "skills/fructal" in readme_text,
         "README does not use the current install path",
     )
+    validate_public_naming(repo, validation)
 
     embedded_skill = extract_demo_skill(demo_text, validation)
     if embedded_skill:
@@ -406,7 +430,7 @@ def validate_package(repo: Path, installed: Path | None) -> None:
     validation.finish()
     word_count = len(skill_text.split())
     print(
-        "PASS: Fructal package "
+        "PASS: Fructal Cap Design package "
         f"{EXPECTED_VERSION} is valid "
         f"({case_count} contract cases, {word_count} skill words, "
         f"installed: {installed_state})."

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run isolated live Codex evaluations for the Fructal skill contract."""
+"""Run isolated live Codex evaluations for the Fructal Cap Design skill contract."""
 
 from __future__ import annotations
 
@@ -349,7 +349,7 @@ def main() -> None:
             )
     if failures:
         raise SystemExit(1)
-    print(f"PASS: {len(selected_ids)} live Fructal contract cases")
+    print(f"PASS: {len(selected_ids)} live Fructal Cap Design contract cases")
 
 
 if __name__ == "__main__":

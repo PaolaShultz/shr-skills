@@ -223,7 +223,7 @@ Do not remove supported constraints, hide consequential state changes, weaken
 accessibility or ownership, justify manipulation as a business requirement, or
 invent unrelated changes.
 
-## Run the Fructal-cap test in Redesign and Implement
+## Run the six-question cap test in Redesign and Implement
 
 Before finalizing a replacement motion, ask:
 

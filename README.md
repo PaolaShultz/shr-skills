@@ -73,8 +73,8 @@ response directly, with almost no explanatory framing.
 ## Real-world usage and testing
 
 Read the [real-world usage and testing
-account](docs/real-world-usage-and-testing.md) for Fructal's self-application,
-an anonymized private software case, and the public
+account](docs/real-world-usage-and-testing.md) for Fructal Cap Design's
+self-application, an anonymized private software case, and the public
 [SHR-DAW](https://github.com/PaolaShultz/shr-daw) Raspberry Pi workflow audit,
 repair, and acceptance evidence, plus the
 [Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental

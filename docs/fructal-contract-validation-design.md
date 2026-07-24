@@ -1,6 +1,7 @@
-# Fructal Contract and Evaluation Design
+# Fructal Cap Design Contract and Evaluation Design
 
-This is the durable public design record for Fructal's executable contract.
+This is the durable public design record for Fructal Cap Design's executable
+contract.
 
 ## Purpose
 
@@ -21,7 +22,7 @@ Resolve the six findings from the 2026-07-24 Review of Fructal Cap Design:
 The result must retain the current broad workflow-engineering scope, the three
 exclusive modes, the Review no-solution boundary, the Redesign no-modification
 boundary, Implement persistence, consequential-action safeguards, accessibility,
-and the restored Fructal-cap test.
+and the restored six-question cap test.
 
 ## Contract changes
 

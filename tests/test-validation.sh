@@ -142,6 +142,14 @@ mutate_or_record() {
 
 expect_success "canonical package" "${validator}" --repo "${repo_dir}"
 
+case_dir="$(copy_repo shortened-public-name)"
+replace_text "${case_dir}/README.md" \
+  "Fructal Cap Design is an open engineering method" \
+  "Fructal is an open engineering method"
+expect_failure "shortened public name" \
+  "public prose shortens the Fructal Cap Design name: README.md" \
+  "${validator}" --repo "${case_dir}"
+
 case_dir="$(copy_repo malformed-skill-yaml)"
 replace_text "${case_dir}/skills/fructal/SKILL.md" \
   "name: fructal" "name: [fructal"

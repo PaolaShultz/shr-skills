@@ -1,5 +1,8 @@
 # Repository instructions
 
+- Use `Fructal Cap Design` as the public name in prose. Reserve lowercase
+  `fructal` for the technical skill identifier, directory, metadata, and
+  `$fructal` invocation; never shorten the method's public name to one word.
 - Treat `skills/fructal/SKILL.md` as the canonical skill source.
 - Whenever the skill changes, review and update `README.md` and the embedded
   skill in `examples/chatgpt-web-demo.md`. Update

@@ -11,7 +11,7 @@ Fructal Cap Design has four distinct kinds of practical evidence:
    of [SHR-DAW](https://github.com/PaolaShultz/shr-daw);
 4. its capability cluster independently appeared in the experimental workflow
    of [Moj Sint](https://github.com/PaolaShultz/moj-sint), without evidence that
-   the Fructal skill itself was invoked there.
+   the Fructal Cap Design skill itself was invoked there.
 
 These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
@@ -33,7 +33,7 @@ Repository evidence can prove that a change and its checks exist. It cannot by
 itself prove that a musician, operator, customer, or other affected person finds
 the resulting workflow better.
 
-## Case 1: Fructal applied to itself
+## Case 1: Fructal Cap Design applied to itself
 
 ### Initial method and refinement
 
@@ -55,11 +55,12 @@ The public history then records successive refinements:
 | [`3814c5e`](https://github.com/PaolaShultz/shr-skills/commit/3814c5e2a97ee90479b8591ea1871f71074edc6b) | Restored the six-question design intelligence and deterministic validation |
 
 This history alone shows iterative development. The stronger self-application
-case begins when Fructal was explicitly used to review its own contract.
+case begins when Fructal Cap Design was explicitly used to review its own
+contract.
 
 ### The self-review
 
-**Observed:** A Fructal Review identified six material weaknesses:
+**Observed:** A Fructal Cap Design Review identified six material weaknesses:
 
 1. validation did not exercise Review, Redesign, Implement, or mixed-mode
    behavior;
@@ -78,7 +79,7 @@ The resulting
 preserved the broad workflow-engineering scope, exclusive modes, Review's
 no-solution boundary, Redesign's no-modification boundary, Implement
 persistence, consequential-action safeguards, accessibility, and the
-Fructal-cap test.
+six-question cap test.
 
 The review therefore did not treat every existing behavior as a defect. It
 separated protected capabilities from friction in the method's own execution
@@ -86,7 +87,7 @@ motion.
 
 ### From findings to executable contract
 
-The self-improvement sequence followed Fructal's own mode boundaries:
+The self-improvement sequence followed Fructal Cap Design's own mode boundaries:
 
 1. **Review:** inspect the existing skill, identify evidence, separate
    constraints from friction, and report six findings without changing the
@@ -100,19 +101,19 @@ The self-improvement sequence followed Fructal's own mode boundaries:
 
 The implementation landed in:
 
-- [Harden Fructal execution contracts](https://github.com/PaolaShultz/shr-skills/commit/c04722092035b27f624b30d7ee5cec9e4be22c56),
+- [Harden Fructal Cap Design execution contracts](https://github.com/PaolaShultz/shr-skills/commit/c04722092035b27f624b30d7ee5cec9e4be22c56),
   which added the package validator, 11 contract cases, deterministic regression
   tests, package provenance, installed-copy comparison, and the revised skill
   contract;
-- [Add Fructal live contract evaluations](https://github.com/PaolaShultz/shr-skills/commit/5c16bb548023bbd198c5b3e30b6cc8cebb3b635e),
+- [Add Fructal Cap Design live contract evaluations](https://github.com/PaolaShultz/shr-skills/commit/5c16bb548023bbd198c5b3e30b6cc8cebb3b635e),
   which added isolated Codex execution, structured result validation,
   disposable read-only and workspace-write fixtures, an offline fake runner,
   fixture-state verification, and classified runner, transport, schema,
   contract, and fixture failures.
 
-**Inference:** This demonstrates self-hosting capability. Fructal can inspect
-and improve the workflow through which Fructal itself is selected, authorized,
-executed, and verified.
+**Inference:** This demonstrates self-hosting capability. Fructal Cap Design can
+inspect and improve the workflow through which Fructal Cap Design itself is
+selected, authorized, executed, and verified.
 
 ### What self-application proves and does not prove
 
@@ -133,16 +134,16 @@ with [`Superpowers`](https://github.com/obra/superpowers), a structured
 software-delivery skill suite covering design, planning, debugging, test-driven
 development, verification, review, and branch completion.
 
-A separate read-only Fructal review inspected several connected workflows as
-complete constrained motions rather than as a collection of known features or
-defects. The review and the later authorized implementation were separate
-stages.
+A separate read-only Fructal Cap Design review inspected several connected
+workflows as complete constrained motions rather than as a collection of known
+features or defects. The review and the later authorized implementation were
+separate stages.
 
 The project remains intentionally anonymous. Its name, organization, private
 repository, routes, implementation identifiers, and unpublished test evidence
 are not linked from this public account.
 
-### What the Fructal review found
+### What the Fructal Cap Design review found
 
 **Observed:** The review identified multiple workflow-contract failures that the
 existing software-delivery process had not surfaced. The individual components
@@ -171,7 +172,7 @@ reliably. Its strongest mechanisms activate after the problem has been named:
 design approval, plans, root-cause debugging, focused tests, implementation
 discipline, review, and fresh verification.
 
-Fructal begins earlier and at a different boundary. It asks:
+Fructal Cap Design begins earlier and at a different boundary. It asks:
 
 - who initiates, continues, and experiences the result;
 - which constraints are necessary and what establishes each one;
@@ -188,10 +189,10 @@ tests pass and no single component appears broken.
 
 ### Division of responsibility
 
-**Observed:** Fructal supplied the discovery and preservation boundary. It
-separated necessary constraints from existing behavior, distinguished observed
-defects from product decisions and open questions, and identified the state and
-actor contracts that later changes had to preserve.
+**Observed:** Fructal Cap Design supplied the discovery and preservation
+boundary. It separated necessary constraints from existing behavior,
+distinguished observed defects from product decisions and open questions, and
+identified the state and actor contracts that later changes had to preserve.
 
 The subsequent authorized implementation used the software-delivery suite's
 strongest mechanisms: reproduce suspected defects, add focused behavioral
@@ -200,8 +201,8 @@ browser-visible behavior, and verify completion from fresh evidence.
 
 The practical sequence was:
 
-> Fructal discovers and bounds the right workflow problem; software-delivery
-> skills help implement the resulting change reliably.
+> Fructal Cap Design discovers and bounds the right workflow problem;
+> software-delivery skills help implement the resulting change reliably.
 
 ### Capability comparison
 
@@ -224,14 +225,14 @@ provide the necessary evidence.
 
 ### Practical result
 
-**Inference:** Fructal and structured software-delivery skills are more
-complementary than interchangeable.
+**Inference:** Fructal Cap Design and structured software-delivery skills are
+more complementary than interchangeable.
 
-Fructal was stronger in this case at problem-space coverage: discovering latent
-friction across actors, steps, state boundaries, recovery paths, and necessary
-constraints. The delivery suite was stronger at implementation mechanics:
-debugging a known failure, test-driven repair, repository discipline, review,
-and completion evidence.
+Fructal Cap Design was stronger in this case at problem-space coverage:
+discovering latent friction across actors, steps, state boundaries, recovery
+paths, and necessary constraints. The delivery suite was stronger at
+implementation mechanics: debugging a known failure, test-driven repair,
+repository discipline, review, and completion evidence.
 
 The case demonstrates why passing local tests does not prove that a complete
 workflow remains coherent. It also demonstrates why a broad workflow review is
@@ -388,9 +389,10 @@ Later public changes continued the same constrained-workflow pattern:
 operator reports that the repaired flows changed the system from a confusing
 state into workflows that now feel notably coherent and effective.
 
-This is affected-actor evidence under Fructal's own evidence contract. It is
-qualitative and comes from one deeply involved creator/operator, but it is
-stronger than an inference derived from tests or screenshots alone.
+This is affected-actor evidence under Fructal Cap Design's own evidence
+contract. It is qualitative and comes from one deeply involved
+creator/operator, but it is stronger than an inference derived from tests or
+screenshots alone.
 
 **Inference:** The positive experience is plausibly connected to the
 preservation-first repairs because the reported improvement corresponds to
@@ -411,26 +413,26 @@ observation.
 low-level headless Rust synthesizer under active sound research for later use
 as a distinct external SHR-DAW instrument.
 
-This is not presented as another direct Fructal application.
+This is not presented as another direct Fructal Cap Design application.
 
 **Observed:** A search across the complete 106-commit local repository history
-found no reference to `Fructal`. A separate search across the original Codex
-session logs for the project's foundation, oscillator research, experimental
-policy, and first five-family listening gate found no Fructal or
-`fructal-cap-design` invocation. Those sessions explicitly used general
-software-delivery workflows including brainstorming, planning, test-driven
-development, and verification.
+found no reference to `Fructal Cap Design`. A separate search across the
+original Codex session logs for the project's foundation, oscillator research,
+experimental policy, and first five-family listening gate found no
+Fructal Cap Design or `fructal-cap-design` invocation. Those sessions
+explicitly used general software-delivery workflows including brainstorming,
+planning, test-driven development, and verification.
 
-**Observed:** Fructal's
+**Observed:** Fructal Cap Design's
 [first public commit](https://github.com/PaolaShultz/shr-skills/commit/814898424a53767a9e1b49975a748c891da1f614)
 predates Moj Sint's
 [initial design and handoff](https://github.com/PaolaShultz/moj-sint/commit/1d828b57a9a48de8d6e1476bf6bb75168faa9043)
 by about fifteen hours. The case therefore does not show that Moj Sint
-independently invented the method before Fructal existed. It shows that a
-Fructal-like execution pattern emerged in another difficult workflow without a
-recorded invocation of the skill.
+independently invented the method before Fructal Cap Design existed. It shows
+that a method-like execution pattern emerged in another difficult workflow
+without a recorded invocation of the skill.
 
-### The primordial Fructal-like pattern
+### The primordial constrained-workflow pattern
 
 The
 [portable foundation](https://github.com/PaolaShultz/moj-sint/commit/1aa6a6bd9f8074c8391621820684267524365b67)
@@ -465,7 +467,7 @@ ranking, or macro-mapping a source.
 
 ### Capability correspondence
 
-| Moj Sint execution behavior | Corresponding Fructal capability |
+| Moj Sint execution behavior | Corresponding Fructal Cap Design capability |
 | --- | --- |
 | Real-time, ownership, provenance, hardware-evidence, and listening rules are separated from experimental mechanics | Constraint-source analysis |
 | Disposable research sources remain isolated from the production `Engine` | Explicit modification and mode boundaries |
@@ -495,26 +497,27 @@ experimental flow turned several previously messy sound-development motions
 into useful and coherent ones.
 
 **Inference:** Moj Sint is evidence that the capability cluster formalized by
-Fructal can be valuable outside conventional product-interface work. It also
-shows that parts of the cluster can emerge from a careful combination of domain
-constraints, human acceptance, disciplined implementation, and durable
-handoffs.
+Fructal Cap Design can be valuable outside conventional product-interface work.
+It also shows that parts of the cluster can emerge from a careful combination
+of domain constraints, human acceptance, disciplined implementation, and
+durable handoffs.
 
-**Unsupported claim:** Moj Sint was built by invoking Fructal, or proves that
-Fructal caused the improvement.
+**Unsupported claim:** Moj Sint was built by invoking Fructal Cap Design, or
+proves that Fructal Cap Design caused the improvement.
 
-**Open question:** A future explicitly logged Fructal Review, Redesign, or
-Implement cycle could compare the existing workflow with a deliberately
-Fructal-routed one and provide stronger causal evidence.
+**Open question:** A future explicitly logged Fructal Cap Design Review,
+Redesign, or Implement cycle could compare the existing workflow with one
+deliberately routed through Fructal Cap Design and provide stronger causal
+evidence.
 
 ## Combined evidence
 
 | Evidence layer | What it demonstrates | Main limitation |
 | --- | --- | --- |
-| Fructal applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
+| Fructal Cap Design applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
 | Anonymous private software project | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
 | Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
-| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal invocation | Convergence is not causal proof; the newest 50 commits are not yet public |
+| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; the newest 50 commits are not yet public |
 
 Together, the cases support a narrower, evidence-backed conclusion:
 
@@ -522,14 +525,14 @@ Together, the cases support a narrower, evidence-backed conclusion:
 > layer above disciplined implementation—first on itself, then in a private
 > software product, and then across a public Raspberry Pi
 > musician/operator system. Moj Sint separately shows the same capability
-> cluster emerging in experimental sound research without proving that Fructal
-> caused it.
+> cluster emerging in experimental sound research without proving that
+> Fructal Cap Design caused it.
 
-The cases do not show that Fructal replaces debugging, test-driven development,
-human-centered research, accessibility standards, safety analysis, or durable
-workflow runtimes. They show that Fructal can find and bound the complete
-workflow problem those specialist processes then help analyze, implement, or
-verify.
+The cases do not show that Fructal Cap Design replaces debugging, test-driven
+development, human-centered research, accessibility standards, safety analysis,
+or durable workflow runtimes. They show that Fructal Cap Design can find and
+bound the complete workflow problem those specialist processes then help
+analyze, implement, or verify.
 
 ## Future production comparison
 
@@ -569,7 +572,7 @@ These cases provide:
 
 They do not yet provide:
 
-- independent evaluation of Fructal by an unrelated team;
+- independent evaluation of Fructal Cap Design by an unrelated team;
 - controlled comparison against another method on identical work;
 - multiple affected actors across unrelated domains;
 - longitudinal outcome measurements;
