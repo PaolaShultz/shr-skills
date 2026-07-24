@@ -1,6 +1,6 @@
 # Physical-product design comparison protocol
 
-Status: **planned; no treatment or control result has been evaluated**
+Status: **control frozen; treatment pending; no comparison has been evaluated**
 
 This prospective protocol records how Fructal Cap Design is expected to affect
 the design of a real Raspberry Pi music-workstation enclosure before either
@@ -229,6 +229,13 @@ acoustic trials, connector and cable trials, service repetition, and affected
 musician use remain separate future evidence.
 
 ## Publication record
+
+Current run state:
+
+- control run `ppd-001-control` is frozen in
+  [`docs/evaluations/physical-product-comparison/ppd-001-control/`](evaluations/physical-product-comparison/ppd-001-control/);
+- treatment run is pending; and
+- no blinded scoring or comparison finding has been produced.
 
 After the runs, add immutable links or repository artifacts for:
 

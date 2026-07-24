@@ -1,0 +1,29 @@
+# Run metadata
+
+- Run ID: `ppd-001-control`
+- Fixed order: control first; treatment second and pending
+- Operational start timestamp: `2026-07-24T19:59:27+02:00` (`Europe/Zagreb`)
+- Completion timestamp: `2026-07-24T20:09:19+02:00` (`Europe/Zagreb`)
+- Exact text-model identifier: `unavailable` (the environment exposes only a family-level GPT-5 description, not an exact model identifier)
+- Reasoning level: `unavailable`
+- Image tool identifier: `image_gen.imagegen`
+- Underlying image-model identifier: `unavailable`
+- Shell/filesystem tools: available; unrestricted repository workspace access
+- Web browsing and network access: available
+- Image-generation capability: available
+- Git remote network access: available
+- Protocol repository commit before run: `b9eec17fd7886e96299075a420b856a80c32d104`
+- Frozen Fructal Cap Design source commit supplied in the prompt: `5efbd8a586cfed7538141e25111a247127ca092d`
+- Frozen skill SHA-256 supplied in the prompt: `11b11556b3092f3fa14b7dd81ecfd96bde635433cff20141d87603f36c48f171`
+- Frozen SHR-DAW source commit: `927eb05888951f9955c7d46e856ef7208149bc00`
+- Fructal Cap Design metadata ambiently visible: yes. The system-provided skill catalog exposed its public name, identifier, description, and local path; an automatically supplied memory summary also exposed repository conventions and prior-work metadata. This is recorded as possible control contamination.
+- Fructal Cap Design body opened: no
+- Fructal Cap Design invoked, quoted, imitated, or used: no
+- Other workflow-design, service-design, systems-design, or brainstorming skill used: no
+- Allowed image-generation skill used: yes, only for image-production instructions and generation
+- Interruption: none
+- Retry: none; one image-generation request produced one image
+- Tool failure: none
+- Image-generation elapsed time reported by the orchestration tool: `116.3 seconds`
+- Context loss: none observed
+- Required post-freeze repository validation: `git diff --check`, `scripts/validate.sh`, `tests/test-validation.sh`, and `tests/test-live-eval-harness.sh` all passed before archival staging
