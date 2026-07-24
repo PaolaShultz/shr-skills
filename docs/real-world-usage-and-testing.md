@@ -592,6 +592,29 @@ This will strengthen the anonymous case only after both production states have
 been directly observed. Until then, the current public account makes no
 production-effectiveness claim.
 
+## Planned physical-product comparison
+
+**Observed:** A
+[prospective comparison protocol](physical-product-comparison-protocol.md)
+records, before either result is evaluated, how the same Raspberry Pi
+music-workstation enclosure task will be run in isolated Fructal Cap Design and
+skill-off threads. It freezes the starting sources and skill hash, defines the
+expected Fructal Cap Design contribution, keeps one shared neutral task, and
+predefines equal-weight scoring for hardware fidelity, constraints, airflow,
+fan interaction, connectors, maintenance, musician interaction, evidence,
+verification, and visual-product coherence.
+
+**Inference:** This can become stronger evidence than another retrospective
+success account because the expected differentiators and scoring rules exist
+before the outputs. The written design contract is the primary comparison;
+render quality remains secondary because image generation is stochastic.
+
+**Open question:** No run has been evaluated yet. One paired result would be a
+controlled case study, not general physical-product proof. Exact hardware
+measurements, CAD, printing, thermal and acoustic trials, electrical checks,
+cable trials, repeated service, and affected-musician use remain necessary
+before claiming that either enclosure works physically.
+
 ## Overall limits
 
 These cases provide:
