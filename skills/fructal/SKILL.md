@@ -126,8 +126,12 @@ Look for:
 - controls that expose implementation or organizational internals;
 - lost input, selection, focus, physical position, context, or ownership;
 - defaults or automation that act before consequences are legible;
-- handoffs, delays, and cross-actor effects without clear status;
+- handoffs, delays, cross-channel context loss, source-of-truth drift, or
+  cross-actor effects without clear status;
 - errors without nearby recovery or retained work;
+- circular waits, stalled approvals, queue starvation, or unclear ownership that
+  prevents any actor from progressing;
+- accessibility needs treated as exceptional instead of part of normal use;
 - repeated decisions whose effort is not intrinsic to the task.
 
 Rank friction by consequence, frequency, and recovery cost.
@@ -140,21 +144,44 @@ prescribing a replacement motion.
 - Make the obvious action produce one clear primary result.
 - Create one coherent motion. This does not mean one click: preserve necessary
   decisions, but order them so their purpose and consequences are clear.
+  Minimize cognitive friction rather than raw clicks, steps, or controls.
 - Preserve explicit choices, entered work, location, and intent.
-- Make genuinely exclusive modes replace one another.
+- Make genuinely exclusive modes replace one another. Combine nested or
+  orthogonal modes only when their interaction remains obvious and safe.
 - Make defaults and automatic behavior legible before meaningful consequence.
+- Keep continuously relevant constraints and safety state legible without
+  obstructing unrelated work.
 - Do not treat setup, selection, authentication, or authorization as consent to
   a consequential action unless that intent is explicit.
 - Make destructive or externally consequential actions legible and require
-  exact actor intent. Do not add duplicate confirmation after that intent is
-  explicit. Make reversible actions easy to try and undo.
+  exact actor intent. Expose coupled consequential effects before commitment.
+  Do not add duplicate confirmation after that intent is explicit. Make
+  reversible actions easy to try and undo.
 - Put recovery beside failure and retain work wherever safe.
+- Reveal advanced choices, exception handling, and escalation progressively
+  instead of forcing them through the normal path.
+- Provide immediate feedback through a form every affected actor can perceive.
 - Prefer direct, inspectable control when it improves clarity; do not force it
   where automation, accessibility, or expert use requires another interaction.
 
 Do not remove supported constraints, hide consequential state changes, weaken
 accessibility or ownership, justify manipulation as a business requirement, or
 invent unrelated changes.
+
+## Run the Fructal-cap test in Redesign and Implement
+
+Before finalizing a replacement motion, ask:
+
+1. Does the obvious action produce one clear result?
+2. Is the motion coherent without hiding a necessary decision or consequence?
+3. Is each constraint visible or active when needed without obstructing
+   unrelated work?
+4. Are context, position, entered work, ownership, and intent preserved?
+5. Do feedback and recovery guide every affected actor back into motion?
+6. Is the remaining effort intrinsic to the outcome rather than the system?
+
+If any answer is no, revise the motion or state the supported unavoidable
+tradeoff. In Implement, repeat the test against observed verification results.
 
 ## Report and verify
 
@@ -173,12 +200,17 @@ For Redesign, add the replacement motion, what must remain unchanged, risks,
 verification scenarios, and any material decisions still required. Treat
 verification as a plan; do not claim the proposed motion has been validated.
 
+For Redesign and Implement, state relevant before-and-after behavior precisely.
+Their verification plans and checks must cover the applicable normal
+completion, cancellation, failure and retry, repeated use, interruption, actor
+handoff, cross-channel and source-of-truth continuity, stalled-progress or
+circular-wait paths, accessibility—including keyboard, assistive technology,
+sensory, reach, and motor paths—and untouched state.
+
 For Implement, add the exact change, what remained unchanged, tests or other
-checks run, observed results, and residual risks or open questions. Verification
-must cover the applicable normal completion, cancellation, failure and retry,
-repeated use, interruption, actor handoff, accessibility, and untouched-state
-paths. Never claim real-world or affected-actor validation without that
-evidence.
+checks run, observed results, and residual risks or open questions. Add focused
+checks for the actor-visible or system-observable contract. Never claim
+real-world or affected-actor validation without that evidence.
 
 Keep visual or cosmetic observations separate from workflow findings. Refer an
 isolated defect to an available debugging process; if none exists, apply

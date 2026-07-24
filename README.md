@@ -21,6 +21,10 @@ Fructal Cap Design applies to:
 It supports three explicit modes: Review, Redesign, and Implement. Review is the
 safe default when the requested mode is unclear.
 
+Review produces findings without proposing a replacement motion. Choose
+Redesign for a proposed replacement without modification, or Implement for an
+authorized change with verification.
+
 ## Read the method
 
 - [Skill source](skills/fructal/SKILL.md)
@@ -39,7 +43,7 @@ Then choose one form and replace the bracketed text:
 Review:
 
 ```text
-Use $fructal to review this constrained workflow without modifying it: [workflow]
+Use $fructal to review this constrained workflow and report findings only, without modifying it: [workflow]
 ```
 
 Redesign:

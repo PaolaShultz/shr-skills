@@ -7,4 +7,7 @@
 - Keep the ChatGPT demonstration task natural and short. Do not add response
   formatting, prioritization, evidence-labeling, or other instructions already
   supplied by the skill.
-- Run `scripts/check-chatgpt-demo-sync.sh` before committing a skill change.
+- Run `scripts/validate.sh` before committing a skill change.
+- Repository validation cannot prove an installed copy is current. After a
+  source change, deliberately synchronize or reinstall the active copy and
+  compare its skill and metadata with the source.
