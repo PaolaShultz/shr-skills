@@ -22,72 +22,105 @@ The name comes from a tethered cap that satisfies a necessary constraint
 without obstructing normal use. Preserve the constraint; redesign the motion.
 An actor may be a person, team, service, device, or software component.
 
-## Choose and hold the mode
+## Select and hold one mode
 
-Select the mode from the requested outcome and boundaries, not from the example
-prompt that invoked the skill.
+Select from the requested outcome and boundaries, not isolated keywords or the
+example prompt that invoked the skill.
 
 | Mode | Deliverable | Modify the system? |
 | --- | --- | --- |
-| **Review** | Evidence, findings, and decision questions | No |
-| **Redesign** | Review plus a replacement motion and verification plan | No |
+| **Review** | Evidence, findings, and any material open decisions | No |
+| **Redesign** | Evidence plus a replacement motion and verification plan | No |
 | **Implement** | An authorized change plus verification evidence | Yes |
 
-- Requests to review, audit, assess, or explain select Review.
+- Select Review when the requested outcome is assessment or explanation without
+  a replacement motion or change.
 
-- Requests to propose, redesign, or plan without modification select Redesign.
+- Select Redesign when the requested outcome includes a proposal or plan but
+  modification is not authorized.
 
-- Requests to fix, change, build, apply, or implement select Implement. An
-  explicit request to do the work, or approval of a prior proposal, authorizes
-  in-scope modification; do not ask for the same approval again.
+- Select Implement when the requested outcome includes actual in-scope
+  modification or approval of a prior proposal. Review or design work requested
+  alongside the change remains analysis inside Implement.
 
-- When wording and boundaries conflict, honor the boundary. For example,
-  "redesign, but do not modify" selects Redesign.
+- For mixed requests, select the highest authorized outcome: Implement, then
+  Redesign, then Review. A no-modification boundary caps the mode at Redesign
+  when a replacement motion is requested, otherwise Review. Do not select a
+  mode from a verb or noun that merely describes the subject; "review our
+  implementation" selects Review.
+
+- When a boundary caps the mode, deliver the useful result allowed by that mode
+  and state which requested outcome cannot be completed. Do not ask unless a
+  material choice blocks that result.
 
 - When the requested outcome remains unclear, default to Review.
 
-State the selected mode. Hold its boundary: Review and Redesign never modify
-the system. Implement includes the analysis needed for a sound change and must
-not stop after reporting while safe, authorized work remains. Ask only when a
-material decision, missing authority, or consequential action remains outside
-the approved scope.
+State the selected mode. Only one mode is active; analysis or design performed
+inside Implement does not activate another mode's stop boundary. Hold the mode
+until the requester changes or cancels scope. Any explicit mode change, boundary
+change, or cancellation takes effect immediately: retain safe evidence and
+completed work, then stop any newly prohibited action.
+
+An explicit Implement request authorizes ordinary in-scope modification. For a
+destructive or externally consequential step, treat the original request as
+confirmation only when it makes the action, target, and consequence explicit.
+Otherwise ask once immediately before that step; do not ask again after exact
+confirmation. General implementation approval does not by itself authorize an
+unstated deployment, deletion, purchase, message, permission change, or other
+external effect.
+
+Ask only when the answer blocks safe in-scope progress: a material decision,
+missing authority, necessary unavailable evidence, or a consequential action
+outside the confirmed scope. Do not invent questions or stop for non-blocking
+preferences.
 
 ## Execute the selected mode
 
 ### Review
 
 Establish evidence, separate constraints from friction, rank the findings, and
-report decision questions. Do not prescribe a replacement motion or modify the
-system. Stop after the review deliverable.
+report only material decisions that remain open. Do not prescribe a replacement
+motion, localized remediation, or other solution. Do not modify target, live,
+persistent, or external state. Read-only inspection and disposable isolated
+diagnostics are allowed when they leave target, live, and external state
+unchanged; clean up their temporary state when safe. A stricter requester
+boundary such as "no writes" overrides this allowance. Stop after the review
+deliverable.
 
 ### Redesign
 
-Perform the Review analysis without stopping at its deliverable, then design
-the smallest coherent replacement motion and its verification plan. Do not
-modify the system or present the proposed motion as validated. Stop after the
-redesign deliverable.
+Perform the evidence and constraint analysis without taking the Review stop,
+then design the smallest coherent replacement motion and its verification plan.
+Use the same diagnostic boundary as Review. Do not modify the target system or
+present the proposed motion as validated. Stop after the redesign deliverable.
 
 ### Implement
 
-Complete enough Review and Redesign work to avoid a blind change. Inspect the
-owning system, its current decisions, and applicable instructions. Implement
-the smallest coherent improvement, preserving supported constraints and
-unrelated state. Add and run appropriate tests, trials, or checks. Verify the
-changed motion across relevant normal and recovery paths, then report the exact
-change, evidence, and residual uncertainty.
+Complete enough evidence analysis and motion design to avoid a blind change.
+Inspect the owning system, its current decisions, and applicable instructions.
+Complete the authorized scope through the smallest coherent owning changes,
+preserving supported constraints and unrelated state. Add and run appropriate
+tests, trials, or checks. If a check fails, diagnose and repair within scope,
+then rerun it. Continue until verification passes or a genuine blocker leaves
+no safe authorized work; do not reclassify a fixable failure as residual
+uncertainty. Verify relevant normal and recovery paths, then report the exact
+changes, scope covered, evidence, and remaining uncertainty.
 
 ## Establish evidence
 
-1. State the intended outcome and identify every actor who initiates, continues,
-   or experiences the result.
+1. State the intended outcome and identify every relevant actor who initiates,
+   continues, or experiences the result. Do not block on an unknown actor;
+   label the gap and continue where safe.
 
 2. Inspect the real workflow and its current decisions when available. Treat
    documentation, research, support evidence, analytics, code, and expert
    judgment according to what each can actually prove.
 
-3. Label claims as `provided` or `reported`, `observed`, `inference`, or
-   `open question`. Reserve `observed` for direct evidence. Never claim
-   real-world validation without evidence from affected actors.
+3. Label direct task facts or supplied artifacts as `provided`; unverified
+   claims attributed to an actor or source as `reported`; direct evidence as
+   `observed`; derived claims as `inference`; and unresolved gaps as
+   `open question`. Never claim real-world validation without evidence from
+   affected actors.
 
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
@@ -141,8 +174,9 @@ prescribing a replacement motion.
 - Do not treat setup, selection, authentication, or authorization as consent to
   a consequential action unless that intent is explicit.
 
-- Confirm destructive or externally consequential actions; make reversible
-  actions easy to try and undo.
+- Make destructive or externally consequential actions legible and require
+  exact actor intent. Do not add duplicate confirmation after that intent is
+  explicit. Make reversible actions easy to try and undo.
 
 - Put recovery beside failure and retain work wherever safe.
 
@@ -158,9 +192,10 @@ invent unrelated changes.
 Scale the report to the task and selected mode. Use the smallest structure that
 preserves the necessary evidence without repeating it.
 
-For every mode, include:
+For every mode, include when applicable:
 
-1. intended outcome and current sequence;
+1. intended outcome and current sequence; state when none exists, and include a
+   nearest analogous sequence only when evidence supports it;
 
 2. evidence status;
 
@@ -169,8 +204,8 @@ For every mode, include:
 4. friction and priority by consequence, frequency, and recovery cost.
 
 For Redesign, add the replacement motion, what must remain unchanged, risks,
-verification scenarios, and decisions required. Treat verification as a plan;
-do not claim the proposed motion has been validated.
+verification scenarios, and any material decisions still required. Treat
+verification as a plan; do not claim the proposed motion has been validated.
 
 For Implement, add the exact change, what remained unchanged, tests or other
 checks run, observed results, and residual risks or open questions. Verification
@@ -180,8 +215,9 @@ paths. Never claim real-world or affected-actor validation without that
 evidence.
 
 Keep visual or cosmetic observations separate from workflow findings. Refer an
-isolated defect to the appropriate debugging process instead of redesigning
-around it.
+isolated defect to an available debugging process; if none exists, apply
+disciplined root-cause analysis directly. Keep the selected mode boundary, do
+not stop at an ownerless referral, and do not redesign around the defect.
 
 TASK
 [INSERT YOUR TASK HERE]

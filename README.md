@@ -34,12 +34,24 @@ Ask Codex:
 Install the skill from https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal
 ```
 
-Then invoke it with:
+Then choose one form and replace the bracketed text:
+
+Review:
 
 ```text
-Use $fructal to review this workflow.
-Use $fructal to redesign this workflow without modifying the system.
-Use $fructal to implement this workflow improvement and verify the change.
+Use $fructal to review this constrained workflow without modifying it: [workflow]
+```
+
+Redesign:
+
+```text
+Use $fructal to redesign this constrained workflow without modifying it: [workflow]
+```
+
+Implement:
+
+```text
+Use $fructal to implement and verify this constrained workflow change: [change]
 ```
 
 The method is named **Fructal Cap Design**. Lowercase `fructal` is only its
