@@ -609,6 +609,14 @@ success account because the expected differentiators and scoring rules exist
 before the outputs. The written design contract is the primary comparison;
 render quality remains secondary because image generation is stochastic.
 
+**Observed:** Before the frozen control result was deliberately inspected, the
+creator noticed that the method-loaded prompt author had already shaped the
+shared task with Fructal Cap Design-like coverage. The separate
+[prompt-author contamination amendment](evaluations/physical-product-comparison/protocol-amendment-01.md)
+preserves that discovery without rewriting the protocol. It narrows the first
+pair to an execution comparison over a strong method-influenced brief and
+reserves a second raw-brief pair for testing constraint discovery.
+
 **Open question:** No run has been evaluated yet. One paired result would be a
 controlled case study, not general physical-product proof. Exact hardware
 measurements, CAD, printing, thermal and acoustic trials, electrical checks,

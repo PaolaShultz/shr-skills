@@ -234,6 +234,9 @@ Current run state:
 
 - control run `ppd-001-control` is frozen in
   [`docs/evaluations/physical-product-comparison/ppd-001-control/`](evaluations/physical-product-comparison/ppd-001-control/);
+- [protocol amendment 01](evaluations/physical-product-comparison/protocol-amendment-01.md)
+  records prompt-author contamination identified before deliberate inspection
+  of the frozen control result;
 - treatment run is pending; and
 - no blinded scoring or comparison finding has been produced.
 
