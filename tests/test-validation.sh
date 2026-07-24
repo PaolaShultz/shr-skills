@@ -81,6 +81,56 @@ path.write_text("".join(line for line in lines if needle not in line))
 PY
 }
 
+delete_json_key() {
+  local file=$1
+  local item_index=$2
+  local key=$3
+  python3 - "${file}" "${item_index}" "${key}" <<'PY'
+from pathlib import Path
+import json
+import sys
+
+path = Path(sys.argv[1])
+item_index = int(sys.argv[2])
+key = sys.argv[3]
+data = json.loads(path.read_text())
+if key not in data[item_index]:
+    raise SystemExit(f"missing JSON key in {path}: {key}")
+del data[item_index][key]
+path.write_text(json.dumps(data, indent=2) + "\n")
+PY
+}
+
+delete_schema_required_field() {
+  local file=$1
+  local field=$2
+  python3 - "${file}" "${field}" <<'PY'
+from pathlib import Path
+import json
+import sys
+
+path = Path(sys.argv[1])
+field = sys.argv[2]
+data = json.loads(path.read_text())
+data["required"].remove(field)
+path.write_text(json.dumps(data, indent=2) + "\n")
+PY
+}
+
+add_unsupported_unique_items() {
+  local file=$1
+  python3 - "${file}" <<'PY'
+from pathlib import Path
+import json
+import sys
+
+path = Path(sys.argv[1])
+data = json.loads(path.read_text())
+data["properties"]["evidence_labels"]["uniqueItems"] = True
+path.write_text(json.dumps(data, indent=2) + "\n")
+PY
+}
+
 mutate_or_record() {
   local name=$1
   shift
@@ -171,6 +221,26 @@ replace_text "${case_dir}/tests/contract-cases.json" \
   '"expected_mode": "Review"' '"expected_mode": "Implement"'
 expect_failure "incorrect contract expectation" \
   "contract case implicit_review must expect Review" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo incomplete-live-case)"
+delete_json_key "${case_dir}/tests/contract-cases.json" 0 "task"
+expect_failure "incomplete live contract case" \
+  "contract case implicit_review is missing task" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo incomplete-live-schema)"
+delete_schema_required_field \
+  "${case_dir}/tests/live-output-schema.json" "stop_reason"
+expect_failure "incomplete live output schema" \
+  "live output schema required fields differ" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo unsupported-live-schema-keyword)"
+add_unsupported_unique_items \
+  "${case_dir}/tests/live-output-schema.json"
+expect_failure "unsupported live output schema keyword" \
+  "live output schema uses unsupported keyword uniqueItems" \
   "${validator}" --repo "${case_dir}"
 
 installed_dir="${temporary_root}/installed/fructal"

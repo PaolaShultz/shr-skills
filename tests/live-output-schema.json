@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "selected_mode",
+    "modification_attempted",
+    "replacement_motion_proposed",
+    "confirmation_requested",
+    "read_inspection_allowed",
+    "evidence_labels",
+    "stop_reason"
+  ],
+  "properties": {
+    "selected_mode": {
+      "type": "string",
+      "enum": [
+        "Review",
+        "Redesign",
+        "Implement"
+      ]
+    },
+    "modification_attempted": {
+      "type": "boolean"
+    },
+    "replacement_motion_proposed": {
+      "type": "boolean"
+    },
+    "confirmation_requested": {
+      "type": "boolean"
+    },
+    "read_inspection_allowed": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "not_applicable"
+      ]
+    },
+    "evidence_labels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "provided",
+          "reported",
+          "observed",
+          "inference",
+          "open question"
+        ]
+      }
+    },
+    "stop_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

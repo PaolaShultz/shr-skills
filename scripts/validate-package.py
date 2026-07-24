@@ -26,6 +26,34 @@ EXPECTED_CASES = {
     "implement_capped_by_no_modification": "Redesign",
     "implementation_is_subject_only": "Review",
     "mode_change_to_review": "Review",
+    "consequential_confirmation": "Implement",
+    "evidence_dimensions": "Review",
+    "incidental_read_metadata": "Review",
+}
+LIVE_CASE_FIELDS = {
+    "task",
+    "expected_modification",
+    "expected_replacement",
+    "expected_confirmation",
+    "expected_read_inspection",
+    "required_evidence_labels",
+    "sandbox",
+}
+LIVE_RESULT_FIELDS = {
+    "selected_mode",
+    "modification_attempted",
+    "replacement_motion_proposed",
+    "confirmation_requested",
+    "read_inspection_allowed",
+    "evidence_labels",
+    "stop_reason",
+}
+EVIDENCE_LABELS = {
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question",
 }
 REQUIRED_SKILL_TEXT = {
     "mode selection contract is missing": "## Select and hold one mode",
@@ -116,6 +144,16 @@ def normalized_nonblank_lines(text: str) -> list[str]:
     return [line for line in text.splitlines() if line.strip()]
 
 
+def contains_mapping_key(value: Any, key: str) -> bool:
+    if isinstance(value, dict):
+        return key in value or any(
+            contains_mapping_key(child, key) for child in value.values()
+        )
+    if isinstance(value, list):
+        return any(contains_mapping_key(child, key) for child in value)
+    return False
+
+
 def extract_demo_skill(text: str, validation: Validation) -> str:
     lines = text.splitlines()
     try:
@@ -161,9 +199,50 @@ def validate_contract_cases(
         case = found.get(case_id)
         if case is None:
             validation.failures.append(f"missing contract case {case_id}")
-        elif case.get("expected_mode") != expected_mode:
+            continue
+        if case.get("expected_mode") != expected_mode:
             validation.failures.append(
                 f"contract case {case_id} must expect {expected_mode}"
+            )
+        for field in sorted(LIVE_CASE_FIELDS):
+            if field not in case:
+                validation.failures.append(
+                    f"contract case {case_id} is missing {field}"
+                )
+        if not isinstance(case.get("task"), str) or not case.get("task", "").strip():
+            validation.failures.append(
+                f"contract case {case_id} task must be nonempty"
+            )
+        for field in (
+            "expected_modification",
+            "expected_replacement",
+            "expected_confirmation",
+        ):
+            if not isinstance(case.get(field), bool):
+                validation.failures.append(
+                    f"contract case {case_id} {field} must be boolean"
+                )
+        if case.get("expected_read_inspection") not in {
+            "yes",
+            "no",
+            "not_applicable",
+        }:
+            validation.failures.append(
+                f"contract case {case_id} expected_read_inspection is invalid"
+            )
+        labels = case.get("required_evidence_labels")
+        if (
+            not isinstance(labels, list)
+            or any(not isinstance(label, str) for label in labels)
+            or not set(labels).issubset(EVIDENCE_LABELS)
+            or len(labels) != len(set(labels))
+        ):
+            validation.failures.append(
+                f"contract case {case_id} required_evidence_labels are invalid"
+            )
+        if case.get("sandbox") not in {"read-only", "workspace-write"}:
+            validation.failures.append(
+                f"contract case {case_id} sandbox is invalid"
             )
 
     extras = sorted(set(found) - set(EXPECTED_CASES))
@@ -174,6 +253,40 @@ def validate_contract_cases(
     return len(found)
 
 
+def validate_live_output_schema(
+    path: Path, validation: Validation
+) -> None:
+    text = load_text(path, validation, "tests/live-output-schema.json")
+    if not text:
+        return
+    try:
+        schema = json.loads(text)
+    except json.JSONDecodeError as error:
+        validation.failures.append(f"invalid live-output-schema.json: {error}")
+        return
+    if not isinstance(schema, dict):
+        validation.failures.append("live output schema must be an object")
+        return
+    validation.require(
+        set(schema.get("required", [])) == LIVE_RESULT_FIELDS,
+        "live output schema required fields differ",
+    )
+    properties = schema.get("properties")
+    validation.require(
+        isinstance(properties, dict)
+        and set(properties) == LIVE_RESULT_FIELDS,
+        "live output schema properties differ",
+    )
+    validation.require(
+        schema.get("additionalProperties") is False,
+        "live output schema must reject additional properties",
+    )
+    validation.require(
+        not contains_mapping_key(schema, "uniqueItems"),
+        "live output schema uses unsupported keyword uniqueItems",
+    )
+
+
 def validate_package(repo: Path, installed: Path | None) -> None:
     validation = Validation()
     skill_path = repo / "skills/fructal/SKILL.md"
@@ -181,6 +294,7 @@ def validate_package(repo: Path, installed: Path | None) -> None:
     readme_path = repo / "README.md"
     demo_path = repo / "examples/chatgpt-web-demo.md"
     cases_path = repo / "tests/contract-cases.json"
+    live_schema_path = repo / "tests/live-output-schema.json"
 
     validation.require(
         not (repo / "skills/fructal-cap-design").exists(),
@@ -267,6 +381,7 @@ def validate_package(repo: Path, installed: Path | None) -> None:
         )
 
     case_count = validate_contract_cases(cases_path, validation)
+    validate_live_output_schema(live_schema_path, validation)
 
     installed_state = "not requested"
     if installed is not None:
