@@ -60,8 +60,11 @@ short Codex skill identifier and invocation name.
 ## Demonstrate it in ChatGPT Web
 
 The [ChatGPT Web demonstration](examples/chatgpt-web-demo.md) requires no
-installation. Its deliberately plain task lets the embedded skill—not extra
-prompt instructions—determine the analysis and response structure.
+installation. Copy one prompt containing the complete skill and a task slot,
+then insert any problem or use the short prepared EV-charger example.
+
+The resulting conversation shows the method, problem, and evidence-backed
+response directly, with almost no explanatory framing.
 
 ## Origin and independence
 

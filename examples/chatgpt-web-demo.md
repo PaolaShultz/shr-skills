@@ -1,12 +1,11 @@
-# Try Fructal Cap Design in ChatGPT
+# See it in action
 
-Copy this prompt into ChatGPT. The task is intentionally plain so the skill,
-not prompt scaffolding, determines the analysis and response structure.
+Copy the prompt below into ChatGPT.
 
-````text
+```text
 Use the SKILL below to execute the TASK.
 
-<<<BEGIN_FRUCTAL_SKILL>>>
+SKILL
 ---
 name: fructal
 description: Use when a technical, operational, physical, service, or multi-actor workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when changing such a workflow must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
@@ -36,19 +35,24 @@ example prompt that invoked the skill.
 
 - Select Review when the requested outcome is assessment or explanation without
   a replacement motion or change.
+
 - Select Redesign when the requested outcome includes a proposal or plan but
   modification is not authorized.
+
 - Select Implement when the requested outcome includes actual in-scope
   modification or approval of a prior proposal. Review or design work requested
   alongside the change remains analysis inside Implement.
+
 - For mixed requests, select the highest authorized outcome: Implement, then
   Redesign, then Review. A no-modification boundary caps the mode at Redesign
   when a replacement motion is requested, otherwise Review. Do not select a
   mode from a verb or noun that merely describes the subject; "review our
   implementation" selects Review.
+
 - When a boundary caps the mode, deliver the useful result allowed by that mode
   and state which requested outcome cannot be completed. Do not ask unless a
   material choice blocks that result.
+
 - When the requested outcome remains unclear, default to Review.
 
 State the selected mode. Only one mode is active; analysis or design performed
@@ -107,14 +111,17 @@ changes, scope covered, evidence, and remaining uncertainty.
 1. State the intended outcome and identify every relevant actor who initiates,
    continues, or experiences the result. Do not block on an unknown actor;
    label the gap and continue where safe.
+
 2. Inspect the real workflow and its current decisions when available. Treat
    documentation, research, support evidence, analytics, code, and expert
    judgment according to what each can actually prove.
+
 3. Label direct task facts or supplied artifacts as `provided`; unverified
    claims attributed to an actor or source as `reported`; direct evidence as
    `observed`; derived claims as `inference`; and unresolved gaps as
    `open question`. Never claim real-world validation without evidence from
    affected actors.
+
 4. Trace the path through feedback, cancellation, failure, retry, interruption,
    handoff, delayed outcome, return, and repeated use where applicable.
 
@@ -131,12 +138,19 @@ a constraint.
 Look for:
 
 - mutually exclusive modes that remain layered;
+
 - surprising labels, hidden side effects, or unclear responsibility;
+
 - controls that expose implementation or organizational internals;
+
 - lost input, selection, focus, physical position, context, or ownership;
+
 - defaults or automation that act before consequences are legible;
+
 - handoffs, delays, and cross-actor effects without clear status;
+
 - errors without nearby recovery or retained work;
+
 - repeated decisions whose effort is not intrinsic to the task.
 
 Rank friction by consequence, frequency, and recovery cost.
@@ -147,17 +161,25 @@ Apply this section only in Redesign and Implement. Review stops before
 prescribing a replacement motion.
 
 - Make the obvious action produce one clear primary result.
+
 - Create one coherent motion. This does not mean one click: preserve necessary
   decisions, but order them so their purpose and consequences are clear.
+
 - Preserve explicit choices, entered work, location, and intent.
+
 - Make genuinely exclusive modes replace one another.
+
 - Make defaults and automatic behavior legible before meaningful consequence.
+
 - Do not treat setup, selection, authentication, or authorization as consent to
   a consequential action unless that intent is explicit.
+
 - Make destructive or externally consequential actions legible and require
   exact actor intent. Do not add duplicate confirmation after that intent is
   explicit. Make reversible actions easy to try and undo.
+
 - Put recovery beside failure and retain work wherever safe.
+
 - Prefer direct, inspectable control when it improves clarity; do not force it
   where automation, accessibility, or expert use requires another interaction.
 
@@ -174,8 +196,11 @@ For every mode, include when applicable:
 
 1. intended outcome and current sequence; state when none exists, and include a
    nearest analogous sequence only when evidence supports it;
+
 2. evidence status;
+
 3. constraint, source, and confidence;
+
 4. friction and priority by consequence, frequency, and recovery cost.
 
 For Redesign, add the replacement motion, what must remain unchanged, risks,
@@ -193,12 +218,21 @@ Keep visual or cosmetic observations separate from workflow findings. Refer an
 isolated defect to an available debugging process; if none exists, apply
 disciplined root-cause analysis directly. Keep the selected mode boundary, do
 not stop at an ownerless referral, and do not redesign around the defect.
-<<<END_FRUCTAL_SKILL>>>
+
 TASK
+[INSERT YOUR TASK HERE]
+```
 
-Redesign this EV-charger workflow:
+Replace `[INSERT YOUR TASK HERE]` with any technical, operational, physical,
+service, or other constrained workflow you want Fructal Cap Design to address.
 
-When a driver plugs in before paying, the charger makes them unplug, pay, and
-reconnect. If payment fails, it shows an error code and locks the connector for
-60 seconds without explaining why.
-````
+Or use the prepared example below:
+
+```text
+An EV charger must authenticate payment before power flows. If the driver
+connects the cable before paying, the charger rejects the session and requires
+unplugging, paying, and reconnecting. When payment fails, it shows an error code
+and locks the connector for 60 seconds without explaining why. Improve the
+workflow without weakening electrical safety, payment authorization, connector
+security, or fraud controls.
+```
