@@ -1,6 +1,7 @@
 # Physical-product design comparison protocol
 
-Status: **control frozen; treatment pending; no comparison has been evaluated**
+Status: **control and treatment execution runs frozen; blinded evaluation
+pending**
 
 This prospective protocol records how Fructal Cap Design is expected to affect
 the design of a real Raspberry Pi music-workstation enclosure before either
@@ -237,7 +238,9 @@ Current run state:
 - [protocol amendment 01](evaluations/physical-product-comparison/protocol-amendment-01.md)
   records prompt-author contamination identified before deliberate inspection
   of the frozen control result;
-- treatment run is pending; and
+- treatment run `ppd-001-treatment` is frozen in
+  [`docs/evaluations/physical-product-comparison/ppd-001-treatment/`](evaluations/physical-product-comparison/ppd-001-treatment/);
+- both execution runs are frozen and blinded evaluation is pending; and
 - no blinded scoring or comparison finding has been produced.
 
 After the runs, add immutable links or repository artifacts for:
