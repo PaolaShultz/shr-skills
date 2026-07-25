@@ -529,10 +529,15 @@ The recovery deliberately preserved:
 5. Freeze ownership and invocation order for a combined Fructal Cap Design plus
    Superpowers arm.
 6. Execute that arm only after its controls are fixed.
-7. Run a later four-condition discovery comparison from the creator's minimally
+7. Label the combined and layered evaluation as a first methodological pass
+   whose primary purpose is hardening experimental rules and boundaries.
+8. Design a second pass with randomized, anonymous human review of every
+   design, preserving small imperfections, whole-product failures, and
+   prompt/rubric omissions that model evaluation did not surface.
+9. Run a later four-condition discovery comparison from the creator's minimally
    wrapped rough request.
-8. Complete the pending blind evaluation of the original `ppd-001` pair.
-9. Build CAD and physical prototypes before making enclosure fit, thermal,
+10. Complete the pending blind evaluation of the original `ppd-001` pair.
+11. Build CAD and physical prototypes before making enclosure fit, thermal,
    acoustic, electrical, service, or musician-acceptance claims.
 
 ## Claim boundary

@@ -87,6 +87,48 @@ existing byte-identical `ppd-002` execution prompt. A later discovery study
 should begin from the creator's rough request and include all intended
 conditions prospectively.
 
+## First-pass and second-pass boundary
+
+**Provided:** The current experiment is a first methodological pass. Its main
+purpose is to expose and harden prompt, isolation, skill-interaction,
+attribution, evaluation, and publication boundaries.
+
+The combined arm and layered prompt/design/image evaluation belong to this
+first pass. Their result may improve the protocol, but it should not be treated
+as the last word on product quality.
+
+**Reported:** Model evaluation does not reliably catch every small imperfection
+or whole-product failure visible to an affected human reviewer. Some problems
+may be present in the design even when the original request, generated prompt,
+and frozen rubric did not imply them strongly enough for a model evaluator to
+surface them.
+
+A second experimental pass should therefore include structured human review of
+every design. It should:
+
+1. freeze each design before human inspection;
+2. present designs in randomized anonymous order before revealing the skill
+   condition or model scores;
+3. preserve the reviewer’s original observations separately from later
+   interpretation;
+4. identify subtle imperfections, whole-product failures, missing requirements,
+   and interactions that the prompt or rubric did not anticipate;
+5. classify whether each finding exposes a design defect, prompt omission,
+   rubric omission, image-instruction problem, renderer error, delivery/QC
+   miss, preference, or open question;
+6. keep human judgment separate from measured physical evidence; and
+7. append newly discovered evaluation dimensions rather than retroactively
+   rewriting the first-pass rubric.
+
+Human review is not a substitute for CAD, measurement, prototyping, thermal or
+acoustic testing, connector trials, service repetition, or broader musician
+testing. It is a necessary affected-actor layer that can detect product-level
+meaning and failure modes that automated comparison may miss.
+
+**Inference:** The first pass hardens how the experiment asks and attributes
+questions. The second pass tests whether those hardened rules still produce
+designs that remain coherent when a person examines each product as a whole.
+
 ## “A million bees stung me”
 
 The Croatian expression *milijun me pčela ubolo* carries two kinds of
@@ -128,7 +170,10 @@ The next session may:
 3. extract and evaluate each existing image-generation instruction;
 4. decide and freeze the combined-arm execution contract;
 5. execute the combined arm only after those controls exist; and
-6. append results without rewriting `ppd-002`.
+6. append results without rewriting `ppd-002`;
+7. label that completed comparison as the first methodological pass; and
+8. preserve the second-pass human-review requirement as future work rather
+   than silently treating model evaluation as complete product review.
 
 It must not treat the existing one-point spread as method superiority or erase
 the package-level result merely because attribution is incomplete.

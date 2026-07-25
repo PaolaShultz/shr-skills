@@ -248,7 +248,9 @@ Current run state:
   03](evaluations/physical-product-comparison/protocol-amendment-03.md) records
   the need to score prompt, written design, image instruction, rendered image,
   and complete package separately, and reserves a combined Fructal Cap Design
-  plus Superpowers arm;
+  plus Superpowers arm; it also defines the current work as a first
+  methodological pass and reserves structured human review of every design for
+  a second pass;
 - the [`ppd-002` three-arm
   comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
   preserves no-user-skill, Superpowers-only, and Fructal Cap Design-only
