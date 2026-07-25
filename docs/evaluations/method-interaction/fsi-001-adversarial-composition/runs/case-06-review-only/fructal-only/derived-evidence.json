@@ -1,0 +1,29 @@
+{
+  "added_files": [],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-06-review-only",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "fructal-only",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "b170d62cf443dc29ca0df57930ab94cc8a229410",
+  "fixture_head_before": "b170d62cf443dc29ca0df57930ab94cc8a229410",
+  "local_remote_refs_added": [],
+  "modified_files": [],
+  "removed_files": [],
+  "skill_read_events": [
+    "fructal"
+  ],
+  "unique_skill_first_read_order": [
+    "fructal"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "added_files": [],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-01-small-implementation",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "fructal-only",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "dba065a4c34152e64f868a4086aaaeea6de4f6c7",
+  "fixture_head_before": "dba065a4c34152e64f868a4086aaaeea6de4f6c7",
+  "local_remote_refs_added": [],
+  "modified_files": [
+    "textfmt.py"
+  ],
+  "removed_files": [],
+  "skill_read_events": [],
+  "unique_skill_first_read_order": []
+}

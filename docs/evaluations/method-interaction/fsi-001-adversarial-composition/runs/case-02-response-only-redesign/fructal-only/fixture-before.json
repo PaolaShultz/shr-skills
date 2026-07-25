@@ -1,0 +1,12 @@
+{
+  "branch": "main",
+  "head": "50323d0f8625cb138039056651fb5ac8bd445add",
+  "index_diff": "",
+  "log": "50323d0f8625cb138039056651fb5ac8bd445add\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "",
+  "tracked_files": "100644 18f6c10b19776d37ab12212c9b3f928adc032dbd 0\tworkflow.md",
+  "tree_hashes": {
+    "workflow.md": "d16b64725268b09048f4934e2b16d7033f445f1bfe1252ade5611af6ec0e0aee"
+  },
+  "worktree_diff": ""
+}

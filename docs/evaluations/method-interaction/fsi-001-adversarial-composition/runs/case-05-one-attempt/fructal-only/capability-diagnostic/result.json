@@ -1,0 +1,19 @@
+{
+  "actual_user_skills": [
+    "fructal"
+  ],
+  "elapsed_seconds": 5.772,
+  "exit_status": 0,
+  "expected_user_skills": [
+    "fructal"
+  ],
+  "no_other_user_skills": true,
+  "system_skills": [
+    "imagegen",
+    "openai-docs",
+    "plugin-creator",
+    "skill-creator",
+    "skill-installer"
+  ],
+  "trace_archived": true
+}

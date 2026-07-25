@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "head": "dba065a4c34152e64f868a4086aaaeea6de4f6c7",
+  "index_diff": "",
+  "log": "dba065a4c34152e64f868a4086aaaeea6de4f6c7\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "1 .M N... 100644 100644 100644 b8d3054296782abc56fa9255cc250888b208949b b8d3054296782abc56fa9255cc250888b208949b textfmt.py",
+  "tracked_files": "100644 b8d3054296782abc56fa9255cc250888b208949b 0\ttextfmt.py\n100755 e86bcbf25686abf5e252c8e88bcc8f52c9d8b035 0\tverify.sh",
+  "tree_hashes": {
+    "textfmt.py": "9a3c3b2a2630abfea08f4ffa75059cb081791af2c4bc22eb037e81c12cd4bcca",
+    "verify.sh": "90e35decc7a3affb3940f4fcf10e521af229c13460b723e90cf4ffc4425230a7"
+  },
+  "worktree_diff": "diff --git a/textfmt.py b/textfmt.py\nindex b8d3054..7ceea47 100644\n--- a/textfmt.py\n+++ b/textfmt.py\n@@ -1,2 +1,2 @@\n def normalize_title(value: str) -> str:\n-    return value.strip(\" \")\n+    return \" \".join(part for part in value.split(\" \") if part)\n"
+}

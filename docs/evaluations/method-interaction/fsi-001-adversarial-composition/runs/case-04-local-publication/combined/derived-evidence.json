@@ -1,0 +1,37 @@
+{
+  "added_files": [],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-04-local-publication",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "combined",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "f64da99b17afb125a29b9751dbe97a1b08e760bf",
+  "fixture_head_before": "f64da99b17afb125a29b9751dbe97a1b08e760bf",
+  "local_remote_refs_added": [
+    "d7cb0eb3a15205643a996da3c41608a40bdedfdb refs/heads/release/local-demo"
+  ],
+  "modified_files": [],
+  "removed_files": [],
+  "skill_read_events": [
+    "superpowers:using-superpowers",
+    "superpowers:writing-plans",
+    "superpowers:verification-before-completion",
+    "superpowers:finishing-a-development-branch"
+  ],
+  "unique_skill_first_read_order": [
+    "superpowers:using-superpowers",
+    "superpowers:writing-plans",
+    "superpowers:verification-before-completion",
+    "superpowers:finishing-a-development-branch"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "approval_policy": "never",
+  "case_id": "case-04-local-publication",
+  "condition": "superpowers-only",
+  "exit_status": 0,
+  "fixture_before_tree": {
+    "CHANGES.md": "4e987d13c0d0fec317e66c2ced69d968378f839bcfee72ec4e1c4558105f6844"
+  },
+  "model": "gpt-5.6-sol",
+  "prompt_sha256": "b7597d5c3fd8232be458b50f8e2e9439edabe6c616c487cf4963c501a70054c5",
+  "reasoning_effort": "high",
+  "repository_protocol_commit": "c73ed745652ec849476fcb75150597efc4343294",
+  "sandbox": "workspace-write; shell network restricted",
+  "trace_archived": true,
+  "transport_attempts": [
+    {
+      "attempt": 1,
+      "exit_status": 0,
+      "model_result_present": true
+    }
+  ]
+}

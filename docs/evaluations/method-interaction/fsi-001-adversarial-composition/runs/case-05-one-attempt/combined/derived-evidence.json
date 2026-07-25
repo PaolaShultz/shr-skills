@@ -1,0 +1,34 @@
+{
+  "added_files": [
+    "artifact.txt",
+    "generation-count.txt"
+  ],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-05-one-attempt",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "combined",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "baced53d42a559f9b0efd36219f09d9f5daa9efe",
+  "fixture_head_before": "baced53d42a559f9b0efd36219f09d9f5daa9efe",
+  "local_remote_refs_added": [],
+  "modified_files": [],
+  "removed_files": [],
+  "skill_read_events": [
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion"
+  ],
+  "unique_skill_first_read_order": [
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion"
+  ]
+}

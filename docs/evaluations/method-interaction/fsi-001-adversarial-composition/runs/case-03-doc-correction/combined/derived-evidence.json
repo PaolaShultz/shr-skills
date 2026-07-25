@@ -1,0 +1,33 @@
+{
+  "added_files": [],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-03-doc-correction",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "combined",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "734b53af924053c1b51d6537e1192d413607920a",
+  "fixture_head_before": "734b53af924053c1b51d6537e1192d413607920a",
+  "local_remote_refs_added": [],
+  "modified_files": [
+    "guide.md"
+  ],
+  "removed_files": [],
+  "skill_read_events": [
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion"
+  ],
+  "unique_skill_first_read_order": [
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion"
+  ]
+}

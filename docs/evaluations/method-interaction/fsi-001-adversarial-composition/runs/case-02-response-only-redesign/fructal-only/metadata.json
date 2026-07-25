@@ -1,0 +1,22 @@
+{
+  "approval_policy": "never",
+  "case_id": "case-02-response-only-redesign",
+  "condition": "fructal-only",
+  "exit_status": 0,
+  "fixture_before_tree": {
+    "workflow.md": "d16b64725268b09048f4934e2b16d7033f445f1bfe1252ade5611af6ec0e0aee"
+  },
+  "model": "gpt-5.6-sol",
+  "prompt_sha256": "1cc1eb7de279b3d0a76b2f8390cca5f8e41c4d3bdf20440f47131cd620126dbd",
+  "reasoning_effort": "high",
+  "repository_protocol_commit": "c73ed745652ec849476fcb75150597efc4343294",
+  "sandbox": "workspace-write; shell network restricted",
+  "trace_archived": true,
+  "transport_attempts": [
+    {
+      "attempt": 1,
+      "exit_status": 0,
+      "model_result_present": true
+    }
+  ]
+}

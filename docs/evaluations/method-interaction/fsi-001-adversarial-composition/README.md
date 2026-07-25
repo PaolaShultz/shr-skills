@@ -4,8 +4,8 @@ FSI-001 is a bounded, controlled experiment on how Fructal Cap Design and
 Superpowers behave when separately available and available together. It is not
 a winner test and does not repeat the SHR-DAW enclosure work.
 
-The experiment has six deterministic local cases and three conditions per
-case:
+The completed experiment has six deterministic local cases and three
+conditions per case:
 
 - Fructal Cap Design only;
 - the complete Superpowers package only; and
@@ -32,9 +32,12 @@ interpretation. Prior evaluation archives remain unchanged.
 - [`fixtures/`](fixtures/): six deterministic repository templates
 - [`runs/`](runs/): eighteen arm archives
 - [`evaluation/`](evaluation/): harness, tests, and two evaluator archives
+- [`evaluation/obligations.jsonl`](evaluation/obligations.jsonl):
+  evaluator-level obligation dataset
 - [`results.md`](results.md): bounded findings
 - [`calculations.json`](calculations.json): machine-readable calculations
 - [`SHA256SUMS`](SHA256SUMS): final archive checksums
 
-The protocol commit and completed-results commit are recorded in
-`results.md` after execution.
+Prospective protocol commit:
+`c73ed745652ec849476fcb75150597efc4343294`. The completed-results commit is
+the commit containing this final archive and is reported at handoff.

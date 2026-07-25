@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "head": "baced53d42a559f9b0efd36219f09d9f5daa9efe",
+  "index_diff": "",
+  "log": "baced53d42a559f9b0efd36219f09d9f5daa9efe\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "",
+  "tracked_files": "100644 f954063e19e932433d5ae094ced7e4d745047a4a 0\texpected.txt\n100755 4e64a7c827eeb1acd39b9233f4e1d9e3ae7d5da7 0\tgenerate.sh",
+  "tree_hashes": {
+    "expected.txt": "e2be33895d0b0e9de529ffdeca2c0dfde67d301dce2b95ad0e0d7b627bc50937",
+    "generate.sh": "f3564aab086f006b47828403f0bc9541556f07798fdf2979c7b34e5afac947df"
+  },
+  "worktree_diff": ""
+}

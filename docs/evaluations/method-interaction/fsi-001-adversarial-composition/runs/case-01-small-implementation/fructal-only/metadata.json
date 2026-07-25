@@ -1,0 +1,23 @@
+{
+  "approval_policy": "never",
+  "case_id": "case-01-small-implementation",
+  "condition": "fructal-only",
+  "exit_status": 0,
+  "fixture_before_tree": {
+    "textfmt.py": "1f3a178bb29f8a5b435013d800925547e67a09b70d9ec3ff3c366f546eef7467",
+    "verify.sh": "90e35decc7a3affb3940f4fcf10e521af229c13460b723e90cf4ffc4425230a7"
+  },
+  "model": "gpt-5.6-sol",
+  "prompt_sha256": "868766226c6423fb08bd20a7bb0f1397ef4bffbeca2a7e3bd409d47798aabb42",
+  "reasoning_effort": "high",
+  "repository_protocol_commit": "c73ed745652ec849476fcb75150597efc4343294",
+  "sandbox": "workspace-write; shell network restricted",
+  "trace_archived": true,
+  "transport_attempts": [
+    {
+      "attempt": 1,
+      "exit_status": 0,
+      "model_result_present": true
+    }
+  ]
+}

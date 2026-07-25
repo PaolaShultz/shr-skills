@@ -1,0 +1,9 @@
+{
+  "elapsed_seconds": 677.116,
+  "evaluator_id": "evaluator-1",
+  "exit_status": 0,
+  "identities_available": false,
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "trace_archived": true
+}

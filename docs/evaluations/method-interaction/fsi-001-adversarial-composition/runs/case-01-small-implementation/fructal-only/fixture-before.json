@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "head": "dba065a4c34152e64f868a4086aaaeea6de4f6c7",
+  "index_diff": "",
+  "log": "dba065a4c34152e64f868a4086aaaeea6de4f6c7\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "",
+  "tracked_files": "100644 b8d3054296782abc56fa9255cc250888b208949b 0\ttextfmt.py\n100755 e86bcbf25686abf5e252c8e88bcc8f52c9d8b035 0\tverify.sh",
+  "tree_hashes": {
+    "textfmt.py": "1f3a178bb29f8a5b435013d800925547e67a09b70d9ec3ff3c366f546eef7467",
+    "verify.sh": "90e35decc7a3affb3940f4fcf10e521af229c13460b723e90cf4ffc4425230a7"
+  },
+  "worktree_diff": ""
+}

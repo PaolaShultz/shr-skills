@@ -94,6 +94,12 @@ attribution. Its separate
 extension](docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/cross-renderer/zit-001/)
 re-renders all four frozen designs with a second image system while preserving
 both byte-identical and renderer-adapted prompt conditions. The
+[FSI-001 adversarial method-composition
+experiment](docs/evaluations/method-interaction/fsi-001-adversarial-composition/)
+tests six deterministic local workflows with Fructal Cap Design,
+Superpowers, and both packages together, including isolated skill diagnostics,
+two anonymous evaluators, obligation-level evidence, conflict incidence,
+suppression, cost, and recovery. The
 [2026-07-24 workflow
 postmortem](docs/workflow-postmortem-2026-07-24.md) reconstructs the complete
 motion, including missed assumptions, recovery decisions, orchestration

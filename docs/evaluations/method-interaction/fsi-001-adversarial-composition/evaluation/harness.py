@@ -11,6 +11,7 @@ import io
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import tarfile
@@ -650,6 +651,33 @@ def readable_event_sequence(events_path: Path) -> str:
     return "\n".join(lines)
 
 
+def anonymize_text(text: str) -> str:
+    replacements = (
+        ("Fructal Cap Design", "Contract A"),
+        ("fructal-only", "contract-a-only"),
+        ("Superpowers", "Contract B"),
+        ("superpowers-only", "contract-b-only"),
+        ("superpowers:", "contract-b:"),
+        ("/superpowers/skills/", "/contract-b/skills/"),
+        ("/.codex/superpowers/", "/.codex/contract-b/"),
+        ("/skills/fructal/", "/skills/contract-a/"),
+    )
+    for source, target in replacements:
+        text = text.replace(source, target)
+    text = re.sub(r"\bfructal\b", "contract-a", text)
+    text = re.sub(r"\bsuperpowers\b", "contract-b", text)
+    return text
+
+
+def copy_anonymized(source: Path, destination: Path) -> None:
+    if source.suffix == ".gz":
+        with gzip.open(source, "rt") as handle:
+            text = handle.read()
+        destination.write_bytes(deterministic_gzip(anonymize_text(text).encode()))
+    else:
+        destination.write_text(anonymize_text(source.read_text()))
+
+
 def extract_run_metrics(events_path: Path, elapsed: float) -> dict[str, Any]:
     metrics: dict[str, Any] = {
         "elapsed_seconds": round(elapsed, 3),
@@ -879,7 +907,15 @@ def build_evaluator_workspace(destination: Path) -> None:
                 "metadata.json",
                 "cleanup.json",
             ):
-                shutil.copy2(source / name, target / name)
+                if name == "metadata.json":
+                    metadata = json.loads((source / name).read_text())
+                    metadata.pop("condition", None)
+                    metadata["arm_label"] = label
+                    (target / name).write_text(
+                        json.dumps(metadata, indent=2, sort_keys=True) + "\n"
+                    )
+                else:
+                    copy_anonymized(source / name, target / name)
 
 
 def run_evaluator(evaluator_id: str) -> str:

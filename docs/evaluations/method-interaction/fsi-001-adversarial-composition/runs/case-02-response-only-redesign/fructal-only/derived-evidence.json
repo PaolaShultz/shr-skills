@@ -1,0 +1,29 @@
+{
+  "added_files": [],
+  "approval_pause_observed": false,
+  "approval_policy": "never",
+  "case_id": "case-02-response-only-redesign",
+  "cleanup": {
+    "auth_state_removed": true,
+    "temporary_root_removed": true
+  },
+  "condition": "fructal-only",
+  "evaluator_question_counts": [
+    0,
+    0
+  ],
+  "exit_status": 0,
+  "fixture_branch_after": "main",
+  "fixture_branch_before": "main",
+  "fixture_head_after": "50323d0f8625cb138039056651fb5ac8bd445add",
+  "fixture_head_before": "50323d0f8625cb138039056651fb5ac8bd445add",
+  "local_remote_refs_added": [],
+  "modified_files": [],
+  "removed_files": [],
+  "skill_read_events": [
+    "fructal"
+  ],
+  "unique_skill_first_read_order": [
+    "fructal"
+  ]
+}

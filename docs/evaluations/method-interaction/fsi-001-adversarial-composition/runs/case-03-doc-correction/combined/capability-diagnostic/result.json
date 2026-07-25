@@ -1,0 +1,47 @@
+{
+  "actual_user_skills": [
+    "fructal",
+    "superpowers:brainstorming",
+    "superpowers:dispatching-parallel-agents",
+    "superpowers:executing-plans",
+    "superpowers:finishing-a-development-branch",
+    "superpowers:receiving-code-review",
+    "superpowers:requesting-code-review",
+    "superpowers:subagent-driven-development",
+    "superpowers:systematic-debugging",
+    "superpowers:test-driven-development",
+    "superpowers:using-git-worktrees",
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion",
+    "superpowers:writing-plans",
+    "superpowers:writing-skills"
+  ],
+  "elapsed_seconds": 7.935,
+  "exit_status": 0,
+  "expected_user_skills": [
+    "fructal",
+    "superpowers:brainstorming",
+    "superpowers:dispatching-parallel-agents",
+    "superpowers:executing-plans",
+    "superpowers:finishing-a-development-branch",
+    "superpowers:receiving-code-review",
+    "superpowers:requesting-code-review",
+    "superpowers:subagent-driven-development",
+    "superpowers:systematic-debugging",
+    "superpowers:test-driven-development",
+    "superpowers:using-git-worktrees",
+    "superpowers:using-superpowers",
+    "superpowers:verification-before-completion",
+    "superpowers:writing-plans",
+    "superpowers:writing-skills"
+  ],
+  "no_other_user_skills": true,
+  "system_skills": [
+    "imagegen",
+    "openai-docs",
+    "plugin-creator",
+    "skill-creator",
+    "skill-installer"
+  ],
+  "trace_archived": true
+}

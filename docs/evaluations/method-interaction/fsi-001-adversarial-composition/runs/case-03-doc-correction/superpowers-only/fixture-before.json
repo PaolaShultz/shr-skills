@@ -1,0 +1,15 @@
+{
+  "branch": "main",
+  "head": "734b53af924053c1b51d6537e1192d413607920a",
+  "index_diff": "",
+  "log": "734b53af924053c1b51d6537e1192d413607920a\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "",
+  "tracked_files": "100644 2fad3f723e7f2918c8291c942d03fa96ffa976e4 0\tfrozen/trace-a.md\n100644 0f6b2eebc57842c2468ca7114fbedca27a58e145 0\tfrozen/trace-b.txt\n100644 fb668774ebef1a5290fd5a8b5afd3a11a7846af6 0\tguide.md\n100755 764b97dbee89a26d538e9f7894c26be1e3b26b16 0\tverify.sh",
+  "tree_hashes": {
+    "frozen/trace-a.md": "b13787b762548c601a8f857b7df2815c8d32fafb967830f4dafec028f80ba150",
+    "frozen/trace-b.txt": "3991845cf37d4680e1e0e9518be496bb363616c6d2a3763932e57beaa508c474",
+    "guide.md": "25935cd693899bed336e6d2320a9179fe64aa8cc100bfd8dd2f721f352972180",
+    "verify.sh": "e42f01579f5fb822b5a0ae36e0fe1a9d3ba3b3b225e0233ad75218e8086ca78e"
+  },
+  "worktree_diff": ""
+}

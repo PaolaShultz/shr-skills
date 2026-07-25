@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 163.085,
+  "token_counter_semantics": "Codex CLI turn.completed usage",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 136448,
+    "input_tokens": 154851,
+    "output_tokens": 5709,
+    "reasoning_output_tokens": 3706
+  }
+}

@@ -149,6 +149,32 @@ class HarnessTests(unittest.TestCase):
             ],
         )
 
+    def test_evaluator_workspace_redacts_method_identities(self):
+        harness = load_harness()
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary) / "workspace"
+            harness.build_evaluator_workspace(workspace)
+            forbidden = (
+                "Fructal Cap Design",
+                "Superpowers",
+                "fructal-only",
+                "superpowers-only",
+                "/skills/fructal/",
+                "/superpowers/skills/",
+            )
+            for path in workspace.rglob("*"):
+                if not path.is_file():
+                    continue
+                if path.suffix == ".gz":
+                    import gzip
+
+                    with gzip.open(path, "rt") as handle:
+                        text = handle.read()
+                else:
+                    text = path.read_text()
+                for marker in forbidden:
+                    self.assertNotIn(marker, text, f"{marker} in {path}")
+
 
 if __name__ == "__main__":
     unittest.main()

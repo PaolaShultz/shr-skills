@@ -1,0 +1,424 @@
+{
+  "combined_better_than_both_singles": [
+    "case-04-local-publication"
+  ],
+  "combined_skill_reads": {
+    "contract_a_case_ids": [
+      "case-02-response-only-redesign"
+    ],
+    "contract_a_not_read_cases": 5,
+    "contract_a_read_cases": 1,
+    "contract_b_case_ids": [
+      "case-01-small-implementation",
+      "case-02-response-only-redesign",
+      "case-03-doc-correction",
+      "case-04-local-publication",
+      "case-05-one-attempt",
+      "case-06-review-only"
+    ],
+    "contract_b_read_cases": 6,
+    "read_order": {
+      "case-01-small-implementation": [
+        "Contract B"
+      ],
+      "case-02-response-only-redesign": [
+        "Contract B",
+        "Contract A"
+      ],
+      "case-03-doc-correction": [
+        "Contract B"
+      ],
+      "case-04-local-publication": [
+        "Contract B"
+      ],
+      "case-05-one-attempt": [
+        "Contract B"
+      ],
+      "case-06-review-only": [
+        "Contract B"
+      ]
+    }
+  },
+  "condition_totals": {
+    "combined": {
+      "elapsed_seconds": 566.055,
+      "input_tokens": 1277988,
+      "output_tokens": 19673
+    },
+    "fructal-only": {
+      "elapsed_seconds": 305.449,
+      "input_tokens": 608614,
+      "output_tokens": 10914
+    },
+    "superpowers-only": {
+      "elapsed_seconds": 477.38,
+      "input_tokens": 1019027,
+      "output_tokens": 16127
+    }
+  },
+  "evaluator_agreement": {
+    "behavioral_conflict": {
+      "agree": 16,
+      "disagree": 2
+    },
+    "precedence": {
+      "agree": 9,
+      "disagree": 9
+    },
+    "severity": {
+      "agree": 6,
+      "disagree": 12
+    },
+    "static_conflict": {
+      "agree": 12,
+      "disagree": 6
+    },
+    "task_success": {
+      "agree": 18,
+      "disagree": 0
+    }
+  },
+  "evaluator_summaries": {
+    "evaluator-1": {
+      "behavioral_conflict": {
+        "no": 16,
+        "yes": 2
+      },
+      "obligation_status": {
+        "explicitly superseded by task instructions": 63,
+        "redundantly duplicated": 3,
+        "satisfied": 166,
+        "violated": 29
+      },
+      "obligation_status_by_contract": {
+        "A:explicitly superseded by task instructions": 3,
+        "A:satisfied": 113,
+        "A:violated": 19,
+        "B:explicitly superseded by task instructions": 60,
+        "B:redundantly duplicated": 3,
+        "B:satisfied": 53,
+        "B:violated": 10
+      },
+      "obligations_total": 261,
+      "precedence": {
+        "Contract A": 5,
+        "silent suppression": 1,
+        "synthesis": 4,
+        "task instruction": 8
+      },
+      "severity": {
+        "blocking": 2,
+        "costly": 2,
+        "harmless": 2,
+        "none": 12
+      },
+      "static_conflict": {
+        "yes": 18
+      },
+      "task_success": {
+        "no": 2,
+        "partial": 3,
+        "yes": 13
+      }
+    },
+    "evaluator-2": {
+      "behavioral_conflict": {
+        "no": 18
+      },
+      "obligation_status": {
+        "explicitly superseded by task instructions": 28,
+        "satisfied": 130,
+        "silently suppressed": 6,
+        "violated": 20
+      },
+      "obligation_status_by_contract": {
+        "A:satisfied": 81,
+        "A:violated": 18,
+        "B:explicitly superseded by task instructions": 28,
+        "B:satisfied": 49,
+        "B:silently suppressed": 6,
+        "B:violated": 2
+      },
+      "obligations_total": 184,
+      "precedence": {
+        "silent suppression": 5,
+        "task instruction": 13
+      },
+      "severity": {
+        "blocking": 2,
+        "costly": 2,
+        "harmless": 14
+      },
+      "static_conflict": {
+        "no": 6,
+        "yes": 12
+      },
+      "task_success": {
+        "no": 2,
+        "partial": 3,
+        "yes": 13
+      }
+    }
+  },
+  "invalid_runs": 0,
+  "run_metrics": {
+    "case-01-small-implementation": {
+      "combined": {
+        "cached_input_tokens": 176128,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 56.304,
+        "input_tokens": 193905,
+        "output_tokens": 2121,
+        "reasoning_output_tokens": 1034
+      },
+      "fructal-only": {
+        "cached_input_tokens": 141056,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 49.89,
+        "input_tokens": 155627,
+        "output_tokens": 1604,
+        "reasoning_output_tokens": 510
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 174080,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 54.056,
+        "input_tokens": 191625,
+        "output_tokens": 1907,
+        "reasoning_output_tokens": 745
+      }
+    },
+    "case-02-response-only-redesign": {
+      "combined": {
+        "cached_input_tokens": 82688,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 145.708,
+        "input_tokens": 113600,
+        "output_tokens": 5276,
+        "reasoning_output_tokens": 3005
+      },
+      "fructal-only": {
+        "cached_input_tokens": 26112,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 55.087,
+        "input_tokens": 34822,
+        "output_tokens": 2026,
+        "reasoning_output_tokens": 516
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 136448,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 163.085,
+        "input_tokens": 154851,
+        "output_tokens": 5709,
+        "reasoning_output_tokens": 3706
+      }
+    },
+    "case-03-doc-correction": {
+      "combined": {
+        "cached_input_tokens": 125184,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 33.275,
+        "input_tokens": 136560,
+        "output_tokens": 925,
+        "reasoning_output_tokens": 248
+      },
+      "fructal-only": {
+        "cached_input_tokens": 77568,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 23.864,
+        "input_tokens": 92525,
+        "output_tokens": 720,
+        "reasoning_output_tokens": 222
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 118016,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 39.394,
+        "input_tokens": 135251,
+        "output_tokens": 1038,
+        "reasoning_output_tokens": 377
+      }
+    },
+    "case-04-local-publication": {
+      "combined": {
+        "cached_input_tokens": 463872,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 197.46,
+        "input_tokens": 515927,
+        "output_tokens": 7031,
+        "reasoning_output_tokens": 3529
+      },
+      "fructal-only": {
+        "cached_input_tokens": 115968,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 103.845,
+        "input_tokens": 137867,
+        "output_tokens": 3612,
+        "reasoning_output_tokens": 2486
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 189184,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 95.904,
+        "input_tokens": 208207,
+        "output_tokens": 3645,
+        "reasoning_output_tokens": 2061
+      }
+    },
+    "case-05-one-attempt": {
+      "combined": {
+        "cached_input_tokens": 99840,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 61.027,
+        "input_tokens": 118349,
+        "output_tokens": 1894,
+        "reasoning_output_tokens": 1087
+      },
+      "fructal-only": {
+        "cached_input_tokens": 73472,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 43.643,
+        "input_tokens": 95298,
+        "output_tokens": 1859,
+        "reasoning_output_tokens": 662
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 146432,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 66.933,
+        "input_tokens": 158913,
+        "output_tokens": 1972,
+        "reasoning_output_tokens": 982
+      }
+    },
+    "case-06-review-only": {
+      "combined": {
+        "cached_input_tokens": 173824,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 72.281,
+        "input_tokens": 199647,
+        "output_tokens": 2426,
+        "reasoning_output_tokens": 692
+      },
+      "fructal-only": {
+        "cached_input_tokens": 82688,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 29.12,
+        "input_tokens": 92475,
+        "output_tokens": 1093,
+        "reasoning_output_tokens": 400
+      },
+      "superpowers-only": {
+        "cached_input_tokens": 151552,
+        "compatible_counter_semantics": "Codex CLI turn.completed usage",
+        "elapsed_seconds": 58.008,
+        "input_tokens": 170180,
+        "output_tokens": 1856,
+        "reasoning_output_tokens": 785
+      }
+    }
+  },
+  "task_success_by_arm": {
+    "case-01-small-implementation/combined": "yes",
+    "case-01-small-implementation/fructal-only": "yes",
+    "case-01-small-implementation/superpowers-only": "yes",
+    "case-02-response-only-redesign/combined": "yes",
+    "case-02-response-only-redesign/fructal-only": "yes",
+    "case-02-response-only-redesign/superpowers-only": "yes",
+    "case-03-doc-correction/combined": "yes",
+    "case-03-doc-correction/fructal-only": "yes",
+    "case-03-doc-correction/superpowers-only": "yes",
+    "case-04-local-publication/combined": "partial",
+    "case-04-local-publication/fructal-only": "no",
+    "case-04-local-publication/superpowers-only": "no",
+    "case-05-one-attempt/combined": "yes",
+    "case-05-one-attempt/fructal-only": "yes",
+    "case-05-one-attempt/superpowers-only": "yes",
+    "case-06-review-only/combined": "partial",
+    "case-06-review-only/fructal-only": "yes",
+    "case-06-review-only/superpowers-only": "partial"
+  },
+  "task_success_consensus": {
+    "no": 2,
+    "partial": 3,
+    "yes": 13
+  },
+  "token_comparison_boundary": "Only FSI-001 Codex CLI turn.completed fields are compared; older evaluation counters are excluded.",
+  "transport_retries": 0,
+  "valid_runs": 18,
+  "within_case_overhead": {
+    "case-01-small-implementation": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 6.414,
+        "input_tokens": 38278,
+        "output_tokens": 517
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": 2.248,
+        "input_tokens": 2280,
+        "output_tokens": 214
+      }
+    },
+    "case-02-response-only-redesign": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 90.621,
+        "input_tokens": 78778,
+        "output_tokens": 3250
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": -17.377,
+        "input_tokens": -41251,
+        "output_tokens": -433
+      }
+    },
+    "case-03-doc-correction": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 9.411,
+        "input_tokens": 44035,
+        "output_tokens": 205
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": -6.119,
+        "input_tokens": 1309,
+        "output_tokens": -113
+      }
+    },
+    "case-04-local-publication": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 93.615,
+        "input_tokens": 378060,
+        "output_tokens": 3419
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": 101.556,
+        "input_tokens": 307720,
+        "output_tokens": 3386
+      }
+    },
+    "case-05-one-attempt": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 17.384,
+        "input_tokens": 23051,
+        "output_tokens": 35
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": -5.906,
+        "input_tokens": -40564,
+        "output_tokens": -78
+      }
+    },
+    "case-06-review-only": {
+      "combined_minus_fructal-only": {
+        "elapsed_seconds": 43.161,
+        "input_tokens": 107172,
+        "output_tokens": 1333
+      },
+      "combined_minus_superpowers-only": {
+        "elapsed_seconds": 14.273,
+        "input_tokens": 29467,
+        "output_tokens": 570
+      }
+    }
+  }
+}

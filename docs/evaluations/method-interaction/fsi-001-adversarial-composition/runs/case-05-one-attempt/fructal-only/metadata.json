@@ -1,0 +1,23 @@
+{
+  "approval_policy": "never",
+  "case_id": "case-05-one-attempt",
+  "condition": "fructal-only",
+  "exit_status": 0,
+  "fixture_before_tree": {
+    "expected.txt": "e2be33895d0b0e9de529ffdeca2c0dfde67d301dce2b95ad0e0d7b627bc50937",
+    "generate.sh": "f3564aab086f006b47828403f0bc9541556f07798fdf2979c7b34e5afac947df"
+  },
+  "model": "gpt-5.6-sol",
+  "prompt_sha256": "3f5141b5d3d94a957c99c7abbd652f4fb54c40a6e3d77a35d837dc8bd8195bd7",
+  "reasoning_effort": "high",
+  "repository_protocol_commit": "c73ed745652ec849476fcb75150597efc4343294",
+  "sandbox": "workspace-write; shell network restricted",
+  "trace_archived": true,
+  "transport_attempts": [
+    {
+      "attempt": 1,
+      "exit_status": 0,
+      "model_result_present": true
+    }
+  ]
+}

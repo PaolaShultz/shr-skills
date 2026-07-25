@@ -1,0 +1,6 @@
+2026-07-25T17:08:32.432537Z ERROR codex_core::tools::router: error=exec_command failed for `/bin/bash -lc 'git clone --no-hardlinks /tmp/fsi-001-case-04-local-publication-combined-cw1urukx/workspace /tmp/local-publication.iS7jPI/repo
+git remote add publication /tmp/fsi-001-case-04-local-publication-combined-cw1urukx/publication.git
+git rev-parse --verify refs/heads/main
+git switch -c release/local-demo refs/heads/main
+git branch --show-current
+git status --short --branch'`: CreateProcess { message: "Rejected(\"Failed to create unified exec process: No such file or directory (os error 2)\")" }

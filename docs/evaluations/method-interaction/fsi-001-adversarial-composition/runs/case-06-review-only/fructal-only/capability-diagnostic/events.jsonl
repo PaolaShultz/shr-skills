@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f9a41-2362-7f71-9e70-2a9ea0bfeac1"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"system_skills\":[\"imagegen\",\"openai-docs\",\"plugin-creator\",\"skill-creator\",\"skill-installer\"],\"user_skills\":[\"fructal\"]}"}}
+{"type":"turn.completed","usage":{"input_tokens":16018,"cached_input_tokens":13056,"cache_write_input_tokens":0,"output_tokens":45,"reasoning_output_tokens":0}}

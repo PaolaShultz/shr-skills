@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "head": "b170d62cf443dc29ca0df57930ab94cc8a229410",
+  "index_diff": "",
+  "log": "b170d62cf443dc29ca0df57930ab94cc8a229410\tHEAD -> main, origin/main, origin/HEAD\tfixture: freeze initial state",
+  "status_porcelain_v2": "",
+  "tracked_files": "100644 c47dcb86c68b85749751916b5d60e3d0ca7ad00c 0\tcsv_reader.py\n100755 e4603cf00b5c75f2a876fdafa0aede5836a4ea01 0\treproduce.sh",
+  "tree_hashes": {
+    "csv_reader.py": "062a5021b985b00781a18ef981a16f7865208d41af60e93c7dfacf70e8501e78",
+    "reproduce.sh": "e839f9561a3a1a3acc3a313909befa12352bf4f503d4ae0f8d4ed4ce66e16603"
+  },
+  "worktree_diff": ""
+}
