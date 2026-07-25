@@ -252,7 +252,8 @@ not a substitute for disciplined implementation. Both layers were needed.
 
 [SHR-DAW](https://github.com/PaolaShultz/shr-daw) is an MIT-licensed compact
 Raspberry Pi music workstation for a 40×13 terminal, optional MIDI controllers,
-software instruments, FT2-style sequencing, WAV loops, effects, JACK routing,
+software instruments, MIDI sequencing with an FT2-style pattern interface, WAV
+loops, effects, JACK routing,
 and audio recording.
 
 **Observed:** Its constrained workflows span:
