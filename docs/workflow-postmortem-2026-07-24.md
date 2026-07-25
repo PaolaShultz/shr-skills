@@ -534,10 +534,13 @@ The recovery deliberately preserved:
 8. Design a second pass with randomized, anonymous human review of every
    design, preserving small imperfections, whole-product failures, and
    prompt/rubric omissions that model evaluation did not surface.
-9. Run a later four-condition discovery comparison from the creator's minimally
+9. Execute every frozen image instruction with at least one independent image
+   renderer under equal attempt and correction rules, so repeated prompt
+   defects can be distinguished from renderer-specific artifacts.
+10. Run a later four-condition discovery comparison from the creator's minimally
    wrapped rough request.
-10. Complete the pending blind evaluation of the original `ppd-001` pair.
-11. Build CAD and physical prototypes before making enclosure fit, thermal,
+11. Complete the pending blind evaluation of the original `ppd-001` pair.
+12. Build CAD and physical prototypes before making enclosure fit, thermal,
    acoustic, electrical, service, or musician-acceptance claims.
 
 ## Claim boundary

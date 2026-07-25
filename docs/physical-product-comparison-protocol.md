@@ -250,7 +250,8 @@ Current run state:
   and complete package separately, and reserves a combined Fructal Cap Design
   plus Superpowers arm; it also defines the current work as a first
   methodological pass and reserves structured human review of every design for
-  a second pass;
+  a second pass, including same-prompt execution with an independent image
+  renderer to separate prompt defects from renderer-specific artifacts;
 - the [`ppd-002` three-arm
   comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
   preserves no-user-skill, Superpowers-only, and Fructal Cap Design-only

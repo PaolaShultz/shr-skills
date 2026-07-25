@@ -129,6 +129,57 @@ meaning and failure modes that automated comparison may miss.
 questions. The second pass tests whether those hardened rules still produce
 designs that remain coherent when a person examines each product as a whole.
 
+## Cross-renderer control
+
+**Provided:** The same image-generation instruction will also be executed by at
+least one independent image-generation tool. The purpose is to distinguish
+weakness in the written design or image prompt from renderer-specific artifacts
+and generic generated-image degradation.
+
+For each design, the primary cross-renderer comparison should:
+
+1. freeze the exact image instruction before any cross-renderer output is seen;
+2. send semantically identical instruction text to every renderer;
+3. prohibit tool-specific prompt improvement in the primary comparison;
+4. record any unavoidable syntax wrapper or unsupported control separately;
+5. use the same aspect ratio, output class, attempt count, and correction
+   allowance where the tools support them;
+6. preserve provider, model, version or date, settings, seed where exposed,
+   prompt bytes, output files, and hashes;
+7. anonymize both skill condition and renderer identity during human review;
+   and
+8. keep adapted, tool-optimized prompts as a later secondary experiment rather
+   than mixing them into the same-prompt control.
+
+If an arm contains a correction chain, the initial full instruction should be
+compared independently first. A later correction may be compared only when
+each renderer receives its own preceding output plus the same frozen correction
+instruction. A correction that refers to a different renderer's image is not an
+equivalent condition.
+
+Attribution should use the following evidence:
+
+- a defect already present in the written design is `DESIGN_ORIGIN`;
+- a requirement present in the design but absent or weakened in the shared
+  image instruction is `IMAGE_PROMPT_ORIGIN`;
+- a requirement clearly present in the same instruction but violated by only
+  one renderer is strong evidence of `RENDERER_ORIGIN`;
+- a similar defect repeated across independent renderers is evidence of prompt
+  ambiguity, overload, or an upstream design problem, but not automatic proof;
+- inconsistent failures across repeated samples indicate stochastic renderer
+  behavior; and
+- unsupported settings or unequal tool capabilities remain an `OPEN QUESTION`
+  rather than being silently assigned to the prompt.
+
+One output per renderer remains a case comparison. Where budget permits, equal
+multiple samples from each renderer provide stronger evidence about recurrent
+prompt defects versus stochastic generated-image artifacts.
+
+**Inference:** Cross-renderer repetition makes error attribution materially
+stronger. It cannot by itself prove that a physically convincing image
+represents a buildable product, so written, human, and later physical review
+remain separate layers.
+
 ## “A million bees stung me”
 
 The Croatian expression *milijun me pčela ubolo* carries two kinds of
@@ -173,7 +224,8 @@ The next session may:
 6. append results without rewriting `ppd-002`;
 7. label that completed comparison as the first methodological pass; and
 8. preserve the second-pass human-review requirement as future work rather
-   than silently treating model evaluation as complete product review.
+   than silently treating model evaluation as complete product review; and
+9. preserve the same-prompt cross-renderer control for the second pass.
 
 It must not treat the existing one-point spread as method superiority or erase
 the package-level result merely because attribution is incomplete.
