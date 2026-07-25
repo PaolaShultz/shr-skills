@@ -100,20 +100,24 @@ Applied to this experiment thread, the first reading is the observable record:
 multiple prompt-contamination discoveries, isolation repairs, reruns, frozen
 artifacts, comparison arms, image contradictions, and evaluation limitations.
 
-The second reading is the actor's experience of that motion: the thread felt
-enormous, confusing, and repeatedly obstructed even though individual steps
-could each be explained or corrected.
+The mapping is structural, not emotional: a sting does not stand for an error.
+The creator reported enjoying the work, its accomplishments, and the way the
+collaboration repeatedly corrected itself.
 
-**Inference:** Both readings are evidence, but they are not the same evidence.
-Counting defects, turns, tokens, or rubric points describes the outer workflow.
-The affected actor's metaphor can reveal accumulated cognitive and emotional
-load that those measurements conceal.
+The second reading therefore reveals the pattern beneath the event count:
+mistakes became evidence, corrections strengthened the method and experiment,
+and identifying a confound was productive progress rather than defeat.
 
-This is also the central warning from `ppd-002`: a final score can say
-`38/40` while the actor can still correctly say that the experiment does not
-yet answer the intended question. The score describes the visible artifact;
-the metaphor reveals a hidden continuity failure in how the work was
-experienced and understood.
+**Inference:** Both readings matter, but they answer different questions.
+Counting turns, tokens, artifacts, or rubric points describes the outer
+workflow. Reading the pattern explains the quality of the collaboration and
+what its corrections accomplished.
+
+The same principle applies to `ppd-002`: a final score can say `38/40` while a
+second reading shows that the score does not isolate prompt authorship, design
+reasoning, image instruction, and renderer behavior. Recognizing that hidden
+layer is a successful self-correction, not evidence that the working experience
+was negative.
 
 ## Next-session boundary
 

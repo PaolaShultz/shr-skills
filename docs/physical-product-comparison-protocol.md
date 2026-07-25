@@ -258,8 +258,8 @@ Current run state:
   uncertainty; and
 - the [2026-07-24 workflow
   postmortem](workflow-postmortem-2026-07-24.md) reconstructs the complete
-  experiment motion, ownership failures, recoveries, and remaining work without
-  rewriting the frozen records.
+  experiment motion, orchestration corrections, recoveries, and remaining work
+  without rewriting the frozen records.
 
 The preserved records include:
 

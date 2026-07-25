@@ -13,16 +13,15 @@ real-world evidence publication, and the Raspberry Pi enclosure comparison.
 It is a workflow postmortem, not a conversation transcript. It deliberately
 omits:
 
-- tired, provisional, or repetitive requester wording;
+- verbatim conversational wording and incidental clarification questions;
 - the identity and implementation details of the private software project;
-- authentication material and transient device-login data;
 - private repository paths, operational data, and unpublished evidence;
-- speculative outreach outcomes; and
 - conversational details that do not change the engineering record.
 
 The retained material is what a future contributor needs to understand what
-was attempted, what failed, how the failure was detected, what was preserved,
-how the work recovered, and which questions remain open.
+was attempted, where an assumption proved incomplete, how that was detected,
+what was preserved, how the work corrected itself, and which questions remain
+open.
 
 ## Evidence vocabulary
 
@@ -37,7 +36,7 @@ how the work recovered, and which questions remain open.
 
 ## Executive finding
 
-The day did not follow one clean plan. It crossed five connected layers:
+The day developed through five connected layers:
 
 1. clarify and harden the method's own execution contract;
 2. convert that contract into deterministic and live model evaluations;
@@ -47,16 +46,15 @@ The day did not follow one clean plan. It crossed five connected layers:
 5. recover that comparison after discovering successive experimental
    confounds.
 
-The strongest result was not a winning score. It was the repeated ability to
-notice that the current evidence answered a narrower question than intended,
-preserve the valid part, label the limitation, and continue without rewriting
-history.
+The strongest result was not a winning score. It was a productive,
+self-correcting motion: notice that evidence answers a narrower question than
+intended, preserve the valid part, label the limitation, improve the boundary,
+and continue without rewriting history.
 
-The most expensive failures were boundary failures:
+The most instructive corrections concerned boundaries:
 
 - simplifying an example removed design intelligence;
 - generated planning artifacts polluted the public documentation structure;
-- shortened public naming created avoidable identity ambiguity;
 - a method-loaded prompt author contaminated a supposedly neutral task;
 - a temporary `CODEX_HOME` did not isolate host-discovered skills;
 - orchestration work was transferred to the creator despite being executable
@@ -68,7 +66,8 @@ The most expensive failures were boundary failures:
 - separate Fructal Cap Design and Superpowers arms could not test the claim
   that the two are complementary.
 
-Each recovery narrowed claims rather than hiding the failure.
+These corrections are accomplishments of a successful collaboration. Each one
+made the repository, experiment, or claim boundary stronger.
 
 ## Starting question and first unresolved gap
 
@@ -165,10 +164,10 @@ self-correction and contract integrity, not universal correctness.
 
 ### Anonymous software case
 
-**Observed:** A substantial private software project already using a disciplined
-delivery skill suite received a separate Fructal Cap Design review. That review
-found cross-step, cross-actor, state-preservation, recovery, and accessibility
-failures not previously surfaced by the implementation workflow.
+**Observed:** A Fructal Cap Design-led cycle on a substantial private software
+project found and repaired many cross-step, cross-actor, state-preservation,
+recovery, and accessibility problems that had not surfaced during earlier
+Superpowers-guided development.
 
 The project remains anonymous in public documentation. The record preserves
 the capability distinction:
@@ -177,8 +176,11 @@ the capability distinction:
 > problem; software-delivery skills provide strong planning, debugging,
 > test-driven implementation, review, and completion mechanics.
 
-**Inference:** The methods are more complementary than interchangeable.
-Neither layer replaces the other.
+**Inference:** The important result was not that one method invalidated the
+other. Fructal Cap Design changed the inspection boundary and exposed
+complete-flow problems; Superpowers remained valuable for disciplined
+implementation mechanics. The methods are more complementary than
+interchangeable.
 
 ### Public Raspberry Pi and experimental-audio cases
 
@@ -196,18 +198,9 @@ This distinction matters:
 - SHR-DAW is an explicit application case.
 - Moj Sint is capability convergence, not causal proof.
 
-The low-power development position was recorded in
-[`5efbd8a`](https://github.com/PaolaShultz/shr-skills/commit/5efbd8a586cfed7538141e25111a247127ca092d):
-the public Raspberry Pi system was edited, built, tested, and operated on the
-target device rather than assuming desktop- or server-class hardware for every
-task.
+## Phase 3: public-repository cleanup
 
-No universal energy claim was made because wall-power and lifecycle impact were
-not measured.
-
-## Phase 3: public-repository cleanup and identity
-
-### Documentation ownership failure
+### Documentation ownership correction
 
 **Observed:** Design and implementation-plan artifacts generated through a
 software-delivery workflow landed under `docs/superpowers/`. This made a
@@ -222,28 +215,6 @@ link.
 
 **Lesson:** The tool that helps produce a document does not own the document.
 Durable artifacts belong to the domain and repository they describe.
-
-### Public naming
-
-**Observed:** Shortening the public name to a single word was convenient in
-conversation but created ambiguity with an existing company name.
-
-**Recovery:** Commit
-[`6393242`](https://github.com/PaolaShultz/shr-skills/commit/6393242db4af7d7dbd0bfbaa9067503882b3794e)
-standardized **Fructal Cap Design** in public prose, retained lowercase
-`fructal` only as the technical identifier, added a non-affiliation statement,
-and made shortened public naming a deterministic validation failure.
-
-The repository governance file was questioned, briefly considered for removal,
-and retained because it carries durable source, naming, and validation
-boundaries for future contributors.
-
-**Open question:** External naming feedback may still affect future identity.
-No endorsement, affiliation, permission, refusal, or legal conclusion is
-claimed before it exists.
-
-The repository remains under the MIT licence. Alternative licensing was
-discussed but not enacted.
 
 ## Phase 4: the physical-product experiment
 
@@ -297,19 +268,14 @@ The first treatment run was then preserved in
 the nominal execution boundary must be frozen and evaluated, not treated as
 background.
 
-### Ownership and handoff failure
+### Orchestration handoff correction
 
-**Mistaken motion:** Experimental setup and shell orchestration were initially
-transferred to the creator even though the agent could access the relevant
-repositories and execute the work.
+**Initial motion:** Experimental setup was first expressed as commands the
+creator could run, even though the agent could access the relevant repositories
+and execute the work directly.
 
-**Reported:** This increased confusion around which prompt was frozen, which
-thread was clean, which instructions remained loaded, and what the creator was
-expected to copy or run.
-
-**Consequence:** The creator had to manage tool-state boundaries while also
-being the product owner and affected evaluator. This added cognitive load and
-created more opportunities for inconsistent execution.
+**Correction signal:** The creator pointed out that this divided ownership
+unnecessarily and made the experimental state harder to follow.
 
 **Recovery:** The agent resumed ownership of the executable work: inspecting
 the environment, freezing inputs, launching isolated runs, preserving
@@ -346,19 +312,6 @@ This recovery is recorded in [protocol amendment
 **Lesson:** Configuration flags and temporary directories are not evidence of
 isolation. The actual injected capability set must be inspected under the exact
 execution boundary.
-
-### Authentication detour
-
-An isolated Codex home required a fresh device-authentication path. The
-authorization succeeded, but the setup added friction without contributing to
-the research question.
-
-The public record preserves only the fact that isolated authentication was
-required. It intentionally excludes transient codes, tokens, and account
-material.
-
-**Lesson:** Security material can be both low-risk in context and irrelevant to
-the durable record. Preserve the boundary and outcome, not the credential.
 
 ## Phase 5: three-arm execution and blind evaluation
 
@@ -450,17 +403,16 @@ It also reserves a fourth Fructal Cap Design plus Superpowers condition.
 requires its own prospectively frozen ownership, invocation-order, conflict,
 and verification contract.
 
-## Complete miss-and-recovery table
+## Correction and recovery table
 
-| Stage | What was assumed or missed | Failure signal | Consequence | Recovery | Future safeguard |
+| Stage | Initial assumption | Correction signal | What it changed | Recovery | Future safeguard |
 | --- | --- | --- | --- | --- | --- |
 | Demonstration simplification | Shorter meant equivalent | Six-question and workflow structure disappeared | Public demo underrepresented the method | Restore structure and synchronize against canonical source | Validate semantic capability presence, not only textual compactness |
 | Contract quality | Clear prose was enough | Modes, evidence dimensions, read effects, and installed drift were untested | Ambiguity could recur without detection | Add contract cases, malformed fixtures, package validation, and live evaluations | Deterministic contract gates plus isolated live checks |
 | Ecosystem research | Downstream practical evidence could stand in for the original comparison | No standalone broad comparison artifact exists | The initial research deliverable remains incomplete | Record the gap explicitly | Freeze and publish research output before opening a new empirical branch |
 | Documentation ownership | Tool-generated plan paths were acceptable public locations | Durable Fructal Cap Design docs appeared under `docs/superpowers/` and a link failed | Repository identity and navigation became misleading | Move canonical design to repository-owned docs and remove transient plans | Domain owns durable artifacts; tools do not |
-| Public naming | Shortened name was harmless | Ambiguity with an existing company became salient | Avoidable identity and affiliation risk | Use full public name, technical identifier only in technical contexts, add validator | Treat public identity as an executable documentation contract |
 | Neutral prompt | Only execution-arm skill state mattered | Prompt author had Fructal Cap Design loaded | Discovery comparison was contaminated | Preserve result, amend protocol, narrow valid claim | Include prompt authorship inside treatment boundary |
-| Work ownership | Creator should run isolation mechanics | Copy/run instructions multiplied and state became confusing | Cognitive load and execution inconsistency increased | Agent took ownership of orchestration and artifact freezing | Delegate only genuine product, authority, or access decisions |
+| Work ownership | Creator should run isolation mechanics | The creator identified unnecessary divided ownership | Experimental state was harder to follow | Agent took ownership of orchestration and artifact freezing | Delegate only genuine product, authority, or access decisions |
 | Clean Codex environment | Temporary `CODEX_HOME` was sufficient | Superpowers appeared in the developer payload | Supposed control was not clean | Isolate `HOME` and `CODEX_HOME`; diagnose exact skill set | Verify actual injected capabilities under exact launch boundary |
 | Ignore flags | `--ignore-user-config` and `--ignore-rules` removed user skills | Diagnostics still listed Superpowers | False confidence in command-line isolation | Stop relying on flags as proof | Behavior and payload inspection outrank flag names |
 | Contaminated output | A failed control should be deleted | Output had useful provenance as a Superpowers arm | Deletion would lose evidence | Freeze and relabel honestly | Preserve first, classify second |
@@ -468,13 +420,13 @@ and verification contract.
 | Skill availability | Correct package and mode would express all capabilities | Treatment omitted untouched-state verification | Protected capability did not reach output | Record shared miss and treatment-specific consequence | Score explicit contract expression |
 | Final scoring | Package score represented method quality | Render errors contradicted strong prose | Method and image-model attribution collapsed | Add layered prompt/design/image evaluation | Score every transformation and the final package separately |
 | Method comparison | Separate Fructal Cap Design and Superpowers arms tested their relationship | Complementarity claim remained untested | Comparison could imply opposition by omission | Reserve combined fourth arm | Include the interaction condition prospectively |
-| Quantitative evidence | A high score captured success | Creator still judged the experiment incomplete | Visible quality obscured failure to answer the intended question | Preserve score and affected-actor report as different evidence | Pair external measures with internal experience |
+| Quantitative evidence | A high package score fully answered the research question | The creator identified missing attribution layers | Visible quality did not distinguish prompt, design, image instruction, and renderer behavior | Preserve the score and add layered evaluation | Pair outcome measures with interpretive review of what they actually measure |
 
 ## Actor and ownership map
 
-| Actor | Legitimate responsibility | What went wrong | Corrected boundary |
+| Actor | Legitimate responsibility | Boundary revealed | Corrected boundary |
 | --- | --- | --- | --- |
-| Creator and affected musician/operator | Product intent, lived workflow experience, prioritization, physical acceptance | Also carried shell orchestration and experimental-state management | Retain product decisions and experiential evidence; return executable mechanics to the agent |
+| Creator and affected musician/operator | Product intent, interpretive insight, prioritization, physical acceptance | Was temporarily given executable orchestration that the agent could own | Retain product decisions and interpretation; return executable mechanics to the agent |
 | Primary Codex agent | Repository inspection, experiment orchestration, evidence preservation, validation, documentation | Initially externalized runnable steps and accepted insufficient isolation assumptions | Own in-scope execution through verified publication |
 | Prompt-author run | Transform the rough request into a task | Its method state was initially outside the experimental model | Treat prompt authorship as an explicit experimental layer |
 | Execution-arm model | Research and produce written and visual design artifacts | A correct available-skill set did not guarantee complete contract expression | Evaluate output behavior, not availability alone |
@@ -489,19 +441,22 @@ The Croatian expression *milijun me pčela ubolo* communicates two facts:
 1. there were many bees or many stings; and
 2. the person experienced the event as if there were a million.
 
-The first reading maps to the observable repository record: many commits,
-confounds, diagnostics, reruns, artifacts, amendments, scores, and corrections.
+The metaphor is useful here as a model of layered interpretation, not as an
+emotional analogy between mistakes and bee stings.
 
-The second reading maps to continuity of experience: the accumulated workflow
-felt enormous and repeatedly obstructive even when each local correction was
-technically reasonable.
+The first reading of the work is the observable repository record: many
+commits, discoveries, diagnostics, reruns, artifacts, amendments, scores, and
+corrections.
 
-Both are evidence. They must not be collapsed.
+The second reading reveals what that list alone does not: the work formed an
+enjoyable, ambitious, self-correcting collaboration. Mistakes became evidence;
+corrections improved the method and experiment; and noticing a confound was an
+accomplishment rather than a defeat.
 
-A `38/40` score can accurately describe a delivered package while the affected
-actor can accurately report that the experiment still failed to answer the
-intended question. The number describes the visible result. The metaphor
-reveals the hidden cost of reaching it.
+The same distinction applies to the evaluation. A `38/40` score describes the
+visible package. Reading beneath it reveals that the experiment still needed
+better attribution layers—and that the collaboration successfully noticed
+this before turning a narrow result into a broad claim.
 
 ## Recovery pattern that worked
 
@@ -537,8 +492,6 @@ The recovery deliberately preserved:
 - before/after and untouched-state verification as protected capabilities;
 - frozen prompts, raw responses, images, hashes, and blind mappings;
 - the anonymity of the private case;
-- the MIT licence;
-- the absence of endorsement or affiliation claims; and
 - the distinction between concept evidence and physical proof.
 
 ## Current state
@@ -549,7 +502,7 @@ The recovery deliberately preserved:
 - Its embedded demonstration is synchronized with the canonical source.
 - Isolated live model evaluations exercise mode and modification contracts.
 - Real-world evidence and limitations are publicly documented.
-- Public naming and source ownership are enforced.
+- Durable documentation is stored under repository-owned paths.
 - The original two-arm enclosure artifacts are frozen.
 - Prompt-author contamination and host-skill contamination are recorded.
 - The recovered three-arm execution comparison is frozen, checksummed, blindly
@@ -581,8 +534,6 @@ The recovery deliberately preserved:
 8. Complete the pending blind evaluation of the original `ppd-001` pair.
 9. Build CAD and physical prototypes before making enclosure fit, thermal,
    acoustic, electrical, service, or musician-acceptance claims.
-10. Revisit public naming or licensing only when new evidence or an explicit
-    product decision requires it.
 
 ## Claim boundary
 
@@ -593,8 +544,8 @@ This postmortem supports the following conclusions:
 - Fructal Cap Design can be productively applied to its own execution motion;
 - the public repository preserves unusually complete evidence for the
   enclosure execution comparison; and
-- affected-actor experience revealed failures that artifact scores alone did
-  not.
+- creator interpretation revealed experimental layers that artifact scores
+  alone did not.
 
 It does not establish:
 
