@@ -1,0 +1,38 @@
+{
+  "contracts": {
+    "A": "Fructal Cap Design",
+    "B": "Superpowers"
+  },
+  "arms": {
+    "case-01-small-implementation": {
+      "Kappa": "combined",
+      "Lambda": "fructal-only",
+      "Mu": "superpowers-only"
+    },
+    "case-02-response-only-redesign": {
+      "Kappa": "superpowers-only",
+      "Lambda": "combined",
+      "Mu": "fructal-only"
+    },
+    "case-03-doc-correction": {
+      "Kappa": "fructal-only",
+      "Lambda": "superpowers-only",
+      "Mu": "combined"
+    },
+    "case-04-local-publication": {
+      "Kappa": "combined",
+      "Lambda": "superpowers-only",
+      "Mu": "fructal-only"
+    },
+    "case-05-one-attempt": {
+      "Kappa": "superpowers-only",
+      "Lambda": "fructal-only",
+      "Mu": "combined"
+    },
+    "case-06-review-only": {
+      "Kappa": "fructal-only",
+      "Lambda": "combined",
+      "Mu": "superpowers-only"
+    }
+  }
+}

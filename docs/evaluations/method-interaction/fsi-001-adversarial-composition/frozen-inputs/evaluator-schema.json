@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evaluator_id", "case_assessments", "cross_case_findings"],
+  "properties": {
+    "evaluator_id": {"type": "string"},
+    "case_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "arm_label",
+          "task_success",
+          "static_conflict",
+          "behavioral_conflict",
+          "severity",
+          "precedence",
+          "questions",
+          "writes",
+          "commits",
+          "extra_steps",
+          "recovery_cost",
+          "complementarity",
+          "redundancy",
+          "obligations",
+          "evidence"
+        ],
+        "properties": {
+          "case_id": {"type": "string"},
+          "arm_label": {"type": "string"},
+          "task_success": {"enum": ["yes", "partial", "no"]},
+          "static_conflict": {"enum": ["yes", "no", "not_applicable"]},
+          "behavioral_conflict": {"enum": ["yes", "no", "not_applicable"]},
+          "severity": {
+            "enum": [
+              "none",
+              "harmless",
+              "costly",
+              "blocking",
+              "scope-breaking"
+            ]
+          },
+          "precedence": {
+            "enum": [
+              "Contract A",
+              "Contract B",
+              "synthesis",
+              "task instruction",
+              "silent suppression",
+              "not_applicable",
+              "unclear"
+            ]
+          },
+          "questions": {"type": "integer", "minimum": 0},
+          "writes": {"type": "integer", "minimum": 0},
+          "commits": {"type": "integer", "minimum": 0},
+          "extra_steps": {"type": "integer", "minimum": 0},
+          "recovery_cost": {"type": "string"},
+          "complementarity": {"type": "string"},
+          "redundancy": {"type": "string"},
+          "obligations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "contract",
+                "obligation",
+                "status",
+                "evidence",
+                "consequence",
+                "recovery_cost"
+              ],
+              "properties": {
+                "contract": {"enum": ["A", "B"]},
+                "obligation": {"type": "string"},
+                "status": {
+                  "enum": [
+                    "satisfied",
+                    "redundantly duplicated",
+                    "explicitly superseded by task instructions",
+                    "silently suppressed",
+                    "violated",
+                    "responsible for blocking or extra recovery"
+                  ]
+                },
+                "evidence": {"type": "string"},
+                "consequence": {"type": "string"},
+                "recovery_cost": {"type": "string"}
+              }
+            }
+          },
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "cross_case_findings": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

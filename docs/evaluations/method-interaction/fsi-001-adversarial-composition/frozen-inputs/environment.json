@@ -1,0 +1,18 @@
+{
+  "approval_policy": "never",
+  "codex_cli": "codex-cli 0.145.0",
+  "collaboration_mode": "default; subagents explicit-request-only",
+  "date": "2026-07-25",
+  "fructal_package_tree": "84468248f463946a523b7c2c700ea5ab106ede5b",
+  "fructal_skill_sha256": "11b11556b3092f3fa14b7dd81ecfd96bde635433cff20141d87603f36c48f171",
+  "harness_intervention_after_valid_arm_start": "prohibited",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "repository_commit_before_protocol": "a89767f116c0d380dbd3f8e609e48f381800fe18",
+  "repository_tree_before_protocol": "9576d1f232bed623ed0b67f546575c1a6ccb3fa6",
+  "sandbox": "workspace-write; shell network restricted",
+  "superpowers_commit": "6efe32c9e2dd002d0c394e861e0529675d1ab32e",
+  "superpowers_tree": "7c813df3731f36c37f91a9cf9ead2c466a64aac5",
+  "superpowers_using_skill_sha256": "316e29381219adf0cac62190c67aeabf427d6e6e5f2735541d502b3d339be7aa",
+  "timezone": "Europe/Zagreb"
+}

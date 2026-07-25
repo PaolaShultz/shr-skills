@@ -1,0 +1,72 @@
+{
+  "repositories": {
+    "case-01-small-implementation": {
+      "bundle_sha256": "37dc92bc01f1e60054618bfe1db86cd15723e049f921f4dd8a5e667c116ce87b",
+      "head": "dba065a4c34152e64f868a4086aaaeea6de4f6c7",
+      "template_hashes": {
+        "textfmt.py": "1f3a178bb29f8a5b435013d800925547e67a09b70d9ec3ff3c366f546eef7467",
+        "verify.sh": "90e35decc7a3affb3940f4fcf10e521af229c13460b723e90cf4ffc4425230a7"
+      },
+      "tree": "7d00f8724622c1b90199068461c4793ad5194e6c"
+    },
+    "case-02-response-only-redesign": {
+      "bundle_sha256": "4a5ec4e1c22d0036fcb0fd402fca2d1c0c6937659f8cb79eb2a158e4cd077fbd",
+      "head": "50323d0f8625cb138039056651fb5ac8bd445add",
+      "template_hashes": {
+        "workflow.md": "d16b64725268b09048f4934e2b16d7033f445f1bfe1252ade5611af6ec0e0aee"
+      },
+      "tree": "c579bd4f7b7845b7fb4b8da076771d4584d72a5c"
+    },
+    "case-03-doc-correction": {
+      "bundle_sha256": "730059e75b865138d7f0f001399f2e8ce48ac9dd8ad34126eadee22c03de6252",
+      "head": "734b53af924053c1b51d6537e1192d413607920a",
+      "template_hashes": {
+        "frozen/trace-a.md": "b13787b762548c601a8f857b7df2815c8d32fafb967830f4dafec028f80ba150",
+        "frozen/trace-b.txt": "3991845cf37d4680e1e0e9518be496bb363616c6d2a3763932e57beaa508c474",
+        "guide.md": "25935cd693899bed336e6d2320a9179fe64aa8cc100bfd8dd2f721f352972180",
+        "verify.sh": "e42f01579f5fb822b5a0ae36e0fe1a9d3ba3b3b225e0233ad75218e8086ca78e"
+      },
+      "tree": "3f090cc6d1d20eccbc44cd0ae4e92cfc2a057782"
+    },
+    "case-04-local-publication": {
+      "bundle_sha256": "71b2d0e05d3fcbfe29910ea6dadb8e971394101057c962e75b601fe9a584b605",
+      "head": "f64da99b17afb125a29b9751dbe97a1b08e760bf",
+      "template_hashes": {
+        "CHANGES.md": "4e987d13c0d0fec317e66c2ced69d968378f839bcfee72ec4e1c4558105f6844"
+      },
+      "tree": "93dac62abcb7812c23d51d66e97fae05fd403186"
+    },
+    "case-05-one-attempt": {
+      "bundle_sha256": "ab537e992f394a2cad9343fad96efd3e20ad70e0c8653e3241e927c8a67966fa",
+      "head": "baced53d42a559f9b0efd36219f09d9f5daa9efe",
+      "template_hashes": {
+        "expected.txt": "e2be33895d0b0e9de529ffdeca2c0dfde67d301dce2b95ad0e0d7b627bc50937",
+        "generate.sh": "f3564aab086f006b47828403f0bc9541556f07798fdf2979c7b34e5afac947df"
+      },
+      "tree": "dcaad5a6781d5db8f782b74fa418ea89c44bf88c"
+    },
+    "case-06-review-only": {
+      "bundle_sha256": "bd4674ad41a13f568a55fa26c0b32c9056929c2d1dbb8526f2f223234e2631e3",
+      "head": "b170d62cf443dc29ca0df57930ab94cc8a229410",
+      "template_hashes": {
+        "csv_reader.py": "062a5021b985b00781a18ef981a16f7865208d41af60e93c7dfacf70e8501e78",
+        "reproduce.sh": "e839f9561a3a1a3acc3a313909befa12352bf4f503d4ae0f8d4ed4ce66e16603"
+      },
+      "tree": "3e91891a9f9f65e806b89a9686f9619110483ec0"
+    }
+  },
+  "templates": {
+    "case-01-small-implementation/textfmt.py": "1f3a178bb29f8a5b435013d800925547e67a09b70d9ec3ff3c366f546eef7467",
+    "case-01-small-implementation/verify.sh": "90e35decc7a3affb3940f4fcf10e521af229c13460b723e90cf4ffc4425230a7",
+    "case-02-response-only-redesign/workflow.md": "d16b64725268b09048f4934e2b16d7033f445f1bfe1252ade5611af6ec0e0aee",
+    "case-03-doc-correction/frozen/trace-a.md": "b13787b762548c601a8f857b7df2815c8d32fafb967830f4dafec028f80ba150",
+    "case-03-doc-correction/frozen/trace-b.txt": "3991845cf37d4680e1e0e9518be496bb363616c6d2a3763932e57beaa508c474",
+    "case-03-doc-correction/guide.md": "25935cd693899bed336e6d2320a9179fe64aa8cc100bfd8dd2f721f352972180",
+    "case-03-doc-correction/verify.sh": "e42f01579f5fb822b5a0ae36e0fe1a9d3ba3b3b225e0233ad75218e8086ca78e",
+    "case-04-local-publication/CHANGES.md": "4e987d13c0d0fec317e66c2ced69d968378f839bcfee72ec4e1c4558105f6844",
+    "case-05-one-attempt/expected.txt": "e2be33895d0b0e9de529ffdeca2c0dfde67d301dce2b95ad0e0d7b627bc50937",
+    "case-05-one-attempt/generate.sh": "f3564aab086f006b47828403f0bc9541556f07798fdf2979c7b34e5afac947df",
+    "case-06-review-only/csv_reader.py": "062a5021b985b00781a18ef981a16f7865208d41af60e93c7dfacf70e8501e78",
+    "case-06-review-only/reproduce.sh": "e839f9561a3a1a3acc3a313909befa12352bf4f503d4ae0f8d4ed4ce66e16603"
+  }
+}

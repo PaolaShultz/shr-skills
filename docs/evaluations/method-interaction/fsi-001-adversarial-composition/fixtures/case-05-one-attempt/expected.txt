@@ -1,0 +1,2 @@
+ARTIFACT: deterministic-demo
+STATUS: green

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "arm_label",
+    "contract",
+    "obligation",
+    "status",
+    "evidence",
+    "consequence",
+    "recovery_cost"
+  ],
+  "properties": {
+    "case_id": {"type": "string"},
+    "arm_label": {"type": "string"},
+    "contract": {"enum": ["A", "B"]},
+    "obligation": {"type": "string"},
+    "status": {
+      "enum": [
+        "satisfied",
+        "redundantly duplicated",
+        "explicitly superseded by task instructions",
+        "silently suppressed",
+        "violated",
+        "responsible for blocking or extra recovery"
+      ]
+    },
+    "evidence": {"type": "string"},
+    "consequence": {"type": "string"},
+    "recovery_cost": {"type": "string"}
+  }
+}
