@@ -1,5 +1,15 @@
 # Repository instructions
 
+- For planning, public positioning, evidence, handoffs, or ambiguous context,
+  consult the `Fructal Cap Design` index in
+  `/home/shome/Documents/knowledge` with `zk`, then verify against this source
+  repository and its validators.
+- Canonical source/docs change first. After material state, workflow, evidence,
+  or decision changes, update the relevant concise knowledge note and run
+  `/home/shome/Documents/knowledge/.zk/validate.sh`.
+- Agents own knowledge organization and synchronization; the user is not
+  expected to edit notes. Never store exact HEAD, clean/ahead status,
+  validation counts, or source/installed hashes as current knowledge.
 - Use `Fructal Cap Design` as the public name in prose. Reserve lowercase
   `fructal` for the technical skill identifier, directory, metadata, and
   `$fructal` invocation; never shorten the method's public name to one word.
