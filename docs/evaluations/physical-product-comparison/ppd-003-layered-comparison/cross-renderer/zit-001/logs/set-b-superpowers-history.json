@@ -1,0 +1,176 @@
+{
+  "prompt": [
+    2,
+    "19859520-fa5f-4360-96c5-d45a833b8995",
+    {
+      "1": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "z_image_turbo_bf16.safetensors",
+          "weight_dtype": "default"
+        }
+      },
+      "2": {
+        "class_type": "ModelSamplingAuraFlow",
+        "inputs": {
+          "model": [
+            "1",
+            0
+          ],
+          "shift": 4.0
+        }
+      },
+      "3": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen_3_4b.safetensors",
+          "type": "lumina2",
+          "device": "default"
+        }
+      },
+      "4": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "3",
+            0
+          ],
+          "text": "Create one polished landscape industrial-design presentation board for one resolved SHR-DAW Raspberry Pi 5 music-workstation enclosure. Show the exact same product in a large front-right three-quarter hero view, a smaller rear three-quarter inset, and a smaller side cutaway inset. Do not show alternate products or variants.\n\nThe enclosure is a compact wedge console approximately 212 mm wide, 155 mm deep, and 103 mm high at the rear. Its flush 7-inch landscape screen rises toward the rear at 24 degrees above horizontal and faces the seated operator. The rear shell drops to the tabletop as a stable leveling plinth, supported by two discreet black front feet.\n\nUse bead-blasted warm-graphite powder-coated folded aluminum for the chassis and bottom plate, a satin-black PC-ABS display bezel, precise seams, captive screws, five small square off-white controller buttons, and one tiny amber status light. The screen shows a dense dark 40-by-13 terminal-style tracker interface with cyan, amber, and soft-gray blocks and meters; only SHR-DAW may be legible.\n\nKeep the wide low front intake visibly open. Show exactly five evenly spaced off-white controller buttons and no knobs. The operator-right direct-access well contains exactly four USB-A sockets and one RJ45 Ethernet socket, recessed into a credible bracket with realistic scale and clearance.\n\nThe rear inset shows exactly one 40 mm square exhaust fan behind a high-open-area rear grille, a recessed rear-high cable bay with exactly one rounded-rectangle USB-C power socket and exactly two smaller distinct micro-HDMI sockets, and the rear leveling foot. Do not make the three rear sockets identical.\n\nThe side cutaway clearly shows, from top to bottom, the display panel, upper airflow gap, Raspberry Pi 5, upward-facing official Active Cooler in that gap, bottom-mounted NVMe Base and SSD, and aluminum bottom plate. Use subtle unlabelled airflow arrows from the front grille through the upper display/Pi gap to the single rear exhaust, plus a smaller lower branch over the NVMe. Exterior views remain closed and do not expose bare circuit boards.\n\nRender as a premium mechanically credible studio product visualization on a neutral warm-light-gray background with soft directional light, sharp edges, restrained shadows, accurate connector shapes, and identical geometry and materials across every view. Exclude blocked grilles, plugged-in cables, extra ports, a second USB-C socket, audio jacks, extra fans, impossible floating parts, dimension text, captions, callout labels, watermarks, hands, people, headphones, speakers, and decorative fake meters.\n"
+        }
+      },
+      "5": {
+        "class_type": "ConditioningZeroOut",
+        "inputs": {
+          "conditioning": [
+            "4",
+            0
+          ]
+        }
+      },
+      "6": {
+        "class_type": "EmptySD3LatentImage",
+        "inputs": {
+          "width": 1536,
+          "height": 1024,
+          "batch_size": 1
+        }
+      },
+      "7": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "positive": [
+            "4",
+            0
+          ],
+          "negative": [
+            "5",
+            0
+          ],
+          "latent_image": [
+            "6",
+            0
+          ],
+          "seed": 25072026,
+          "steps": 12,
+          "cfg": 1.0,
+          "sampler_name": "dpmpp_2m_sde_heun_gpu",
+          "scheduler": "simple",
+          "denoise": 1.0
+        }
+      },
+      "8": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "ae.safetensors"
+        }
+      },
+      "9": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "7",
+            0
+          ],
+          "vae": [
+            "8",
+            0
+          ]
+        }
+      },
+      "10": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "9",
+            0
+          ],
+          "filename_prefix": "ppd-003-zit/set-b/superpowers"
+        }
+      }
+    },
+    {
+      "client_id": "db014eb4-d2d6-49cd-84eb-cd350578d2ce",
+      "create_time": 1784963500463
+    },
+    [
+      "10"
+    ]
+  ],
+  "outputs": {
+    "10": {
+      "images": [
+        {
+          "filename": "superpowers_00001_.png",
+          "subfolder": "ppd-003-zit/set-b",
+          "type": "output"
+        }
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "19859520-fa5f-4360-96c5-d45a833b8995",
+          "timestamp": 1784963500463
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "6",
+            "8"
+          ],
+          "prompt_id": "19859520-fa5f-4360-96c5-d45a833b8995",
+          "timestamp": 1784963500464
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "19859520-fa5f-4360-96c5-d45a833b8995",
+          "timestamp": 1784963569761
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "10": {
+      "node_id": "10",
+      "display_node": "10",
+      "parent_node": null,
+      "real_node_id": "10"
+    }
+  }
+}

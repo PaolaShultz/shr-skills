@@ -1,6 +1,6 @@
 {
   "experiment_id": "ppd-003-zit-001",
-  "status": "inputs_frozen_before_rendering",
+  "status": "technically_validated",
   "frozen_at": "2026-07-25T09:06:36+02:00",
   "expected_primary_generation_count": 8,
   "expected_retry_count": 0,
@@ -88,7 +88,96 @@
       "output_path": "outputs/set-b/combined.png"
     }
   ],
-  "outputs": [],
-  "primary_generation_count": 0,
+  "outputs": [
+    {
+      "set": "set-a",
+      "condition": "control",
+      "prompt_id": "0dc86d4c-74cf-4c30-bc5d-b1342b006b80",
+      "completed_at": "2026-07-25T07:09:55.663494+00:00",
+      "path": "outputs/set-a/control.png",
+      "size_bytes": 1856190,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9212b092b1bd1b965e62ee53f398265733b83cd91b382bbe090477e65d67e9cb"
+    },
+    {
+      "set": "set-a",
+      "condition": "superpowers",
+      "prompt_id": "84411014-5dec-4469-b34e-f33e755d8a6d",
+      "completed_at": "2026-07-25T07:10:11.688686+00:00",
+      "path": "outputs/set-a/superpowers.png",
+      "size_bytes": 1758895,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c0fc714660f20540447f08e2c94ad92707c9cdbc867996015bf75b2ceb1265d3"
+    },
+    {
+      "set": "set-a",
+      "condition": "fructal-cap-design",
+      "prompt_id": "d177f0ba-c8c3-4889-81eb-485c38458ea7",
+      "completed_at": "2026-07-25T07:10:53.733211+00:00",
+      "path": "outputs/set-a/fructal-cap-design.png",
+      "size_bytes": 1655780,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "203de42f1139900964b1d354c04ef165b5a163feb6d7fb2381c2b170b064f680"
+    },
+    {
+      "set": "set-a",
+      "condition": "combined",
+      "prompt_id": "2ed52704-a584-478f-9b8b-7fe6f32cf5fd",
+      "completed_at": "2026-07-25T07:11:21.756064+00:00",
+      "path": "outputs/set-a/combined.png",
+      "size_bytes": 1729437,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ea8fa34e103a76aa8311decf480291fdad43faf9a5a9e30552d8532f21061788"
+    },
+    {
+      "set": "set-b",
+      "condition": "control",
+      "prompt_id": "58c21dac-2614-48e0-88f3-7e32599fde2b",
+      "completed_at": "2026-07-25T07:12:34.555655+00:00",
+      "path": "outputs/set-b/control.png",
+      "size_bytes": 1774040,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "dcfe909eafda4b61ae8c683a2b215363804c3f14c7b230207c44dc2e60cdc34c"
+    },
+    {
+      "set": "set-b",
+      "condition": "superpowers",
+      "prompt_id": "19859520-fa5f-4360-96c5-d45a833b8995",
+      "completed_at": "2026-07-25T07:12:50.580515+00:00",
+      "path": "outputs/set-b/superpowers.png",
+      "size_bytes": 1618330,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "33e596a767b724fe92d0324fd10ca9a188747b3592eb0ac8caf9d6cb5c6bc62e"
+    },
+    {
+      "set": "set-b",
+      "condition": "fructal-cap-design",
+      "prompt_id": "c9c552a0-2133-4e03-957e-c565bff6a872",
+      "completed_at": "2026-07-25T07:13:28.804202+00:00",
+      "path": "outputs/set-b/fructal-cap-design.png",
+      "size_bytes": 1695908,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "629236cab7ab1f7c1e0bec266b45ee273e6750dbf84901f0df8ecb1c13f30f6a"
+    },
+    {
+      "set": "set-b",
+      "condition": "combined",
+      "prompt_id": "345e00bf-c81f-4840-8ca5-5ad6e58831c5",
+      "completed_at": "2026-07-25T07:14:00.827788+00:00",
+      "path": "outputs/set-b/combined.png",
+      "size_bytes": 1710170,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "aaef7ad81165aed9d5fdefbe9ff63979663a8461c2d18169bda1f710e52ac5db"
+    }
+  ],
+  "primary_generation_count": 8,
   "retry_count": 0
 }

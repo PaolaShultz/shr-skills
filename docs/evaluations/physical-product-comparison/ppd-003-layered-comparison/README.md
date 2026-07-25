@@ -18,6 +18,7 @@ started. The first three arms were neither rerun nor modified.
 - [Prompt-author evaluation](prompt-author-evaluation/README.md)
 - [Combined-arm archive](combined/)
 - [Exact image instruction chains](image-instruction-chains/)
+- [ZIT cross-renderer extension](cross-renderer/zit-001/)
 - [Anonymous evaluator inputs](blind-inputs/)
 - [Layered evaluator records](layered-evaluation/)
 - [Mapping reveal](mapping-reveal.md)

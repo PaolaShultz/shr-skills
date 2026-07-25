@@ -1,0 +1,176 @@
+{
+  "prompt": [
+    3,
+    "c9c552a0-2133-4e03-957e-c565bff6a872",
+    {
+      "1": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "z_image_turbo_bf16.safetensors",
+          "weight_dtype": "default"
+        }
+      },
+      "2": {
+        "class_type": "ModelSamplingAuraFlow",
+        "inputs": {
+          "model": [
+            "1",
+            0
+          ],
+          "shift": 4.0
+        }
+      },
+      "3": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "qwen_3_4b.safetensors",
+          "type": "lumina2",
+          "device": "default"
+        }
+      },
+      "4": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "3",
+            0
+          ],
+          "text": "Create one coherent landscape industrial-design presentation board for one resolved compact SHR-DAW Raspberry Pi 5 music-workstation enclosure. Show the exact same product in one large front-right three-quarter hero view and one smaller rear three-quarter inset. Do not show alternate concepts.\n\nThe enclosure is a small wedge console approximately 132 mm wide, 118 mm deep, 82 mm high at the rear, and 38 mm high at the front. Its inset 4-inch landscape screen rises away from the operator at exactly 24 degrees above the desk and remains right-way-up. A rigid extended rear aluminum heel reaches the tabletop so the enclosure stands level and stable on four low rubber feet.\n\nUse a charcoal textured PC-ABS upper shell, dark-graphite folded-aluminum bottom and rear spine, warm-gray horizontal grille inserts, a subtle off-white accent line, realistic 2-to-3 mm wall thickness, radiused edges, visible part seams, and a few black captive screws on the underside and rear. The screen shows an abstract dark terminal music interface with tracker lanes, meters, and small blocks, without readable words or marks.\n\nAcross the front fascia, show exactly two continuous horizontal louvered intake bands with rounded slot ends. They remain open and unobstructed and communicate separate upper and lower front-to-rear air paths. A narrow left cheek beside the display carries exactly five small cream square buttons in one vertical row, without text or symbols.\n\nThe operator-right recessed side pocket contains exactly four USB-A receptacles arranged as two vertical pairs and exactly one RJ45 Ethernet receptacle. The sockets are realistically scaled, aligned in a planar internal bracket, surrounded by credible wall thickness, and accompanied by one small reusable cable-tie slot. Do not place USB-C in this side bay.\n\nThe rear inset clearly shows exactly one circular 40 mm exhaust fan behind a horizontal-slot finger guard on the left and one recessed open-bottom cable hood on the right. The hood contains exactly one USB-C power inlet, exactly two smaller micro-HDMI openings, and one small round native power-button actuator. A small rear stand-off bumper preserves exhaust clearance. No cables are attached.\n\nRender as a polished premium studio product visualization on a clean warm-light-gray tabletop with soft directional light, accurate matte plastic and powder-coated metal response, restrained shadows, realistic scale, crisp connector geometry, and consistent product geometry in both views. Exclude transparent shells, exposed circuit boards, impossible overhangs, handles, knobs, speakers, audio jacks, extra ports, extra fans, dimensions, arrows, captions, legends, logos, watermarks, readable text, props, people, and hands.\n"
+        }
+      },
+      "5": {
+        "class_type": "ConditioningZeroOut",
+        "inputs": {
+          "conditioning": [
+            "4",
+            0
+          ]
+        }
+      },
+      "6": {
+        "class_type": "EmptySD3LatentImage",
+        "inputs": {
+          "width": 1536,
+          "height": 1024,
+          "batch_size": 1
+        }
+      },
+      "7": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "positive": [
+            "4",
+            0
+          ],
+          "negative": [
+            "5",
+            0
+          ],
+          "latent_image": [
+            "6",
+            0
+          ],
+          "seed": 25072026,
+          "steps": 12,
+          "cfg": 1.0,
+          "sampler_name": "dpmpp_2m_sde_heun_gpu",
+          "scheduler": "simple",
+          "denoise": 1.0
+        }
+      },
+      "8": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "ae.safetensors"
+        }
+      },
+      "9": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "7",
+            0
+          ],
+          "vae": [
+            "8",
+            0
+          ]
+        }
+      },
+      "10": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "9",
+            0
+          ],
+          "filename_prefix": "ppd-003-zit/set-b/fructal-cap-design"
+        }
+      }
+    },
+    {
+      "client_id": "7cd074ef-a4ef-4ff9-8df8-f870624ea38f",
+      "create_time": 1784963500465
+    },
+    [
+      "10"
+    ]
+  ],
+  "outputs": {
+    "10": {
+      "images": [
+        {
+          "filename": "fructal-cap-design_00001_.png",
+          "subfolder": "ppd-003-zit/set-b",
+          "type": "output"
+        }
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "c9c552a0-2133-4e03-957e-c565bff6a872",
+          "timestamp": 1784963553827
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "6",
+            "8"
+          ],
+          "prompt_id": "c9c552a0-2133-4e03-957e-c565bff6a872",
+          "timestamp": 1784963553828
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "c9c552a0-2133-4e03-957e-c565bff6a872",
+          "timestamp": 1784963608325
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "10": {
+      "node_id": "10",
+      "display_node": "10",
+      "parent_node": null,
+      "real_node_id": "10"
+    }
+  }
+}

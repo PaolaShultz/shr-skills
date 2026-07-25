@@ -1,6 +1,6 @@
 # ZIT cross-renderer extension
 
-Status: **inputs frozen before rendering**
+Status: **eight primary renders complete and technically validated**
 
 This non-destructive extension executes the four completed PPD-003 product
 designs through Z-Image-Turbo (ZIT) in ComfyUI. It adds renderer evidence
@@ -66,3 +66,11 @@ These files are concept renders. They are not CAD, thermal, manufacturability,
 acoustic, EMC, electrical, fabrication, regulatory, or physical-validation
 evidence. This thread performs technical file and provenance validation only:
 no semantic scoring, winner selection, or visual repair.
+
+## Technical result
+
+All eight planned primary renders completed: four Set A and four Set B. Every
+archived output is a unique, decodable 1536×1024 RGB PNG associated with one
+frozen condition, prompt, workflow, server submission, and ComfyUI history
+record. Primary generation count: 8. Infrastructure failure count: 0. Retry
+count: 0. Visual inspection and semantic scoring performed in this thread: no.
