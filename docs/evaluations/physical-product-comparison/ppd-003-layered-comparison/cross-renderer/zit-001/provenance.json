@@ -1,0 +1,98 @@
+{
+  "source_experiment": {
+    "path": "docs/evaluations/physical-product-comparison/ppd-003-layered-comparison",
+    "repository_commit": "be54ded50983ac1c8b0e617fea95d61c961db96b",
+    "git_tree_before_extension": "67ef4c1a412d41c7cf7a428f15c5479afd0711fb"
+  },
+  "conditions": [
+    {
+      "id": "control",
+      "public_condition": "No-user-skill control",
+      "anonymous_source_label": "Harbor",
+      "written_design": "blind-inputs/Harbor/written-design.md",
+      "initial_instruction": "image-instruction-chains/control/call-01.json",
+      "corrections": []
+    },
+    {
+      "id": "superpowers",
+      "public_condition": "Superpowers only",
+      "anonymous_source_label": "Ember",
+      "written_design": "blind-inputs/Ember/written-design.md",
+      "initial_instruction": "image-instruction-chains/superpowers/call-01.json",
+      "corrections": [
+        "image-instruction-chains/superpowers/call-02.json"
+      ],
+      "correction_application": "Preserved as source evidence only; not applied to an unrelated ZIT image."
+    },
+    {
+      "id": "fructal-cap-design",
+      "public_condition": "Fructal Cap Design only",
+      "anonymous_source_label": "Quartz",
+      "written_design": "blind-inputs/Quartz/written-design.md",
+      "initial_instruction": "image-instruction-chains/treatment/call-01.json",
+      "corrections": []
+    },
+    {
+      "id": "combined",
+      "public_condition": "Fructal Cap Design plus Superpowers",
+      "anonymous_source_label": "Willow",
+      "written_design": "blind-inputs/Willow/written-design.md",
+      "initial_instruction": "image-instruction-chains/combined/call-01.json",
+      "corrections": []
+    }
+  ],
+  "renderer_files": [
+    {
+      "path": "/home/shome/hermes/workspace/adria/skills/zit-generate/SKILL.md",
+      "sha256": "d788b24b055dc3e7129e47780cc21ce2063c16f71c250333e200f2edebab05ac"
+    },
+    {
+      "path": "/home/shome/hermes/workspace/adria/skills/zit-generate/generate.py",
+      "sha256": "4ecd636df7f6fccc668b07dd7f7f07113b4a185bf3d4dfb2889b80125c403ead"
+    },
+    {
+      "path": "/home/shome/hermes/workspace/adria/skills/zit-generate/workflows/z-image-turbo-bf16-userflow.api.json",
+      "sha256": "223a61c769dd321432794a8d7569207c7eb6083714a09c0ee09f79fc221a300d"
+    },
+    {
+      "path": "/home/shome/.hermes/skills/comfyui-skill/data/local/z-image-turbo-bf16-userflow-api/workflow.json",
+      "sha256": "0306fc48c9aba0241fa583b4302a1a0e2dc12d371ee2806274675fe3d0dd74fa",
+      "difference_from_zit_skill_workflow": "Byte difference is only the terminal newline."
+    },
+    {
+      "path": "/home/shome/.hermes/skills/comfyui-skill/data/local/z-image-turbo-bf16-userflow-api/schema.json",
+      "sha256": "06d2ae6454a7ff19694465c1d4d354cd497c9d1768c968d8b0ec1122c83f06f2"
+    }
+  ],
+  "runtime": {
+    "comfyui_version": "0.20.0",
+    "comfyui_commit": "75143eeb06b14bc93db71de207945f6f888be4e0",
+    "python": "3.12.13",
+    "pytorch": "2.11.0+cu130",
+    "nvidia_driver": "580.173.02",
+    "gpus": [
+      "NVIDIA GeForce RTX 3060 12 GiB",
+      "NVIDIA GeForce RTX 3060 12 GiB"
+    ]
+  },
+  "models": [
+    {
+      "role": "UNet",
+      "name": "z_image_turbo_bf16.safetensors",
+      "size_bytes": 12309866400,
+      "sha256": "2407613050b809ffdff18a4ac99af83ea6b95443ecebdf80e064a79c825574a6"
+    },
+    {
+      "role": "text_encoder",
+      "name": "qwen_3_4b.safetensors",
+      "size_bytes": 8044982048,
+      "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a"
+    },
+    {
+      "role": "VAE",
+      "name": "ae.safetensors",
+      "size_bytes": 335304388,
+      "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38"
+    }
+  ]
+}

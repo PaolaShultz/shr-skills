@@ -1,0 +1,110 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift": 4.0
+    }
+  },
+  "3": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "Create one clean landscape industrial-design presentation sheet for one resolved Raspberry Pi 5 music-workstation enclosure. Show the exact same product in one dominant front-right three-quarter hero view, one smaller operator-right connector inset, and one smaller rear inset. Do not show alternate concepts, colors, or variants.\n\nThe product is a compact wedge-shaped digital console approximately 214 mm wide, 158 mm deep, 92 mm high at the rear, and 34 mm high at the front. Its flush landscape screen rises toward the rear at 28 degrees above horizontal and faces the operator. The rear skirt reaches a level base with four small silicone feet, so the tilted body sits level.\n\nUse a dark-graphite folded-metal inner chassis, satin-charcoal PC-ABS outer bezel, narrow warm walnut-toned side rails, black glass screen bezel, fine-texture powder coat, precise part seams, and restrained visible fasteners. The landscape screen shows an abstract dark 40-by-13 terminal-style music interface with colored tracker cells, meters, and compact panels, without readable words or branding.\n\nAcross the narrow upper front control strip, show exactly eight small square low-profile keycaps with blank replaceable legends. Below them, show exactly five clean horizontal front-intake louvers spanning most of the width. Keep the intake visibly open and unobstructed.\n\nThe right-side inset shows one accurately organized recessed native-port opening containing exactly four USB-A sockets in two stacked pairs and exactly one RJ45 Ethernet socket, with credible connector depth and surrounding clearance. Do not add analog audio jacks or vents to this port opening.\n\nThe rear inset shows exactly one 40 mm exhaust grille high on the rear, with the fan behind the grille, and a recessed cable bay beside it containing exactly one USB-C power position and exactly one visible micro-HDMI service opening, plus a low cord-relief channel. Add one small rear bumper that preserves exhaust clearance. Front louvers lead into the shallow gap beneath the display; the single rear grille is the sole active exhaust.\n\nRender as a premium mechanically plausible product portfolio image on a white-to-warm-gray studio background with neutral softbox lighting, subtle shadows, realistic graphite metal, charcoal polymer, walnut, black glass, and silicone material response, crisp connector shapes, and perfectly consistent geometry across all three views. Exclude dimension text, captions, callout labels, logos, watermarks, knobs, speakers, quarter-inch jacks, duplicate fans, decorative vents, exposed circuit boards, floating parts, plugged cables, science-fiction styling, people, and hands.\n"
+    }
+  },
+  "5": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1536,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 25072026,
+      "steps": 12,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde_heun_gpu",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "ppd-003-zit/set-b/combined"
+    }
+  }
+}

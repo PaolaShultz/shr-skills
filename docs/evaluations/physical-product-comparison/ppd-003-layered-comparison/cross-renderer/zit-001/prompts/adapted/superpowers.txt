@@ -1,0 +1,13 @@
+Create one polished landscape industrial-design presentation board for one resolved SHR-DAW Raspberry Pi 5 music-workstation enclosure. Show the exact same product in a large front-right three-quarter hero view, a smaller rear three-quarter inset, and a smaller side cutaway inset. Do not show alternate products or variants.
+
+The enclosure is a compact wedge console approximately 212 mm wide, 155 mm deep, and 103 mm high at the rear. Its flush 7-inch landscape screen rises toward the rear at 24 degrees above horizontal and faces the seated operator. The rear shell drops to the tabletop as a stable leveling plinth, supported by two discreet black front feet.
+
+Use bead-blasted warm-graphite powder-coated folded aluminum for the chassis and bottom plate, a satin-black PC-ABS display bezel, precise seams, captive screws, five small square off-white controller buttons, and one tiny amber status light. The screen shows a dense dark 40-by-13 terminal-style tracker interface with cyan, amber, and soft-gray blocks and meters; only SHR-DAW may be legible.
+
+Keep the wide low front intake visibly open. Show exactly five evenly spaced off-white controller buttons and no knobs. The operator-right direct-access well contains exactly four USB-A sockets and one RJ45 Ethernet socket, recessed into a credible bracket with realistic scale and clearance.
+
+The rear inset shows exactly one 40 mm square exhaust fan behind a high-open-area rear grille, a recessed rear-high cable bay with exactly one rounded-rectangle USB-C power socket and exactly two smaller distinct micro-HDMI sockets, and the rear leveling foot. Do not make the three rear sockets identical.
+
+The side cutaway clearly shows, from top to bottom, the display panel, upper airflow gap, Raspberry Pi 5, upward-facing official Active Cooler in that gap, bottom-mounted NVMe Base and SSD, and aluminum bottom plate. Use subtle unlabelled airflow arrows from the front grille through the upper display/Pi gap to the single rear exhaust, plus a smaller lower branch over the NVMe. Exterior views remain closed and do not expose bare circuit boards.
+
+Render as a premium mechanically credible studio product visualization on a neutral warm-light-gray background with soft directional light, sharp edges, restrained shadows, accurate connector shapes, and identical geometry and materials across every view. Exclude blocked grilles, plugged-in cables, extra ports, a second USB-C socket, audio jacks, extra fans, impossible floating parts, dimension text, captions, callout labels, watermarks, hands, people, headphones, speakers, and decorative fake meters.

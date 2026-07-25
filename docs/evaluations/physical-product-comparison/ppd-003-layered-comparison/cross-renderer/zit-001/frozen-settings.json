@@ -1,0 +1,42 @@
+{
+  "status": "frozen_before_rendering",
+  "renderer": "Z-Image-Turbo through ComfyUI",
+  "server_mode": {
+    "deterministic": true,
+    "parallel_servers": [
+      {
+        "physical_gpu": 0,
+        "url": "http://127.0.0.1:8188"
+      },
+      {
+        "physical_gpu": 1,
+        "url": "http://127.0.0.1:8189"
+      }
+    ]
+  },
+  "common_generation_controls": {
+    "width": 1536,
+    "height": 1024,
+    "batch_size": 1,
+    "seed": 25072026,
+    "steps": 12,
+    "cfg": 1,
+    "sampler_name": "dpmpp_2m_sde_heun_gpu",
+    "scheduler": "simple",
+    "denoise": 1,
+    "model_shift": 4.0,
+    "lora": null
+  },
+  "attempt_policy": {
+    "primary_attempts_per_job": 1,
+    "aesthetic_retries": 0,
+    "infrastructure_retry": "Only after a documented infrastructure failure that produced no valid image; repeat identical frozen inputs and preserve the failed attempt.",
+    "inspection_order": "Submit all four Set A jobs before any visual inspection; submit all four Set B jobs without inspecting intermediate results.",
+    "selection": "No cherry-picking."
+  },
+  "interpretation_boundary": {
+    "seed_scope": "The seed supports ZIT reproducibility only and is not claimed to correspond to another renderer's latent seed.",
+    "evidence_scope": "Concept renders only; not CAD, thermal, manufacturability, acoustic, EMC, electrical, or physical-validation evidence.",
+    "semantic_scoring": "Prohibited in this execution archive."
+  }
+}

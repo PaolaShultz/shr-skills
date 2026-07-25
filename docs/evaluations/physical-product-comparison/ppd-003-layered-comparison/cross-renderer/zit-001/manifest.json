@@ -1,0 +1,94 @@
+{
+  "experiment_id": "ppd-003-zit-001",
+  "status": "inputs_frozen_before_rendering",
+  "frozen_at": "2026-07-25T09:06:36+02:00",
+  "expected_primary_generation_count": 8,
+  "expected_retry_count": 0,
+  "common_settings": "frozen-settings.json",
+  "provenance": "provenance.json",
+  "jobs": [
+    {
+      "set": "set-a",
+      "condition": "control",
+      "server": "http://127.0.0.1:8188",
+      "prompt_path": "prompts/exact-transfer/control.txt",
+      "prompt_sha256": "a75495e03999ee201a83f39a6d0d9062dddfd1d0dc94d8619b052f12cd46ab04",
+      "workflow_path": "workflows/jobs/set-a-control.api.json",
+      "workflow_sha256": "0c644728d424a0aab21b636131a996efafc2e6d7f3c2b5fc85af79fa57c5c6b9",
+      "output_path": "outputs/set-a/control.png"
+    },
+    {
+      "set": "set-a",
+      "condition": "superpowers",
+      "server": "http://127.0.0.1:8189",
+      "prompt_path": "prompts/exact-transfer/superpowers.txt",
+      "prompt_sha256": "0dd80a4f9e6a04be64107cfbb896d51ac022cc495d01e5cc28bdb1feb9a57b03",
+      "workflow_path": "workflows/jobs/set-a-superpowers.api.json",
+      "workflow_sha256": "bce074ee8fe6382377aa6a57095fbed6e63814b3f0b91f1f200704bdac9a7211",
+      "output_path": "outputs/set-a/superpowers.png"
+    },
+    {
+      "set": "set-a",
+      "condition": "fructal-cap-design",
+      "server": "http://127.0.0.1:8188",
+      "prompt_path": "prompts/exact-transfer/fructal-cap-design.txt",
+      "prompt_sha256": "03eb79a7843ce3a81464a8b59cb8ef7e24113b670681728e13888274c1a3ab71",
+      "workflow_path": "workflows/jobs/set-a-fructal-cap-design.api.json",
+      "workflow_sha256": "9e32db6f4f65705747ee929cc882ce8bd2f77406caa7bcb830587f569ac62daf",
+      "output_path": "outputs/set-a/fructal-cap-design.png"
+    },
+    {
+      "set": "set-a",
+      "condition": "combined",
+      "server": "http://127.0.0.1:8189",
+      "prompt_path": "prompts/exact-transfer/combined.txt",
+      "prompt_sha256": "14018ca8459c6704057bb5fca20a013124fd240132435c970b687bba4c9576bc",
+      "workflow_path": "workflows/jobs/set-a-combined.api.json",
+      "workflow_sha256": "db0b20fc35428ea1c0327cfff44fb376e737cb499b2ce76b7629556deeef297c",
+      "output_path": "outputs/set-a/combined.png"
+    },
+    {
+      "set": "set-b",
+      "condition": "control",
+      "server": "http://127.0.0.1:8188",
+      "prompt_path": "prompts/adapted/control.txt",
+      "prompt_sha256": "98633d61bab044b7baf2d75721be9ec6f77bb5044a013887c3b1b16ac7fb0b26",
+      "workflow_path": "workflows/jobs/set-b-control.api.json",
+      "workflow_sha256": "8b50c9c18a34e7e37f171e7daec6b37073db68d6cff2c30d59ca203e81883a80",
+      "output_path": "outputs/set-b/control.png"
+    },
+    {
+      "set": "set-b",
+      "condition": "superpowers",
+      "server": "http://127.0.0.1:8189",
+      "prompt_path": "prompts/adapted/superpowers.txt",
+      "prompt_sha256": "878a20d80d71edb7732797baf2efabad3ab54bfc4c3ec4d9ebfd61b114ca990d",
+      "workflow_path": "workflows/jobs/set-b-superpowers.api.json",
+      "workflow_sha256": "8bc9e882e70b0217aeedf098b61bfe027401eab8f1b4fdb7ed90d775d61389fa",
+      "output_path": "outputs/set-b/superpowers.png"
+    },
+    {
+      "set": "set-b",
+      "condition": "fructal-cap-design",
+      "server": "http://127.0.0.1:8188",
+      "prompt_path": "prompts/adapted/fructal-cap-design.txt",
+      "prompt_sha256": "5d0dc5cfcc4d676c60397ba22809c9935c9f650e00d4fbc108bcd0c29b022bf4",
+      "workflow_path": "workflows/jobs/set-b-fructal-cap-design.api.json",
+      "workflow_sha256": "393cda302c75b810e6723a5a02110a7d9bc72bae89579db3dc7afecf8db1a4d7",
+      "output_path": "outputs/set-b/fructal-cap-design.png"
+    },
+    {
+      "set": "set-b",
+      "condition": "combined",
+      "server": "http://127.0.0.1:8189",
+      "prompt_path": "prompts/adapted/combined.txt",
+      "prompt_sha256": "97b0ac4f06dc8fc2427657968a4b6ae2d4aa352db17cc949d8c0c8721ec6fcb2",
+      "workflow_path": "workflows/jobs/set-b-combined.api.json",
+      "workflow_sha256": "ae74af3ec00c12d37419ec06d28368b7f369eb352fa17b74238b9053377c5c3f",
+      "output_path": "outputs/set-b/combined.png"
+    }
+  ],
+  "outputs": [],
+  "primary_generation_count": 0,
+  "retry_count": 0
+}

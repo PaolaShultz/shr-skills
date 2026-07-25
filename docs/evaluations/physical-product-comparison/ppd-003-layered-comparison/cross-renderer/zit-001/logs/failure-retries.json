@@ -1,0 +1,7 @@
+{
+  "policy": "Retry only an infrastructure failure that produced no valid image, with identical frozen inputs and preserved failure evidence.",
+  "failures": [],
+  "retries": [],
+  "failure_count": 0,
+  "retry_count": 0
+}

@@ -1,0 +1,110 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift": 4.0
+    }
+  },
+  "3": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "Create one clean landscape industrial-design presentation board for one resolved Raspberry Pi 5 music-workstation enclosure. Show the exact same product in a dominant front-right three-quarter hero view, a smaller rear three-quarter inset, and a smaller low side-profile inset. Do not show alternate concepts.\n\nThe product is a compact low wedge console, approximately 190 mm wide, 165 mm deep, 96 mm high at the rear, and 36 mm high at the front. A recessed 7-inch landscape screen rises toward the rear at 22 degrees above horizontal and faces a seated operator. The display stays in native landscape orientation. A tall rear leveling heel reaches the tabletop; front and rear silicone feet make the tilted body sit level.\n\nUse a matte charcoal textured polymer shell, black anodized screen bezel, perforated black metal front and rear grilles, narrow dark-bronze anodized side rails, restrained visible fasteners, and one tiny amber status light. The screen shows a dark compact 40-by-13 terminal-style music-tracker grid in muted cyan and amber without readable UI labels.\n\nKeep the full-width front intake visibly open and unobstructed below the screen. Place exactly eight small unlabelled low-profile square control keys, four along each side rail of the screen. Add one small round power button on the right rail. The operator-right recessed connector pocket shows exactly four USB-A sockets and one RJ45 Ethernet socket, with credible wall thickness and connector depth, and no other side ports.\n\nThe rear inset clearly shows the heel, exactly one visible 40 mm square exhaust fan behind its rear grille, and a recessed raised cable/service bay. That bay contains one USB-C power inlet and two micro-HDMI service openings, plus a separate protected gutter for the display connectors. Keep every opening recessed, aligned, realistically scaled, and physically supported. The low side inset clearly communicates the 22-degree screen plane and level stance.\n\nRender as a precise high-end CAD-style product visualization on a warm light-gray studio tabletop with soft controlled key light, crisp edges, realistic material response, coherent geometry across all three views, and generous clean spacing. Exclude arrows, dimensions, captions, callouts, cutaways, exposed circuit boards, knobs, faders, speakers, handles, wood, loose cables, extra fans, extra ports, science-fiction details, branding clutter, watermarks, people, and hands.\n"
+    }
+  },
+  "5": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1536,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 25072026,
+      "steps": 12,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde_heun_gpu",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "ppd-003-zit/set-b/control"
+    }
+  }
+}
