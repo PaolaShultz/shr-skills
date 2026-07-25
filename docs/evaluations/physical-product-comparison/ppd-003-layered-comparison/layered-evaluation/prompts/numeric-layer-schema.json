@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["arms", "comparative_result", "disagreements", "evaluator_confidence"],
+  "properties": {
+    "arms": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "scores",
+          "total",
+          "evidence",
+          "most_consequential_strength",
+          "most_consequential_weakness",
+          "confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": ["Ember", "Harbor", "Quartz", "Willow"]
+          },
+          "scores": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 10,
+            "items": {"type": "integer", "minimum": 0, "maximum": 4}
+          },
+          "total": {"type": "integer", "minimum": 0, "maximum": 40},
+          "evidence": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 10,
+            "items": {"type": "string"}
+          },
+          "most_consequential_strength": {"type": "string"},
+          "most_consequential_weakness": {"type": "string"},
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "comparative_result": {"type": "string"},
+    "disagreements": {"type": "string"},
+    "evaluator_confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    }
+  }
+}

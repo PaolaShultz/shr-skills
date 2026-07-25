@@ -403,6 +403,24 @@ It also reserves a fourth Fructal Cap Design plus Superpowers condition.
 requires its own prospectively frozen ownership, invocation-order, conflict,
 and verification contract.
 
+## Phase 5: layered completion
+
+The collaboration then completed that reserved work in
+[PPD-003](evaluations/physical-product-comparison/ppd-003-layered-comparison/).
+This remained an enjoyable, ambitious, self-correcting experiment: a prospective
+protocol was pushed before the combined result existed, the exact PPD-002
+prompt bytes were reused, an invalid skill diagnostic was corrected before
+launch, and one evaluator transport failure was preserved and replaced under
+the frozen rule.
+
+The layered result clarified rather than repudiated the earlier work. All four
+written designs scored 38–39, while instruction and render layers separated
+substantially. The combined condition strengthened service, recovery, and
+untouched-state reasoning but lost several of those decisions at the image
+handoff. Superpowers retained the only full inspect–correct–reinspect render
+loop. This locates the most recoverable improvement in coverage checking and
+QC closure, not in abandoning either method.
+
 ## Correction and recovery table
 
 | Stage | Initial assumption | Correction signal | What it changed | Recovery | Future safeguard |
@@ -522,25 +540,16 @@ The recovery deliberately preserved:
 
 1. Complete and publish the original broad ecosystem comparison from primary
    sources.
-2. Freeze a layered prompt, design, image-instruction, image-compliance, and
-   package rubric.
-3. Blindly score the two existing prompt-author outputs.
-4. Extract and score the existing image-generation instructions.
-5. Freeze ownership and invocation order for a combined Fructal Cap Design plus
-   Superpowers arm.
-6. Execute that arm only after its controls are fixed.
-7. Label the combined and layered evaluation as a first methodological pass
-   whose primary purpose is hardening experimental rules and boundaries.
-8. Design a second pass with randomized, anonymous human review of every
+2. Design a second pass with randomized, anonymous human review of every
    design, preserving small imperfections, whole-product failures, and
    prompt/rubric omissions that model evaluation did not surface.
-9. Execute every frozen image instruction with at least one independent image
+3. Execute every frozen image instruction with at least one independent image
    renderer under equal attempt and correction rules, so repeated prompt
    defects can be distinguished from renderer-specific artifacts.
-10. Run a later four-condition discovery comparison from the creator's minimally
+4. Run a later four-condition discovery comparison from the creator's minimally
    wrapped rough request.
-11. Complete the pending blind evaluation of the original `ppd-001` pair.
-12. Build CAD and physical prototypes before making enclosure fit, thermal,
+5. Complete the pending blind evaluation of the original `ppd-001` pair.
+6. Build CAD and physical prototypes before making enclosure fit, thermal,
    acoustic, electrical, service, or musician-acceptance claims.
 
 ## Claim boundary
@@ -563,7 +572,7 @@ It does not establish:
 - that the broad ecosystem comparison is complete;
 - that one day's self-directed work is independent validation;
 - that the enclosure designs are physically valid; or
-- that future combined or discovery runs will favor any condition.
+- that future discovery runs will favor any condition.
 
 ## Source map
 
@@ -580,3 +589,5 @@ It does not establish:
   evidence](evaluations/physical-product-comparison/protocol-amendment-03.md)
 - [`ppd-002` three-arm execution
   comparison](evaluations/physical-product-comparison/ppd-002-discovery/)
+- [PPD-003 layered four-arm
+  comparison](evaluations/physical-product-comparison/ppd-003-layered-comparison/)

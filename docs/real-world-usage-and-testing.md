@@ -654,13 +654,26 @@ acoustic trials, electrical checks, cable trials, repeated service, and
 affected-musician use remain necessary before claiming that any enclosure works
 physically.
 
-**Open question:** [Protocol amendment
+**Resolved methodological question:** [Protocol amendment
 03](evaluations/physical-product-comparison/protocol-amendment-03.md) records
 two further needs: evaluate prompt authorship, written design, image
 instruction, image compliance, and complete-package quality as distinct
 layers; and add a prospectively frozen Fructal Cap Design plus Superpowers arm
-to test the claim that their strengths are complementary. No fourth execution
-has been run.
+to test the claim that their strengths are complementary.
+
+**Observed:** [PPD-003](evaluations/physical-product-comparison/ppd-003-layered-comparison/)
+completed both. The combined written design scored `38/39`, but its
+design-to-image instruction scored `30/29` and renderer compliance `30/28`.
+Its complete package scored `38/39`. Across both judges, origin-label
+assignments were image prompt 21, delivery/QC 16, renderer 7, design 1, and
+indeterminate 1. The Superpowers prompt author narrowly led the no-user-skill
+prompt author, `37/39` versus `36/37`.
+
+**Inference:** Fructal Cap Design and Superpowers were complementary in
+discovery and untouched-state/service expression, but availability together
+did not ensure that those constraints survived the image prompt or that visible
+renderer deviations were corrected. The most useful safeguard is an explicit
+design-to-image coverage check followed by a discrepancy-closing render gate.
 
 ## Overall limits
 
@@ -671,7 +684,8 @@ These cases provide:
 - one anonymous private-project implementation;
 - one public-project convergence case whose newest local history is not yet
   published;
-- one frozen, blindly evaluated three-arm physical-product case;
+- one frozen three-arm execution record plus a prospectively frozen fourth arm
+  and two-evaluator layered comparison;
 - qualitative evidence from one affected creator/operator.
 
 They do not yet provide:

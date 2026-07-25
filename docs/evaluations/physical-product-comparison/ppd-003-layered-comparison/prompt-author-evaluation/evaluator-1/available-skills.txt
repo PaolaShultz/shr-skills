@@ -1,0 +1,9 @@
+Non-system user skills: none.
+
+Built-in system skills:
+
+- `imagegen`
+- `openai-docs`
+- `plugin-creator`
+- `skill-creator`
+- `skill-installer`

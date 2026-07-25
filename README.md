@@ -86,6 +86,10 @@ workflow and its explicit claim boundaries. A
 record](docs/physical-product-comparison-protocol.md) preserves the prospective
 protocol, prompt-contamination recovery, frozen enclosure runs, and a blind
 three-arm comparison of no user skill, Superpowers, and Fructal Cap Design. The
+[PPD-003 layered comparison](docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/)
+adds the prospectively frozen combined arm, two blind prompt-author judges,
+two five-layer artifact judges, exact render-call extraction, and error-origin
+attribution. The
 [2026-07-24 workflow
 postmortem](docs/workflow-postmortem-2026-07-24.md) reconstructs the complete
 motion, including missed assumptions, recovery decisions, orchestration

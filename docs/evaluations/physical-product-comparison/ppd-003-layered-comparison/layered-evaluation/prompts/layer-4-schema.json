@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["arms", "comparative_result", "disagreements", "evaluator_confidence"],
+  "properties": {
+    "arms": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "inspected_image",
+          "noticed_contradictions",
+          "corrected_contradictions",
+          "correction_improved_result",
+          "remaining_limitations_disclosed",
+          "exactly_one_final_image",
+          "artifact_agreement",
+          "evidence",
+          "confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": ["Ember", "Harbor", "Quartz", "Willow"]
+          },
+          "inspected_image": {
+            "type": "string",
+            "enum": ["yes", "no", "unclear"]
+          },
+          "noticed_contradictions": {
+            "type": "string",
+            "enum": ["yes", "no", "unclear"]
+          },
+          "corrected_contradictions": {
+            "type": "string",
+            "enum": ["yes", "no", "not_applicable", "unclear"]
+          },
+          "correction_improved_result": {
+            "type": "string",
+            "enum": ["yes", "no", "mixed", "not_applicable", "unclear"]
+          },
+          "remaining_limitations_disclosed": {
+            "type": "string",
+            "enum": ["yes", "partial", "no", "unclear"]
+          },
+          "exactly_one_final_image": {
+            "type": "string",
+            "enum": ["yes", "no", "unclear"]
+          },
+          "artifact_agreement": {
+            "type": "string",
+            "enum": ["yes", "partial", "no", "unclear"]
+          },
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "comparative_result": {"type": "string"},
+    "disagreements": {"type": "string"},
+    "evaluator_confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    }
+  }
+}

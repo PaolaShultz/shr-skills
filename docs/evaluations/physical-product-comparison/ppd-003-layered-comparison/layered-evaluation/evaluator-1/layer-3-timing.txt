@@ -1,0 +1,4 @@
+start=2026-07-25T08:15:48,064669350+02:00
+end=2026-07-25T08:20:42,829369178+02:00
+exit_status=0
+replacement_for=transport-invalid-attempt-1

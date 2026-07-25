@@ -1,0 +1,4 @@
+sealed_at=2026-07-25T07:50:35,936417868+02:00
+seed_sha256=08b377792ff132e22abbca8b6d80ef87b6cb82c3b1935a06ad79a2bf2dc74d1f
+Juniper=superpowers
+Saffron=no-user-skill

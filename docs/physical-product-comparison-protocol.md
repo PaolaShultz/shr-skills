@@ -258,7 +258,13 @@ Current run state:
   executions from a byte-identical prompt; and
 - its separate blind evaluator scored the three arms `38/40`, `39/40`, and
   `38/40` respectively and treated the one-point spread as within judgment
-  uncertainty; and
+  uncertainty;
+- the [PPD-003 layered four-arm
+  comparison](evaluations/physical-product-comparison/ppd-003-layered-comparison/)
+  prospectively froze and executed the combined condition, blindly compared
+  both prompt authors, extracted every exact render-call chain, and used two
+  new judges to score written design, image instruction, renderer compliance,
+  delivery/QC, and complete package separately; and
 - the [2026-07-24 workflow
   postmortem](workflow-postmortem-2026-07-24.md) reconstructs the complete
   experiment motion, orchestration corrections, recoveries, and remaining work

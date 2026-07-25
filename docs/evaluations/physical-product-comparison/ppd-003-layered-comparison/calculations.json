@@ -1,0 +1,164 @@
+{
+  "formula": "100 * (1 - sum(abs(score_a_i - score_b_i)) / (4 * n))",
+  "dimensions": 10,
+  "prompt_author": [
+    {
+      "pair": "Juniper--Saffron",
+      "evaluator_1": 92.5,
+      "evaluator_2": 90,
+      "mean": 91.25
+    }
+  ],
+  "layer_1": [
+    {
+      "pair": "Ember--Harbor",
+      "evaluator_1": 97.5,
+      "evaluator_2": 97.5,
+      "mean": 97.5
+    },
+    {
+      "pair": "Ember--Quartz",
+      "evaluator_1": 100,
+      "evaluator_2": 95,
+      "mean": 97.5
+    },
+    {
+      "pair": "Ember--Willow",
+      "evaluator_1": 95,
+      "evaluator_2": 92.5,
+      "mean": 93.75
+    },
+    {
+      "pair": "Harbor--Quartz",
+      "evaluator_1": 97.5,
+      "evaluator_2": 97.5,
+      "mean": 97.5
+    },
+    {
+      "pair": "Harbor--Willow",
+      "evaluator_1": 97.5,
+      "evaluator_2": 95,
+      "mean": 96.25
+    },
+    {
+      "pair": "Quartz--Willow",
+      "evaluator_1": 95,
+      "evaluator_2": 92.5,
+      "mean": 93.75
+    }
+  ],
+  "layer_2": [
+    {
+      "pair": "Ember--Harbor",
+      "evaluator_1": 85,
+      "evaluator_2": 87.5,
+      "mean": 86.25
+    },
+    {
+      "pair": "Ember--Quartz",
+      "evaluator_1": 90,
+      "evaluator_2": 92.5,
+      "mean": 91.25
+    },
+    {
+      "pair": "Ember--Willow",
+      "evaluator_1": 85,
+      "evaluator_2": 85,
+      "mean": 85
+    },
+    {
+      "pair": "Harbor--Quartz",
+      "evaluator_1": 90,
+      "evaluator_2": 95,
+      "mean": 92.5
+    },
+    {
+      "pair": "Harbor--Willow",
+      "evaluator_1": 95,
+      "evaluator_2": 92.5,
+      "mean": 93.75
+    },
+    {
+      "pair": "Quartz--Willow",
+      "evaluator_1": 85,
+      "evaluator_2": 87.5,
+      "mean": 86.25
+    }
+  ],
+  "layer_3": [
+    {
+      "pair": "Ember--Harbor",
+      "evaluator_1": 77.5,
+      "evaluator_2": 87.5,
+      "mean": 82.5
+    },
+    {
+      "pair": "Ember--Quartz",
+      "evaluator_1": 80,
+      "evaluator_2": 87.5,
+      "mean": 83.75
+    },
+    {
+      "pair": "Ember--Willow",
+      "evaluator_1": 82.5,
+      "evaluator_2": 85,
+      "mean": 83.75
+    },
+    {
+      "pair": "Harbor--Quartz",
+      "evaluator_1": 92.5,
+      "evaluator_2": 95,
+      "mean": 93.75
+    },
+    {
+      "pair": "Harbor--Willow",
+      "evaluator_1": 90,
+      "evaluator_2": 87.5,
+      "mean": 88.75
+    },
+    {
+      "pair": "Quartz--Willow",
+      "evaluator_1": 92.5,
+      "evaluator_2": 82.5,
+      "mean": 87.5
+    }
+  ],
+  "layer_5": [
+    {
+      "pair": "Ember--Harbor",
+      "evaluator_1": 97.5,
+      "evaluator_2": 97.5,
+      "mean": 97.5
+    },
+    {
+      "pair": "Ember--Quartz",
+      "evaluator_1": 97.5,
+      "evaluator_2": 87.5,
+      "mean": 92.5
+    },
+    {
+      "pair": "Ember--Willow",
+      "evaluator_1": 97.5,
+      "evaluator_2": 95,
+      "mean": 96.25
+    },
+    {
+      "pair": "Harbor--Quartz",
+      "evaluator_1": 95,
+      "evaluator_2": 85,
+      "mean": 90
+    },
+    {
+      "pair": "Harbor--Willow",
+      "evaluator_1": 95,
+      "evaluator_2": 97.5,
+      "mean": 96.25
+    },
+    {
+      "pair": "Quartz--Willow",
+      "evaluator_1": 95,
+      "evaluator_2": 87.5,
+      "mean": 91.25
+    }
+  ]
+}

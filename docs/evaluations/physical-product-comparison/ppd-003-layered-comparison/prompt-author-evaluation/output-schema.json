@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidates",
+    "comparative_result",
+    "disagreement_likely",
+    "evaluator_confidence"
+  ],
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "scores",
+          "total",
+          "preserved_meaning",
+          "useful_additions",
+          "unsupported_additions",
+          "premature_decisions",
+          "omissions",
+          "distortions",
+          "likely_downstream_consequences",
+          "summary",
+          "confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": ["Juniper", "Saffron"]
+          },
+          "scores": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 10,
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4
+            }
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 40
+          },
+          "preserved_meaning": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "useful_additions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "unsupported_additions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "premature_decisions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "omissions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "distortions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "likely_downstream_consequences": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "summary": {"type": "string"},
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "comparative_result": {"type": "string"},
+    "disagreement_likely": {"type": "string"},
+    "evaluator_confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    }
+  }
+}

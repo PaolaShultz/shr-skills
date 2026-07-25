@@ -1,0 +1,6 @@
+sealed_at=2026-07-25T07:50:35,941524913+02:00
+seed_sha256=27f9a086f02e4c6d9de95cb18ad4c89aef96f1dd862b6d0a8880ee7877bc939c
+Ember=superpowers
+Harbor=control
+Quartz=treatment
+Willow=combined
