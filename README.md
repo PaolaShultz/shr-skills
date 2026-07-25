@@ -89,7 +89,11 @@ three-arm comparison of no user skill, Superpowers, and Fructal Cap Design. The
 [PPD-003 layered comparison](docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/)
 adds the prospectively frozen combined arm, two blind prompt-author judges,
 two five-layer artifact judges, exact render-call extraction, and error-origin
-attribution. The
+attribution. Its separate
+[ZIT cross-renderer
+extension](docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/cross-renderer/zit-001/)
+re-renders all four frozen designs with a second image system while preserving
+both byte-identical and renderer-adapted prompt conditions. The
 [2026-07-24 workflow
 postmortem](docs/workflow-postmortem-2026-07-24.md) reconstructs the complete
 motion, including missed assumptions, recovery decisions, orchestration

@@ -251,6 +251,13 @@ expect_failure "unsupported live output schema keyword" \
   "live output schema uses unsupported keyword uniqueItems" \
   "${validator}" --repo "${case_dir}"
 
+case_dir="$(copy_repo changed-frozen-artifact)"
+printf '\nchanged after freeze\n' >> \
+  "${case_dir}/docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/README.md"
+expect_failure "changed frozen artifact" \
+  "frozen artifact checksum differs: docs/evaluations/physical-product-comparison/ppd-003-layered-comparison/README.md" \
+  "${validator}" --repo "${case_dir}"
+
 installed_dir="${temporary_root}/installed/fructal"
 mkdir -p "${installed_dir}/agents"
 cp "${repo_dir}/skills/fructal/SKILL.md" "${installed_dir}/SKILL.md"

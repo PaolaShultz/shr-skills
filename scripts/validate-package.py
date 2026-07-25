@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -310,6 +311,42 @@ def validate_live_output_schema(
     )
 
 
+def validate_evaluation_freezes(repo: Path, validation: Validation) -> None:
+    evaluations = repo / "docs/evaluations"
+    for manifest in sorted(evaluations.rglob("SHA256SUMS")):
+        label = str(manifest.relative_to(repo))
+        text = load_text(manifest, validation, label)
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            match = re.fullmatch(r"([0-9a-f]{64})  (.+)", line)
+            if match is None:
+                validation.failures.append(
+                    f"invalid checksum entry in {label}:{line_number}"
+                )
+                continue
+            expected, relative_name = match.groups()
+            archive = manifest.parent.resolve()
+            artifact = (manifest.parent / relative_name).resolve()
+            try:
+                artifact.relative_to(archive)
+            except ValueError:
+                validation.failures.append(
+                    f"checksum entry escapes its archive in {label}:{line_number}"
+                )
+                continue
+            if not artifact.is_file():
+                validation.failures.append(
+                    f"frozen artifact is missing: "
+                    f"{artifact.relative_to(repo)}"
+                )
+                continue
+            observed = hashlib.sha256(artifact.read_bytes()).hexdigest()
+            if observed != expected:
+                validation.failures.append(
+                    f"frozen artifact checksum differs: "
+                    f"{artifact.relative_to(repo)}"
+                )
+
+
 def validate_package(repo: Path, installed: Path | None) -> None:
     validation = Validation()
     skill_path = repo / "skills/fructal/SKILL.md"
@@ -406,6 +443,7 @@ def validate_package(repo: Path, installed: Path | None) -> None:
 
     case_count = validate_contract_cases(cases_path, validation)
     validate_live_output_schema(live_schema_path, validation)
+    validate_evaluation_freezes(repo, validation)
 
     installed_state = "not requested"
     if installed is not None:
