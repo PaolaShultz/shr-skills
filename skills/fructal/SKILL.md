@@ -2,7 +2,7 @@
 name: fructal
 description: Use when a technical, operational, physical, service, or multi-actor workflow is constrained by necessary rules yet feels obstructive, surprising, mode-heavy, difficult to recover from, or prone to losing context. Also use when changing such a workflow must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Do not use for purely aesthetic critique or isolated defects unless they materially affect the workflow.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 ---
 

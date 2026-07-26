@@ -3,6 +3,11 @@
 This is the durable public design record for Fructal Cap Design's executable
 contract.
 
+Historical boundary: this document records the design that introduced package
+version `1.0.0`. That version below is intentionally retained as the release
+designed here; the current package version is tracked in
+[`README.md`](../README.md) and the canonical skill metadata.
+
 ## Purpose
 
 Resolve the six findings from the 2026-07-24 Review of Fructal Cap Design:

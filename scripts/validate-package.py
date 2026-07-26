@@ -14,7 +14,7 @@ from typing import Any
 import yaml
 
 
-EXPECTED_VERSION = "1.0.0"
+EXPECTED_VERSION = "1.0.1"
 EXPECTED_SOURCE = (
     "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 )

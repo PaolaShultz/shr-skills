@@ -4,6 +4,13 @@ Status: **retrospective, public, and privacy-sanitized**
 
 Date: 2026-07-24
 
+Historical boundary: this dated reconstruction includes the already-reserved
+PPD-003 layered completion. Later ZIT-001, FSI-001, and private
+implementation-replay evidence is routed from
+[Real-world usage and testing](real-world-usage-and-testing.md) rather than
+being retrofitted into this day's narrative. “Current state” below means the
+state at this postmortem's bounded endpoint.
+
 ## Purpose
 
 This document reconstructs the complete working motion that led from
@@ -403,7 +410,7 @@ It also reserves a fourth Fructal Cap Design plus Superpowers condition.
 requires its own prospectively frozen ownership, invocation-order, conflict,
 and verification contract.
 
-## Phase 5: layered completion
+## Phase 7: layered completion
 
 The collaboration then completed that reserved work in
 [PPD-003](evaluations/physical-product-comparison/ppd-003-layered-comparison/).

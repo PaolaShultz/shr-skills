@@ -1,7 +1,7 @@
 # Physical-product design comparison protocol
 
-Status: **first execution pair frozen with evaluation pending; three-arm
-execution extension frozen and blindly evaluated**
+Status: **prospective protocol preserved; three-arm and four-arm evaluations
+complete; cross-renderer extension complete**
 
 This prospective protocol records how Fructal Cap Design is expected to affect
 the design of a real Raspberry Pi music-workstation enclosure before either
@@ -264,7 +264,15 @@ Current run state:
   prospectively froze and executed the combined condition, blindly compared
   both prompt authors, extracted every exact render-call chain, and used two
   new judges to score written design, image instruction, renderer compliance,
-  delivery/QC, and complete package separately; and
+  delivery/QC, and complete package separately;
+- the [ZIT-001 cross-renderer
+  extension](evaluations/physical-product-comparison/ppd-003-layered-comparison/cross-renderer/zit-001/)
+  completed four byte-exact prompt transfers and four prospectively adapted
+  prompts through a second renderer under common frozen controls. All eight
+  primary outputs passed technical archive validation with no infrastructure
+  failures or retries. This is renderer evidence only: the adapted set is not a
+  fifth method arm, and no semantic score or physical-product verdict was
+  added; and
 - the [2026-07-24 workflow
   postmortem](workflow-postmortem-2026-07-24.md) reconstructs the complete
   experiment motion, orchestration corrections, recoveries, and remaining work

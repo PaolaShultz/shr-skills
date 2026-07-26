@@ -1,20 +1,27 @@
 # Real-world usage and testing
 
-Fructal Cap Design has five distinct kinds of practical evidence:
+Fructal Cap Design has seven distinct kinds of practical evidence:
 
 1. it was applied to its own execution contract and produced regression-tested
    improvements;
 2. it found latent workflow failures in an anonymous private software project
    already using a disciplined software-delivery skill suite;
-3. it drove a public musician/operator workflow audit and repair across the
+3. a private implementation replay compared historical Fructal Cap Design,
+   no Fructal Cap Design, and current Fructal Cap Design while holding the same
+   software-delivery skills and a repair brief authored by Fructal Cap Design
+   constant;
+4. it drove a public musician/operator workflow audit and repair across the
    software, controllers, audio services, storage, and Raspberry Pi environment
    of [SHR-DAW](https://github.com/PaolaShultz/shr-daw);
-4. its capability cluster independently appeared in the experimental workflow
+5. its capability cluster independently appeared in the experimental workflow
    of [Moj Sint](https://github.com/PaolaShultz/moj-sint), without evidence that
    the Fructal Cap Design skill itself was invoked there; and
-5. it was executed in a frozen three-arm physical-product comparison against
-   Superpowers and a no-user-skill control, then scored by a separate blind
-   evaluator.
+6. it was executed in frozen three- and four-arm physical-product comparisons,
+   followed by layered evaluation and an eight-render technical cross-renderer
+   extension; and
+7. it was tested with Superpowers across six adversarial local workflows and
+   eighteen isolated arms to examine composition, conflict, suppression,
+   recovery, and cost.
 
 These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
@@ -245,6 +252,47 @@ repository discipline, review, and completion evidence.
 The case demonstrates why passing local tests does not prove that a complete
 workflow remains coherent. It also demonstrates why a broad workflow review is
 not a substitute for disciplined implementation. Both layers were needed.
+
+### Private implementation replay
+
+**Observed:** A separate private, local-only experiment replayed the same
+repair brief authored by Fructal Cap Design from the same pre-repair source
+across three implementation arms:
+
+1. historical Fructal Cap Design plus explicitly requested Superpowers skills;
+2. the same Superpowers skills without Fructal Cap Design; and
+3. current Fructal Cap Design plus those same Superpowers skills.
+
+Superpowers was held constant as the debugging, test-driven implementation, and
+verification layer. It was not treated as a competing design method. All three
+arms covered the same nine named feature areas because every arm inherited the
+findings, decisions, constraints, recovery requirements, and preservation
+boundaries from the earlier Fructal Cap Design review.
+
+**Observed:** Both Fructal Cap Design arms removed a parent-dismissal
+interaction topology retained by the Superpowers-only arm. The current arm
+reproduced that retained topology as a real child-interaction failure before
+repairing it. The current arm also produced the strongest selected-city
+identity and intent contract across validation, form state, later events, and
+persistence.
+
+**Inference:** This supports incremental implementation-stage workflow
+integrity and complementarity. Fructal Cap Design added attention to motion,
+context, and intent while Superpowers continued to supply disciplined
+engineering execution.
+
+The experiment does **not** measure Fructal Cap Design's discovery advantage:
+every arm received a brief authored by Fructal Cap Design. One stochastic
+replay does not establish universal superiority. Different test counts and
+changed-line totals are completion evidence, not quality scores. Browser checks
+used desktop and mobile Chromium emulation, not physical devices, assistive
+technology, or affected-actor acceptance. No experiment result was merged into
+the current private product.
+
+The archive remains private and is intentionally not linked. Product names,
+repository paths, routes, implementation identifiers, traces, patches,
+operational details, and unpublished test evidence remain outside this public
+record.
 
 ## Case 3: SHR-DAW on Raspberry Pi
 
@@ -557,7 +605,8 @@ evidence.
 | Evidence layer | What it demonstrates | Main limitation |
 | --- | --- | --- |
 | Fructal Cap Design applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
-| Anonymous private software project | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
+| Anonymous private software review | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
+| Anonymous private implementation replay | With the same brief authored by Fructal Cap Design and Superpowers held constant, both Fructal Cap Design arms protected a cross-interaction motion the control retained, while the current arm strengthened identity and intent preservation | One stochastic implementation replay; discovery advantage was not measured |
 | Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
 | Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; the newest 50 commits are not yet public |
 
@@ -566,8 +615,10 @@ Together, the cases support a narrower, evidence-backed conclusion:
 > Fructal Cap Design has demonstrated value as a discovery and preservation
 > layer above disciplined implementation—first on itself, then in a private
 > software product, and then across a public Raspberry Pi
-> musician/operator system. Moj Sint separately shows the same capability
-> cluster emerging in experimental sound research without proving that
+> musician/operator system. A private replay separately supports incremental
+> workflow integrity during implementation when Superpowers is held constant,
+> without measuring discovery. Moj Sint shows the same capability cluster
+> emerging in experimental sound research without proving that
 > Fructal Cap Design caused it.
 
 The cases do not show that Fructal Cap Design replaces debugging, test-driven
@@ -581,6 +632,9 @@ analyze, implement, or verify.
 **Open question:** The anonymous private software case currently has extensive
 local behavioral and browser evidence but no published before/after production
 comparison.
+
+No implementation-replay result was merged into the current private product,
+so the replay is experimental evidence rather than product state.
 
 A future validation pass is reserved to:
 
@@ -676,17 +730,74 @@ did not ensure that those constraints survived the image prompt or that visible
 renderer deviations were corrected. The most useful safeguard is an explicit
 design-to-image coverage check followed by a discrepancy-closing render gate.
 
+**Observed:** The separate [ZIT-001 cross-renderer
+extension](evaluations/physical-product-comparison/ppd-003-layered-comparison/cross-renderer/zit-001/)
+sent all four frozen designs through a second image system under common
+controls. Set A transferred each original image instruction byte-for-byte.
+Set B used a separately frozen renderer-adapted prompt mapped back to the same
+design and source instruction. Set B was not a fifth workflow-method arm and
+did not repair an upstream design.
+
+All eight primary renders were unique, decodable 1536×1024 RGB PNGs with
+complete prompt, workflow, submission, history, and output associations. There
+were no infrastructure failures or retries. That is technical archive and
+provenance validation only: no semantic scoring, winner selection, visual
+repair, physical validation, or affected-musician acceptance was performed.
+
+## Method-interaction experiment
+
+**Observed:** [FSI-001](evaluations/method-interaction/fsi-001-adversarial-composition/)
+ran six deterministic local cases under three isolated conditions:
+Fructal Cap Design only, Superpowers only, and both packages together. All 18
+arms were valid. Two anonymous evaluators agreed on 13 successful, three
+partial, and two unsuccessful task outcomes.
+
+This was not a winner result. Combined availability improved task correctness
+beyond both single-method arms in one of six cases, and only from unsuccessful
+to partial. One local-publication case was materially confounded by read-only
+fixture Git metadata and was preserved rather than rerun.
+
+The clearest interaction evidence concerned invocation:
+
+- Superpowers was read in all six combined arms;
+- Fructal Cap Design was read in one of the six combined arms; and
+- Superpowers appeared first in that one arm.
+
+Availability therefore did not guarantee composition. The strongest observed
+complementarity was the one response-only Redesign case that read both
+contracts: Fructal Cap Design supplied the no-write mode ceiling, preservation,
+recovery, and actor continuity, while Superpowers supplied structured option
+comparison and verification discipline. All three conditions completed that
+case, so the combined value was coverage and structure rather than uniquely
+correct task completion.
+
+**Inference:** FSI-001 supports bounded ownership rules for using
+software-delivery processes inside Fructal Cap Design's selected mode and shows
+that non-blocking conflict, redundancy, and skill suppression deserve explicit
+attention. It does not show that either package is universally superior or
+that one fixed read order generalizes.
+
+Combined elapsed time and compatible token totals exceeded both
+single-condition totals across the six cases, but recovery work and fixed
+package order confound causal efficiency claims. Those measurements are
+descriptive costs, not evidence that composition is inherently slower.
+
 ## Overall limits
 
 These cases provide:
 
 - direct repository evidence of self-correction;
 - direct public source, test, screenshot, machine, audio, and recovery evidence;
-- one anonymous private-project implementation;
+- one anonymous private-project review and implementation;
+- one private three-arm implementation replay with a held-constant engineering
+  layer and a brief authored by Fructal Cap Design;
 - one public-project convergence case whose newest local history is not yet
   published;
 - one frozen three-arm execution record plus a prospectively frozen fourth arm
   and two-evaluator layered comparison;
+- one eight-render technical cross-renderer extension without semantic scoring;
+- one eighteen-arm adversarial method-interaction experiment with two anonymous
+  evaluators; and
 - qualitative evidence from one affected creator/operator.
 
 They do not yet provide:

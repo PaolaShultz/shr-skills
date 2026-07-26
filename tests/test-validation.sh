@@ -166,9 +166,9 @@ expect_failure "malformed openai.yaml" \
 
 case_dir="$(copy_repo missing-version)"
 if mutate_or_record "missing version" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.0.0"'; then
+  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.0.1"'; then
   expect_failure "missing package version" \
-    "metadata.version must be 1.0.0" \
+    "metadata.version must be 1.0.1" \
     "${validator}" --repo "${case_dir}"
 fi
 

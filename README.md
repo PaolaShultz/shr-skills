@@ -1,7 +1,7 @@
 # Fructal Cap Design
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill. The current package version is **1.0.0**.
+packaged as a Codex skill. The current package version is **1.0.1**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
@@ -79,7 +79,12 @@ self-application, an anonymized private software case, and the public
 repair, and acceptance evidence. The SHR-DAW case also records a low-power-first
 development position: its editing, builds, tests, QA, and release work ran
 directly on the target Raspberry Pi rather than requiring a desktop
-workstation. The account also covers the
+workstation. The private case now also includes an anonymized three-arm
+implementation replay. It held Superpowers constant while comparing historical
+Fructal Cap Design, no Fructal Cap Design, and current Fructal Cap Design over
+the same repair brief authored by Fructal Cap Design. That replay supports a
+bounded implementation-stage workflow-integrity claim, not a discovery
+advantage or universal superiority claim. The account also covers the
 [Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
 workflow and its explicit claim boundaries. A
 [physical-product comparison
