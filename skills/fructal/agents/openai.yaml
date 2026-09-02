@@ -1,4 +1,4 @@
 interface:
   display_name: "Fructal Cap Design"
-  short_description: "Make constrained workflows feel natural"
-  default_prompt: "Use $fructal on this constrained workflow: [describe the workflow, desired outcome, and modification boundary]. Treat an explicitly requested mode as the maximum outcome; otherwise select the mode from that scope."
+  short_description: "Unblock consequential workflows without weakening constraints"
+  default_prompt: "Use $fructal when a necessary constraint materially obstructs this workflow: [describe the workflow, desired outcome, and modification boundary]. Scale rigor to consequence, and treat an explicitly requested mode as the maximum outcome."

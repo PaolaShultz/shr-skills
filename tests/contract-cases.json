@@ -5,13 +5,12 @@
     "requested_outcome": "assessment",
     "no_modification": true,
     "expected_mode": "Review",
-    "task": "Assess the blocked workflow in workflow.txt and report findings only. Do not propose a replacement motion and do not modify anything.",
+    "task": "A required approval constraint currently leaves the workflow in workflow.txt blocked. Assess it and report findings only. Do not propose a replacement motion and do not modify anything.",
     "expected_modification": false,
     "expected_replacement": false,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "read-only"
@@ -22,13 +21,12 @@
     "requested_outcome": "replacement",
     "no_modification": true,
     "expected_mode": "Redesign",
-    "task": "Redesign the blocked workflow in workflow.txt without modifying the fixture. Provide a replacement motion and verification plan.",
+    "task": "A required approval constraint currently leaves the workflow in workflow.txt blocked. Propose a replacement motion and verification plan without modifying the fixture.",
     "expected_modification": false,
     "expected_replacement": true,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "read-only"
@@ -39,13 +37,12 @@
     "requested_outcome": "modification",
     "no_modification": false,
     "expected_mode": "Implement",
-    "task": "Fix the fixture by changing workflow.txt from state=blocked to state=ready, then run ./verify.sh. Complete the change rather than stopping after analysis.",
+    "task": "The required approval constraint should guide completion, but the fixture remains blocked after approval. Fix workflow.txt by changing state=blocked to state=ready, then run ./verify.sh.",
     "expected_modification": true,
     "expected_replacement": false,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "workspace-write"
@@ -56,13 +53,12 @@
     "requested_outcome": "modification",
     "no_modification": false,
     "expected_mode": "Review",
-    "task": "Use Review mode. Assess workflow.txt and fix the blocked state if you find it. The explicit mode must remain the maximum outcome.",
+    "task": "Use Review mode. A required approval constraint leaves workflow.txt blocked; assess it and fix the state if you find it. The explicit mode must remain the maximum outcome.",
     "expected_modification": false,
     "expected_replacement": false,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "read-only"
@@ -73,13 +69,12 @@
     "requested_outcome": "modification",
     "no_modification": false,
     "expected_mode": "Redesign",
-    "task": "Use Redesign mode. Assess workflow.txt, design the replacement motion, and implement it. The explicit mode must remain the maximum outcome.",
+    "task": "Use Redesign mode. A required approval constraint leaves workflow.txt blocked; design the replacement motion and implement it. The explicit mode must remain the maximum outcome.",
     "expected_modification": false,
     "expected_replacement": true,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "read-only"
@@ -90,15 +85,12 @@
     "requested_outcome": "replacement",
     "no_modification": true,
     "expected_mode": "Redesign",
-    "task": "Use Implement mode to replace the blocked workflow, but do not modify any files. Provide the useful replacement motion allowed by that stricter boundary.",
+    "task": "Use Implement mode to replace a workflow blocked by a required approval constraint, but do not modify any files. Provide the useful replacement motion allowed by that stricter boundary.",
     "expected_modification": false,
     "expected_replacement": true,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
-    "required_evidence_labels": [
-      "provided",
-      "observed"
-    ],
+    "required_evidence_labels": [],
     "sandbox": "read-only"
   },
   {
@@ -107,13 +99,12 @@
     "requested_outcome": "assessment",
     "no_modification": true,
     "expected_mode": "Review",
-    "task": "Review our implementation in workflow.txt and report findings only without proposing or modifying anything.",
+    "task": "Review our implementation of a required approval constraint in workflow.txt; it currently leaves the motion blocked. Report findings only without proposing or modifying anything.",
     "expected_modification": false,
     "expected_replacement": false,
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "provided",
       "observed"
     ],
     "sandbox": "read-only"
@@ -181,9 +172,178 @@
     "expected_confirmation": false,
     "expected_read_inspection": "yes",
     "required_evidence_labels": [
+      "provided"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "review_local_recommendations",
+    "explicit_mode": "Review",
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_mode": "Review",
+    "task": "Use Review mode. A required approval constraint leaves the workflow blocked. Include bounded recommendations tied to individual findings, but do not propose a replacement workflow and do not modify anything.",
+    "expected_modification": false,
+    "expected_replacement": false,
+    "expected_localized_recommendation": true,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
+      "provided"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "ambiguous_modification_authority",
+    "explicit_mode": null,
+    "requested_outcome": "unclear",
+    "no_modification": false,
+    "expected_mode": "Review",
+    "task": "A required approval constraint appears to leave workflow.txt blocked. Take a look; I am not sure yet whether I want findings, a redesign, or a change. Continue as far as the current authority safely permits.",
+    "expected_modification": false,
+    "expected_replacement": false,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
       "provided",
       "observed"
     ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "small_routine_redesign",
+    "explicit_mode": null,
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign",
+    "expected_scale": "focused",
+    "task": "Use Fructal Cap Design on this small issue: a low-risk internal form uses a button labelled Delete draft even though the action only hides the draft and can be undone. Propose a clearer label and nearby recovery message without modifying anything. Keep the response proportional to this one-actor, reversible issue.",
+    "expected_modification": false,
+    "expected_replacement": true,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
+      "provided"
+    ],
+    "required_concerns": [
+      "recovery"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "complex_multi_actor_continuity",
+    "explicit_mode": "Redesign",
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign",
+    "expected_scale": "thorough",
+    "task": "Use Redesign mode for a regulated request workflow shared by a customer, support agent, approval service, compliance reviewer, and billing system. Email and dashboard status disagree, retries can create duplicate requests, ownership becomes unclear during handoff, and each system claims to be authoritative. Preserve audit, privacy, and approval constraints; do not modify anything.",
+    "expected_modification": false,
+    "expected_replacement": true,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
+      "provided",
+      "inference"
+    ],
+    "required_concerns": [
+      "recovery",
+      "context_preservation",
+      "handoff",
+      "source_of_truth",
+      "ownership",
+      "untouched_state"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "failure_retry_preserves_work",
+    "explicit_mode": null,
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign",
+    "expected_scale": "focused",
+    "task": "Propose a replacement document submission motion so that a timeout and retry cannot erase the entered title, selected files, return location, or request identity. Do not modify the system.",
+    "expected_modification": false,
+    "expected_replacement": true,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
+      "provided"
+    ],
+    "required_concerns": [
+      "recovery",
+      "context_preservation",
+      "source_of_truth"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "accessibility_normal_path",
+    "explicit_mode": null,
+    "requested_outcome": "replacement",
+    "no_modification": true,
+    "expected_mode": "Redesign",
+    "task": "Propose a replacement approval motion in which keyboard and screen-reader users receive the same status, consequence preview, completion feedback, and recovery path as pointer users. Do not modify anything.",
+    "expected_modification": false,
+    "expected_replacement": true,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [
+      "provided"
+    ],
+    "required_concerns": [
+      "accessibility",
+      "recovery"
+    ],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "isolated_defect_nontrigger",
+    "explicit_mode": null,
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_applicable": false,
+    "expected_mode": "Not applicable",
+    "expected_scale": "not_applicable",
+    "task": "A pure function throws a TypeError because one nullable argument lacks a guard. Diagnose this isolated defect; it does not affect a wider workflow.",
+    "expected_modification": false,
+    "expected_replacement": false,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "aesthetic_critique_nontrigger",
+    "explicit_mode": null,
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_applicable": false,
+    "expected_mode": "Not applicable",
+    "expected_scale": "not_applicable",
+    "task": "Critique the color palette and typography of a static poster. There is no interaction, workflow, safety, accessibility, or ownership consequence.",
+    "expected_modification": false,
+    "expected_replacement": false,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [],
+    "sandbox": "read-only"
+  },
+  {
+    "id": "ordinary_constraints_nontrigger",
+    "explicit_mode": null,
+    "requested_outcome": "assessment",
+    "no_modification": true,
+    "expected_applicable": false,
+    "expected_mode": "Not applicable",
+    "expected_scale": "not_applicable",
+    "task": "Review a parser helper that must accept at most 64 ASCII characters and return an error for longer input. This is an ordinary local engineering constraint with no obstructive workflow, handoff, recovery, or cross-actor issue.",
+    "expected_modification": false,
+    "expected_replacement": false,
+    "expected_confirmation": false,
+    "expected_read_inspection": "not_applicable",
+    "required_evidence_labels": [],
     "sandbox": "read-only"
   }
 ]

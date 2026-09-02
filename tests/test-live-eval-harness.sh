@@ -54,6 +54,9 @@ mkdir -p "${temporary_root}/tmp"
 expect_success "full fake live matrix" \
   env TMPDIR="${temporary_root}/tmp" \
   "${evaluator}" --codex-bin "${fake_codex}"
+expect_success "historical skill selection" \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --skill-git-ref HEAD --case implicit_review
 if find "${temporary_root}/tmp" -mindepth 1 -maxdepth 1 -type d |
   grep -q .; then
   record_failure "successful run retained temporary evaluation state"
@@ -81,6 +84,10 @@ expect_failure_class "missing Implement fixture change" "fixture" \
 expect_failure_class "missing Codex runner" "runner" \
   "${evaluator}" --codex-bin "${temporary_root}/does-not-exist" \
   --case implicit_review
+
+expect_failure_class "missing historical skill revision" "runner" \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --skill-git-ref does-not-exist --case implicit_review
 
 if ((failures > 0)); then
   exit 1

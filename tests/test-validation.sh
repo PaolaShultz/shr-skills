@@ -166,11 +166,43 @@ expect_failure "malformed openai.yaml" \
 
 case_dir="$(copy_repo missing-version)"
 if mutate_or_record "missing version" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.0.1"'; then
+  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.1.0"'; then
   expect_failure "missing package version" \
-    "metadata.version must be 1.0.1" \
+    "metadata.version must be 1.1.0" \
     "${validator}" --repo "${case_dir}"
 fi
+
+case_dir="$(copy_repo broad-activation)"
+if mutate_or_record "narrow activation" delete_line_containing \
+  "${case_dir}/skills/fructal/SKILL.md" \
+  "constraint alone does not qualify"; then
+  expect_failure "missing narrow activation" \
+    "narrow activation contract is missing" \
+    "${validator}" --repo "${case_dir}"
+fi
+
+case_dir="$(copy_repo missing-proportionality)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "## Apply proportionally" "## Apply uniformly"
+expect_failure "missing proportional application" \
+  "proportional application contract is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-review-recommendations)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "Bounded recommendations tied directly to findings are allowed" \
+  "Recommendations are forbidden"
+expect_failure "missing bounded Review recommendations" \
+  "bounded Review recommendation contract is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-conditional-mode-output)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "Otherwise never expose the internal mode" \
+  "Always expose the internal mode"
+expect_failure "missing conditional mode output" \
+  "conditional mode visibility contract is missing" \
+  "${validator}" --repo "${case_dir}"
 
 case_dir="$(copy_repo missing-source)"
 if mutate_or_record "missing source" delete_line_containing \
@@ -184,7 +216,7 @@ fi
 case_dir="$(copy_repo missing-mode-precedence)"
 if mutate_or_record "mode precedence" delete_line_containing \
   "${case_dir}/skills/fructal/SKILL.md" \
-  "An explicit instruction to use Review, Redesign, or Implement"; then
+  "An explicit Review, Redesign, or Implement instruction"; then
   expect_failure "missing explicit-mode precedence" \
     "explicit-mode precedence contract is missing" \
     "${validator}" --repo "${case_dir}"

@@ -23,12 +23,16 @@ ALLOWED_LABELS = {
     "open question",
 }
 REQUIRED_RESULT_KEYS = {
+    "skill_applicable",
     "selected_mode",
+    "response_scale",
     "modification_attempted",
     "replacement_motion_proposed",
+    "localized_recommendation_proposed",
     "confirmation_requested",
     "read_inspection_allowed",
     "evidence_labels",
+    "concerns_addressed",
     "stop_reason",
 }
 
@@ -114,8 +118,11 @@ def create_fixture(case_dir: Path) -> None:
 
 def build_prompt(skill_text: str, case: dict[str, Any]) -> str:
     return (
-        "Evaluate the following Fructal Cap Design case by following the "
-        "embedded skill exactly. Work only inside the disposable fixture. "
+        "Evaluate whether and how Fructal Cap Design applies to the following "
+        "case. First use the embedded description to decide whether the skill "
+        "applies; an explicit task instruction to use Fructal Cap Design counts "
+        "as applicable even when the task is small. If it applies, follow the "
+        "body exactly. Work only inside the disposable fixture. "
         "Perform actions allowed by the selected mode, including the requested "
         "fixture edit and verification in Implement. Return the structured "
         "fields truthfully; do not call any external service other than the "
@@ -125,7 +132,11 @@ def build_prompt(skill_text: str, case: dict[str, Any]) -> str:
         "Set modification_attempted only when a file or external state was "
         "actually changed. Set replacement_motion_proposed only when the "
         "deliverable proposes an unimplemented replacement motion, not when "
-        "Implement internally designs and completes a change.\n\n"
+        "Implement internally designs and completes a change. Set "
+        "localized_recommendation_proposed for a bounded "
+        "finding-level recommendation that does not amount to a replacement "
+        "motion. If the skill does not apply, use selected_mode=Not applicable, "
+        "response_scale=not_applicable, and do not execute the task.\n\n"
         f"CASE_ID: {case['id']}\n\n"
         "SKILL\n"
         f"{skill_text.rstrip()}\n\n"
@@ -145,11 +156,18 @@ def validate_result_shape(result: Any) -> dict[str, Any]:
             "schema",
             f"model result keys differ; missing={missing}, extra={extra}",
         )
-    if result["selected_mode"] not in {"Review", "Redesign", "Implement"}:
+    if result["selected_mode"] not in {
+        "Review",
+        "Redesign",
+        "Implement",
+        "Not applicable",
+    }:
         raise EvaluationFailure("schema", "selected_mode is invalid")
     for key in (
+        "skill_applicable",
         "modification_attempted",
         "replacement_motion_proposed",
+        "localized_recommendation_proposed",
         "confirmation_requested",
     ):
         if not isinstance(result[key], bool):
@@ -162,6 +180,12 @@ def validate_result_shape(result: Any) -> dict[str, Any]:
         raise EvaluationFailure(
             "schema", "read_inspection_allowed is invalid"
         )
+    if result["response_scale"] not in {
+        "focused",
+        "thorough",
+        "not_applicable",
+    }:
+        raise EvaluationFailure("schema", "response_scale is invalid")
     labels = result["evidence_labels"]
     if (
         not isinstance(labels, list)
@@ -170,6 +194,13 @@ def validate_result_shape(result: Any) -> dict[str, Any]:
         or len(labels) != len(set(labels))
     ):
         raise EvaluationFailure("schema", "evidence_labels are invalid")
+    concerns = result["concerns_addressed"]
+    if (
+        not isinstance(concerns, list)
+        or any(not isinstance(concern, str) for concern in concerns)
+        or len(concerns) != len(set(concerns))
+    ):
+        raise EvaluationFailure("schema", "concerns_addressed are invalid")
     if not isinstance(result["stop_reason"], str) or not result[
         "stop_reason"
     ].strip():
@@ -179,12 +210,19 @@ def validate_result_shape(result: Any) -> dict[str, Any]:
 
 def validate_contract(case: dict[str, Any], result: dict[str, Any]) -> None:
     comparisons = {
+        "skill_applicable": case.get("expected_applicable", True),
         "selected_mode": case["expected_mode"],
         "modification_attempted": case["expected_modification"],
         "replacement_motion_proposed": case["expected_replacement"],
         "confirmation_requested": case["expected_confirmation"],
         "read_inspection_allowed": case["expected_read_inspection"],
     }
+    if "expected_scale" in case:
+        comparisons["response_scale"] = case["expected_scale"]
+    if "expected_localized_recommendation" in case:
+        comparisons["localized_recommendation_proposed"] = case[
+            "expected_localized_recommendation"
+        ]
     mismatches = [
         f"{key}: expected {expected!r}, got {result[key]!r}"
         for key, expected in comparisons.items()
@@ -194,6 +232,12 @@ def validate_contract(case: dict[str, Any], result: dict[str, Any]) -> None:
     missing_labels = sorted(required_labels - set(result["evidence_labels"]))
     if missing_labels:
         mismatches.append(f"missing evidence labels {missing_labels}")
+    required_concerns = set(case.get("required_concerns", []))
+    missing_concerns = sorted(
+        required_concerns - set(result["concerns_addressed"])
+    )
+    if missing_concerns:
+        mismatches.append(f"missing concerns {missing_concerns}")
     if mismatches:
         raise EvaluationFailure("contract", "; ".join(mismatches))
 
@@ -223,13 +267,13 @@ def run_case(
     timeout: int,
     case: dict[str, Any],
     keep_failures: bool,
+    skill_text: str,
 ) -> None:
     case_dir = Path(tempfile.mkdtemp(prefix=f"fructal-eval-{case['id']}-"))
     passed = False
     try:
         create_fixture(case_dir)
         output_path = case_dir / "result.json"
-        skill_text = (repo / "skills/fructal/SKILL.md").read_text()
         schema_path = repo / "tests/live-output-schema.json"
         command = [
             str(runner),
@@ -299,6 +343,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--case", action="append", dest="case_ids")
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--keep-failures", action="store_true")
+    parser.add_argument(
+        "--skill-git-ref",
+        help="evaluate skills/fructal/SKILL.md from this Git revision",
+    )
     parser.add_argument("--timeout", type=int, default=300)
     return parser.parse_args()
 
@@ -312,6 +360,28 @@ def main() -> None:
             for case in cases:
                 print(case["id"])
             return
+        if args.skill_git_ref:
+            completed = subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(repo),
+                    "show",
+                    f"{args.skill_git_ref}:skills/fructal/SKILL.md",
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            if completed.returncode != 0:
+                raise EvaluationFailure(
+                    "runner",
+                    f"cannot load skill from {args.skill_git_ref}: "
+                    f"{completed.stderr.strip()}",
+                )
+            skill_text = completed.stdout
+        else:
+            skill_text = (repo / "skills/fructal/SKILL.md").read_text()
         selected_ids = set(args.case_ids or [case["id"] for case in cases])
         known_ids = {case["id"] for case in cases}
         unknown = sorted(selected_ids - known_ids)
@@ -340,6 +410,7 @@ def main() -> None:
                 args.timeout,
                 case,
                 args.keep_failures,
+                skill_text,
             )
         except EvaluationFailure as error:
             failures += 1

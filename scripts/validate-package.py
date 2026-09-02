@@ -14,7 +14,7 @@ from typing import Any
 import yaml
 
 
-EXPECTED_VERSION = "1.0.1"
+EXPECTED_VERSION = "1.1.0"
 EXPECTED_SOURCE = (
     "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 )
@@ -31,6 +31,15 @@ EXPECTED_CASES = {
     "consequential_confirmation": "Implement",
     "evidence_dimensions": "Review",
     "incidental_read_metadata": "Review",
+    "review_local_recommendations": "Review",
+    "ambiguous_modification_authority": "Review",
+    "small_routine_redesign": "Redesign",
+    "complex_multi_actor_continuity": "Redesign",
+    "failure_retry_preserves_work": "Redesign",
+    "accessibility_normal_path": "Redesign",
+    "isolated_defect_nontrigger": "Not applicable",
+    "aesthetic_critique_nontrigger": "Not applicable",
+    "ordinary_constraints_nontrigger": "Not applicable",
 }
 LIVE_CASE_FIELDS = {
     "task",
@@ -42,12 +51,16 @@ LIVE_CASE_FIELDS = {
     "sandbox",
 }
 LIVE_RESULT_FIELDS = {
+    "skill_applicable",
     "selected_mode",
+    "response_scale",
     "modification_attempted",
     "replacement_motion_proposed",
+    "localized_recommendation_proposed",
     "confirmation_requested",
     "read_inspection_allowed",
     "evidence_labels",
+    "concerns_addressed",
     "stop_reason",
 }
 EVIDENCE_LABELS = {
@@ -57,26 +70,56 @@ EVIDENCE_LABELS = {
     "inference",
     "open question",
 }
+WORKFLOW_CONCERNS = {
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state",
+}
 REQUIRED_SKILL_TEXT = {
+    "narrow activation contract is missing": (
+        "A requirement or\nconstraint alone does not qualify"
+    ),
+    "activation gate is missing": "## Pass the activation gate",
+    "proportional application contract is missing": "## Apply proportionally",
     "mode selection contract is missing": "## Select and hold one mode",
     "Review execution path is missing": "### Review",
     "Redesign execution path is missing": "### Redesign",
     "Implement execution path is missing": "### Implement",
     "explicit-mode precedence contract is missing": (
-        "An explicit instruction to use Review, Redesign, or Implement"
+        "An explicit Review, Redesign, or Implement instruction"
     ),
     "incidental read-side-effect contract is missing": "ordinary access metadata",
     "provided-artifact and reported-claim distinction is missing": (
-        "`provided artifact` containing a\n   `reported claim`"
+        "`provided artifact` containing a `reported claim`"
     ),
     "actor-appropriate feedback contract is missing": (
-        "services, devices,\n  and software components"
+        "services, devices, and software components"
     ),
     "Six-question cap acceptance loop is missing": (
         "## Run the six-question cap test in Redesign and Implement"
     ),
     "concrete accessibility verification is missing": "assistive technology",
     "before-and-after behavior contract is missing": "before-and-after behavior",
+    "conditional mode visibility contract is missing": (
+        "Otherwise never expose the internal mode\n"
+        "as a heading or completion label"
+    ),
+    "bounded Review recommendation contract is missing": (
+        "Bounded recommendations tied directly to findings are allowed"
+    ),
+    "proportionate evidence-label contract is missing": (
+        "label\n   them explicitly only when status matters"
+    ),
+    "proportionate cap-test reporting contract is missing": (
+        "do not print six ceremonial\nanswers"
+    ),
+    "proportionate path verification contract is missing": (
+        "Do\nnot enumerate or test paths the change cannot affect"
+    ),
 }
 
 
@@ -263,6 +306,35 @@ def validate_contract_cases(
         ):
             validation.failures.append(
                 f"contract case {case_id} required_evidence_labels are invalid"
+            )
+        if not isinstance(case.get("expected_applicable", True), bool):
+            validation.failures.append(
+                f"contract case {case_id} expected_applicable must be boolean"
+            )
+        if case.get("expected_scale", "focused") not in {
+            "focused",
+            "thorough",
+            "not_applicable",
+        }:
+            validation.failures.append(
+                f"contract case {case_id} expected_scale is invalid"
+            )
+        if not isinstance(
+            case.get("expected_localized_recommendation", False), bool
+        ):
+            validation.failures.append(
+                f"contract case {case_id} expected_localized_recommendation "
+                "must be boolean"
+            )
+        concerns = case.get("required_concerns", [])
+        if (
+            not isinstance(concerns, list)
+            or any(not isinstance(concern, str) for concern in concerns)
+            or not set(concerns).issubset(WORKFLOW_CONCERNS)
+            or len(concerns) != len(set(concerns))
+        ):
+            validation.failures.append(
+                f"contract case {case_id} required_concerns are invalid"
             )
         if case.get("sandbox") not in {"read-only", "workspace-write"}:
             validation.failures.append(

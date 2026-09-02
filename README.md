@@ -1,34 +1,43 @@
 # Fructal Cap Design
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill. The current package version is **1.0.1**.
+packaged as a Codex skill. The current package version is **1.1.0**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
 
-It separates necessary constraints from accidental friction, traces the real
-workflow across actors and interruptions, and proposes a more natural motion
-without weakening safety, privacy, accessibility, ownership, compliance, or
-data integrity.
+It separates necessary constraints from accidental friction, traces materially
+relevant workflow continuity across actors and interruptions, and creates a
+more natural motion without weakening safety, privacy, accessibility,
+ownership, compliance, or data integrity. Its depth scales with consequence,
+complexity, uncertainty, reversibility, and the number of affected actors.
 
-Fructal Cap Design applies to:
+Fructal Cap Design is strongest when a necessary constraint materially
+obstructs completion, recovery, handoff, or continuity in:
 
 - software and technical systems;
 - physical tools, machines, and controls;
 - services and operational processes;
 - multi-actor, approval, permission, and handoff workflows.
 
-It supports three explicit modes: Review, Redesign, and Implement. Review is the
-safe default when the requested mode is unclear.
+It is not a default for ordinary engineering requirements, purely aesthetic
+critique, or an isolated defect that does not reveal a broader workflow
+failure.
 
-Review produces findings without proposing a replacement motion. Choose
+It supports three modes: Review, Redesign, and Implement. Review is the safe
+default when the requested outcome or modification authority is unclear.
+
+Review produces evidence and findings and may include requested bounded
+recommendations without proposing an end-to-end replacement motion. Choose
 Redesign for a proposed replacement without modification, or Implement for an
-authorized change with verification.
+authorized change with verification. The mode is always held internally but is
+stated only when requested or materially useful, so small tasks stay small.
 
 ## Read the method
 
 - [Skill source](skills/fructal/SKILL.md)
 - [Raw skill text](https://raw.githubusercontent.com/PaolaShultz/shr-skills/main/skills/fructal/SKILL.md)
+- [1.1 proportionality revision](docs/fructal-1.1-proportionality-design.md)
 
 ## Install
 
@@ -59,7 +68,7 @@ Use $fructal to implement and verify this constrained workflow change: [change]
 ```
 
 The method is named **Fructal Cap Design**. Lowercase `fructal` is only its
-short Codex skill identifier and invocation name.
+short Codex skill identifier and invocation name; the spelling is intentional.
 
 ## Demonstrate it in ChatGPT Web
 
@@ -132,9 +141,13 @@ tests/test-live-eval-harness.sh
 scripts/evaluate.sh
 ```
 
-Deterministic checks are the commit gate. Live evaluations exercise the
-Review, Redesign, Implement, mixed-mode, confirmation, evidence, and diagnostic
-contracts against a model in disposable read-only or workspace-write fixtures.
+Deterministic checks are the commit gate. The 20-case live matrix exercises
+activation and non-activation, proportional depth, Review recommendations,
+Review/Redesign/Implement boundaries, mixed-mode requests, confirmation,
+evidence, recovery, continuity, accessibility, and diagnostics against a model
+in disposable read-only or workspace-write fixtures. `scripts/evaluate.sh
+--skill-git-ref REVISION` supports before-and-after comparison with a historical
+skill revision.
 
 ## Origin and independence
 

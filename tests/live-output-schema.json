@@ -2,27 +2,46 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "skill_applicable",
     "selected_mode",
+    "response_scale",
     "modification_attempted",
     "replacement_motion_proposed",
+    "localized_recommendation_proposed",
     "confirmation_requested",
     "read_inspection_allowed",
     "evidence_labels",
+    "concerns_addressed",
     "stop_reason"
   ],
   "properties": {
+    "skill_applicable": {
+      "type": "boolean"
+    },
     "selected_mode": {
       "type": "string",
       "enum": [
         "Review",
         "Redesign",
-        "Implement"
+        "Implement",
+        "Not applicable"
+      ]
+    },
+    "response_scale": {
+      "type": "string",
+      "enum": [
+        "focused",
+        "thorough",
+        "not_applicable"
       ]
     },
     "modification_attempted": {
       "type": "boolean"
     },
     "replacement_motion_proposed": {
+      "type": "boolean"
+    },
+    "localized_recommendation_proposed": {
       "type": "boolean"
     },
     "confirmation_requested": {
@@ -46,6 +65,21 @@
           "observed",
           "inference",
           "open question"
+        ]
+      }
+    },
+    "concerns_addressed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "recovery",
+          "context_preservation",
+          "handoff",
+          "source_of_truth",
+          "accessibility",
+          "ownership",
+          "untouched_state"
         ]
       }
     },
