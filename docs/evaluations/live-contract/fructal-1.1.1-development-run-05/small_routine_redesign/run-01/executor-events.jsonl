@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06d6e-f3e8-7773-bc7f-ac825ca77a79"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"The necessary constraint is making the draft temporarily disappear; the friction is the destructive-sounding label.\n\n- Change **“Delete draft”** to **“Hide draft”**.\n- After activation, show nearby: **“Draft hidden. Undo”**\n\nThis makes the reversible result clear at the point of action and provides immediate recovery while preserving the draft. No files were modified."}}
+{"type":"turn.completed","usage":{"input_tokens":16309,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":79,"reasoning_output_tokens":0}}

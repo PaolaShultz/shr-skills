@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level evidence-gathering friction caused by a necessary authorization, cost, and rate-limit constraint, so Fructal applies in explicit Review mode. The response correctly denies the explicitly queried inspection, treats the contents as unavailable, reports the material evidence gap, gives no recommendation or replacement workflow, and visibly labels Review mode. The execution evidence shows no read or write action, and identical fixture states corroborate that no file modification occurred. The gap is an open material uncertainty; the conclusions about what cannot be verified are inferences grounded in the provided restriction and observed lack of inspection.",
+  "read_inspection_allowed": "no",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

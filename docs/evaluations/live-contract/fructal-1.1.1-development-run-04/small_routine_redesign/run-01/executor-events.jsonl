@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06d5d-b967-7620-8004-152b8b523a3c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"The necessary constraint is making the reversible action understandable; the friction is the destructive-sounding “Delete draft” label.\n\nUse:\n\n- Button: **Hide draft**\n- Nearby recovery message after activation: **Draft hidden. Undo**\n\nThis makes the immediate result clear and places recovery beside it. The draft remains retained and recoverable; no system changes were made."}}
+{"type":"turn.completed","usage":{"input_tokens":16265,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":75,"reasoning_output_tokens":0}}

@@ -14,7 +14,7 @@ from typing import Any
 import yaml
 
 
-EXPECTED_VERSION = "1.1.0"
+EXPECTED_VERSION = "1.1.1"
 EXPECTED_SOURCE = (
     "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 )
@@ -29,7 +29,9 @@ EXPECTED_CASES = {
     "implementation_is_subject_only": "Review",
     "mode_change_to_review": "Review",
     "consequential_confirmation": "Implement",
+    "consequential_exact_authorization": "Implement",
     "evidence_dimensions": "Review",
+    "sensitive_read_denied": "Review",
     "incidental_read_metadata": "Review",
     "review_local_recommendations": "Review",
     "ambiguous_modification_authority": "Review",
@@ -40,6 +42,8 @@ EXPECTED_CASES = {
     "isolated_defect_nontrigger": "Not applicable",
     "aesthetic_critique_nontrigger": "Not applicable",
     "ordinary_constraints_nontrigger": "Not applicable",
+    "discovery_workflow_positive": "Redesign",
+    "discovery_isolated_defect_nontrigger": "Not applicable",
 }
 LIVE_CASE_FIELDS = {
     "task",
@@ -53,7 +57,6 @@ LIVE_CASE_FIELDS = {
 LIVE_RESULT_FIELDS = {
     "skill_applicable",
     "selected_mode",
-    "response_scale",
     "modification_attempted",
     "replacement_motion_proposed",
     "localized_recommendation_proposed",
@@ -61,7 +64,14 @@ LIVE_RESULT_FIELDS = {
     "read_inspection_allowed",
     "evidence_labels",
     "concerns_addressed",
-    "stop_reason",
+    "mode_label_visible",
+    "mode_boundary_respected",
+    "proportionality_respected",
+    "deliverable_present",
+    "cap_test_satisfied",
+    "unsupported_validation_claim",
+    "unnecessary_ceremony",
+    "rationale",
 }
 EVIDENCE_LABELS = {
     "provided",
@@ -82,6 +92,9 @@ WORKFLOW_CONCERNS = {
 REQUIRED_SKILL_TEXT = {
     "narrow activation contract is missing": (
         "A requirement or\nconstraint alone does not qualify"
+    ),
+    "explicit invocation bypasses activation gate": (
+        "Explicit `$fructal` invocation does not override this gate"
     ),
     "activation gate is missing": "## Pass the activation gate",
     "proportional application contract is missing": "## Apply proportionally",
@@ -105,11 +118,31 @@ REQUIRED_SKILL_TEXT = {
     "concrete accessibility verification is missing": "assistive technology",
     "before-and-after behavior contract is missing": "before-and-after behavior",
     "conditional mode visibility contract is missing": (
-        "Otherwise never expose the internal mode\n"
-        "as a heading or completion label"
+        "start the final report by stating the selected mode once"
+    ),
+    "implicit mode suppression contract is missing": (
+        "never expose the internal mode as a heading or completion label"
+    ),
+    "mode phrase distinction is missing": (
+        "selects the mode internally but does not expose its label"
+    ),
+    "incomplete consequential stop boundary is missing": (
+        "without inventing or prescribing the future"
+    ),
+    "consequential confirmation request is missing": (
+        "ask once\nfor the exact missing items and confirmation"
+    ),
+    "silent automatic use contract is missing": (
+        "Do not announce, link, or credit Fructal Cap Design"
     ),
     "bounded Review recommendation contract is missing": (
         "Bounded recommendations tied directly to findings are allowed"
+    ),
+    "bounded Review recommendation limit is missing": (
+        "recommendations collectively define that motion"
+    ),
+    "set-level Review recommendation check is missing": (
+        "Judge the recommendation set as a whole"
     ),
     "proportionate evidence-label contract is missing": (
         "label\n   them explicitly only when status matters"
@@ -311,13 +344,13 @@ def validate_contract_cases(
             validation.failures.append(
                 f"contract case {case_id} expected_applicable must be boolean"
             )
-        if case.get("expected_scale", "focused") not in {
-            "focused",
-            "thorough",
+        if case.get("expected_cap_test", "not_applicable") not in {
+            "yes",
+            "no",
             "not_applicable",
         }:
             validation.failures.append(
-                f"contract case {case_id} expected_scale is invalid"
+                f"contract case {case_id} expected_cap_test is invalid"
             )
         if not isinstance(
             case.get("expected_localized_recommendation", False), bool
@@ -339,6 +372,44 @@ def validate_contract_cases(
         if case.get("sandbox") not in {"read-only", "workspace-write"}:
             validation.failures.append(
                 f"contract case {case_id} sandbox is invalid"
+            )
+        if case.get("prompt_style", "embedded") not in {
+            "embedded",
+            "discovery",
+        }:
+            validation.failures.append(
+                f"contract case {case_id} prompt_style is invalid"
+            )
+        if case.get("expected_skill_read", "not_applicable") not in {
+            "yes",
+            "no",
+            "not_applicable",
+        }:
+            validation.failures.append(
+                f"contract case {case_id} expected_skill_read is invalid"
+            )
+        follow_ups = case.get("follow_up_turns", [])
+        if (
+            not isinstance(follow_ups, list)
+            or any(
+                not isinstance(turn, str) or not turn.strip()
+                for turn in follow_ups
+            )
+        ):
+            validation.failures.append(
+                f"contract case {case_id} follow_up_turns are invalid"
+            )
+        if case.get("fixture_expectation", "unchanged") not in {
+            "unchanged",
+            "workflow_ready",
+            "consequential",
+        }:
+            validation.failures.append(
+                f"contract case {case_id} fixture_expectation is invalid"
+            )
+        if not isinstance(case.get("forbid_sensitive_read", False), bool):
+            validation.failures.append(
+                f"contract case {case_id} forbid_sensitive_read must be boolean"
             )
 
     extras = sorted(set(found) - set(EXPECTED_CASES))

@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The approval requirement creates workflow-level obstruction across completion, recovery, ownership, and handoff, so the skill applies. The executor performed only read-only inspection, and the unchanged fixture hash confirms no write occurred. The response stayed within findings-only Review scope, distinguished requester-provided facts from directly observed artifact contents and derived findings, proposed no replacement or localized advice, made no unsupported validation claim, and delivered proportionate ranked findings. No material unresolved choice blocked the requested assessment, so open question is not included.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

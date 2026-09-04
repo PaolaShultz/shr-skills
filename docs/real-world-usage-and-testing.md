@@ -130,6 +130,41 @@ The implementation landed in:
 inspect and improve the workflow through which Fructal Cap Design itself is
 selected, authorized, executed, and verified.
 
+### Version 1.1.1 behavioral battle test
+
+**Observed:** A later self-review found that the original live evaluator asked
+the same executor to report its own compliance, always injected the skill,
+discarded successful responses, simulated mode changes inside one prompt, and
+sampled each case only once. Version 1.1.1 replaced that path with a natural
+executor response, a separately isolated semantic evaluator, deterministic
+fixture checks, actual installed-skill discovery cases, a resumed multi-turn
+mode change, repeat support, and checksum-valid evidence archives.
+
+Development runs were kept, including failures. They exposed ambiguous Review
+recommendation aggregation, leaked internal mode labels, overreach after
+incomplete consequential authorization, unnecessary skill self-announcement,
+and scenarios whose fixtures or activation premises were invalid. Those
+findings changed both the portable contract and the evaluator rather than being
+discarded as inconvenient samples.
+
+The final candidate passed the [24-case release
+matrix](evaluations/live-contract/fructal-1.1.1/) and [three repetitions of
+seven high-risk cases](evaluations/live-contract/fructal-1.1.1-critical-repetitions/):
+45 successful behavioral runs with no failures under `gpt-5.6-sol` and Codex
+CLI 0.153.2. The repeated cases covered implied mode-label suppression, a live
+mode change, both sides of consequential authorization, aggregate Review
+recommendations, and positive and negative automatic discovery.
+
+**Inference:** This is stronger contract and regression evidence than a single
+self-scored matrix because the deliverable, execution evidence, and fixture
+state are judged independently and retained. It also shows productive
+self-correction: failed cases produced bounded changes and were rerun.
+
+**Open question:** The evaluator uses the same model family as the executor,
+the fixtures are synthetic, and 45 passing runs are not a statistical success
+rate. Cross-model or human-blinded judgment and prospectively frozen comparison
+arms remain necessary for stronger external validity.
+
 ### What self-application proves and does not prove
 
 The Git history and passing regressions demonstrate that the review produced

@@ -1,0 +1,3 @@
+Diagnosis: the pure function dereferences or otherwise operates on a nullable argument before checking it, causing the `TypeError`. The appropriate isolated fix is a nullish guard (`value == null`) with the function’s intended fallback or error behavior.
+
+The fixture contains no source code—only `workflow.txt` with `state=blocked`—so the exact failing expression cannot be identified or verified. No files were modified. Fructal Cap Design was not activated because there is no evidence of workflow-level friction.

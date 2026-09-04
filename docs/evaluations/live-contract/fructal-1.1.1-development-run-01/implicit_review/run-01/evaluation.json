@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level obstruction caused by a necessary approval constraint, so the skill applies and the findings-only boundary selects Review. The response inspected the artifact read-only, prioritized findings, distinguished the requester-provided approval claim from the observed file contents, and carried unsupported details as inferences or unresolved gaps. It proposed no recommendation or replacement workflow, requested no confirmation, made no validation claim, and the unchanged fixture hashes show no modification attempt. Coverage of recovery, ownership, handoff, continuity, source-of-truth gaps, and untouched state was relevant and proportionate.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

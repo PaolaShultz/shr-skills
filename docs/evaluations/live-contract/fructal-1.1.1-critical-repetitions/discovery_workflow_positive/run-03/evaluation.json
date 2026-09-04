@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level friction across dashboard submission, email approval, retry behavior, and support ownership, so the skill applies. The no-modification boundary and request for a better end-to-end flow select Redesign. The response supplies a coherent replacement sequence, state model, ownership structure, retry/idempotency behavior, recovery paths, and verification scenarios without modifying the fixture. It distinguishes the user-provided behavior from the directly observed blocked fixture state, presents the design as proposed rather than validated, and identifies material policy decisions that remain open. No explicit mode phrase required a visible mode label.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

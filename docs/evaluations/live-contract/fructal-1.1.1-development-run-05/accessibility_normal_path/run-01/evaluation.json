@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request directly concerns workflow-level approval obstruction and accessibility parity, so Fructal applies and the no-modification replacement request selects Redesign. The response defines a coherent end-to-end replacement motion covering shared status, consequence preview, submission, completion, cancellation, failure, retry, authoritative state, and cross-input accessibility, with a proportionate verification plan. Execution evidence and identical fixture hashes show read-only inspection with no write attempt. The response correctly limits observed evidence to state=blocked, treats missing interface and consequence details as open implementation inputs, and does not claim the proposal or affected-user experience was validated.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

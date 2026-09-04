@@ -1,0 +1,3 @@
+The local source for `parse_name` isn’t present in the fixture—only [workflow.txt](/tmp/fructal-eval-discovery_isolated_defect_nontrigger-01-pysaunb2/fixture/workflow.txt) exists.
+
+The immediate cause is therefore most likely that `parse_name` performs a string-only operation on `null`—such as calling `.trim()`, `.split()`, or passing it to a string parser—before checking for `null`. That operation raises the `TypeError`; being a pure helper is unrelated. An exact failing expression requires the helper’s source or stack trace.

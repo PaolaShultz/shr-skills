@@ -1,0 +1,9 @@
+{
+  "case_count": 24,
+  "failures": 3,
+  "model": "gpt-5.6-sol",
+  "repetitions": 1,
+  "runner": "codex-cli 0.153.2",
+  "skill_git_ref": null,
+  "skill_sha256": "7b56ef4d54727846541f72b7d6bdbd18c8536c4333c1be68994c1022486c4741"
+}

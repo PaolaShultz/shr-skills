@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request is expressly limited to aesthetic critique of a static poster's palette and typography, with no workflow-level friction or consequential constraint, so the Fructal skill is not applicable. The executor read only poster.txt, made no observed writes, and the before/after fixture hashes are unchanged. The response delivered a focused critique and localized aesthetic/legibility recommendations grounded in the provided description, without defining a replacement workflow, claiming validation, adding irrelevant ceremony, or exposing a mode label.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

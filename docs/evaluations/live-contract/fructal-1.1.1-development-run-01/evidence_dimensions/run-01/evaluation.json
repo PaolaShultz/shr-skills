@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "context_preservation",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level retry friction involving loss of context, so the skill applies. The response correctly stayed in explicitly requested Review mode, performed only read-only inspection, and distinguished the requester-provided artifact, the attributed unverified operator report, and the directly observed document contents. It appropriately left actual retry behavior and frequency unresolved, made no recommendation or replacement motion, attempted no modification, and claimed no unsupported real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

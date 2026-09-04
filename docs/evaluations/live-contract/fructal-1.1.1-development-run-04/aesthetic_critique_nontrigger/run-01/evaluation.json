@@ -1,0 +1,23 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request is expressly limited to aesthetic critique of a static poster and disclaims workflow-level consequences, so Fructal Cap Design is not applicable. The executor read poster.txt without writing, and the unchanged fixture corroborates that no modification was attempted. The final response delivers a focused palette and typography critique, with localized suggestions tied to individual visual findings rather than a coherent replacement workflow. It makes aesthetic inferences from the observed artifact, does not claim real-world validation, request confirmation, expose a mode label, or introduce unnecessary ceremony.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

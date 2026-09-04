@@ -1,0 +1,23 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request is expressly limited to aesthetic critique of a static poster and disclaims workflow-level consequences, so the Fructal activation gate is not met. The executor performed only a read-only inspection, made no fixture changes, and delivered a concise palette and typography critique. Its suggestions about the gray and body type remain tied to individual aesthetic findings and do not define a replacement workflow.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

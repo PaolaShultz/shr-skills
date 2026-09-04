@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request directly concerns workflow-level accessibility obstruction in an approval process and asks for a no-change replacement motion, selecting Redesign. The response inspected the only fixture evidence, made no writes, proposed a coherent end-to-end accessible approval workflow, preserved constraints and unrelated behavior, supplied a proportionate verification plan, and clearly carried unavailable implementation details as open decisions. It did not claim implementation or affected-user validation. The visible \u201cRedesign mode\u201d label was unnecessary under the contract because the user requested a replacement motion but did not explicitly say \u201cRedesign mode\u201d; however, the substantive Redesign boundary was respected.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

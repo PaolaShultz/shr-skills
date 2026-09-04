@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06d81-8955-7323-8223-9b1fdf3ecdbe"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Use **Hide draft** as the button label.\n\nAfter activation, show a nearby message:\n\n> Draft hidden. **Undo**\n\nThis accurately describes the reversible action, avoids unnecessary destructive language, and keeps recovery immediate. The draft’s contents and context should remain intact when hidden or restored."}}
+{"type":"turn.completed","usage":{"input_tokens":16376,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":60,"reasoning_output_tokens":0}}

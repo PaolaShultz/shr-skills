@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request was limited to inspecting and classifying evidence provenance. Although the note reports retry-related context loss, no necessary constraint is identified as causing workflow-level obstruction, so the Fructal activation gate is not met. The response accurately separates the requester-supplied artifact, the attributed but unverified operator claim, and the directly observed file contents. Execution and fixture hashes show no modification. The visible \u201cReview mode\u201d label was appropriate because that exact phrase was explicitly requested.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

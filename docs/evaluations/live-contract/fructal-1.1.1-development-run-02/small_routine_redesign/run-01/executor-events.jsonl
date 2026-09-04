@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06d46-d014-7301-be3e-c6b8bf16e011"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Replace **“Delete draft”** with **“Hide draft.”**\n\nAfter activation, show a nearby message:\n\n> **Draft hidden. Undo**\n\nThis preserves the reversible behavior while making the immediate result clear. “Undo” provides recovery at the point of feedback; the draft’s contents and state should remain intact. No changes were made."}}
+{"type":"turn.completed","usage":{"input_tokens":16257,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":71,"reasoning_output_tokens":0}}

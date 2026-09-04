@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level continuity friction: timeout and retry can erase entered work, navigation context, and request identity. With modification expressly prohibited, Redesign is the correct mode. The response supplies a coherent replacement lifecycle covering durable identity, staged state, idempotent submission, timeout reconciliation, adjacent recovery, accessibility feedback, and verification scenarios. Read-only inspection observed only the blocked fixture state, and identical before/after hashes corroborate that no modification was attempted. The response appropriately distinguishes the supplied requirements, observed fixture evidence, inferred design, and unresolved feasibility questions without claiming real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

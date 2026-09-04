@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly selects Review and findings-only boundaries for a workflow-level obstruction caused by a required approval constraint, so the skill applies. The response inspected the one-line artifact, reported evidence-backed workflow findings, proposed no recommendation or replacement motion, and made no modification; unchanged fixture hashes corroborate this. The visible \u201cReview mode\u201d label was required because the user explicitly requested Review. The findings proportionally address blocked completion, missing ownership and context, absent recovery/continuity paths, and lack of observable approval state without claiming real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

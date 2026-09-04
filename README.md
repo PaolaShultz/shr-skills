@@ -1,7 +1,7 @@
 # Fructal Cap Design
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill. The current package version is **1.1.0**.
+packaged as a Codex skill. The current package version is **1.1.1**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
@@ -30,14 +30,20 @@ default when the requested outcome or modification authority is unclear.
 Review produces evidence and findings and may include requested bounded
 recommendations without proposing an end-to-end replacement motion. Choose
 Redesign for a proposed replacement without modification, or Implement for an
-authorized change with verification. The mode is always held internally but is
-stated only when requested or materially useful, so small tasks stay small.
+authorized change with verification. The mode is always held internally. When
+the requester explicitly names a mode, the final report starts by stating it
+once; otherwise the internal mode stays out of headings and completion labels
+so small tasks stay small. For example, `review our implementation` selects
+Review internally but does not explicitly request a visible `Review mode`
+label. Automatic use is likewise silent unless the requester asks which method
+was used or attribution materially helps the task.
 
 ## Read the method
 
 - [Skill source](skills/fructal/SKILL.md)
 - [Raw skill text](https://raw.githubusercontent.com/PaolaShultz/shr-skills/main/skills/fructal/SKILL.md)
 - [1.1 proportionality revision](docs/fructal-1.1-proportionality-design.md)
+- [1.1.1 behavioral evaluation revision](docs/fructal-1.1.1-behavioral-evaluation-design.md)
 
 ## Install
 
@@ -141,13 +147,24 @@ tests/test-live-eval-harness.sh
 scripts/evaluate.sh
 ```
 
-Deterministic checks are the commit gate. The 20-case live matrix exercises
-activation and non-activation, proportional depth, Review recommendations,
-Review/Redesign/Implement boundaries, mixed-mode requests, confirmation,
-evidence, recovery, continuity, accessibility, and diagnostics against a model
-in disposable read-only or workspace-write fixtures. `scripts/evaluate.sh
---skill-git-ref REVISION` supports before-and-after comparison with a historical
-skill revision.
+Deterministic checks are the commit gate. The 24-case behavioral matrix captures
+a natural executor response and fixture effects, then asks a separate isolated
+evaluator to judge the actual output against the contract. It exercises
+activation and non-activation, installed-skill discovery, proportionality,
+Review recommendations, mode boundaries and changes, both sides of
+consequential confirmation, permitted and prohibited reads, evidence, recovery,
+continuity, accessibility, the cap test, and untouched state.
+
+`scripts/evaluate.sh --skill-git-ref REVISION` supports historical comparison.
+`--repetitions N` repeats every selected case, and `--archive-dir PATH`
+preserves successful responses, event evidence, fixture snapshots, evaluations,
+metadata, and a SHA-256 manifest for audit.
+
+The 1.1.1 candidate passed the [complete 24-case release
+matrix](docs/evaluations/live-contract/fructal-1.1.1/) and [21 repeated
+high-risk runs](docs/evaluations/live-contract/fructal-1.1.1-critical-repetitions/).
+Development-failure archives remain beside them so the published evidence does
+not hide the iterations that changed the contract and evaluator.
 
 ## Origin and independence
 

@@ -1,0 +1,3 @@
+The palette feels warm, restrained, and editorial. Cream softens the poster, while dark navy gives the headline strong visual authority; coral adds an effective point of energy. The muted gray body text may feel slightly washed out beside those richer colors, so a somewhat deeper gray could create a more cohesive palette.
+
+The serif headline and sans-serif body form a classic, appealing contrast. At 54 pt, the headline should feel appropriately prominent. The 12 pt body type is comparatively modest; its success will depend on the sans-serif’s weight and spacing, especially across two columns. Slightly more line spacing or a medium rather than light weight would help the typography feel deliberate instead of delicate.

@@ -1,0 +1,25 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents a workflow-level evidence obstruction caused by authorization and paid, rate-limited access constraints, so Fructal applies in explicitly requested Review mode. The response correctly denies inspection, treats the contents as unavailable evidence, reports the resulting material gap, makes no recommendation or replacement design, and the unchanged fixture shows no modification attempt. It distinguishes the requester-provided access constraint from the unresolved content evidence without claiming validation.",
+  "read_inspection_allowed": "no",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

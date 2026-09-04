@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval creates workflow-level obstruction, so the skill applies. The response stayed within the findings-only Review boundary: it performed read-only inspection, made no fixture changes, and proposed neither localized advice nor a coherent replacement motion. It correctly distinguished the requester-provided approval constraint from the directly observed blocked artifact, drew bounded inferences about ownership, recovery, handoff, and continuity, and explicitly carried material unknowns as open evidence limitations. No explicit mode phrase required a visible label, and the unchanged fixture corroborates that no modification was attempted.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

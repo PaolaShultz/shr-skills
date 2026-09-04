@@ -44,7 +44,9 @@ list_output="$("${evaluator}" --list 2>&1)" || {
   list_output=""
 }
 for case_id in implicit_review implicit_redesign implicit_implement \
-  explicit_review_caps_fix; do
+  explicit_review_caps_fix consequential_exact_authorization \
+  sensitive_read_denied discovery_workflow_positive \
+  discovery_isolated_defect_nontrigger; do
   if [[ "${list_output}" != *"${case_id}"* ]]; then
     record_failure "--list omitted ${case_id}"
   fi
@@ -57,6 +59,20 @@ expect_success "full fake live matrix" \
 expect_success "historical skill selection" \
   "${evaluator}" --codex-bin "${fake_codex}" \
   --skill-git-ref HEAD --case implicit_review
+archive_dir="${temporary_root}/archive"
+expect_success "successful evidence archive" \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --archive-dir "${archive_dir}" --case implicit_review
+if [[ ! -f "${archive_dir}/SHA256SUMS" ]] || ! (
+  cd "${archive_dir}" && sha256sum -c SHA256SUMS >/dev/null
+); then
+  record_failure "successful evidence archive is incomplete or invalid"
+else
+  printf '%s\n' "PASS: successful evidence archive is checksum-valid"
+fi
+expect_failure_class "nonempty evidence archive" "archive" \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --archive-dir "${archive_dir}" --case implicit_review
 if find "${temporary_root}/tmp" -mindepth 1 -maxdepth 1 -type d |
   grep -q .; then
   record_failure "successful run retained temporary evaluation state"
@@ -72,6 +88,24 @@ expect_failure_class "wrong selected mode" "contract" \
 expect_failure_class "invalid model JSON" "schema" \
   env FAKE_CODEX_MODE=invalid_json \
   "${evaluator}" --codex-bin "${fake_codex}" --case implicit_review
+
+expect_failure_class "missing natural response" "response" \
+  env FAKE_CODEX_MODE=missing_response \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_review
+
+expect_failure_class "failed semantic cap test" "contract" \
+  env FAKE_CODEX_MODE=failed_cap \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_redesign
+
+expect_failure_class "missed positive skill discovery" "discovery" \
+  env FAKE_CODEX_MODE=missing_skill_read \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --case discovery_workflow_positive
+
+expect_failure_class "false-positive skill discovery" "discovery" \
+  env FAKE_CODEX_MODE=unexpected_skill_read \
+  "${evaluator}" --codex-bin "${fake_codex}" \
+  --case discovery_isolated_defect_nontrigger
 
 expect_failure_class "Codex process failure" "transport" \
   env FAKE_CODEX_MODE=transport \

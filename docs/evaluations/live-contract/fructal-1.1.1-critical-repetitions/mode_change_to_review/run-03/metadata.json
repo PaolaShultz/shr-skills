@@ -1,0 +1,6 @@
+{
+  "case_id": "mode_change_to_review",
+  "prompt_style": "embedded",
+  "repetition": 3,
+  "skill_read_observed": false
+}

@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request concerns workflow-level failure and retry friction that can erase entered work, navigation context, and request identity, so Fructal Cap Design applies. The no-modification boundary selects Redesign. Read-only inspection observed only `state=blocked`, and identical fixture hashes confirm no write was attempted. The response supplies a coherent replacement motion with persistent draft and attachment state, stable idempotent request identity, status reconciliation, explicit recovery, preserved return context, unchanged constraints, and proportionate verification scenarios. It correctly avoids claiming validation and identifies material implementation decisions that remain open.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

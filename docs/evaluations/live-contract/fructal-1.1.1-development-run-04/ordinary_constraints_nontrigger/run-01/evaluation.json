@@ -1,0 +1,24 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly describes an ordinary local parser constraint without workflow-level obstruction, so Fructal Cap Design does not activate. The executor performed only read-only inspection and focused direct checks; execution events and identical before/after fixture hashes corroborate that no modification was attempted. The final response provides the requested review outcome, accurately reports the observed boundary behavior and pytest unavailability, makes no recommendations or replacement workflow, and does not claim unobserved real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,12 @@
+{
+  "verify.sh": {
+    "sha256": "61f1ec22a93c4b2bd958150d31c19d9598c84abfb62357fed7b66f97f811e429",
+    "size": 112,
+    "text": "#!/usr/bin/env bash\nset -euo pipefail\n[[ \"$(<workflow.txt)\" == \"state=ready\" ]]\nprintf 'verified\\n' > .verified\n"
+  },
+  "workflow.txt": {
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

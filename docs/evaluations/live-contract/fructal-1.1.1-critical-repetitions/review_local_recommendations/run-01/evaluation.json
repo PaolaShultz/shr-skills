@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval is a necessary constraint that obstructs workflow completion, so the skill applies. The response correctly held Review mode, visibly labeled it because the request explicitly used \u201cReview mode,\u201d performed read-only inspection, and made no writes. It distinguished the requester-provided approval constraint from the directly observed blocked state, drew appropriately qualified inferences, and identified material unresolved ownership, state-definition, constraint-source, and preservation questions. The four recommendations remain tied to individual findings and do not specify a coordinated end-to-end replacement sequence or complete state/ownership model. Coverage is proportionate to the single minimal artifact, and no real-world behavior or actor acceptance was claimed as validated.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

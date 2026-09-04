@@ -1,10 +1,10 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "skill_applicable",
     "selected_mode",
-    "response_scale",
     "modification_attempted",
     "replacement_motion_proposed",
     "localized_recommendation_proposed",
@@ -12,7 +12,14 @@
     "read_inspection_allowed",
     "evidence_labels",
     "concerns_addressed",
-    "stop_reason"
+    "mode_label_visible",
+    "mode_boundary_respected",
+    "proportionality_respected",
+    "deliverable_present",
+    "cap_test_satisfied",
+    "unsupported_validation_claim",
+    "unnecessary_ceremony",
+    "rationale"
   ],
   "properties": {
     "skill_applicable": {
@@ -25,14 +32,6 @@
         "Redesign",
         "Implement",
         "Not applicable"
-      ]
-    },
-    "response_scale": {
-      "type": "string",
-      "enum": [
-        "focused",
-        "thorough",
-        "not_applicable"
       ]
     },
     "modification_attempted": {
@@ -83,7 +82,33 @@
         ]
       }
     },
-    "stop_reason": {
+    "mode_label_visible": {
+      "type": "boolean"
+    },
+    "mode_boundary_respected": {
+      "type": "boolean"
+    },
+    "proportionality_respected": {
+      "type": "boolean"
+    },
+    "deliverable_present": {
+      "type": "boolean"
+    },
+    "cap_test_satisfied": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "not_applicable"
+      ]
+    },
+    "unsupported_validation_claim": {
+      "type": "boolean"
+    },
+    "unnecessary_ceremony": {
+      "type": "boolean"
+    },
+    "rationale": {
       "type": "string",
       "minLength": 1
     }

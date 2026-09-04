@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly identifies workflow-level obstruction caused by a required approval constraint and selects Review mode. The response performs only corroborated read inspection, preserves the fixture unchanged, distinguishes the requester-provided necessity of approval from the directly observed blocked state, draws bounded inferences, and identifies material open decisions. Each recommendation is tied to an individual finding and does not define a complete replacement sequence, state model, or ownership structure. The report visibly begins with the required mode label, addresses recovery, handoff, retained context, ownership, and untouched state proportionately, and makes no unsupported validation claim.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

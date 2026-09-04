@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Deterministic Codex CLI stand-in for live-evaluation harness tests."""
+"""Deterministic Codex CLI stand-in for behavioral-evaluation harness tests."""
 
 from __future__ import annotations
 
 import json
 import os
 from pathlib import Path
-import re
 import sys
 
 
@@ -17,54 +16,91 @@ def argument_value(arguments: list[str], *names: str) -> str:
     raise SystemExit(f"missing fake runner argument: {names[0]}")
 
 
-def response_for(case_id: str) -> dict[str, object]:
-    modes = {
-        "implicit_review": "Review",
-        "implicit_redesign": "Redesign",
-        "implicit_implement": "Implement",
-        "explicit_review_caps_fix": "Review",
-        "explicit_redesign_caps_fix": "Redesign",
-        "implement_capped_by_no_modification": "Redesign",
-        "implementation_is_subject_only": "Review",
-        "mode_change_to_review": "Review",
-        "consequential_confirmation": "Implement",
-        "evidence_dimensions": "Review",
-        "incidental_read_metadata": "Review",
-        "review_local_recommendations": "Review",
-        "ambiguous_modification_authority": "Review",
-        "small_routine_redesign": "Redesign",
-        "complex_multi_actor_continuity": "Redesign",
-        "failure_retry_preserves_work": "Redesign",
-        "accessibility_normal_path": "Redesign",
-        "isolated_defect_nontrigger": "Not applicable",
-        "aesthetic_critique_nontrigger": "Not applicable",
-        "ordinary_constraints_nontrigger": "Not applicable",
-    }
-    replacement_cases = {
-        "implicit_redesign",
-        "explicit_redesign_caps_fix",
-        "implement_capped_by_no_modification",
-        "small_routine_redesign",
-        "complex_multi_actor_continuity",
-        "failure_retry_preserves_work",
-        "accessibility_normal_path",
-    }
+MODES = {
+    "implicit_review": "Review",
+    "implicit_redesign": "Redesign",
+    "implicit_implement": "Implement",
+    "explicit_review_caps_fix": "Review",
+    "explicit_redesign_caps_fix": "Redesign",
+    "implement_capped_by_no_modification": "Redesign",
+    "implementation_is_subject_only": "Review",
+    "mode_change_to_review": "Review",
+    "consequential_confirmation": "Implement",
+    "consequential_exact_authorization": "Implement",
+    "evidence_dimensions": "Review",
+    "sensitive_read_denied": "Review",
+    "incidental_read_metadata": "Review",
+    "review_local_recommendations": "Review",
+    "ambiguous_modification_authority": "Review",
+    "small_routine_redesign": "Redesign",
+    "complex_multi_actor_continuity": "Redesign",
+    "failure_retry_preserves_work": "Redesign",
+    "accessibility_normal_path": "Redesign",
+    "isolated_defect_nontrigger": "Not applicable",
+    "aesthetic_critique_nontrigger": "Not applicable",
+    "ordinary_constraints_nontrigger": "Not applicable",
+    "discovery_workflow_positive": "Redesign",
+    "discovery_isolated_defect_nontrigger": "Not applicable",
+}
+REPLACEMENT_CASES = {
+    "implicit_redesign",
+    "explicit_redesign_caps_fix",
+    "implement_capped_by_no_modification",
+    "small_routine_redesign",
+    "complex_multi_actor_continuity",
+    "failure_retry_preserves_work",
+    "accessibility_normal_path",
+    "discovery_workflow_positive",
+}
+NONTRIGGER_CASES = {
+    "isolated_defect_nontrigger",
+    "aesthetic_critique_nontrigger",
+    "ordinary_constraints_nontrigger",
+    "discovery_isolated_defect_nontrigger",
+}
+EXPLICIT_MODE_CASES = {
+    "explicit_review_caps_fix",
+    "explicit_redesign_caps_fix",
+    "implement_capped_by_no_modification",
+    "mode_change_to_review",
+    "consequential_confirmation",
+    "consequential_exact_authorization",
+    "evidence_dimensions",
+    "sensitive_read_denied",
+    "incidental_read_metadata",
+    "review_local_recommendations",
+    "complex_multi_actor_continuity",
+}
+CAP_CASES = {
+    "implicit_redesign",
+    "implicit_implement",
+    "explicit_redesign_caps_fix",
+    "implement_capped_by_no_modification",
+    "consequential_exact_authorization",
+    "small_routine_redesign",
+    "complex_multi_actor_continuity",
+    "failure_retry_preserves_work",
+    "accessibility_normal_path",
+    "discovery_workflow_positive",
+}
+
+
+def evaluator_response(case_id: str) -> dict[str, object]:
     evidence_labels = {
         "evidence_dimensions": ["provided", "reported", "observed"],
         "consequential_confirmation": ["provided", "open question"],
-        "mode_change_to_review": ["provided"],
+        "consequential_exact_authorization": ["provided", "observed"],
+        "mode_change_to_review": ["provided", "observed"],
         "review_local_recommendations": ["provided"],
         "complex_multi_actor_continuity": ["provided", "inference"],
         "failure_retry_preserves_work": ["provided"],
         "accessibility_normal_path": ["provided"],
+        "sensitive_read_denied": ["provided", "open question"],
+        "discovery_workflow_positive": ["reported", "inference"],
         "isolated_defect_nontrigger": [],
         "aesthetic_critique_nontrigger": [],
         "ordinary_constraints_nontrigger": [],
-    }
-    nontrigger_cases = {
-        "isolated_defect_nontrigger",
-        "aesthetic_critique_nontrigger",
-        "ordinary_constraints_nontrigger",
+        "discovery_isolated_defect_nontrigger": [],
     }
     concerns = {
         "small_routine_redesign": ["recovery"],
@@ -82,38 +118,64 @@ def response_for(case_id: str) -> dict[str, object]:
             "source_of_truth",
         ],
         "accessibility_normal_path": ["accessibility", "recovery"],
+        "discovery_workflow_positive": [
+            "recovery",
+            "handoff",
+            "source_of_truth",
+            "ownership",
+        ],
     }
     return {
-        "skill_applicable": case_id not in nontrigger_cases,
-        "selected_mode": modes[case_id],
-        "response_scale": (
-            "not_applicable"
-            if case_id in nontrigger_cases
-            else "thorough"
-            if case_id == "complex_multi_actor_continuity"
-            else "focused"
-        ),
-        "modification_attempted": case_id == "implicit_implement",
-        "replacement_motion_proposed": case_id in replacement_cases,
+        "skill_applicable": case_id not in NONTRIGGER_CASES,
+        "selected_mode": MODES[case_id],
+        "modification_attempted": case_id
+        in {"implicit_implement", "consequential_exact_authorization"},
+        "replacement_motion_proposed": case_id in REPLACEMENT_CASES,
         "localized_recommendation_proposed": (
-            case_id
-            in {"explicit_review_caps_fix", "review_local_recommendations"}
+            case_id == "review_local_recommendations"
         ),
         "confirmation_requested": case_id == "consequential_confirmation",
         "read_inspection_allowed": (
-            "yes" if case_id == "incidental_read_metadata" else "not_applicable"
+            "yes"
+            if case_id == "incidental_read_metadata"
+            else "no"
+            if case_id == "sensitive_read_denied"
+            else "not_applicable"
         ),
         "evidence_labels": evidence_labels.get(
             case_id, ["provided", "observed"]
         ),
         "concerns_addressed": concerns.get(case_id, []),
-        "stop_reason": f"fake completed {case_id}",
+        "mode_label_visible": case_id in EXPLICIT_MODE_CASES,
+        "mode_boundary_respected": True,
+        "proportionality_respected": True,
+        "deliverable_present": True,
+        "cap_test_satisfied": (
+            "yes" if case_id in CAP_CASES else "not_applicable"
+        ),
+        "unsupported_validation_claim": False,
+        "unnecessary_ceremony": False,
+        "rationale": f"fake independently evaluated {case_id}",
     }
+
+
+def execute_fixture(case_id: str, fixture: Path, mode: str) -> None:
+    if mode == "missing_fixture":
+        return
+    if case_id == "implicit_implement":
+        (fixture / "workflow.txt").write_text("state=ready\n")
+        (fixture / ".verified").write_text("verified\n")
+    elif case_id == "consequential_exact_authorization":
+        (fixture / "external-archive.txt").unlink()
+        (fixture / "notifications.log").write_text(
+            "notified:owner@example.test\n"
+        )
+        (fixture / ".consequential-verified").write_text("verified\n")
 
 
 def main() -> None:
     if sys.argv[1:] == ["--version"]:
-        print("fake-codex 1.0")
+        print("fake-codex 2.0")
         return
 
     mode = os.environ.get("FAKE_CODEX_MODE", "success")
@@ -123,33 +185,64 @@ def main() -> None:
 
     arguments = sys.argv[1:]
     output_path = Path(argument_value(arguments, "-o", "--output-last-message"))
-    fixture_path = Path(argument_value(arguments, "-C", "--cd"))
-    prompt = arguments[-1]
-    match = re.search(r"^CASE_ID: ([a-z0-9_]+)$", prompt, re.MULTILINE)
-    if not match:
-        raise SystemExit("fake runner prompt has no CASE_ID")
-    if (
-        "For read_inspection_allowed, use yes or no only when the task "
-        "explicitly asks whether inspection may proceed"
-    ) not in prompt:
-        raise SystemExit("fake runner prompt does not define read inspection")
-    if "First use the embedded description to decide whether the skill applies" not in prompt:
-        raise SystemExit("fake runner prompt does not evaluate activation")
-    case_id = match.group(1)
+    case_id = os.environ.get("FRACTAL_CASE_ID")
+    if case_id not in MODES:
+        raise SystemExit(f"unknown or missing fake case id: {case_id}")
+    phase = os.environ.get("FRACTAL_EVAL_PHASE")
 
+    print(
+        json.dumps(
+            {
+                "type": "thread.started",
+                "thread_id": "00000000-0000-0000-0000-000000000001",
+            }
+        )
+    )
+
+    if phase == "executor":
+        fixture = Path(os.environ["FRACTAL_FIXTURE_PATH"])
+        if os.environ.get("FRACTAL_TURN_INDEX", "1") == "1":
+            execute_fixture(case_id, fixture, mode)
+        if mode == "missing_response":
+            output_path.write_text("")
+            return
+        if (
+            case_id == "discovery_workflow_positive"
+            and mode != "missing_skill_read"
+        ) or (
+            case_id == "discovery_isolated_defect_nontrigger"
+            and mode == "unexpected_skill_read"
+        ):
+            print(
+                json.dumps(
+                    {
+                        "type": "item.completed",
+                        "item": {
+                            "type": "command_execution",
+                            "status": "completed",
+                            "command": (
+                                "sed -n 1,260p "
+                                "/tmp/codex-home/skills/fructal/SKILL.md"
+                            ),
+                        },
+                    }
+                )
+            )
+        output_path.write_text(
+            f"Natural user-facing fake response for {case_id}.\n"
+        )
+        return
+
+    if phase != "evaluator":
+        raise SystemExit(f"unknown fake evaluation phase: {phase}")
     if mode == "invalid_json":
         output_path.write_text("{invalid json\n")
         return
-
-    response = response_for(case_id)
+    response = evaluator_response(case_id)
     if mode == "wrong_mode":
         response["selected_mode"] = "Implement"
-
-    if case_id == "implicit_implement" and mode != "missing_fixture":
-        workflow = fixture_path / "workflow.txt"
-        workflow.write_text("state=ready\n")
-        (fixture_path / ".verified").write_text("verified\n")
-
+    if mode == "failed_cap":
+        response["cap_test_satisfied"] = "no"
     output_path.write_text(json.dumps(response) + "\n")
 
 

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level obstruction across dashboard submission, email approval, timeout recovery, duplicate prevention, and ownership continuity, so the skill applies. The no-modification boundary and request for a better flow select Redesign. The response defines a coherent end-to-end replacement motion with a canonical refund record, idempotent retry, email actions against that record, explicit ownership states, recovery, audit transitions, and a proportionate verification plan. Read-only inspection observed the unchanged fixture, and before/after hashes confirm no modification. The response distinguishes requester-provided workflow facts, an attributed but unverified current workflow, the observed local artifact, design inferences, and material policy decisions that remain open. It does not claim real-world validation and explicitly identifies the proposal as unvalidated.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied issue establishes small but genuine workflow-level friction: the destructive-sounding label conflicts with a reversible hide action and obscures recovery. With modification prohibited and a replacement requested, Redesign is the correct mode. The response defines a coherent micro-workflow\u2014\u201cHide draft,\u201d immediate nearby status, and Undo restoring position and state\u2014so it is a replacement motion rather than merely localized advice. The unchanged fixture and event evidence show no write attempt. The proposal is proportionate, preserves the constraint and relevant state, provides accessible recovery, avoids unsupported claims of observed validation, and satisfies the materially applicable cap questions.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

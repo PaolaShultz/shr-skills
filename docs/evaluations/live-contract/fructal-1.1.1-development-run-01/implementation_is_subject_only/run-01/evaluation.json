@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level obstruction caused by a required approval constraint, so the skill applies and Review is selected by the explicit request to review with findings only. The response performed read-only inspection, and identical before/after hashes show no write attempt. It reported prioritized findings without recommendations or a replacement motion, distinguished requester-provided requirements from directly observed file content, derived findings, and unresolved gaps, and stayed within the findings-only boundary. The cap test is not applicable in Review.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

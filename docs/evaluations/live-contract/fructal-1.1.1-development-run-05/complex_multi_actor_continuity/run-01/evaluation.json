@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request clearly triggers Fructal Cap Design because necessary regulatory, audit, privacy, approval, and integrity constraints conflict with continuity across retries, handoffs, channels, and multiple actors. The response correctly holds explicit Redesign mode, performs only read inspection, leaves the fixture unchanged, distinguishes requester-provided workflow failures from the directly observed blocked artifact and derived conclusions, and carries material implementation decisions as open questions. It defines a coherent replacement workflow covering authoritative state, idempotency, lifecycle, ownership, handoff, recovery, channel continuity, regulated decisions, billing, cancellation, accessibility, and verification without claiming validation. The replacement and verification plan satisfy the materially applicable cap questions, remain proportionate to the consequential multi-actor workflow, and preserve untouched state.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

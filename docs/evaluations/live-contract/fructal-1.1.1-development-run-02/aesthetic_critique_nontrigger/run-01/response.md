@@ -1,0 +1,3 @@
+The palette feels warm, refined, and editorial. Cream and dark navy provide a strong, classic foundation, while coral adds welcome energy. The muted gray may appear slightly subdued beside those richer colors; a darker or warmer gray could make the palette feel more cohesive.
+
+Typographically, the 54 pt navy serif creates a confident headline, and the sans-serif body offers effective contrast. The serif/sans-serif pairing is conventional but polished. At 12 pt, the body may feel delicate against the oversized headline, so slightly increasing its size or weight could produce a more balanced typographic hierarchy.

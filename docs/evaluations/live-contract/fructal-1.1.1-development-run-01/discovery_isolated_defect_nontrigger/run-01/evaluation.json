@@ -1,0 +1,23 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "This is an isolated helper defect with no evidence of workflow-level obstruction, so Fructal Cap Design is not applicable. The executor performed read-only inspection, made no writes, accurately reported that the implementation was absent, and clearly qualified the proposed null dereference as likely rather than observed. It supplied the requested local JavaScript cause and only a finding-specific guard recommendation, without defining a replacement workflow or claiming validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

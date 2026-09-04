@@ -1,0 +1,22 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request concerns only the local cause of an isolated pure-helper TypeError, with no evidence connecting it to workflow-level obstruction, so the Fructal skill is not applicable. The executor performed read-only inspection, made no fixture changes, and accurately identified the observed direct cause: null has no trim method. The concise explanation supplies the requested deliverable without recommendations, workflow redesign, unsupported validation, or irrelevant ceremony.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

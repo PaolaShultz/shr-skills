@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The misleading destructive label obstructs a reversible hide-and-recover workflow, so the skill applies. The response proportionally defines a coherent replacement motion\u2014activate \u201cHide draft,\u201d then receive nearby \u201cDraft hidden. Undo\u201d feedback\u2014without modifying the fixture. The unchanged before/after hash corroborates that no write occurred. The proposal preserves the draft, makes the action\u2019s result clear, and provides immediate recovery; it does not claim observed user acceptance or real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

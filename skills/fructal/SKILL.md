@@ -2,7 +2,7 @@
 name: fructal
 description: Use when a necessary constraint creates workflow-level obstruction in completion, recovery, handoff, or continuity across actors, states, channels, or systems, especially when change must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Activate only for workflow-level friction; a requirement or constraint alone does not qualify. Never activate for purely aesthetic critique or an isolated defect unless evidence connects it to a broader workflow failure.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
   source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 ---
 
@@ -25,8 +25,9 @@ Apply only to workflow-level conflict between a necessary constraint and the
 motion through completion, recovery, handoff, or continuity. A requirement or
 constraint alone does not qualify. Purely aesthetic critique and an isolated
 defect without evidence of broader workflow failure stay outside this method.
-An explicit `$fructal` request may apply it proportionally to a small workflow
-issue; small does not mean exhaustive.
+Explicit `$fructal` invocation does not override this gate. It may apply
+proportionally to a small issue only when that issue still creates
+workflow-level friction; small does not mean exhaustive.
 
 ## Apply proportionally
 
@@ -73,6 +74,9 @@ change, or other external effect. Treat a destructive or externally
 consequential step as confirmed only when the action, target, and consequence
 are explicit; otherwise ask once immediately before it. Do not ask again after
 exact confirmation.
+When Implement stops for missing exact consequential authorization, ask once
+for the exact missing items and confirmation, and report preserved state
+without inventing or prescribing the future action sequence.
 
 Ask only when the answer blocks safe progress: a material decision, missing
 authority, necessary unavailable evidence, or an unconfirmed consequential
@@ -89,6 +93,15 @@ do not prescribe an end-to-end replacement motion. A findings-only or
 no-recommendation boundary is stricter and must be respected. Do not change the
 target system, actor-visible outcomes, permissions, content, business state, or
 consequential external state.
+
+A recommendation remains bounded only while it addresses an individual
+finding without defining the workflow's complete sequence, state model, or
+ownership structure. If the recommendations collectively define that motion,
+the deliverable is Redesign and exceeds Review.
+
+Judge the recommendation set as a whole, not each bullet in isolation. If
+recommendations depend on or coordinate with one another, report that a
+Redesign decision is open and stop before specifying the combined change.
 
 Already-authorized read-only inspection may proceed when its only unavoidable
 effects are ordinary access metadata such as logs, request counters, or
@@ -206,9 +219,14 @@ answers unless they help the requester assess the result.
 
 ## Report and verify
 
-Name the selected mode only when the task explicitly says `Review mode`,
-`Redesign mode`, or `Implement mode`. Otherwise never expose the internal mode
-as a heading or completion label.
+When the task explicitly says `Review mode`, `Redesign mode`, or `Implement
+mode`, start the final report by stating the selected mode once. Otherwise
+never expose the internal mode as a heading or completion label.
+Only those explicit mode phrases trigger report visibility. A verb such as
+`review our implementation`, or a requested outcome that merely implies a
+mode, selects the mode internally but does not expose its label.
+Do not announce, link, or credit Fructal Cap Design in the task response unless
+the requester asks what method was used or attribution is materially useful.
 
 Scale the report to the task without repeating evidence. Include only what is
 applicable:

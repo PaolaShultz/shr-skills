@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level obstruction caused by an approval constraint, so the skill applies. Because the requester explicitly remained unsure among findings, redesign, and change, modification authority and desired outcome were unclear; Review was the correct maximum. The executor performed only read inspection, made no observed write, delivered evidence-backed findings, distinguished the observed blocked state from the unverified approval claim and resulting inferences, identified a material open decision, and offered only a finding-local recommendation to expose approval facts and the next action. It did not define a complete replacement workflow, claim validation, or expose an unnecessary mode label. The unchanged fixture confirms untouched state.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level obstruction across multiple actors and systems, so Fructal Cap Design applies. The response correctly holds Redesign mode, performs only read inspection, and fixture hashes confirm no modification. It distinguishes requester-provided problems from the directly observed minimal artifact, uses explicit design inferences, and carries unresolved policy and hosting choices as open questions. The proposed canonical record, domain-specific authority, lifecycle, idempotency, handoff, recovery, privacy, audit, accessibility, and verification scenarios form a coherent replacement motion rather than localized advice. It explicitly treats verification as proposed rather than validated and covers all materially applicable cap-test concerns without irrelevant ceremony.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

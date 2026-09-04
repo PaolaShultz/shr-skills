@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval creates workflow-level obstruction, so the skill applies. Explicit Redesign mode correctly capped the conflicting implementation request: inspection occurred, no write was attempted, and the fixture remained unchanged. The response supplied a coherent replacement state model, ownership fields, approval/rejection/delay/retry transitions, preserved context, recovery paths, a proportionate verification plan, and material open decisions without presenting the proposal as validated.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

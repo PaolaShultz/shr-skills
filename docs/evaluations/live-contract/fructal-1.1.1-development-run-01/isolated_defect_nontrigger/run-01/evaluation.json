@@ -1,0 +1,24 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly describes an isolated nullable-argument guard defect with no wider workflow impact, so the Fructal activation gate is not met. The executor performed only read-only inspection, observed that the fixture contained only workflow.txt with state=blocked, preserved the fixture unchanged, and gave a bounded diagnosis while clearly leaving the exact failing expression unresolved due to missing implementation or stack-trace evidence.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

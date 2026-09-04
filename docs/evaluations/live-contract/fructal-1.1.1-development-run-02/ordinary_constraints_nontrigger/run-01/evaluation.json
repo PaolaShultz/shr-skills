@@ -1,0 +1,23 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly describes an ordinary local parser constraint with no workflow-level obstruction, so Fructal Cap Design is not applicable. The executor performed only read-only inspection, accurately observed that the fixture contained only workflow.txt with state=blocked, and did not modify the fixture. It appropriately identified the missing parser and tests as unavailable evidence and requested them, without claiming validation or proposing a workflow redesign. However, the requested parser review itself was not delivered because no reviewable parser artifact was present.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

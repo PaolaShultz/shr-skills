@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval constraint creates workflow-level blockage, so the skill applies. The response correctly held the explicit Review maximum: it inspected the fixture, made no writes, reported the observed blocked state and missing approval metadata, distinguished uncertainty, and gave a finding-specific recommendation without defining a complete replacement workflow. The unchanged fixture hashes corroborate the no-modification claim. The visible \u201cReview mode\u201d label was required because the request explicitly named that mode.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

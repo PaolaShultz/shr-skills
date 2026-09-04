@@ -1,0 +1,3 @@
+The fixture contains no `parse_name` implementation—only `workflow.txt` with `state=blocked`—so the exact failing expression isn’t available locally.
+
+The immediate JavaScript cause is that `parse_name` treats `null` like a usable value, likely accessing a property or calling a method such as `value.trim()`. Since `null` has no properties or methods, JavaScript throws a `TypeError`. A guard like `if (value == null)` must occur before that operation.

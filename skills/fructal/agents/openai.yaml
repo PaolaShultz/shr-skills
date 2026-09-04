@@ -1,4 +1,4 @@
 interface:
   display_name: "Fructal Cap Design"
   short_description: "Unblock consequential workflows without weakening constraints"
-  default_prompt: "Use $fructal when a necessary constraint materially obstructs this workflow: [describe the workflow, desired outcome, and modification boundary]. Scale rigor to consequence, and treat an explicitly requested mode as the maximum outcome."
+  default_prompt: "Use $fructal when a necessary constraint materially obstructs this workflow: [describe the workflow, desired outcome, and modification boundary]. Apply the activation gate even when explicitly invoked, scale rigor to consequence, and treat an explicitly requested mode as the maximum outcome."

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level friction across dashboard submission, email approval, timeout recovery, duplicate prevention, and ownership, so Fructal Cap Design applies. The no-modification boundary caps the requested replacement flow at Redesign. The response defines a coherent end-to-end state model, retry/idempotency behavior, ownership transitions, handoff, recovery, source of truth, preserved approval constraints, and a proportionate verification plan without writing to the fixture. It correctly distinguishes the requester-reported workflow from the directly observed minimal fixture and explicitly avoids claiming validation. Material implementation choices remain open, including whether ownership is queue-based or assigned to a named approver and the exact escalation ownership.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

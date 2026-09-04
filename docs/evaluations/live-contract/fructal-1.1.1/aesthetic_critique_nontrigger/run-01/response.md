@@ -1,0 +1,3 @@
+The palette feels warm and editorial: cream softens the poster, navy provides a strong anchor, and coral adds lively contrast. The muted gray may look slightly washed out against cream; a darker, warmer gray would improve clarity while preserving the restrained mood.
+
+The navy serif headline at 54 pt should feel authoritative and elegant. Pairing it with a sans-serif body creates useful contrast. At 12 pt, however, the body type may appear delicate—especially in muted gray—so slightly increasing its size, weight, or line spacing would strengthen legibility. Ensure the serif and sans-serif share compatible proportions so the pairing feels intentional rather than generic.

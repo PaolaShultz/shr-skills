@@ -1,0 +1,6 @@
+{
+  "case_id": "discovery_isolated_defect_nontrigger",
+  "prompt_style": "discovery",
+  "repetition": 1,
+  "skill_read_observed": false
+}

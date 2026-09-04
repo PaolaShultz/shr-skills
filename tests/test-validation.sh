@@ -166,9 +166,9 @@ expect_failure "malformed openai.yaml" \
 
 case_dir="$(copy_repo missing-version)"
 if mutate_or_record "missing version" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.1.0"'; then
+  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.1.1"'; then
   expect_failure "missing package version" \
-    "metadata.version must be 1.1.0" \
+    "metadata.version must be 1.1.1" \
     "${validator}" --repo "${case_dir}"
 fi
 
@@ -180,6 +180,14 @@ if mutate_or_record "narrow activation" delete_line_containing \
     "narrow activation contract is missing" \
     "${validator}" --repo "${case_dir}"
 fi
+
+case_dir="$(copy_repo invocation-bypasses-activation)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  'Explicit `$fructal` invocation does not override this gate' \
+  'Explicit `$fructal` invocation always overrides this gate'
+expect_failure "explicit invocation bypasses activation" \
+  "explicit invocation bypasses activation gate" \
+  "${validator}" --repo "${case_dir}"
 
 case_dir="$(copy_repo missing-proportionality)"
 replace_text "${case_dir}/skills/fructal/SKILL.md" \
@@ -196,12 +204,68 @@ expect_failure "missing bounded Review recommendations" \
   "bounded Review recommendation contract is missing" \
   "${validator}" --repo "${case_dir}"
 
+case_dir="$(copy_repo missing-review-recommendation-limit)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "recommendations collectively define that motion" \
+  "recommendations remain local regardless of their combined effect"
+expect_failure "missing bounded Review recommendation limit" \
+  "bounded Review recommendation limit is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-set-level-review-check)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "Judge the recommendation set as a whole" \
+  "Judge every recommendation independently"
+expect_failure "missing set-level Review recommendation check" \
+  "set-level Review recommendation check is missing" \
+  "${validator}" --repo "${case_dir}"
+
 case_dir="$(copy_repo missing-conditional-mode-output)"
 replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "Otherwise never expose the internal mode" \
-  "Always expose the internal mode"
+  "start the final report by stating the selected mode once" \
+  "omit the selected mode from the final report"
 expect_failure "missing conditional mode output" \
   "conditional mode visibility contract is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-implicit-mode-suppression)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "never expose the internal mode" \
+  "always expose the internal mode"
+expect_failure "missing implicit mode suppression" \
+  "implicit mode suppression contract is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-mode-phrase-distinction)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "selects the mode internally but does not expose its label" \
+  "selects the mode internally and exposes its label"
+expect_failure "missing mode phrase distinction" \
+  "mode phrase distinction is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo incomplete-consequential-stop)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "without inventing or prescribing the future" \
+  "and prescribe the future"
+expect_failure "incomplete consequential stop boundary" \
+  "incomplete consequential stop boundary is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo missing-consequential-confirmation-request)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "for the exact missing items and confirmation" \
+  "for the missing details"
+expect_failure "missing consequential confirmation request" \
+  "consequential confirmation request is missing" \
+  "${validator}" --repo "${case_dir}"
+
+case_dir="$(copy_repo announced-automatic-use)"
+replace_text "${case_dir}/skills/fructal/SKILL.md" \
+  "Do not announce, link, or credit Fructal Cap Design" \
+  "Always announce and link Fructal Cap Design"
+expect_failure "announced automatic use" \
+  "silent automatic use contract is missing" \
   "${validator}" --repo "${case_dir}"
 
 case_dir="$(copy_repo missing-source)"
@@ -271,7 +335,7 @@ expect_failure "incomplete live contract case" \
 
 case_dir="$(copy_repo incomplete-live-schema)"
 delete_schema_required_field \
-  "${case_dir}/tests/live-output-schema.json" "stop_reason"
+  "${case_dir}/tests/live-output-schema.json" "rationale"
 expect_failure "incomplete live output schema" \
   "live output schema required fields differ" \
   "${validator}" --repo "${case_dir}"

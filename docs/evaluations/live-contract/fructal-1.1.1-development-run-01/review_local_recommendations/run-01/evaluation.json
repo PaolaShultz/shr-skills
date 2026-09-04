@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request explicitly describes workflow-level obstruction caused by a required approval constraint and selects Review mode. The response inspected the fixture read-only, distinguished the requester-provided constraint from the directly observed blocked state, derived bounded findings, and preserved unresolved matters as open questions. Each recommendation remains attached to an individual finding; collectively they do not specify a complete sequence, state model, or ownership structure, and the response explicitly leaves lifecycle coordination to a future redesign decision. Fixture hashes confirm no modification. The report is focused, exposes the explicitly requested mode, provides the requested review deliverable, and makes no unsupported validation claim.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

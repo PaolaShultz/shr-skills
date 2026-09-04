@@ -1,0 +1,22 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request is purely aesthetic and explicitly lacks workflow-level consequences, so Fructal Cap Design is not applicable. The executor performed only read-only inspection, correctly observed that no poster asset existed, made no modifications, and did not invent a critique or validation. The requested critique itself was not deliverable without the poster, so deliverable_present is false; the concise attachment request was an appropriate blocker report, not a confirmation request or replacement workflow.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

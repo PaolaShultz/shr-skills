@@ -1,0 +1,3 @@
+Diagnosis: the function dereferences or otherwise operates on a nullable argument before checking for `null`/`undefined`, causing the `TypeError`.
+
+The fixture contains only `workflow.txt` with `state=blocked`; no function implementation or stack trace is available, so the exact failing expression cannot be identified. No files were changed. This is an isolated guard defect, not workflow-level friction, so Fructal Cap Design does not apply.

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request presents workflow-level obstruction across multiple regulated actors and systems, so Fructal Cap Design applies. The response visibly selects the explicitly requested Redesign mode, performs only read inspection, and the unchanged fixture corroborates that no modification was attempted. It defines a coherent end-to-end replacement motion covering canonical authority, idempotent submission and processing, approval, handoff, billing, notifications, recovery, accessibility, ownership, and verification, while preserving audit, privacy, approval, and unrelated state. It distinguishes requester-provided claims from the observed minimal fixture, treats the design as an unvalidated proposal, and carries material ownership, policy, timing, and retention choices as open questions. The verification plan covers the materially affected cap-test concerns without claiming tests or affected-actor acceptance occurred.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

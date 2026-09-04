@@ -1,0 +1,6 @@
+{
+  "case_id": "review_local_recommendations",
+  "prompt_style": "embedded",
+  "repetition": 2,
+  "skill_read_observed": false
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06d35-286c-70d3-89ea-3d6b34a3bf8d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Use **“Hide draft”** for the button.\n\nAfter activation, show a nearby message:\n\n> Draft hidden. **Undo**\n\nThis preserves the reversible behavior while making the immediate result clear. Keep **Undo** keyboard-accessible and return the draft to its previous position and state. No files were modified."}}
+{"type":"turn.completed","usage":{"input_tokens":16260,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":65,"reasoning_output_tokens":0}}

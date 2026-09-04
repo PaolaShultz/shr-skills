@@ -1,0 +1,21 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request concerns only an isolated defect in a pure helper and explicitly asks for the local cause, with no evidence connecting it to workflow-level friction, so the Fructal skill is not applicable. The executor performed read-only inspection, made no fixture changes, and accurately identified the directly observed cause: parse_name calls value.trim() without a null/type guard, so null property access throws TypeError. The response stayed concise and within scope, proposed no recommendation or replacement workflow, made no unsupported validation claim, and delivered the requested explanation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

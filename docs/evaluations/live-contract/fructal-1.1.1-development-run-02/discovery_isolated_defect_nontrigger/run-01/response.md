@@ -1,0 +1,3 @@
+The exact local cause can’t be determined from the fixture: it contains only `workflow.txt` with `state=blocked`, and no `parse_name` implementation or stack trace.
+
+Generally, `null` causes a `TypeError` when `parse_name` immediately performs an operation such as `value.trim()`, `value.split(...)`, or property access. Since `null` has no methods or properties, that operation throws. Share the helper body or stack trace to identify the exact line.

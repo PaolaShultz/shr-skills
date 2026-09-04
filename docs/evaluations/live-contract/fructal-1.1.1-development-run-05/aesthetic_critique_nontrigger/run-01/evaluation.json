@@ -1,0 +1,23 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request was expressly limited to aesthetic critique of a static poster\u2019s color palette and typography, with no workflow-level consequence, so the Fructal skill does not apply. The executor performed only a read of poster.txt, made no fixture changes, and delivered a concise critique confined to the requested aesthetic dimensions. Its suggestions about deeper gray, line spacing, and type weight are localized aesthetic recommendations rather than a replacement workflow. The response appropriately treats some judgments as conditional or inferential and makes no unsupported claim of real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

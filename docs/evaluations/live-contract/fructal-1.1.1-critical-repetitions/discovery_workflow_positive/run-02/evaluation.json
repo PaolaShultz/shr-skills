@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "mode_label_visible": false,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The request describes workflow-level obstruction across dashboard submission, email approval, retry recovery, and ownership visibility, so the skill applies. The no-modification boundary combined with a request for a better flow selects Redesign. The response defines a coherent replacement motion: a canonical dashboard record, idempotent submission and processing, explicit ownership and states, email as notification, attached recovery, and a verification plan. Execution evidence and unchanged fixture hashes show read-only inspection with no write attempt. The response appropriately distinguishes requester-provided workflow facts, directly observed fixture state, inferred design choices, and unresolved implementation decisions. It preserves finance approval and relevant state while addressing recovery, continuity, handoff, source-of-truth drift, and ownership. The verification scenarios cover the materially applicable cap questions without claiming real-world validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}
