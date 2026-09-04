@@ -70,6 +70,9 @@ acceptance claim.
   moved because publication rules prohibit history rewriting. Plugin consumers
   should use the corrected release asset
   `fructal-1.1.1.zip` or current `main`.
+- Evidence-led OpenAI Forum and Show HN drafts are preserved in
+  `distribution/announcement-drafts.md`; they are preparation artifacts, not
+  claims that either post was made.
 
 ## Submission and announcement outcome
 
