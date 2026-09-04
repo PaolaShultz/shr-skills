@@ -1,7 +1,7 @@
 # Anthropic plugin directory listing
 
-- Name: Fractal Cap Design
-- Technical name: <code>fractal-cap-design</code>
+- Name: Fructal Cap Design
+- Technical name: <code>fructal</code>
 - Version: 1.1.1
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
@@ -12,7 +12,7 @@
 - Terms: <https://paolashultz.github.io/shr-skills/terms.html>
 - License: MIT
 
-Fractal Cap Design identifies workflow-level friction created around a necessary
+Fructal Cap Design identifies workflow-level friction created around a necessary
 constraint, preserves the boundary, and improves completion, recovery, handoff,
 or continuity. It supports Review, Redesign, and authorized Implement modes and
 does not activate for aesthetic-only critique or isolated defects without a

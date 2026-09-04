@@ -6,7 +6,7 @@ import shutil
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugins" / "fractal-cap-design"
+PLUGIN = ROOT / "plugins" / "fructal"
 
 
 def main() -> None:
@@ -14,10 +14,10 @@ def main() -> None:
     skill_target = PLUGIN / "skills" / "fructal" / "SKILL.md"
     license_source = ROOT / "LICENSE"
     license_target = PLUGIN / "LICENSE"
-    icon_source = PLUGIN / "assets" / "fractal-cap-icon.svg"
-    icon_target = ROOT / "docs" / "assets" / "fractal-cap-icon.svg"
-    logo_source = PLUGIN / "assets" / "fractal-cap-logo.svg"
-    logo_target = ROOT / "docs" / "assets" / "fractal-cap-logo.svg"
+    icon_source = PLUGIN / "assets" / "fructal-icon.svg"
+    icon_target = ROOT / "docs" / "assets" / "fructal-icon.svg"
+    logo_source = PLUGIN / "assets" / "fructal-logo.svg"
+    logo_target = ROOT / "docs" / "assets" / "fructal-logo.svg"
 
     skill_target.parent.mkdir(parents=True, exist_ok=True)
     icon_target.parent.mkdir(parents=True, exist_ok=True)

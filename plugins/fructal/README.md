@@ -1,8 +1,8 @@
-# Fractal Cap Design plugin
+# Fructal Cap Design plugin
 
 This directory is a generated distribution wrapper around the canonical
-Fractal Cap Design skill at
-<https://github.com/PaolaShultz/shr-skills/blob/main/skills/fractal/SKILL.md>.
+Fructal Cap Design skill at
+<https://github.com/PaolaShultz/shr-skills/blob/main/skills/fructal/SKILL.md>.
 It supplies both the OpenAI and Claude plugin manifests while keeping one
 byte-identical mirrored skill.
 

@@ -15,7 +15,7 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugins" / "fractal-cap-design"
+PLUGIN = ROOT / "plugins" / "fructal"
 VERSION = "1.1.1"
 
 
@@ -57,7 +57,7 @@ def check_equal(left: Path, right: Path, label: str, errors: list[str]) -> None:
 def check_manifest(path: Path, host: str, errors: list[str]) -> None:
     value = load_json(path, errors)
     expected = {
-        "name": "fractal-cap-design",
+        "name": "fructal",
         "version": VERSION,
         "skills": "./skills/",
     }
@@ -67,8 +67,8 @@ def check_manifest(path: Path, host: str, errors: list[str]) -> None:
     display_name = value.get(
         "displayName", value.get("interface", {}).get("displayName")
     )
-    if display_name != "Fractal Cap Design":
-        errors.append(f"{host} manifest must use the public name Fractal Cap Design")
+    if display_name != "Fructal Cap Design":
+        errors.append(f"{host} manifest must use the public name Fructal Cap Design")
 
 
 def check_test_cases(errors: list[str]) -> None:
@@ -152,8 +152,8 @@ def check_site(errors: list[str]) -> None:
 
 def check_assets(errors: list[str]) -> None:
     expected = {
-        "fractal-cap-icon.svg": "0 0 512 512",
-        "fractal-cap-logo.svg": "0 0 1280 320",
+        "fructal-icon.svg": "0 0 512 512",
+        "fructal-logo.svg": "0 0 1280 320",
     }
     for name, view_box in expected.items():
         path = PLUGIN / "assets" / name
@@ -166,8 +166,8 @@ def check_assets(errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)} has the wrong viewBox")
 
     png_expected = {
-        "fractal-cap-icon-512.png": (512, 512),
-        "fractal-cap-logo-1280x320.png": (1280, 320),
+        "fructal-icon-512.png": (512, 512),
+        "fructal-logo-1280x320.png": (1280, 320),
     }
     for name, dimensions in png_expected.items():
         path = PLUGIN / "assets" / name
@@ -190,8 +190,16 @@ def check_public_text(errors: list[str]) -> None:
         re.compile(r"-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----"),
     ]
     roots = [
+        ROOT / "README.md",
+        ROOT / ".agents",
+        ROOT / ".claude-plugin",
+        ROOT / ".github" / "ISSUE_TEMPLATE" / "adversarial-workflow.yml",
         ROOT / "distribution",
-        ROOT / "plugins" / "fractal-cap-design",
+        ROOT / "plugins" / "fructal",
+        ROOT / "docs" / "index.html",
+        ROOT / "docs" / "privacy.html",
+        ROOT / "docs" / "terms.html",
+        ROOT / "docs" / "assets",
         ROOT / "docs" / "distribution-report-1.1.1.md",
     ]
     paths: list[Path] = []
@@ -208,6 +216,11 @@ def check_public_text(errors: list[str]) -> None:
         for marker in private_markers:
             if marker.search(text):
                 errors.append(f"possible private credential in {path.relative_to(ROOT)}")
+        misspelling = "fra" + "ctal"
+        if re.search(rf"\b{misspelling}\b|{misspelling}-", text, re.IGNORECASE):
+            errors.append(
+                f"incorrect public-name spelling or technical identifier in {path.relative_to(ROOT)}"
+            )
 
 
 def main() -> None:
@@ -220,14 +233,14 @@ def main() -> None:
     )
     check_equal(ROOT / "LICENSE", PLUGIN / "LICENSE", "plugin license", errors)
     check_equal(
-        PLUGIN / "assets" / "fractal-cap-icon.svg",
-        ROOT / "docs" / "assets" / "fractal-cap-icon.svg",
+        PLUGIN / "assets" / "fructal-icon.svg",
+        ROOT / "docs" / "assets" / "fructal-icon.svg",
         "landing-page icon mirror",
         errors,
     )
     check_equal(
-        PLUGIN / "assets" / "fractal-cap-logo.svg",
-        ROOT / "docs" / "assets" / "fractal-cap-logo.svg",
+        PLUGIN / "assets" / "fructal-logo.svg",
+        ROOT / "docs" / "assets" / "fructal-logo.svg",
         "landing-page logo mirror",
         errors,
     )

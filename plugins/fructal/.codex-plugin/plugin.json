@@ -1,5 +1,5 @@
 {
-  "name": "fractal-cap-design",
+  "name": "fructal",
   "version": "1.1.1",
   "description": "Redesign constrained workflows without weakening their necessary boundaries.",
   "author": {
@@ -18,9 +18,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Fractal Cap Design",
+    "displayName": "Fructal Cap Design",
     "shortDescription": "Repair constrained workflows without weakening boundaries.",
-    "longDescription": "Fractal Cap Design finds workflow-level friction created around a necessary constraint, preserves the constraint, and improves completion, recovery, handoff, or continuity. Use it for Review, Redesign, or authorized Implement work; do not use it for purely aesthetic critique or isolated defects without a broader workflow obstruction.",
+    "longDescription": "Fructal Cap Design finds workflow-level friction created around a necessary constraint, preserves the constraint, and improves completion, recovery, handoff, or continuity. Use it for Review, Redesign, or authorized Implement work; do not use it for purely aesthetic critique or isolated defects without a broader workflow obstruction.",
     "developerName": "PaolaShultz",
     "category": "Productivity",
     "capabilities": [],
@@ -33,7 +33,7 @@
       "Implement this authorized workflow repair."
     ],
     "brandColor": "#173B34",
-    "composerIcon": "./assets/fractal-cap-icon.svg",
-    "logo": "./assets/fractal-cap-logo.svg"
+    "composerIcon": "./assets/fructal-icon.svg",
+    "logo": "./assets/fructal-logo.svg"
   }
 }

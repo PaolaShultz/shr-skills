@@ -65,9 +65,9 @@ for GitHub CLI 2.90.0 or later.
 Claude Code can also install the repository marketplace:
 
     claude plugin marketplace add PaolaShultz/shr-skills
-    claude plugin install fractal-cap-design@shr-skills
+    claude plugin install fructal@shr-skills
 
-That plugin invokes the skill as <code>/fractal-cap-design:fructal</code>.
+That plugin invokes the skill as <code>/fructal:fructal</code>.
 
 Cursor's current first-party flow can import the repository directly: open
 **Cursor Settings → Rules → Add Rule → Remote Rule (Github)** and enter
@@ -106,7 +106,7 @@ short Codex skill identifier and invocation name; the spelling is intentional.
 ## Distribution and support
 
 The OpenAI and Claude plugin wrappers in
-[plugins/fractal-cap-design](plugins/fractal-cap-design) contain one
+[plugins/fructal](plugins/fructal) contain one
 byte-identical mirror of the canonical skill. Run
 <code>scripts/sync-distribution.py</code> after a canonical change; validation
 rejects drift.

@@ -1,4 +1,4 @@
-# Fractal Cap Design 1.1.1 distribution report
+# Fructal Cap Design 1.1.1 distribution report
 
 Access date for every source below: **2026-09-04**.
 

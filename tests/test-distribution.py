@@ -32,7 +32,7 @@ def main() -> None:
         shutil.copytree(ROOT, copied, ignore=shutil.ignore_patterns(".git"))
         canonical_skill = (ROOT / "skills" / "fructal" / "SKILL.md").read_bytes()
 
-        mirror = copied / "plugins" / "fractal-cap-design" / "skills" / "fructal" / "SKILL.md"
+        mirror = copied / "plugins" / "fructal" / "skills" / "fructal" / "SKILL.md"
         mirror.write_text(mirror.read_text() + "\n# deliberate drift\n")
         drift = run_validator(copied)
         if drift.returncode == 0 or "not byte-identical" not in drift.stdout:

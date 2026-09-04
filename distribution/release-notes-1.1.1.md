@@ -1,4 +1,4 @@
-# Fractal Cap Design 1.1.1
+# Fructal Cap Design 1.1.1
 
 Version 1.1.1 tightens the behavioral contract without expanding its activation
 scope. It:

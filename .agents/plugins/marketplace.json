@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "fractal-cap-design",
+      "name": "fructal",
       "source": {
         "source": "local",
-        "path": "./plugins/fractal-cap-design"
+        "path": "./plugins/fructal"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -2,8 +2,8 @@
 
 ## Listing fields
 
-- Customer-facing name: Fractal Cap Design
-- Technical plugin name: <code>fractal-cap-design</code>
+- Customer-facing name: Fructal Cap Design
+- Technical plugin name: <code>fructal</code>
 - Version: 1.1.1
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
@@ -17,7 +17,7 @@
 
 ## Long description
 
-Fractal Cap Design finds workflow-level friction created around a necessary
+Fructal Cap Design finds workflow-level friction created around a necessary
 constraint, preserves the constraint, and improves completion, recovery,
 handoff, or continuity. Use it for Review, Redesign, or authorized Implement
 work. Its depth scales with consequence and reversibility. Do not use it for
