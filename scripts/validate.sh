@@ -34,3 +34,7 @@ python3 "${script_dir}/validate-package.py" "${arguments[@]}"
 "${script_dir}/check-chatgpt-demo-sync.sh" \
   "${selected_repo}/skills/fructal/SKILL.md" \
   "${selected_repo}/examples/chatgpt-web-demo.md"
+
+if [[ "${selected_repo}" == "${default_repo_dir}" ]]; then
+  python3 "${script_dir}/validate-distribution.py"
+fi

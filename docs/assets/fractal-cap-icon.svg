@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Fractal Cap Design icon</title>
+  <desc id="desc">A warm path bends naturally around a fixed central boundary.</desc>
+  <rect width="512" height="512" rx="108" fill="#173b34"/>
+  <circle cx="256" cy="256" r="74" fill="#f4ddac"/>
+  <circle cx="256" cy="256" r="38" fill="#173b34"/>
+  <path d="M86 326c58 0 63-140 151-140 64 0 79 74 131 74 25 0 42-14 58-42"
+        fill="none" stroke="#e87448" stroke-width="42" stroke-linecap="round"/>
+  <path d="M86 326c58 0 63-140 151-140"
+        fill="none" stroke="#fff8e8" stroke-width="12" stroke-linecap="round" opacity=".82"/>
+</svg>

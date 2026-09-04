@@ -9,6 +9,7 @@ SKILL
 ---
 name: fructal
 description: Use when a necessary constraint creates workflow-level obstruction in completion, recovery, handoff, or continuity across actors, states, channels, or systems, especially when change must preserve safety, privacy, accessibility, ownership, compliance, interoperability, or data integrity. Activate only for workflow-level friction; a requirement or constraint alone does not qualify. Never activate for purely aesthetic critique or an isolated defect unless evidence connects it to a broader workflow failure.
+license: MIT
 metadata:
   version: "1.1.1"
   source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"

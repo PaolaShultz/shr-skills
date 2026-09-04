@@ -47,7 +47,34 @@ was used or attribution materially helps the task.
 
 ## Install
 
-Ask Codex:
+The repository follows the open Agent Skills layout. Install the canonical
+skill with the skills.sh CLI:
+
+    DISABLE_TELEMETRY=1 npx skills add PaolaShultz/shr-skills --skill fructal
+
+For GitHub Copilot, Codex, Claude Code, Cursor, and other agents supported by
+the current GitHub CLI preview, install the published 1.1.1 skill with:
+
+    gh skill install PaolaShultz/shr-skills fructal@v1.1.1 --agent AGENT --scope user
+
+Replace <code>AGENT</code> with a value supported by
+<code>gh skill install</code>, such as <code>codex</code>,
+<code>claude-code</code>, or <code>cursor</code>. GitHub documents this preview
+for GitHub CLI 2.90.0 or later.
+
+Claude Code can also install the repository marketplace:
+
+    claude plugin marketplace add PaolaShultz/shr-skills
+    claude plugin install fractal-cap-design@shr-skills
+
+That plugin invokes the skill as <code>/fractal-cap-design:fructal</code>.
+
+Cursor's current first-party flow can import the repository directly: open
+**Cursor Settings → Rules → Add Rule → Remote Rule (Github)** and enter
+<https://github.com/PaolaShultz/shr-skills>. Cursor documents GitHub import but
+not a general public skill-marketplace submission.
+
+You can also ask Codex:
 
 ```text
 Install the skill from https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal
@@ -75,6 +102,23 @@ Use $fructal to implement and verify this constrained workflow change: [change]
 
 The method is named **Fructal Cap Design**. Lowercase `fructal` is only its
 short Codex skill identifier and invocation name; the spelling is intentional.
+
+## Distribution and support
+
+The OpenAI and Claude plugin wrappers in
+[plugins/fractal-cap-design](plugins/fractal-cap-design) contain one
+byte-identical mirror of the canonical skill. Run
+<code>scripts/sync-distribution.py</code> after a canonical change; validation
+rejects drift.
+
+- [Public site](https://paolashultz.github.io/shr-skills/)
+- [Support and bug reports](https://github.com/PaolaShultz/shr-skills/issues)
+- [Adversarial workflow case form](https://github.com/PaolaShultz/shr-skills/issues/new?template=adversarial-workflow.yml)
+- [Privacy](https://paolashultz.github.io/shr-skills/privacy.html)
+- [Terms](https://paolashultz.github.io/shr-skills/terms.html)
+- [1.1.1 release notes](distribution/release-notes-1.1.1.md)
+- [Submission test cases](distribution/submission-test-cases.json)
+- [Current distribution ledger](docs/distribution-report-1.1.1.md)
 
 ## Demonstrate it in ChatGPT Web
 

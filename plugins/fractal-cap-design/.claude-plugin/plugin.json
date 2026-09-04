@@ -1,0 +1,21 @@
+{
+  "name": "fractal-cap-design",
+  "version": "1.1.1",
+  "description": "Redesign constrained workflows without weakening their necessary boundaries.",
+  "displayName": "Fractal Cap Design",
+  "author": {
+    "name": "PaolaShultz",
+    "url": "https://github.com/PaolaShultz"
+  },
+  "homepage": "https://paolashultz.github.io/shr-skills/",
+  "repository": "https://github.com/PaolaShultz/shr-skills",
+  "license": "MIT",
+  "keywords": [
+    "workflow-design",
+    "constraint-design",
+    "handoffs",
+    "recovery",
+    "accessibility"
+  ],
+  "skills": "./skills/"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "fractal-cap-design",
+  "version": "1.1.1",
+  "description": "Redesign constrained workflows without weakening their necessary boundaries.",
+  "author": {
+    "name": "PaolaShultz",
+    "url": "https://github.com/PaolaShultz"
+  },
+  "homepage": "https://paolashultz.github.io/shr-skills/",
+  "repository": "https://github.com/PaolaShultz/shr-skills",
+  "license": "MIT",
+  "keywords": [
+    "workflow-design",
+    "constraint-design",
+    "handoffs",
+    "recovery",
+    "accessibility"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Fractal Cap Design",
+    "shortDescription": "Repair constrained workflows without weakening boundaries.",
+    "longDescription": "Fractal Cap Design finds workflow-level friction created around a necessary constraint, preserves the constraint, and improves completion, recovery, handoff, or continuity. Use it for Review, Redesign, or authorized Implement work; do not use it for purely aesthetic critique or isolated defects without a broader workflow obstruction.",
+    "developerName": "PaolaShultz",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://paolashultz.github.io/shr-skills/",
+    "privacyPolicyURL": "https://paolashultz.github.io/shr-skills/privacy.html",
+    "termsOfServiceURL": "https://paolashultz.github.io/shr-skills/terms.html",
+    "defaultPrompt": [
+      "Review this blocked handoff without changing it.",
+      "Redesign this constrained recovery path.",
+      "Implement this authorized workflow repair."
+    ],
+    "brandColor": "#173B34",
+    "composerIcon": "./assets/fractal-cap-icon.svg",
+    "logo": "./assets/fractal-cap-logo.svg"
+  }
+}

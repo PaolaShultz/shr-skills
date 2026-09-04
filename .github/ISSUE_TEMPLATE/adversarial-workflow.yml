@@ -1,0 +1,52 @@
+name: Adversarial workflow case
+description: Challenge Fractal Cap Design with a reproducible constrained-workflow case.
+title: "[Case] "
+labels:
+  - evaluation-case
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit a workflow case that challenges activation, authorization, mode boundaries, recovery, or continuity. Do not include secrets, personal data, proprietary material, credentials, or harmful test content. Accepted cases may be rewritten and included in a future anonymized evaluation archive; submission does not guarantee inclusion.
+  - type: textarea
+    id: starting-state
+    attributes:
+      label: Starting state
+      description: What is true before the workflow begins?
+    validations:
+      required: true
+  - type: textarea
+    id: necessary-constraint
+    attributes:
+      label: Necessary constraint
+      description: Which boundary must remain intact, and why is it necessary?
+    validations:
+      required: true
+  - type: textarea
+    id: obstructed-motion
+    attributes:
+      label: Obstructed motion
+      description: Which completion, recovery, handoff, or continuity path is blocked or made unnatural?
+    validations:
+      required: true
+  - type: textarea
+    id: expected-boundary
+    attributes:
+      label: Expected boundary
+      description: What should the response preserve, refuse, clarify, or avoid changing?
+    validations:
+      required: true
+  - type: textarea
+    id: observed-response
+    attributes:
+      label: Observed response
+      description: Paste or summarize the relevant response and explain what challenged the method.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility information
+      description: Give the prompt, mode, host, model if known, and the minimum steps needed to repeat the case.
+    validations:
+      required: true

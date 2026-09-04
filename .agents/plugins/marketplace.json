@@ -1,0 +1,20 @@
+{
+  "name": "shr-skills",
+  "interface": {
+    "displayName": "SHR Skills"
+  },
+  "plugins": [
+    {
+      "name": "fractal-cap-design",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fractal-cap-design"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "shr-skills",
+  "description": "Open, evidence-led agent skills maintained in the SHR Skills repository.",
+  "owner": {
+    "name": "PaolaShultz",
+    "url": "https://github.com/PaolaShultz"
+  },
+  "plugins": [
+    {
+      "name": "fractal-cap-design",
+      "source": "./plugins/fractal-cap-design",
+      "displayName": "Fractal Cap Design",
+      "description": "Repair constrained workflows without weakening boundaries.",
+      "version": "1.1.1",
+      "author": {
+        "name": "PaolaShultz"
+      },
+      "homepage": "https://paolashultz.github.io/shr-skills/",
+      "repository": "https://github.com/PaolaShultz/shr-skills",
+      "license": "MIT",
+      "keywords": [
+        "workflow-design",
+        "constraint-design",
+        "handoffs",
+        "recovery",
+        "accessibility"
+      ],
+      "category": "productivity",
+      "tags": [
+        "workflow",
+        "constraints",
+        "handoffs"
+      ]
+    }
+  ]
+}
