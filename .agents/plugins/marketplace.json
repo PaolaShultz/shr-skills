@@ -8,7 +8,7 @@
       "name": "fructal",
       "source": {
         "source": "local",
-        "path": "./plugins/fructal"
+        "path": "./distribution/plugins/fructal"
       },
       "policy": {
         "installation": "AVAILABLE",

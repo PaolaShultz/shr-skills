@@ -106,10 +106,11 @@ short Codex skill identifier and invocation name; the spelling is intentional.
 ## Distribution and support
 
 The OpenAI and Claude plugin wrappers in
-[plugins/fructal](plugins/fructal) contain one
+[distribution/plugins/fructal](distribution/plugins/fructal) contain one
 byte-identical mirror of the canonical skill. Run
 <code>scripts/sync-distribution.py</code> after a canonical change; validation
-rejects drift.
+rejects drift. The wrapper is nested below a non-discoverable package path so
+GitHub skill search lists only the canonical <code>skills/fructal</code> entry.
 
 - [Public site](https://paolashultz.github.io/shr-skills/)
 - [Support and bug reports](https://github.com/PaolaShultz/shr-skills/issues)

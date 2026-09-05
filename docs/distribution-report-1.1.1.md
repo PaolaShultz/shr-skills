@@ -38,6 +38,14 @@ account details, and attestations are intentionally excluded.
 | Show HN | Deliberately deferred | <https://news.ycombinator.com/showhn.html> | The project is directly installable, but the official submission page was logged out and the required personal authorship/availability facts cannot be inferred. Indexed duplicate searches found no equivalent submission. No post was made. |
 | VoltAgent list | Deliberately deferred | <https://github.com/VoltAgent/awesome-agent-skills> | Contribution rules require observable real community usage; no such external adoption evidence is asserted. |
 
+GitHub, OpenAI, and Anthropic packaging-path documentation was rechecked on
+**2026-09-05** at <https://cli.github.com/manual/gh_skill_publish>,
+<https://developers.openai.com/plugins/build/plugins>, and
+<https://code.claude.com/docs/en/plugins-reference>. The generated plugin was
+moved under `distribution/plugins/fructal`: both host manifests still point to
+its internal `skills/` directory, while GitHub discovery sees only the
+canonical `skills/fructal` entry.
+
 ## Evidence and claim boundary
 
 The retained evidence includes a complete 24-case release matrix and 21

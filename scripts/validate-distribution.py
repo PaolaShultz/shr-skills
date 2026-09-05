@@ -15,7 +15,7 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugins" / "fructal"
+PLUGIN = ROOT / "distribution" / "plugins" / "fructal"
 VERSION = "1.1.1"
 
 
@@ -183,6 +183,46 @@ def check_assets(errors: list[str]) -> None:
             )
 
 
+def check_github_discovery_layout(errors: list[str]) -> None:
+    """Keep generated wrappers out of GitHub's documented skill conventions."""
+
+    discovered: list[Path] = []
+    for candidate in ROOT.rglob("SKILL.md"):
+        relative = candidate.relative_to(ROOT)
+        parts = relative.parts
+        hidden = any(part.startswith(".") for part in parts)
+        plugin_ancestor = "plugins" in parts
+
+        root_skill = len(parts) == 2
+        plain_skill = (
+            len(parts) >= 3
+            and parts[-3] == "skills"
+            and not hidden
+            and not plugin_ancestor
+        )
+        namespaced_skill = (
+            len(parts) >= 4
+            and parts[-4] == "skills"
+            and not hidden
+            and not plugin_ancestor
+        )
+        plugin_skill = (
+            len(parts) == 5
+            and parts[0] == "plugins"
+            and parts[2] == "skills"
+        )
+        if root_skill or plain_skill or namespaced_skill or plugin_skill:
+            discovered.append(relative)
+
+    expected = [Path("skills/fructal/SKILL.md")]
+    if sorted(discovered) != expected:
+        rendered = ", ".join(str(path) for path in sorted(discovered)) or "none"
+        errors.append(
+            "GitHub skill discovery must expose only skills/fructal/SKILL.md; "
+            f"found {rendered}"
+        )
+
+
 def check_public_text(errors: list[str]) -> None:
     private_markers = [
         re.compile(r"sk-[A-Za-z0-9]{20,}"),
@@ -195,7 +235,7 @@ def check_public_text(errors: list[str]) -> None:
         ROOT / ".claude-plugin",
         ROOT / ".github" / "ISSUE_TEMPLATE" / "adversarial-workflow.yml",
         ROOT / "distribution",
-        ROOT / "plugins" / "fructal",
+        PLUGIN,
         ROOT / "docs" / "index.html",
         ROOT / "docs" / "privacy.html",
         ROOT / "docs" / "terms.html",
@@ -250,6 +290,7 @@ def main() -> None:
     check_issue_template(errors)
     check_site(errors)
     check_assets(errors)
+    check_github_discovery_layout(errors)
     check_public_text(errors)
 
     if errors:

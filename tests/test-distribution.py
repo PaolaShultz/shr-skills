@@ -32,7 +32,15 @@ def main() -> None:
         shutil.copytree(ROOT, copied, ignore=shutil.ignore_patterns(".git"))
         canonical_skill = (ROOT / "skills" / "fructal" / "SKILL.md").read_bytes()
 
-        mirror = copied / "plugins" / "fructal" / "skills" / "fructal" / "SKILL.md"
+        mirror = (
+            copied
+            / "distribution"
+            / "plugins"
+            / "fructal"
+            / "skills"
+            / "fructal"
+            / "SKILL.md"
+        )
         mirror.write_text(mirror.read_text() + "\n# deliberate drift\n")
         drift = run_validator(copied)
         if drift.returncode == 0 or "not byte-identical" not in drift.stdout:
@@ -47,7 +55,17 @@ def main() -> None:
         if incomplete.returncode == 0 or "at least three negative" not in incomplete.stdout:
             raise SystemExit("validator did not reject an incomplete negative case set")
 
-    print("PASS: distribution validator rejects drift and incomplete case sets")
+        duplicate = copied / "plugins" / "fructal" / "skills" / "fructal" / "SKILL.md"
+        duplicate.parent.mkdir(parents=True)
+        duplicate.write_bytes(canonical_skill)
+        doubled = run_validator(copied)
+        if doubled.returncode == 0 or "GitHub skill discovery" not in doubled.stdout:
+            raise SystemExit("validator did not reject a duplicate GitHub skill entry")
+
+    print(
+        "PASS: distribution validator rejects drift, incomplete cases, "
+        "and duplicate GitHub skill entries"
+    )
 
 
 if __name__ == "__main__":
