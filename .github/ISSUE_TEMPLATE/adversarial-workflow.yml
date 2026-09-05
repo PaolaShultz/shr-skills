@@ -19,14 +19,14 @@ body:
     id: necessary-constraint
     attributes:
       label: Necessary constraint
-      description: Which boundary must remain intact, and why is it necessary?
+      description: Which boundary must remain intact, and why is it necessary? For a non-trigger case, write "none" if no necessary constraint exists; do not invent one.
     validations:
       required: true
   - type: textarea
     id: obstructed-motion
     attributes:
       label: Obstructed motion
-      description: Which completion, recovery, handoff, or continuity path is blocked or made unnatural?
+      description: Which completion, recovery, handoff, or continuity path is blocked or made unnatural? For a non-trigger case, write "none" if there is no avoidable obstruction linked to the constraint.
     validations:
       required: true
   - type: textarea

@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Fructal Cap Design",
     "shortDescription": "Repair constrained workflows without weakening boundaries.",
-    "longDescription": "Fructal Cap Design finds workflow-level friction created around a necessary constraint, preserves the constraint, and improves completion, recovery, handoff, or continuity. Use it for Review, Redesign, or authorized Implement work; do not use it for purely aesthetic critique or isolated defects without a broader workflow obstruction.",
+    "longDescription": "Fructal Cap Design addresses avoidable loss of progress, context, or ownership caused by the handling of a necessary rule or limit. Preserve the constraint while improving completion, recovery, or handoff through Review, Redesign, or authorized Implement work. Even one defective control can qualify when that connection exists. Aesthetics, ordinary requirements, and local defects without the connection use ordinary design or debugging instead; nonactivation does not abandon the task.",
     "developerName": "PaolaShultz",
     "category": "Productivity",
     "capabilities": [],

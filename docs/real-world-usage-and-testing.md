@@ -7,7 +7,7 @@ Fructal Cap Design has seven distinct kinds of practical evidence:
 2. it found latent workflow failures in an anonymous private software project
    already using a disciplined software-delivery skill suite;
 3. a private implementation replay compared historical Fructal Cap Design,
-   no Fructal Cap Design, and current Fructal Cap Design while holding the same
+   no Fructal Cap Design, and the then-current revision while holding the same
    software-delivery skills and a repair brief authored by Fructal Cap Design
    constant;
 4. it drove a public musician/operator workflow audit and repair across the
@@ -27,6 +27,13 @@ These cases demonstrate practical utility at different boundaries. They do not
 establish a universal success rate or independent validation across every
 technical, physical, service, or operational domain.
 
+Case results belong to their recorded versions and observation windows, not
+automatically to the latest skill. The current contract is
+[`skills/fructal/SKILL.md`](../skills/fructal/SKILL.md); the
+[1.2.0 regression record](evaluations/live-contract/fructal-1.2.0/)
+documents that revision's checks. Historical records below are not new
+instructions or current deployment-status claims.
+
 The [2026-07-24 workflow
 postmortem](workflow-postmortem-2026-07-24.md) separately reconstructs how this
 evidence was developed, where assumptions were corrected, how the workflow
@@ -36,13 +43,18 @@ recovered, and which intended results remain incomplete.
 
 This document keeps provenance and evidentiary status separate:
 
-- `provided/reported` records a statement from a creator, operator, or other
-  affected actor;
+- `provided` identifies supplied material;
+- `reported` records an attributed claim not independently verified, including
+  statements from creators, operators, or other affected actors;
 - `observed` records repository history, source, tests, machine behavior, or
   another artifact inspected directly;
 - `inference` records a conclusion derived from that evidence;
 - `open question` records what still requires affected-actor, physical,
   longitudinal, or independent evidence.
+
+A provided artifact can contain a reported claim. Inspecting it establishes
+its contents, not the claimed cause, chronology, or outcome. Original labels
+inside linked historical artifacts remain unchanged.
 
 Repository evidence can prove that a change and its checks exist. It cannot by
 itself prove that a musician, operator, customer, or other affected person finds
@@ -157,13 +169,29 @@ recommendations, and positive and negative automatic discovery.
 
 **Inference:** This is stronger contract and regression evidence than a single
 self-scored matrix because the deliverable, execution evidence, and fixture
-state are judged independently and retained. It also shows productive
+state are judged in a separate invocation and retained. It also shows productive
 self-correction: failed cases produced bounded changes and were rerun.
 
 **Open question:** The evaluator uses the same model family as the executor,
 the fixtures are synthetic, and 45 passing runs are not a statistical success
 rate. Cross-model or human-blinded judgment and prospectively frozen comparison
 arms remain necessary for stronger external validity.
+
+### Version 1.2.0 simplification and regression checks
+
+**Observed:** The [1.2.0 release notes](../distribution/release-notes-1.2.0.md)
+record a reduction from 1,914 to 1,104 skill words with all six cap questions
+unchanged. The [regression record](evaluations/live-contract/fructal-1.2.0/)
+documents a 29-case development matrix with five initial failures, the skill,
+harness, and judge corrections, and eight passing final-skill rechecks.
+The final revision did not receive a second full-matrix run. Two initial
+fixture-check failures lack retained raw execution traces; the record states
+that gap rather than reconstructing them.
+
+These are development cases using `gpt-5.6-sol` for executor and separate
+evaluator invocations. They do not establish held-out performance, cross-model
+reliability, benefit over a no-skill baseline, or affected-user acceptance.
+The older 1.1.1 results above do not validate 1.2.0.
 
 ### What self-application proves and does not prove
 
@@ -265,7 +293,7 @@ The practical sequence was:
 | Preserving context, work, ownership, and intent | Explicit acceptance condition | Usually requirement-dependent |
 | Accessibility in the normal path | Integrated | Depends on the task and tests |
 | Root-cause debugging of a known defect | Supporting process | Primary strength |
-| Test-driven implementation | Required when appropriate | Primary strength |
+| Test-driven implementation | Not prescribed; proportionate verification is required | Primary strength |
 | Repository and branch discipline | Defers to the owning environment | Primary strength |
 | Verification before completion | Required | Primary strength |
 
@@ -296,7 +324,11 @@ across three implementation arms:
 
 1. historical Fructal Cap Design plus explicitly requested Superpowers skills;
 2. the same Superpowers skills without Fructal Cap Design; and
-3. current Fructal Cap Design plus those same Superpowers skills.
+3. the then-current Fructal Cap Design revision plus those same Superpowers skills.
+
+“Then-current” names the revision used in this historical replay, not 1.2.0 or
+the latest release. This public account does not identify either tested skill
+revision precisely; those identities remain a public evidence gap.
 
 Superpowers was held constant as the debugging, test-driven implementation, and
 verification layer. It was not treated as a competing design method. All three
@@ -305,9 +337,9 @@ findings, decisions, constraints, recovery requirements, and preservation
 boundaries from the earlier Fructal Cap Design review.
 
 **Observed:** Both Fructal Cap Design arms removed a parent-dismissal
-interaction topology retained by the Superpowers-only arm. The current arm
+interaction topology retained by the Superpowers-only arm. The then-current arm
 reproduced that retained topology as a real child-interaction failure before
-repairing it. The current arm also produced the strongest selected-city
+repairing it. That arm also produced the strongest selected-city
 identity and intent contract across validation, form state, later events, and
 persistence.
 
@@ -322,7 +354,7 @@ replay does not establish universal superiority. Different test counts and
 changed-line totals are completion evidence, not quality scores. Browser checks
 used desktop and mobile Chromium emulation, not physical devices, assistive
 technology, or affected-actor acceptance. No experiment result was merged into
-the current private product.
+the private product during the recorded experiment.
 
 The archive remains private and is intentionally not linked. Product names,
 repository paths, routes, implementation identifiers, traces, patches,
@@ -357,7 +389,7 @@ matter at once.
 
 ### Low-power-first development position
 
-**Provided/reported:** The creator deliberately develops SHR-DAW on its target
+**Reported:** The creator deliberately develops SHR-DAW on its target
 Raspberry Pi and describes the broader principle as a roughly
 20-watt-class development path: use Raspberry Pi-class computers for
 development and servers when they can reliably satisfy the real workload,
@@ -510,7 +542,7 @@ Later public changes continued the same constrained-workflow pattern:
 
 ### Affected-actor evidence
 
-**Provided/reported:** The creator, product owner, musician, and Raspberry Pi
+**Reported:** The creator, product owner, musician, and Raspberry Pi
 operator reports that the repaired flows changed the system from a confusing
 state into workflows that now feel notably coherent and effective.
 
@@ -540,7 +572,8 @@ as a distinct external SHR-DAW instrument.
 
 This is not presented as another direct Fructal Cap Design application.
 
-**Observed:** A search across the complete 106-commit local repository history
+**Observed at the recorded checkpoint:** A search across the then-complete
+106-commit local repository history
 found no reference to `Fructal Cap Design`. A separate search across the
 original Codex session logs for the project's foundation, oscillator research,
 experimental policy, and first five-family listening gate found no
@@ -603,21 +636,23 @@ ranking, or macro-mapping a source.
 | Engine, presets, stable macros, host integration, and hardware claims are repeatedly recorded as unchanged | Before/after and untouched-state verification |
 | Rejected batches constrain later experiments without being mislabeled as success | Failure, delayed outcome, return, and repeated-use tracing |
 
-### Current local evidence
+### Historical local evidence
 
-**Observed:** The local repository is currently clean at `bab9a7a`, contains 106
-commits, and is 50 commits ahead of its public remote. Its most recent
+**Observed at the recorded checkpoint:** The local repository was clean at
+`bab9a7a`, contained 106 commits, and was 50 commits ahead of its public remote.
+This is a historical snapshot, not a claim about the repository today; its
+observation date was not recorded here. At that checkpoint, the latest
 experimental sequence preserved the first strongly positive `Coupled Wire`
 reference, rejected later envelope/motion variants, kept the production engine
 and integration boundaries untouched, and produced one controlled-thump
 successor awaiting human listening.
 
-Those 50 later commits are not yet public, so this paragraph is direct local
-repository evidence rather than independently reproducible public evidence.
+Those 50 later commits were not public at the checkpoint, so this paragraph is
+direct local repository evidence rather than independently reproducible public evidence.
 The public links above intentionally stop at history already available on the
-remote.
+remote at that time.
 
-**Provided/reported:** The creator reports that this preservation-first
+**Reported:** The creator reports that this preservation-first
 experimental flow turned several previously messy sound-development motions
 into useful and coherent ones.
 
@@ -641,9 +676,9 @@ evidence.
 | --- | --- | --- |
 | Fructal Cap Design applied to itself | The method can expose ambiguity in its own execution contract and convert findings into regression-tested improvements | Self-evaluation can be circular |
 | Anonymous private software review | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
-| Anonymous private implementation replay | With the same brief authored by Fructal Cap Design and Superpowers held constant, both Fructal Cap Design arms protected a cross-interaction motion the control retained, while the current arm strengthened identity and intent preservation | One stochastic implementation replay; discovery advantage was not measured |
+| Anonymous private implementation replay | With the same brief authored by Fructal Cap Design and Superpowers held constant, both Fructal Cap Design arms protected a cross-interaction motion the control retained, while the then-current arm strengthened identity and intent preservation | One stochastic replay; exact skill revisions are not identified publicly; discovery advantage was not measured |
 | Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
-| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; the newest 50 commits are not yet public |
+| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; later local evidence was unpublished at the recorded checkpoint |
 
 Together, the cases support a narrower, evidence-backed conclusion:
 
@@ -664,12 +699,13 @@ analyze, implement, or verify.
 
 ## Future production comparison
 
-**Open question:** The anonymous private software case currently has extensive
-local behavioral and browser evidence but no published before/after production
-comparison.
+**Open question:** The anonymous private software case records extensive local
+behavioral and browser evidence but no published before/after production
+comparison in this account.
 
-No implementation-replay result was merged into the current private product,
-so the replay is experimental evidence rather than product state.
+No implementation-replay result was merged into the private product during the
+recorded experiment, so the replay is experimental evidence rather than a
+current product-state claim.
 
 A future validation pass is reserved to:
 

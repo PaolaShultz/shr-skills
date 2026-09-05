@@ -12,17 +12,19 @@ more natural motion without weakening safety, privacy, accessibility,
 ownership, compliance, or data integrity. Its depth scales with consequence,
 complexity, uncertainty, reversibility, and the number of affected actors.
 
-Fructal Cap Design is strongest when a necessary constraint materially
-obstructs completion, recovery, handoff, or continuity in:
+Fructal Cap Design applies when the handling of a necessary constraint causes
+avoidable obstruction of completion, recovery, handoff, or continuity in:
 
 - software and technical systems;
 - physical tools, machines, and controls;
 - services and operational processes;
 - multi-actor, approval, permission, and handoff workflows.
 
-It is not a default for ordinary engineering requirements, purely aesthetic
-critique, or an isolated defect that does not reveal a broader workflow
-failure.
+Identify the retained constraint and a concrete obstruction linked to its
+handling. A credible report can justify investigation; even one defective
+control can qualify. Size and actor count do not decide. Ordinary requirements,
+aesthetics, and local defects without that connection use ordinary design or
+debugging instead. Declining the method does not abandon the task.
 
 It supports three modes: Review, Redesign, and Implement. Review is the safe
 default when the requested outcome or modification authority is unclear.
@@ -119,7 +121,7 @@ GitHub skill search lists only the canonical <code>skills/fructal</code> entry.
 - [Terms](https://paolashultz.github.io/shr-skills/terms.html)
 - [1.2.0 release notes](distribution/release-notes-1.2.0.md)
 - [Submission test cases](distribution/submission-test-cases.json)
-- [Current distribution ledger](docs/distribution-report-1.1.1.md)
+- [Historical 1.1.1 distribution ledger](docs/distribution-report-1.1.1.md)
 
 ## Demonstrate it in ChatGPT Web
 
@@ -141,10 +143,12 @@ development position: its editing, builds, tests, QA, and release work ran
 directly on the target Raspberry Pi rather than requiring a desktop
 workstation. The private case now also includes an anonymized three-arm
 implementation replay. It held Superpowers constant while comparing historical
-Fructal Cap Design, no Fructal Cap Design, and current Fructal Cap Design over
+Fructal Cap Design, no Fructal Cap Design, and the then-current revision over
 the same repair brief authored by Fructal Cap Design. That replay supports a
 bounded implementation-stage workflow-integrity claim, not a discovery
-advantage or universal superiority claim. The account also covers the
+advantage or universal superiority claim. The public replay account does not
+identify the tested skill revisions and does not validate 1.2.0. The account
+also covers the
 [Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
 workflow and its explicit claim boundaries. A
 [physical-product comparison
@@ -177,6 +181,7 @@ Run deterministic package, contract-case, documentation, and demo checks:
 ```bash
 scripts/validate.sh
 tests/test-validation.sh
+python3 tests/test-distribution.py
 ```
 
 After synchronizing an installed copy, include its absolute skill directory:
@@ -199,6 +204,13 @@ activation and non-activation, installed-skill discovery, proportionality,
 Review recommendations, mode boundaries and changes, both sides of
 consequential confirmation, permitted and prohibited reads, evidence, recovery,
 continuity, accessibility, the cap test, and untouched state.
+
+Submission examples link related coverage through `contract_case_ids` in
+`tests/contract-cases.json`; distribution validation rejects missing case IDs
+and stale submission versions. These references are not execution results for
+the submission prompts. Static checks do not establish semantic consistency
+of all documentation; review current-facing prose when the contract changes,
+and keep historical evidence explicitly tied to its original revision.
 
 `scripts/evaluate.sh --skill-git-ref REVISION` supports historical comparison.
 `--repetitions N` repeats every selected case, and `--archive-dir PATH`

@@ -74,6 +74,21 @@ def check_manifest(path: Path, host: str, errors: list[str]) -> None:
 def check_test_cases(errors: list[str]) -> None:
     path = ROOT / "distribution" / "submission-test-cases.json"
     value = load_json(path, errors)
+    if value.get("version") != VERSION:
+        errors.append(f"submission test cases version must be {VERSION!r}")
+    contract_path = ROOT / "tests" / "contract-cases.json"
+    try:
+        contract_cases = json.loads(contract_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        errors.append(f"cannot read contract cases: {error}")
+        contract_cases = []
+    if not isinstance(contract_cases, list):
+        errors.append("contract cases must contain an array")
+        contract_cases = []
+    contract_ids = {
+        case["id"] for case in contract_cases
+        if isinstance(case, dict) and isinstance(case.get("id"), str)
+    }
     positives = value.get("positive")
     negatives = value.get("negative")
     if not isinstance(positives, list) or len(positives) < 5:
@@ -84,7 +99,7 @@ def check_test_cases(errors: list[str]) -> None:
         negatives = []
     positive_fields = {
         "id", "prompt", "expected_workflow_behavior", "expected_result_shape",
-        "fixture", "evidence",
+        "fixture", "evidence", "contract_case_ids",
     }
     negative_fields = {
         "id", "scenario", "expected_safe_behavior", "why_not_complete",
@@ -92,6 +107,21 @@ def check_test_cases(errors: list[str]) -> None:
     for index, case in enumerate(positives):
         if not isinstance(case, dict) or not positive_fields <= set(case):
             errors.append(f"positive submission case {index + 1} is incomplete")
+            continue
+        references = case["contract_case_ids"]
+        if not isinstance(references, list) or not references or not all(
+            isinstance(reference, str) for reference in references
+        ):
+            errors.append(
+                f"positive submission case {index + 1} requires nonempty contract_case_ids"
+            )
+            continue
+        for reference in references:
+            if reference not in contract_ids:
+                errors.append(
+                    f"positive submission case {index + 1} references unknown "
+                    f"contract case {reference!r} in tests/contract-cases.json"
+                )
     for index, case in enumerate(negatives):
         if not isinstance(case, dict) or not negative_fields <= set(case):
             errors.append(f"negative submission case {index + 1} is incomplete")

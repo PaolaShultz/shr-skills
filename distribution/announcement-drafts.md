@@ -1,8 +1,9 @@
 # Fructal Cap Design 1.1.1 announcement drafts
 
-These drafts are submission material, not evidence that either announcement
-was posted. Check for a substantially identical post again immediately before
-use.
+Historical preparation for 1.1.1, not current release copy or evidence that
+either announcement was posted. The results below do not validate 1.2.0.
+Before reuse, update the version and claims from the relevant release notes
+and regression record, and check for a substantially identical post.
 
 ## OpenAI Developer Forum
 

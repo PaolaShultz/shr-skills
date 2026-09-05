@@ -17,12 +17,13 @@
 
 ## Long description
 
-Fructal Cap Design finds workflow-level friction created around a necessary
-constraint, preserves the constraint, and improves completion, recovery,
-handoff, or continuity. Use it for Review, Redesign, or authorized Implement
-work. Its depth scales with consequence and reversibility. Do not use it for
-purely aesthetic critique or isolated defects without evidence of a broader
-workflow obstruction.
+Fructal Cap Design addresses avoidable loss of progress, context, or ownership
+caused by the handling of a necessary rule or limit. Preserve that constraint
+while improving completion, recovery, or handoff. Use it for Review, Redesign,
+or authorized Implement work, with depth scaled to risk and uncertainty.
+Even one defective control can qualify when that connection exists. Aesthetics,
+ordinary requirements, and local defects without the connection use ordinary
+design or debugging instead; nonactivation does not abandon the task.
 
 The skill is instruction-only. It includes no MCP server, executable hook,
 hosted service, authentication flow, telemetry, or project-operated data store.
@@ -40,10 +41,13 @@ workflow design, constraint design, handoffs, recovery, accessibility
 
 ## Evidence statement
 
-The 1.1.1 evidence retains a 24-case release matrix, 21 critical repetitions,
-and failed development runs. Natural execution and semantic judgment are
-separate, reproducible stages. The evaluator was another isolated run of the
-same model family, so this is not independent validation or scientific proof.
+The [1.2.0 regression record](../docs/evaluations/live-contract/fructal-1.2.0/)
+documents five initial failures in a 29-case development matrix, corrections,
+and eight passing final-skill rechecks. It was not a second full-matrix run.
+Executor and evaluator used the same model in separate invocations. This is
+development regression evidence, not independent validation, scientific proof,
+or affected-user acceptance. Older 1.1.1 results remain historical and do not
+validate 1.2.0.
 
 ## Required submission facts not asserted here
 
