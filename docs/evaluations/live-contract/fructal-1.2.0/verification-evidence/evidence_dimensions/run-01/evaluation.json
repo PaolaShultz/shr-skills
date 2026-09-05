@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied retry policy is a retained constraint, and the attributed report of context loss is a concrete potential obstruction to resumable recovery across the support-to-service handoff, so Fructal Cap Design applies. The response stayed within Review mode: it inspected the artifact without writes, separated supplied material, attributed claims, direct observation, inference, and unresolved uncertainty, and provided a focused priority finding with only a localized recommendation to investigate. It did not define a replacement workflow or claim that policy violation, blocked recovery, cause, frequency, or impact had been verified. Fixture hashes and execution events corroborate that no modification was attempted.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

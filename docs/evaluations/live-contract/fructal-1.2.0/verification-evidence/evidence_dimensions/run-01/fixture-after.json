@@ -1,0 +1,14 @@
+{
+  "support-note.txt": {
+    "mode": 436,
+    "sha256": "0a740b23cc8c38dc9421903b1555b5d09e640b8cb59cbcdc63882e6b8552066e",
+    "size": 44,
+    "text": "Operators report that retries lose context.\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

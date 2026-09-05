@@ -16,7 +16,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / "distribution" / "plugins" / "fructal"
-VERSION = "1.1.1"
+VERSION = "1.2.0"
 
 
 class LinkParser(HTMLParser):

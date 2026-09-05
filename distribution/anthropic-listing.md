@@ -2,7 +2,7 @@
 
 - Name: Fructal Cap Design
 - Technical name: <code>fructal</code>
-- Version: 1.1.1
+- Version: 1.2.0
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
 - Repository: <https://github.com/PaolaShultz/shr-skills>

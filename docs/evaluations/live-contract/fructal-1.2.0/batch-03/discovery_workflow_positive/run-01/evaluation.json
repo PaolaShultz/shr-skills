@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required finance approval by email is the retained constraint, while duplicate refunds after ambiguous timeouts and unclear request ownership are concrete obstructions to recovery and handoff. The response stays read-only and supplies a coherent replacement workflow with durable identity, idempotency, explicit states and owners, status reconciliation, exception recovery, preserved email approval, and a single support view. It also includes concrete verification scenarios covering success, retries, ambiguous outcomes, reassignment, cancellation, stale approval, and accessibility. Fixture hashes confirm no modification, and the response appropriately separates the observed blocked fixture state from the user-reported workflow and design inferences without claiming the proposal was implemented or validated.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

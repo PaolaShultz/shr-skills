@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied requirements establish both retained constraints\u2014mandatory reauthentication and no sensitive local persistence\u2014and the concrete obstruction of discarded long-form work. The response stays within the requested no-change Redesign boundary, defines a coherent server-draft and same-tab-memory recovery workflow with ownership, failure, retry, cancellation, accessibility, and duplicate-effect handling, and supplies concrete verification scenarios. Fixture inspection was read-only and before/after state confirms no modification. It appropriately leaves server-side-draft policy as an open question without claiming implementation or observed behavioral validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

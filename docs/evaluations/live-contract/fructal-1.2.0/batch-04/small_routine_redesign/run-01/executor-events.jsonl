@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a07122-579b-7170-b13a-0123fdf0f02f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Use:\n\n- Button: **Hide draft**\n- Nearby message: “This removes the draft from your main list, but doesn’t delete it. Drafts are kept for 30 days and can be restored from Hidden drafts.”\n\nAfter activation, confirm: “Draft hidden. Restore it from Hidden drafts.” Include a direct **Undo** action if supported.\n\nVerify that users understand the draft still exists, can locate and restore it, and receive the confirmation through keyboard and screen-reader use. Confirm the message’s 30-day wording against the exact retention start and expiry rules. No files were modified."}}
+{"type":"turn.completed","usage":{"input_tokens":15172,"cached_input_tokens":10624,"cache_write_input_tokens":0,"output_tokens":332,"reasoning_output_tokens":208}}

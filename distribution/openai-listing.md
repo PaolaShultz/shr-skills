@@ -4,7 +4,7 @@
 
 - Customer-facing name: Fructal Cap Design
 - Technical plugin name: <code>fructal</code>
-- Version: 1.1.1
+- Version: 1.2.0
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
 - Developer name: PaolaShultz

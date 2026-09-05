@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval is a retained constraint, and the reported loss of its record ID during support handoff concretely stalls completion and impairs recovery and ownership, so the skill applies. The executor performed the explicitly authorized read, used one prepaid request, made no writes, and delivered a focused Review finding. Its recommendation remains localized to preserving and exposing the missing ID with a fallback; it does not define a complete replacement workflow. The response appropriately separates the supplied approval requirement, the report's unverified claim, directly inspected file limits, and inferred workflow consequences. Fixture hashes and contents are unchanged, and the prepaid-read count claim is corroborated by the single observed read event.",
+  "read_inspection_allowed": "yes",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

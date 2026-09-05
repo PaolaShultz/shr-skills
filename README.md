@@ -1,7 +1,7 @@
 # Fructal Cap Design
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill. The current package version is **1.1.1**.
+packaged as a Codex skill. The current package version is **1.2.0**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
@@ -30,13 +30,13 @@ default when the requested outcome or modification authority is unclear.
 Review produces evidence and findings and may include requested bounded
 recommendations without proposing an end-to-end replacement motion. Choose
 Redesign for a proposed replacement without modification, or Implement for an
-authorized change with verification. The mode is always held internally. When
-the requester explicitly names a mode, the final report starts by stating it
-once; otherwise the internal mode stays out of headings and completion labels
-so small tasks stay small. For example, `review our implementation` selects
-Review internally but does not explicitly request a visible `Review mode`
-label. Automatic use is likewise silent unless the requester asks which method
-was used or attribution materially helps the task.
+authorized change with verification. Related Review recommendations are allowed; a complete replacement sequence,
+state model, or ownership structure belongs in Redesign. Mode labels are not
+required. Authorized sensitive or rate-limited reads are permitted within their
+limits. All six cap questions remain unchanged.
+
+Version 1.2.0 cuts the skill from 1,914 to 1,104 words (42%) and strengthens verification; see the
+[release notes](distribution/release-notes-1.2.0.md).
 
 ## Read the method
 
@@ -53,9 +53,9 @@ skill with the skills.sh CLI:
     DISABLE_TELEMETRY=1 npx skills add PaolaShultz/shr-skills --skill fructal
 
 For GitHub Copilot, Codex, Claude Code, Cursor, and other agents supported by
-the current GitHub CLI preview, install the published 1.1.1 skill with:
+the current GitHub CLI preview, install the published 1.2.0 skill with:
 
-    gh skill install PaolaShultz/shr-skills fructal@v1.1.1 --agent AGENT --scope user
+    gh skill install PaolaShultz/shr-skills fructal@v1.2.0 --agent AGENT --scope user
 
 Replace <code>AGENT</code> with a value supported by
 <code>gh skill install</code>, such as <code>codex</code>,
@@ -117,7 +117,7 @@ GitHub skill search lists only the canonical <code>skills/fructal</code> entry.
 - [Adversarial workflow case form](https://github.com/PaolaShultz/shr-skills/issues/new?template=adversarial-workflow.yml)
 - [Privacy](https://paolashultz.github.io/shr-skills/privacy.html)
 - [Terms](https://paolashultz.github.io/shr-skills/terms.html)
-- [1.1.1 release notes](distribution/release-notes-1.1.1.md)
+- [1.2.0 release notes](distribution/release-notes-1.2.0.md)
 - [Submission test cases](distribution/submission-test-cases.json)
 - [Current distribution ledger](docs/distribution-report-1.1.1.md)
 
@@ -192,7 +192,7 @@ tests/test-live-eval-harness.sh
 scripts/evaluate.sh
 ```
 
-Deterministic checks are the commit gate. The 24-case behavioral matrix captures
+Deterministic checks are the commit gate. The behavioral matrix captures
 a natural executor response and fixture effects, then asks a separate isolated
 evaluator to judge the actual output against the contract. It exercises
 activation and non-activation, installed-skill discovery, proportionality,
@@ -204,12 +204,19 @@ continuity, accessibility, the cap test, and untouched state.
 `--repetitions N` repeats every selected case, and `--archive-dir PATH`
 preserves successful responses, event evidence, fixture snapshots, evaluations,
 metadata, and a SHA-256 manifest for audit.
+`--judge-model MODEL` selects a different judge; the default uses the executor
+model. Current archives also retain failed fixture checks and frozen inputs.
 
-The 1.1.1 candidate passed the [complete 24-case release
+The [1.2.0 regression record](docs/evaluations/live-contract/fructal-1.2.0/)
+records the development matrix, discovered failures, and focused corrections.
+
+The historical 1.1.1 candidate passed the [complete 24-case release
 matrix](docs/evaluations/live-contract/fructal-1.1.1/) and [21 repeated
 high-risk runs](docs/evaluations/live-contract/fructal-1.1.1-critical-repetitions/).
 Development-failure archives remain beside them so the published evidence does
-not hide the iterations that changed the contract and evaluator.
+not hide the iterations that changed the contract and evaluator. These scores
+do not validate 1.2.0. The harness is a development regression suite, not a
+held-out benchmark or evidence of benefit over a no-skill baseline.
 
 ## Origin and independence
 

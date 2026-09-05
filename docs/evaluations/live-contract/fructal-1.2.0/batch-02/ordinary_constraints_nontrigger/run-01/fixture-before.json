@@ -1,0 +1,20 @@
+{
+  "parser.py": {
+    "mode": 436,
+    "sha256": "73543412528dc75ddfe2ba570460b9ade8aba343caf24ab44e388fc29494cbed",
+    "size": 272,
+    "text": "def parse_ascii(value: str) -> tuple[bool, str]:\n    try:\n        value.encode('ascii')\n    except UnicodeEncodeError:\n        return False, 'ASCII characters required'\n    if len(value) > 64:\n        return False, 'maximum length is 64 characters'\n    return True, value\n"
+  },
+  "test_parser.py": {
+    "mode": 436,
+    "sha256": "67166c1aa27a0c9b48d97ed595161079b6445342e0c4d4873f53401885b767db",
+    "size": 216,
+    "text": "from parser import parse_ascii\n\ndef test_limit():\n    assert parse_ascii('a' * 64) == (True, 'a' * 64)\n    assert parse_ascii('a' * 65)[0] is False\n\ndef test_ascii_only():\n    assert parse_ascii('caf\u00e9')[0] is False\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

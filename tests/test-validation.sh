@@ -166,106 +166,18 @@ expect_failure "malformed openai.yaml" \
 
 case_dir="$(copy_repo missing-version)"
 if mutate_or_record "missing version" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.1.1"'; then
+  "${case_dir}/skills/fructal/SKILL.md" 'version: "1.2.0"'; then
   expect_failure "missing package version" \
-    "metadata.version must be 1.1.1" \
+    "metadata.version must be 1.2.0" \
     "${validator}" --repo "${case_dir}"
 fi
 
-case_dir="$(copy_repo broad-activation)"
-if mutate_or_record "narrow activation" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" \
-  "constraint alone does not qualify"; then
-  expect_failure "missing narrow activation" \
-    "narrow activation contract is missing" \
-    "${validator}" --repo "${case_dir}"
-fi
-
-case_dir="$(copy_repo invocation-bypasses-activation)"
+case_dir="$(copy_repo changed-cap-question)"
 replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  'Explicit `$fructal` invocation does not override this gate' \
-  'Explicit `$fructal` invocation always overrides this gate'
-expect_failure "explicit invocation bypasses activation" \
-  "explicit invocation bypasses activation gate" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-proportionality)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "## Apply proportionally" "## Apply uniformly"
-expect_failure "missing proportional application" \
-  "proportional application contract is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-review-recommendations)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "Bounded recommendations tied directly to findings are allowed" \
-  "Recommendations are forbidden"
-expect_failure "missing bounded Review recommendations" \
-  "bounded Review recommendation contract is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-review-recommendation-limit)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "recommendations collectively define that motion" \
-  "recommendations remain local regardless of their combined effect"
-expect_failure "missing bounded Review recommendation limit" \
-  "bounded Review recommendation limit is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-set-level-review-check)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "Judge the recommendation set as a whole" \
-  "Judge every recommendation independently"
-expect_failure "missing set-level Review recommendation check" \
-  "set-level Review recommendation check is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-conditional-mode-output)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "start the final report by stating the selected mode once" \
-  "omit the selected mode from the final report"
-expect_failure "missing conditional mode output" \
-  "conditional mode visibility contract is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-implicit-mode-suppression)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "never expose the internal mode" \
-  "always expose the internal mode"
-expect_failure "missing implicit mode suppression" \
-  "implicit mode suppression contract is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-mode-phrase-distinction)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "selects the mode internally but does not expose its label" \
-  "selects the mode internally and exposes its label"
-expect_failure "missing mode phrase distinction" \
-  "mode phrase distinction is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo incomplete-consequential-stop)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "without inventing or prescribing the future" \
-  "and prescribe the future"
-expect_failure "incomplete consequential stop boundary" \
-  "incomplete consequential stop boundary is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo missing-consequential-confirmation-request)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "for the exact missing items and confirmation" \
-  "for the missing details"
-expect_failure "missing consequential confirmation request" \
-  "consequential confirmation request is missing" \
-  "${validator}" --repo "${case_dir}"
-
-case_dir="$(copy_repo announced-automatic-use)"
-replace_text "${case_dir}/skills/fructal/SKILL.md" \
-  "Do not announce, link, or credit Fructal Cap Design" \
-  "Always announce and link Fructal Cap Design"
-expect_failure "announced automatic use" \
-  "silent automatic use contract is missing" \
+  "Does the obvious action produce one clear result?" \
+  "Does it look good?"
+expect_failure "changed six-question contract" \
+  "the six cap questions must remain unchanged and in order" \
   "${validator}" --repo "${case_dir}"
 
 case_dir="$(copy_repo missing-source)"
@@ -274,42 +186,6 @@ if mutate_or_record "missing source" delete_line_containing \
   "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"; then
   expect_failure "missing package source" \
     "metadata.source must be the canonical skill URL" \
-    "${validator}" --repo "${case_dir}"
-fi
-
-case_dir="$(copy_repo missing-mode-precedence)"
-if mutate_or_record "mode precedence" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" \
-  "An explicit Review, Redesign, or Implement instruction"; then
-  expect_failure "missing explicit-mode precedence" \
-    "explicit-mode precedence contract is missing" \
-    "${validator}" --repo "${case_dir}"
-fi
-
-case_dir="$(copy_repo missing-read-boundary)"
-if mutate_or_record "incidental read boundary" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" \
-  "ordinary access metadata"; then
-  expect_failure "missing incidental-read boundary" \
-    "incidental read-side-effect contract is missing" \
-    "${validator}" --repo "${case_dir}"
-fi
-
-case_dir="$(copy_repo collapsed-evidence)"
-if mutate_or_record "evidence dimensions" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" \
-  "provided artifact"; then
-  expect_failure "collapsed evidence dimensions" \
-    "provided-artifact and reported-claim distinction is missing" \
-    "${validator}" --repo "${case_dir}"
-fi
-
-case_dir="$(copy_repo ambiguous-feedback)"
-if mutate_or_record "actor feedback" delete_line_containing \
-  "${case_dir}/skills/fructal/SKILL.md" \
-  "and software components."; then
-  expect_failure "ambiguous actor feedback" \
-    "actor-appropriate feedback contract is missing" \
     "${validator}" --repo "${case_dir}"
 fi
 

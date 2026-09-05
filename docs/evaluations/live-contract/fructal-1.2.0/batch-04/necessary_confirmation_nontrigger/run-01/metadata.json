@@ -1,0 +1,6 @@
+{
+  "case_id": "necessary_confirmation_nontrigger",
+  "prompt_style": "embedded",
+  "repetition": 1,
+  "skill_read_observed": false
+}

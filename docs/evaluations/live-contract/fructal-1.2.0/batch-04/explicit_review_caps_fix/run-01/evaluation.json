@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval is a retained constraint, and the observed blocked-only state concretely obstructs completion and handoff by omitting status, ownership, and recovery guidance. The executor correctly honored the explicit Review cap: it inspected without writing, supplied a prioritized evidence-backed finding and localized recommendation, and identified the unresolved approval status as an open question.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

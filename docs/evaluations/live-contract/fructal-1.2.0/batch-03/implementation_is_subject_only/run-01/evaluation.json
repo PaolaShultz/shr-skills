@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The required approval rule is provided by the request, and the inspected artifact concretely shows only `state=blocked`, establishing stalled progress. The response stayed within Review: it supplied prioritized evidence-based findings, made no writes, proposed neither a replacement workflow nor localized advice, and did not claim unobserved validation. Missing approver, status, provenance, transitions, and recovery behavior are correctly treated as unresolved gaps rather than verified behavior.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

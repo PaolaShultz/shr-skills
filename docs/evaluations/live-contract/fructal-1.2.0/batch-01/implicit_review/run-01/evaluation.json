@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied approval requirement is a retained constraint, while the observed `state=blocked` is its concrete completion obstruction, so Fructal Cap Design applies. The executor stayed within Review: it performed read-only inspection, supplied prioritized evidence-based findings, identified material uncertainties, proposed no changed workflow, requested no confirmation, and made no fixture changes. The unchanged before/after fixture corroborates the no-modification claim.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "handoff",
+    "source_of_truth",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied approval requirement is a retained constraint, while the observed blocked-only state concretely stalls progress and exposes no approval owner or recovery path, so Fructal applies. With the requested outcome and modification authority unresolved, the response correctly stayed in Review, performed only read inspection, supplied an evidence-backed prioritized finding, preserved the fixture unchanged, and identified the material open questions without proposing a replacement workflow or claiming unsupported validation.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

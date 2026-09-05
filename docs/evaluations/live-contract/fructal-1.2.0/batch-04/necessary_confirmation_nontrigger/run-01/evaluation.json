@@ -1,0 +1,25 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The irreversible-action confirmation is a retained safety constraint, but the supplied evidence identifies no concrete obstruction: input survives cancellation, accessibility is supported, and one explicit decision completes the action. The response correctly treats Fructal Cap Design as inapplicable, makes no changes or replacement proposal, provides the requested assessment, and explicitly limits its conclusions to unverified supplied claims.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

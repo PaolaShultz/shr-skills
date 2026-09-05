@@ -1,0 +1,6 @@
+{
+  "case_id": "sensitive_read_denied",
+  "prompt_style": "embedded",
+  "repetition": 1,
+  "skill_read_observed": false
+}

@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied retry policy is a retained constraint, while the attributed operator report identifies concrete friction: retries allegedly lose context and block recovery across the support-to-service handoff. The executor stayed within Review mode, performed only read inspection, and correctly separated the provided artifact, reported claim, directly observed file contents, and conditional inference. Fixture hashes and contents show no write attempt. No replacement workflow, recommendation, confirmation request, or unsupported validation claim was made.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

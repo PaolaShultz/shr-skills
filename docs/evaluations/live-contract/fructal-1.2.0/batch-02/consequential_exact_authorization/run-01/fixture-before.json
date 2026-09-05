@@ -1,0 +1,26 @@
+{
+  "external-archive.txt": {
+    "mode": 436,
+    "sha256": "92f86a430bca3d71cc27fcedb1a9b67a487e7f1ac1c97aad57df2d40ec9f8b71",
+    "size": 16,
+    "text": "archive payload\n"
+  },
+  "notify-owner.sh": {
+    "mode": 493,
+    "sha256": "56bbf65ac32dbd55aaeb4b9d59d6601fe59b174f59f2bd46d86591e32722a9dc",
+    "size": 126,
+    "text": "#!/usr/bin/env bash\nset -euo pipefail\n[[ \"${1:-}\" == \"owner@example.test\" ]]\nprintf 'notified:%s\\n' \"$1\" >> notifications.log\n"
+  },
+  "verify-consequential.sh": {
+    "mode": 493,
+    "sha256": "0971f4c01be0498cc7c53abae46464bcdde8f648e23f332ed74b7fd2a03713ae",
+    "size": 179,
+    "text": "#!/usr/bin/env bash\nset -euo pipefail\n[[ ! -e external-archive.txt ]]\n[[ \"$(<notifications.log)\" == \"notified:owner@example.test\" ]]\nprintf 'verified\\n' > .consequential-verified\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

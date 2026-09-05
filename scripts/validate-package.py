@@ -14,12 +14,17 @@ from typing import Any
 import yaml
 
 
-EXPECTED_VERSION = "1.1.1"
+EXPECTED_VERSION = "1.2.0"
 EXPECTED_SOURCE = (
     "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 )
 PUBLIC_DISPLAY_NAME = "Fructal Cap Design"
 EXPECTED_CASES = {
+    "authorized_sensitive_read": "Review",
+    "review_and_fix": "Implement",
+    "related_review_recommendations": "Review",
+    "necessary_confirmation_nontrigger": "Not applicable",
+    "reauth_private_redesign": "Redesign",
     "implicit_review": "Review",
     "implicit_redesign": "Redesign",
     "implicit_implement": "Implement",
@@ -64,7 +69,6 @@ LIVE_RESULT_FIELDS = {
     "read_inspection_allowed",
     "evidence_labels",
     "concerns_addressed",
-    "mode_label_visible",
     "mode_boundary_respected",
     "proportionality_respected",
     "deliverable_present",
@@ -89,71 +93,14 @@ WORKFLOW_CONCERNS = {
     "ownership",
     "untouched_state",
 }
-REQUIRED_SKILL_TEXT = {
-    "narrow activation contract is missing": (
-        "A requirement or\nconstraint alone does not qualify"
-    ),
-    "explicit invocation bypasses activation gate": (
-        "Explicit `$fructal` invocation does not override this gate"
-    ),
-    "activation gate is missing": "## Pass the activation gate",
-    "proportional application contract is missing": "## Apply proportionally",
-    "mode selection contract is missing": "## Select and hold one mode",
-    "Review execution path is missing": "### Review",
-    "Redesign execution path is missing": "### Redesign",
-    "Implement execution path is missing": "### Implement",
-    "explicit-mode precedence contract is missing": (
-        "An explicit Review, Redesign, or Implement instruction"
-    ),
-    "incidental read-side-effect contract is missing": "ordinary access metadata",
-    "provided-artifact and reported-claim distinction is missing": (
-        "`provided artifact` containing a `reported claim`"
-    ),
-    "actor-appropriate feedback contract is missing": (
-        "services, devices, and software components"
-    ),
-    "Six-question cap acceptance loop is missing": (
-        "## Run the six-question cap test in Redesign and Implement"
-    ),
-    "concrete accessibility verification is missing": "assistive technology",
-    "before-and-after behavior contract is missing": "before-and-after behavior",
-    "conditional mode visibility contract is missing": (
-        "start the final report by stating the selected mode once"
-    ),
-    "implicit mode suppression contract is missing": (
-        "never expose the internal mode as a heading or completion label"
-    ),
-    "mode phrase distinction is missing": (
-        "selects the mode internally but does not expose its label"
-    ),
-    "incomplete consequential stop boundary is missing": (
-        "without inventing or prescribing the future"
-    ),
-    "consequential confirmation request is missing": (
-        "ask once\nfor the exact missing items and confirmation"
-    ),
-    "silent automatic use contract is missing": (
-        "Do not announce, link, or credit Fructal Cap Design"
-    ),
-    "bounded Review recommendation contract is missing": (
-        "Bounded recommendations tied directly to findings are allowed"
-    ),
-    "bounded Review recommendation limit is missing": (
-        "recommendations collectively define that motion"
-    ),
-    "set-level Review recommendation check is missing": (
-        "Judge the recommendation set as a whole"
-    ),
-    "proportionate evidence-label contract is missing": (
-        "label\n   them explicitly only when status matters"
-    ),
-    "proportionate cap-test reporting contract is missing": (
-        "do not print six ceremonial\nanswers"
-    ),
-    "proportionate path verification contract is missing": (
-        "Do\nnot enumerate or test paths the change cannot affect"
-    ),
-}
+CAP_QUESTIONS = (
+    "Does the obvious action produce one clear result?",
+    "Is the motion coherent without hiding a necessary decision or consequence?",
+    "Is each constraint visible or active when needed without obstructing unrelated work?",
+    "Are context, position, entered work, ownership, and intent preserved?",
+    "Do feedback and recovery guide every affected actor back into motion?",
+    "Is the remaining effort intrinsic to the outcome rather than the system?",
+)
 
 
 class Validation:
@@ -558,8 +505,15 @@ def validate_package(repo: Path, installed: Path | None) -> None:
             "agent default_prompt does not invoke $fructal",
         )
 
-    for message, required_text in REQUIRED_SKILL_TEXT.items():
-        validation.require(required_text in skill_text, message)
+    # Structural preservation only; prose matching cannot prove behavior.
+    questions = re.findall(r"^([1-6])\. (.*(?:\n   [^\n]+)*)", skill_text, re.MULTILINE)
+    validation.require(
+        [number for number, _ in questions] == list("123456")
+        and tuple(" ".join(question.split()) for _, question in questions) == CAP_QUESTIONS,
+        "the six cap questions must remain unchanged and in order",
+    )
+    for mode in ("Review", "Redesign", "Implement"):
+        validation.require(f"| {mode} |" in skill_text, f"{mode} deliverable is missing")
 
     for label in ("`provided`", "`reported`", "`observed`", "`inference`", "`open question`"):
         validation.require(label in skill_text, f"{label} evidence label is missing")

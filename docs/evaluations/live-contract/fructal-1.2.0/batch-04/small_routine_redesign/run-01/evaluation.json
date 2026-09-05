@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "source_of_truth",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied retention rule is a necessary constraint, and the misleading Delete draft label concretely obstructs completion by causing users to recreate work that still exists. The response stays within the requested no-modification Redesign boundary and defines a coherent replacement motion: rename the action, explain retention and restoration before activation, provide post-action recovery feedback, and optionally offer Undo. It also includes concrete verification covering comprehension, restoration, keyboard access, screen readers, and retention wording. The unchanged fixture corroborates that no modification was attempted. The conditional Undo and retention-rule check are scoped qualifications rather than blockers to the requested proposal.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

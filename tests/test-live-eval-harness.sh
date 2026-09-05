@@ -4,6 +4,7 @@ set -euo pipefail
 repo_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 evaluator="${repo_dir}/scripts/evaluate.sh"
 fake_codex="${repo_dir}/tests/fixtures/fake-codex.py"
+PYTHONDONTWRITEBYTECODE=1 python3 "${repo_dir}/tests/test-evidence-checks.py"
 temporary_root="$(mktemp -d)"
 failures=0
 

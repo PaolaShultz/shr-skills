@@ -1,0 +1,3 @@
+Fructal Cap Design does not apply here. Based on the provided description, the confirmation preserves progress, supports accessibility, and requires only the decision intrinsic to authorizing the irreversible action.
+
+Assessment: no actionable friction identified. The extra confirmation is justified because it makes the irreversible consequence and target explicit. No changes recommended. These conclusions rely on the supplied claims; the implementation was not independently tested.
