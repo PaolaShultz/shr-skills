@@ -149,7 +149,7 @@ bounded implementation-stage workflow-integrity claim, not a discovery
 advantage or universal superiority claim. The public replay account does not
 identify the tested skill revisions and does not validate 1.2.0. The account
 also covers the
-[Moj Sint](https://github.com/PaolaShultz/moj-sint) convergent experimental
+[SHR Synth](https://github.com/PaolaShultz/shr-synth) convergent experimental
 workflow and its explicit claim boundaries. A
 [physical-product comparison
 record](docs/physical-product-comparison-protocol.md) preserves the prospective

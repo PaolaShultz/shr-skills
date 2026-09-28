@@ -196,14 +196,14 @@ The public evidence was expanded to include:
 - [SHR-DAW](https://github.com/PaolaShultz/shr-daw), where the method operated
   across musician, controller, audio service, software, storage, device,
   ownership, failure, and recovery boundaries; and
-- [Moj Sint](https://github.com/PaolaShultz/moj-sint), where a convergent
+- [SHR Synth](https://github.com/PaolaShultz/shr-synth), where a convergent
   preservation-first experimental pattern appeared without evidence that the
   Fructal Cap Design skill itself had been invoked.
 
 This distinction matters:
 
 - SHR-DAW is an explicit application case.
-- Moj Sint is capability convergence, not causal proof.
+- SHR Synth is capability convergence, not causal proof.
 
 ## Phase 3: public-repository cleanup
 

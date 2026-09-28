@@ -14,7 +14,7 @@ Fructal Cap Design has seven distinct kinds of practical evidence:
    software, controllers, audio services, storage, and Raspberry Pi environment
    of [SHR-DAW](https://github.com/PaolaShultz/shr-daw);
 5. its capability cluster independently appeared in the experimental workflow
-   of [Moj Sint](https://github.com/PaolaShultz/moj-sint), without evidence that
+   of [SHR Synth](https://github.com/PaolaShultz/shr-synth), without evidence that
    the Fructal Cap Design skill itself was invoked there; and
 6. it was executed in frozen three- and four-arm physical-product comparisons,
    followed by layered evaluation and an eight-render technical cross-renderer
@@ -562,11 +562,11 @@ acceptance may reveal different results. The public SHR-DAW documentation
 correctly retains those gates rather than presenting machine evidence as owner
 observation.
 
-## Case 4: Moj Sint as a convergent workflow
+## Case 4: SHR Synth as a convergent workflow
 
 ### Why this case is different
 
-[Moj Sint](https://github.com/PaolaShultz/moj-sint) is an MIT-licensed,
+[SHR Synth](https://github.com/PaolaShultz/shr-synth) is an MIT-licensed,
 low-level headless Rust synthesizer under active sound research for later use
 as a distinct external SHR-DAW instrument.
 
@@ -583,9 +583,9 @@ planning, test-driven development, and verification.
 
 **Observed:** Fructal Cap Design's
 [first public commit](https://github.com/PaolaShultz/shr-skills/commit/814898424a53767a9e1b49975a748c891da1f614)
-predates Moj Sint's
-[initial design and handoff](https://github.com/PaolaShultz/moj-sint/commit/1d828b57a9a48de8d6e1476bf6bb75168faa9043)
-by about fifteen hours. The case therefore does not show that Moj Sint
+predates SHR Synth's
+[initial design and handoff](https://github.com/PaolaShultz/shr-synth/commit/1d828b57a9a48de8d6e1476bf6bb75168faa9043)
+by about fifteen hours. The case therefore does not show that SHR Synth
 independently invented the method before Fructal Cap Design existed. It shows
 that a method-like execution pattern emerged in another difficult workflow
 without a recorded invocation of the skill.
@@ -593,13 +593,13 @@ without a recorded invocation of the skill.
 ### The primordial constrained-workflow pattern
 
 The
-[portable foundation](https://github.com/PaolaShultz/moj-sint/commit/1aa6a6bd9f8074c8391621820684267524365b67)
+[portable foundation](https://github.com/PaolaShultz/shr-synth/commit/1aa6a6bd9f8074c8391621820684267524365b67)
 already separated necessary real-time, ownership, provenance, platform,
 human-acceptance, modification, and verification constraints from the mechanics
 of individual sound experiments.
 
 The later
-[experimental artifact policy](https://github.com/PaolaShultz/moj-sint/commit/6e10c95bb26ae48ba83193d59ba7343bbf1bdcab)
+[experimental artifact policy](https://github.com/PaolaShultz/shr-synth/commit/6e10c95bb26ae48ba83193d59ba7343bbf1bdcab)
 made recovery and continuity unusually explicit:
 
 - generated audio, measurement tables, manifests, and batch-specific reports
@@ -614,18 +614,18 @@ made recovery and continuity unusually explicit:
   reviewed output was discarded.
 
 The
-[multi-family listening gate](https://github.com/PaolaShultz/moj-sint/commit/882492e5b22f5cb1033ad5b2f8977734e6a6bf53)
+[multi-family listening gate](https://github.com/PaolaShultz/shr-synth/commit/882492e5b22f5cb1033ad5b2f8977734e6a6bf53)
 then kept five experimental sources outside the production engine, gave each a
 distinct perceptual hypothesis and audible failure condition, used automated
 measurements only to reject defects and characterize behavior, and reserved
 musical acceptance for human listening. The
-[recorded verdict](https://github.com/PaolaShultz/moj-sint/commit/da526a940c58a4893a1e3d564d1a1587dcc0c7f9)
+[recorded verdict](https://github.com/PaolaShultz/shr-synth/commit/da526a940c58a4893a1e3d564d1a1587dcc0c7f9)
 retained a cautiously positive direction without selecting, integrating,
 ranking, or macro-mapping a source.
 
 ### Capability correspondence
 
-| Moj Sint execution behavior | Corresponding Fructal Cap Design capability |
+| SHR Synth execution behavior | Corresponding Fructal Cap Design capability |
 | --- | --- |
 | Real-time, ownership, provenance, hardware-evidence, and listening rules are separated from experimental mechanics | Constraint-source analysis |
 | Disposable research sources remain isolated from the production `Engine` | Explicit modification and mode boundaries |
@@ -656,13 +656,13 @@ remote at that time.
 experimental flow turned several previously messy sound-development motions
 into useful and coherent ones.
 
-**Inference:** Moj Sint is evidence that the capability cluster formalized by
+**Inference:** SHR Synth is evidence that the capability cluster formalized by
 Fructal Cap Design can be valuable outside conventional product-interface work.
 It also shows that parts of the cluster can emerge from a careful combination
 of domain constraints, human acceptance, disciplined implementation, and
 durable handoffs.
 
-**Unsupported claim:** Moj Sint was built by invoking Fructal Cap Design, or
+**Unsupported claim:** SHR Synth was built by invoking Fructal Cap Design, or
 proves that Fructal Cap Design caused the improvement.
 
 **Open question:** A future explicitly logged Fructal Cap Design Review,
@@ -678,7 +678,7 @@ evidence.
 | Anonymous private software review | It can find cross-component workflow failures that an established delivery discipline did not surface | Private case with limited public reproducibility |
 | Anonymous private implementation replay | With the same brief authored by Fructal Cap Design and Superpowers held constant, both Fructal Cap Design arms protected a cross-interaction motion the control retained, while the then-current arm strengthened identity and intent preservation | One stochastic replay; exact skill revisions are not identified publicly; discovery advantage was not measured |
 | Public SHR-DAW case | It can operate across people, controllers, software, audio services, devices, ownership, safety, state, and recovery on a real Raspberry Pi system | One primary creator/operator; broader replication remains open |
-| Moj Sint convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; later local evidence was unpublished at the recorded checkpoint |
+| SHR Synth convergent workflow | Its capability cluster maps onto a successful preservation-first creative/technical research flow even without a recorded Fructal Cap Design invocation | Convergence is not causal proof; later local evidence was unpublished at the recorded checkpoint |
 
 Together, the cases support a narrower, evidence-backed conclusion:
 
@@ -687,7 +687,7 @@ Together, the cases support a narrower, evidence-backed conclusion:
 > software product, and then across a public Raspberry Pi
 > musician/operator system. A private replay separately supports incremental
 > workflow integrity during implementation when Superpowers is held constant,
-> without measuring discovery. Moj Sint shows the same capability cluster
+> without measuring discovery. SHR Synth shows the same capability cluster
 > emerging in experimental sound research without proving that
 > Fructal Cap Design caused it.
 
