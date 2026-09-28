@@ -1,10 +1,26 @@
+![Fructal Cap Design — a path around a fixed boundary](docs/assets/fructal-logo.svg)
+
 # Fructal Cap Design
+
+[Install](#install) · [Read the method](#read-the-method) · [Try it in ChatGPT](#demonstrate-it-in-chatgpt-web) · [Evidence](#real-world-usage-and-testing)
 
 Fructal Cap Design is an open engineering method for constrained workflows,
 packaged as a Codex skill. The current package version is **1.2.0**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
+
+Use it to improve a workflow where a necessary rule makes progress, recovery or
+handoff harder than it needs to be. Keep the rule; improve how people work with it.
+
+| Your task | Mode |
+| --- | --- |
+| Understand the obstruction and inspect evidence | Review |
+| Propose a better workflow | Redesign |
+| Make and verify an authorized change | Implement |
+
+<details>
+<summary>When to use the method and how its scope works</summary>
 
 It separates necessary constraints from accidental friction, traces materially
 relevant workflow continuity across actors and interruptions, and creates a
@@ -39,6 +55,8 @@ limits. All six cap questions remain unchanged.
 
 Version 1.2.0 cuts the skill from 1,914 to 1,104 words (42%) and strengthens verification; see the
 [release notes](distribution/release-notes-1.2.0.md).
+
+</details>
 
 ## Read the method
 
