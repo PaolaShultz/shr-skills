@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance approval must precede payout. The user reports that Support loses track of ownership across the dashboard-to-email handoff and that retries can duplicate requests. The fixture establishes only `state=blocked`. The proposed flow gives each request a durable reference, preserves entered details, names the owner at each handoff, and checks status before replay. Its verification scenarios cover concurrent retries, lost email, competing decisions, uncertain payouts, accessibility, and a separate legitimate refund on the same order. Finance\u2019s ability to use the secure link remains an explicit assumption. The execution events show only reads, the fixture snapshots match, and the response presents the checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

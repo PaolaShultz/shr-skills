@@ -1,0 +1,3 @@
+Yes. Read-only inspection of `workflow.txt` is authorized. An ordinary access log is incidental and requires no additional approval under the stated conditions.
+
+The file contains only `state=blocked`. You identified approval as a prerequisite, and the recorded state confirms that progress is blocked. A requester checking the file can see the blockage, but cannot tell whose approval is needed or what to do next. The file alone does not establish that approval caused the block or that the approver missed a handoff.

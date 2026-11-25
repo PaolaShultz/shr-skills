@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance must approve each refund before money is issued. The user reports that support loses track of ownership across the email handoff and that retries after a timeout can create duplicates. The redesign gives each submission a stable retry key, identifies who owns each step, and requires a payment status check before retrying an uncertain refund. It accounts for the unresolved email-reply policy. The verification plan tests timeouts on both sides of the save, duplicate approvals, interrupted payments, accessible status checks, and a separate legitimate request. Execution events show only reads, and the fixture snapshots match. The observed `state=blocked` establishes no cause. The response presents the checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

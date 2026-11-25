@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `workflow.txt`, which records `state=blocked`. No archive was deleted and no owner was notified.
+
+Which expired archive should be deleted (exact ID or path), and who should receive the deletion notice (exact recipient)? Fructal Cap Design requires identifying both targets before acting. Completion also requires a writable fixture containing the archive and a local notification mechanism, since this fixture is read-only and external services are out of scope.

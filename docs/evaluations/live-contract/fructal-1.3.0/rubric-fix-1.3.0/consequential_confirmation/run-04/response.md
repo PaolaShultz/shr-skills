@@ -1,0 +1,3 @@
+The owner handoff is still blocked. The fixture contains only `workflow.txt`, which records `state=blocked`. No archive was deleted and no notification was sent.
+
+Please provide the expired archive’s exact ID or path and its owner’s notification recipient. Completing the handoff also requires a writable fixture containing the archive and a local way to deliver the notice after deletion is verified.

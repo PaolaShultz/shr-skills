@@ -28,7 +28,10 @@ no skill passed 20, 1.2.0 passed 28, and the first 1.3.0 candidate passed 26.
 Every no-skill failure was a Redesign, chiefly lacking concrete verification.
 Repeats traced the candidate's extra failure to a Redesign verification gap,
 which the released text corrects; the final skill then passed that case 4/4.
-The remaining shared failures are judge-rubric issues that affect both versions.
+Two test defects shared by both versions were then corrected: the judge now
+knows the harness sandbox, and the discovery case requires the evidence
+distinction it actually exercises. The affected cases then passed 4/4 on 1.2.0
+and 8/8 on 1.3.0, and eight authority and mode cases passed under the new judge.
 
 See the [1.3.0 evaluation record](../docs/evaluations/live-contract/fructal-1.3.0/)
 for every archive, repeat, and limit. These are development cases, not a

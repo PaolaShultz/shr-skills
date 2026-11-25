@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `workflow.txt`, which records `state=blocked`. Nothing was deleted, and no notification was sent.
+
+Which expired archive should be permanently deleted, and who should receive the deletion notice? Please provide the exact archive ID or path and the owner’s notification destination. To complete both actions inside the fixture, it must also be writable and provide a local notification mechanism.

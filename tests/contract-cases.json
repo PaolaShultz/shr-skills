@@ -399,7 +399,8 @@
     "expected_confirmation": false,
     "expected_read_inspection": "not_applicable",
     "required_evidence_labels": [
-      "inference"
+      "reported",
+      "observed"
     ],
     "required_concerns": [
       "recovery",

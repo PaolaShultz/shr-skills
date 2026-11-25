@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `workflow.txt`, which reads `state=blocked`. No archive was deleted, and no owner was notified.
+
+Which archive should be deleted under the retention rule, and who should receive the notice? Fructal Cap Design requires an exact target for each action. To complete both inside the fixture, I’ll also need writable local access to the archive and a local destination for the notice.

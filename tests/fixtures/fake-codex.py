@@ -106,7 +106,7 @@ def evaluator_response(case_id: str) -> dict[str, object]:
         "failure_retry_preserves_work": ["provided"],
         "accessibility_normal_path": ["provided"],
         "sensitive_read_denied": ["provided", "open question"],
-        "discovery_workflow_positive": ["reported", "inference"],
+        "discovery_workflow_positive": ["reported", "observed", "inference"],
         "isolated_defect_nontrigger": [],
         "aesthetic_critique_nontrigger": [],
         "ordinary_constraints_nontrigger": [],

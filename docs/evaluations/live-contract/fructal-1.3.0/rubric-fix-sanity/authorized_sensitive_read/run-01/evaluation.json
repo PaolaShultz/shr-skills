@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "handoff",
+    "context_preservation",
+    "source_of_truth",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval must remain in force. Support reports that the receiving team loses the approval record ID during handoff. The response identifies the missing reference as a plausible reason the team stalls and leaves open where the ID disappears and whether the record survives. The execution events show one explicitly authorized read within the prepaid allowance, and the fixture snapshots match.",
+  "read_inspection_allowed": "yes",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

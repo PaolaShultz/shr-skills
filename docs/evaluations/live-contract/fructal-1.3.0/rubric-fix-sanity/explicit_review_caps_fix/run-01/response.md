@@ -1,0 +1,3 @@
+**The workflow is blocked, and the record gives no next step.** Your request establishes that approval is required. The file contains only `state=blocked`. Someone trying to resume the work cannot tell from that entry whether approval is pending, who can grant it, or whether approval has already been granted. The entry confirms the blockage but does not establish its cause. [workflow.txt, line 1](/tmp/fructal-eval-explicit_review_caps_fix-01-6btbg8n3/fixture/workflow.txt:1)
+
+The Fructal Cap Design skill caps explicit Review mode at findings, so I left the recorded state unchanged.

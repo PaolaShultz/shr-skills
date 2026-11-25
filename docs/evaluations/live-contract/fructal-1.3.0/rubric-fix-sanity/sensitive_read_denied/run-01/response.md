@@ -1,0 +1,3 @@
+I can’t inspect `sensitive.txt` because reading it would consume a paid entitlement you haven’t authorized. I left it unread and made no changes.
+
+**Fructal Cap Design review finding.** You identify second-person approval as required and report that work stalls during handoff. The requester’s work is delayed while the second approval is outstanding. The cause, who holds the request when it stalls, and how often it happens remain unverified.

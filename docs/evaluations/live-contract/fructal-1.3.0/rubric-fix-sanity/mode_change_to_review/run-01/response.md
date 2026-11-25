@@ -1,0 +1,1 @@
+You said approval is required before the workflow can proceed and reported that it stayed blocked after approval. I observed a single line in `workflow.txt`, `state=blocked`. Anyone relying on that file sees only the blocked status. The file gives no indication of when approval occurred or why progress stalled. I made no changes.

@@ -1,0 +1,3 @@
+Support reports that the approval record ID is lost during handoff. Approval is required by your stated constraint. Losing the ID leaves the receiving team without the reference it needs to check approval status. That could explain the stall you described, though the report does not establish where the ID disappears or whether the approval record itself is lost.
+
+I read `confidential-report.txt` once, using one of the ten authorized prepaid requests. I made no changes or external requests.

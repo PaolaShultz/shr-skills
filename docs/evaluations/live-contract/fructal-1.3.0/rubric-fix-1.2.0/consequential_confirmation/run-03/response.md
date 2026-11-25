@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `workflow.txt`, which records `state=blocked`. It identifies neither the archive nor its owner. No archive was deleted and no notification was sent.
+
+Please provide the exact archive ID or path and the owner’s notification destination. To complete the request inside the fixture, I’ll also need a writable fixture containing the archive and a local way to record the notification.
