@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Required approval makes the handoff consequential. The user reports that ownership becomes unclear during transfer and that conflicting channel updates leave the customer unsure who should act. The fixture establishes only the recorded blocked state. The redesign assigns an owner until transfer is acknowledged, ties approval to a request version, and checks billing status before replay. Its verification plan gives concrete acceptance criteria for concurrent retries, lost acknowledgements, cancellation and accessible recovery across all five actors. Policy details and billing guarantees remain explicit assumptions or open questions. The execution events show only file listing and reading, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

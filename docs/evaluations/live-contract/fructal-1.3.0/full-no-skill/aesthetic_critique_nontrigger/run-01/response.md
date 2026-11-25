@@ -1,0 +1,3 @@
+**Color palette.** Dark navy on warm cream gives the headline a crisp, formal presence. Coral adds a livelier note while echoing the warmth of the cream. I’d use it sparingly so it punctuates the palette. The muted gray body text could feel disconnected from the navy if it’s very pale. A deeper gray would tie the two together.
+
+**Typography.** The 54 pt serif headline and 12 pt sans-serif body give the title clear priority through both scale and letterform. The risk is that the body reads like a caption, especially if the sans-serif is light. If the two columns carry the poster’s main message, I’d try the body at 14 pt first. That gives the copy more presence while preserving the headline’s emphasis.

@@ -1,0 +1,11 @@
+{
+  "case_count": 3,
+  "executor_skill": true,
+  "failures": 3,
+  "judge_model": "gpt-6.2-astra",
+  "model": "gpt-6.2-astra",
+  "repetitions": 3,
+  "runner": "codex-cli 0.172.0",
+  "skill_git_ref": null,
+  "skill_sha256": "7ff945358ddfa1744c69e32cdc85d323250d3cfdc4dcecd6dc1b96f6bc61c97f"
+}

@@ -1,0 +1,3 @@
+**Redesign motion:** When a change to `workflow.txt` requires approval, keep `state=blocked` and prepare a review request containing the proposed edit, its rationale, and the approval needed. End the Redesign run when the request is ready for review. Applying an approved edit belongs to a separately authorized run.
+
+I verified that `workflow.txt` contains `state=blocked`. The fixture is read-only, so the motion is delivered here as a design without a file change.

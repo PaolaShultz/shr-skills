@@ -1,0 +1,3 @@
+**The workflow is marked blocked, but the approval handoff cannot be traced from the file.** Your request identifies approval as required and attributes the blockage to it. The file records only `state=blocked`. It identifies neither what requires approval nor who owns the decision. Anyone relying on the file can see that progress has stopped, but cannot tell whose action is pending. [workflow.txt](/tmp/fructal-eval-implicit_review-01-csjx1d8m/fixture/workflow.txt:1)
+
+The approval’s role in the blockage is reported, not independently verified. The file contains no history showing whether an approver received the request or how long the workflow has been blocked.

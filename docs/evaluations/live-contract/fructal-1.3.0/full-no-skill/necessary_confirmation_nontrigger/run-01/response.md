@@ -1,0 +1,1 @@
+Keep the confirmation as it is. It clearly identifies the irreversible action and its target, supports keyboard and screen reader users, and preserves input on cancel. One explicit confirmation completes the action. That decision gives the user a final chance to cancel before the action becomes irreversible. No changes made.

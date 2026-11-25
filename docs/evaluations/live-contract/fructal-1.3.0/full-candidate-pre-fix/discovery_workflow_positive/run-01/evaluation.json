@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance must approve refunds before payment. The user reports that Support loses track of ownership across the email handoff and that retries after a timeout can duplicate requests. The redesign preserves approval, uses one durable request identifier across retries, and gives Support a visible owner at each handoff. It specifies concrete checks for lost responses, email failure, payment decisions, and keyboard and screen-reader access. Finance access to the dashboard link remains an explicit assumption. The executor performed only reads, the fixture matched before and after, and the response presented its checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

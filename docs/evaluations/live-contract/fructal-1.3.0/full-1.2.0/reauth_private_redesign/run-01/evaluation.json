@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Mandatory reauthentication reportedly discards entered work, and shared-device policy rules out local-storage recovery. The fixture establishes only that the workflow is blocked. The design keeps the draft locked in page memory, restores entries and focus only after fresh authentication by the original account, and preserves explicit submission intent. Its verification plan covers account mismatch, interrupted submission, accessible retry, and draft loss on reload. Permission to retain volatile memory remains an explicit assumption. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

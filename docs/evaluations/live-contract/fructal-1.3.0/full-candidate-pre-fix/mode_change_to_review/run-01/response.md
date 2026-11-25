@@ -1,0 +1,3 @@
+**Finding:** [workflow.txt](/tmp/fructal-eval-mode_change_to_review-01-hnngpx28/fixture/workflow.txt:1) contains only `state=blocked`. You identified approval as a prerequisite and reported that the workflow remained blocked after approval, leaving the person waiting on it unable to proceed.
+
+The file confirms the blocked state. It contains no approval record or transition history, so the timing and cause are unverified. I made no changes.

@@ -210,6 +210,10 @@ def main() -> None:
     )
 
     if phase == "executor":
+        prompt_log = os.environ.get("FAKE_CODEX_PROMPT_LOG")
+        if prompt_log:
+            with open(prompt_log, "a") as log:
+                log.write(arguments[-1] + "\n")
         fixture = Path(os.environ["FRACTAL_FIXTURE_PATH"])
         if os.environ.get("FRACTAL_TURN_INDEX", "1") == "1":
             execute_fixture(case_id, fixture, mode)

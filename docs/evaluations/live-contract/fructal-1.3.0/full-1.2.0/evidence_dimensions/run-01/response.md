@@ -1,0 +1,3 @@
+- **Provided artifact.** The requester supplied [support-note.txt](./support-note.txt) and separately stated that the retry policy requires failed requests to remain resumable across the support-to-service handoff.
+- **Reported claim.** The note attributes context loss during retries to operators. The requester also describes recovery as blocked.
+- **Observed.** I read the note. Its full text is “Operators report that retries lose context.” It contains no statement about blocked recovery. Neither context loss nor blocked recovery was independently verified.

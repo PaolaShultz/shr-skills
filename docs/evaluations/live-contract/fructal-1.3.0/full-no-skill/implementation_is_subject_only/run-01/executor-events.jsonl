@@ -1,0 +1,9 @@
+{"type":"thread.started","thread_id":"01a213d4-4efe-72f3-8323-984409dbb0c4"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I’ll read `workflow.txt` and trace how the approval constraint affects the motion."}}
+{"type":"item.started","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc 'cat workflow.txt'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc 'cat workflow.txt'","aggregated_output":"state=blocked\n","exit_code":0,"status":"completed"}}
+{"type":"item.started","item":{"id":"item_2","type":"command_execution","command":"/bin/bash -lc \"rg --files --hidden -g '\"'!.git'\"'\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_2","type":"command_execution","command":"/bin/bash -lc \"rg --files --hidden -g '\"'!.git'\"'\"","aggregated_output":"workflow.txt\n","exit_code":0,"status":"completed"}}
+{"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"`workflow.txt` records the motion as `state=blocked`. It contains no approval check or rule for changing the state after approval. The fixture confirms the blocked state but does not establish that the required approval constraint caused it. [workflow.txt](./workflow.txt#L1)"}}
+{"type":"turn.completed","usage":{"input_tokens":49006,"cached_input_tokens":46336,"cache_write_input_tokens":0,"output_tokens":144,"reasoning_output_tokens":0}}

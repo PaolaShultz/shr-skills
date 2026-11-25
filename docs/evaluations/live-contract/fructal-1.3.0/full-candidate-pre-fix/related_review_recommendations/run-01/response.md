@@ -1,0 +1,4 @@
+Both findings affect the same required approval. The fixture confirms that the item is blocked. The ID visibility issues and their connection to the stall come from your report. [Fixture record](./workflow.txt)
+
+1. **Status message — highest priority.** You report that the message omits the ID, leaving the requester unable to quote the exact approval record when asking for help. Include the existing ID beside the status, labeled “Approval record ID.” This gives the requester a precise reference while the approval you identified as mandatory remains pending.
+2. **Support view — recovery priority.** You report that the view hides the same ID, making it harder for support staff to confirm which pending approval the requester means. Make the ID visible in the record details under the same label. Staff can then compare the references while the required approval remains in force.

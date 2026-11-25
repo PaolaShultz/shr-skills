@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day retention rule must remain. The user reports that the Delete draft label makes people believe a hidden draft is gone, leading them to recreate it. The Hide draft label, retention message, and adjacent Restore draft action define a complete recovery sequence. The fixture identifies no existing restore control, and the response presents it as a proposal. The verification scenario checks keyboard use, screen reader feedback, and restoration of the original contents. Execution events show only reads, and the before and after snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,3 @@
+**The block is confirmed, but its cause is unverified.** [workflow.txt](./workflow.txt) contains only `state=blocked`. Your request identifies approval as required. The file does not show what needs approval, whether a decision is pending, or who can act. Someone checking the file can see that work has stopped but cannot tell whom to contact to move it forward.
+
+The state remains `blocked` because your explicit Review mode caps the outcome at findings.

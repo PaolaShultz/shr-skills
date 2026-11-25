@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Required approval creates a handoff at which ownership reportedly becomes unclear. The fixture establishes only that the item is blocked. The proposed workflow makes the approval service accountable until reviewer acceptance, identifies the authoritative source for each decision, and requires billing reconciliation before replay. Concrete scenarios cover interrupted handoffs, duplicate effects, accessible recovery, and unrelated records. Policy details and billing guarantees remain open, and the response presents runtime checks as planned. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

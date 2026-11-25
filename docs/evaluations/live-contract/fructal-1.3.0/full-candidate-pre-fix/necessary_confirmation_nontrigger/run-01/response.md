@@ -1,0 +1,3 @@
+Keep the confirmation as described. It identifies the irreversible action and its target before the user commits. Keyboard and screen-reader users can make that choice, canceling preserves their input, and confirming once completes the action.
+
+The reported complaint is the effort of making the necessary decision itself. It identifies no avoidable obstruction, so Fructal Cap Design does not apply. This assessment is based on your description. No changes were made.

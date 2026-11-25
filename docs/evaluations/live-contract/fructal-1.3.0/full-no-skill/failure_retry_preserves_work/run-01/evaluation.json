@@ -1,0 +1,25 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "source_of_truth"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided",
+    "reported"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Required scanning remains a submission gate. The user reports that an acknowledgement timeout followed by retry erases work and request identity. The proposal gives retry a coherent recovery path using the original request ID and stored receipt. The recorded commands only read the fixture, and both snapshots match. The missing Redesign deliverable is a concrete verification scenario, such as suppressing the acknowledgement after receipt creation, retrying, and checking that one request survives with all four items intact and submission still blocked while scanning is pending.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

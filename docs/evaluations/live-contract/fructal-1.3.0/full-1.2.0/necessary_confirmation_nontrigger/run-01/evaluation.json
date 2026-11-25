@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "context_preservation",
+    "accessibility"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Explicit consent is required for the irreversible action. The only reported burden is making that decision. The fixture shows a blocked state whose cause is unknown, so it does not establish that confirmation obstructs progress. The response recommends keeping this control and attributes its accessibility and cancellation behavior to the user\u2019s description. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

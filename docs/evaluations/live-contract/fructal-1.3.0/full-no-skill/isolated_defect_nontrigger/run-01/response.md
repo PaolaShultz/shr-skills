@@ -1,0 +1,3 @@
+`parse_name(null)` throws a `TypeError` because `parse_name` calls `value.trim()` without first checking for `null`. The string case passes: `' Ada '` returns `'Ada'`. [parser.js, line 2](/tmp/fructal-eval-isolated_defect_nontrigger-01-a7cza09v/fixture/parser.js:2)
+
+The fix is local to `parse_name`. If a missing name should stay `null`, add `if (value === null) return null;` before the trim call. The test reproduces the exception but leaves the expected return value for `null` unspecified. [parser.test.js, line 4](/tmp/fructal-eval-isolated_defect_nontrigger-01-a7cza09v/fixture/parser.test.js:4)

@@ -1,0 +1,26 @@
+Give each request one durable ID and one shared answer to **“Who has the next action?”** The approval service should record its decision, the compliance reviewer should record their disposition, and billing should record the financial outcome. A request coordinator should use those records to publish the current status, owner, and next step across channels. A billing timeout, for example, should leave the customer looking at the same request, with billing responsible for resolving the outcome.
+
+The channel disagreement, duplicates, and unclear handoffs are reported in the request. The fixture contains only `state=blocked`. It provides no cause, owner, or history. Audit, privacy, and approval are supplied requirements. The precise approval scope, compliance routing, retention periods, and permitted disclosures remain open. [Fixture record](./workflow.txt)
+
+### Proposed workflow
+
+| Moment | Action and recovery |
+|---|---|
+| Customer submits | Before commitment, show the requested action, its billing consequence, and any required review. Assign a submission key before sending. The coordinator atomically associates that key with one request ID and returns a receipt. After a lost response, the customer or support agent can recover the same receipt. Reusing the key with changed terms requires a fresh decision. |
+| Support hands off | Support routes the request ID and version to the approval service. Support owns delivery until the service durably accepts it. Acceptance transfers ownership once. A missing acknowledgement prompts a status lookup by ID. An overdue handoff stays in the current owner’s queue with a recovery action. |
+| Approval or compliance needs input | The coordinator records each required decision against the exact request version. Where compliance review is required, the reviewer sees the authorized evidence, reason for referral, and next action. A request for information returns the customer to the relevant field with permitted work preserved. A denial gives the customer a permitted explanation and available recourse. Material edits invalidate affected decisions. |
+| Billing receives authorization | Release billing work only when the recorded decisions cover the current terms and the customer has confirmed the consequence. Billing uses a stable operation key for that authorized effect. After a timeout, billing owns reconciliation and looks up the original operation. While the outcome is unknown, the request stays pending. If lookup cannot resolve it, a billing operator investigates before any replay. |
+| Customer cancels | Record the cancellation against the same ID. Before dispatch, serialize cancellation with release so only one wins. If billing is already in flight, show “Cancellation requested” and keep billing responsible until it confirms the outcome. Show any available reversal and its consequences before commitment. |
+| Any actor resumes | The dashboard and support view read the same versioned status, filtered by role. Email gives a dated update and a link to current status, with only details permitted for that channel. Services can query the version and acknowledge events by ID. Duplicate or late events cannot move the request backwards. |
+
+**Audit and privacy.** Record each transition with its request version, actor or service, prior and succeeding owner, decision reference, and outcome. Keep sensitive evidence in its authorized store and apply the approved retention schedule to each record type. Preserve drafts and the customer’s position only in permitted storage. If policy requires a field to be cleared, identify that field on return. Before adoption, the responsible policy owners need to confirm the approval and review gates, access by role and channel, and retention rules. Billing also needs to establish whether it supports durable operation keys and outcome lookup.
+
+### Verification plan
+
+- Complete a request across all five actors. Reconstruct who owned each step and which decisions authorized billing. Repeat with a denial, a missing review, and an edit after approval. Each must block billing on those terms.
+- Double-submit, retry from support after a lost receipt, interrupt handoff before and after acceptance, and deliver events out of order. Expect one request, one accountable owner, and a recoverable next action at each interruption.
+- Drop the billing response after a successful charge and race cancellation against dispatch. Verify the actual ledger outcome, a single financial effect at most, and accurate customer wording while reconciliation is pending.
+- Deliver an old email after the dashboard advances. Follow its link as the customer and inspect the same request as support and compliance. Verify consistent current status, role-appropriate detail, and an audit trail sufficient to explain the earlier message.
+- Resume after reauthentication using keyboard and screen reader. Verify that permitted entries survive, focus returns to the relevant action, and status changes and recovery instructions are announced. Check that an unrelated request remains unchanged throughout.
+
+This is a redesign proposal. No changes were made, no external services were accessed, and the verification cases have not been run.

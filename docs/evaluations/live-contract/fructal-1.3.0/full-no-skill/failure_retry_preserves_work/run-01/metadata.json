@@ -1,0 +1,6 @@
+{
+  "case_id": "failure_retry_preserves_work",
+  "prompt_style": "embedded",
+  "repetition": 1,
+  "skill_read_observed": false
+}

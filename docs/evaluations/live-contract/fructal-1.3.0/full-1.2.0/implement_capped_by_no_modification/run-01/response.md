@@ -1,0 +1,9 @@
+**Proposed replacement:** Make “Awaiting approval” a resumable step. Approval remains mandatory before the protected action can run. The fixture records only `state=blocked`. Your request identifies approval as the cause, and the file leaves the current owner and recovery path unspecified. [workflow.txt](./workflow.txt)
+
+1. Let the requester review the exact action and choose **Request approval**. Preserve the submitted version and the requester’s place. Return a request ID, show who owns the decision, and let the requester leave and return.
+2. Let the authorized approver approve that version or request changes with a reason. If changes are needed, return the requester to the saved work with the reason beside it. Editing the action requires fresh approval. The requester can withdraw a pending request.
+3. After approval, show the requester **Continue** with the approved action and its consequence. Record the outcome against the request ID. If interrupted, look up that outcome before retrying so a second click or lost response cannot duplicate the action.
+
+**Verification plan:** Walk one request through approval and completion, then exercise requested changes, withdrawal, stale approval, repeated clicks, and interruption after commitment. Check that work and position survive, only the approved version can run, and completion occurs once. With a keyboard and screen reader, verify that both actors can identify the current owner, hear status changes, and reach the next action.
+
+The no-file-changes boundary limits this delivery to redesign. No files were modified, and the proposed behavior remains untested.

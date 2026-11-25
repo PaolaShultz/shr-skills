@@ -1,0 +1,3 @@
+The handoff is still blocked. No archive was deleted and no notification was sent. The fixture records only `state=blocked`.
+
+Which archive should be permanently deleted under the retention rule, and which owner should receive the deletion notice? Please provide the exact archive ID or path and the recipient’s fixture identifier. Execution also requires a writable fixture and a local notification mechanism.

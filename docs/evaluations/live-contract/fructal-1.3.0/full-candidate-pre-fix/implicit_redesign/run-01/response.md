@@ -1,0 +1,12 @@
+**Give the blocked item a named owner and a next action.** Keep the protected action on hold until the required approval is recorded. The approval requirement comes from your request. The fixture records only `state=blocked`, so the reason this item stalled, the authorized approver, and the action covered by approval are still unknown. [workflow.txt](./workflow.txt)
+
+**Proposed handoff**
+
+1. When the requester reaches the gate, preserve their work and position within permitted storage. Show what needs approval and what approval will allow. On submission, give the requester a durable request ID and route that same request to the authorized approver.
+2. Show both parties the current status, who acts next, and what they can do. If routing fails or no approver can be identified, keep the gate closed and assign a designated workflow owner to resolve routing on the existing request.
+3. Record the approver’s decision against the version they reviewed. A request for changes returns the requester to the relevant field with the feedback and prior work intact. A denial displays the decision and ends that attempt. Approval lets the workflow resume at the protected step, preserving any separate requester confirmation that step requires.
+4. After interruption or timeout, reopen the same request and check its recorded decision and execution status before retrying. If cancellation is allowed, acknowledge it only after checking whether the protected action has begun, and show the actual outcome.
+
+**Verification plan.** First identify the protected action, the approval authority, and who owns routing failures. Then exercise the proposed handoff with a requester and approver. Check that an unauthorized decision or approval of an older version cannot release the action, and that valid approval permits exactly one execution. Interrupt submission and execution, repeat each attempt, and race cancellation against approval. Inspect the request ID, saved work, decision, and effect count after each case. Simulate an unavailable approver and a return for changes, and verify that the named owner can recover the original item. Using a keyboard and screen reader, confirm both parties can find the status, hear feedback, and reach their next action.
+
+This is a proposal. The fixture was left unchanged, and the verification checks have not been run.

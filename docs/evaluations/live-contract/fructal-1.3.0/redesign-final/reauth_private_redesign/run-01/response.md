@@ -1,0 +1,13 @@
+Keep the unfinished form in the open tab’s volatile memory, hide it when reauthentication is due, and restore it only after the original user reauthenticates. Returning to the form should leave it ready to edit. Submission still requires a separate, explicit action.
+
+The supplied requirements make reauthentication mandatory and prohibit persisting sensitive contents in local storage on shared devices. You report that reauthentication discards the form. The fixture records only `state=blocked`, so the cause of the loss is unverified. This design assumes policy permits retaining sensitive values in volatile memory while the tab is locked and that sign-in can complete while the tab stays open.
+
+**Proposed recovery flow**
+
+1. At expiry, immediately replace the form with a lock screen and block protected actions. Keep field values, the current step, and the focused field in memory only. Remove sensitive values from the visible page and accessibility tree. Move focus to the lock heading and explain, “Sign in again to continue. Keep this tab open to preserve your work.” Provide keyboard-accessible **Sign in again** and **Discard form** controls.
+2. Complete sign-in without unloading the form tab. The server validates the renewed session, current access, and original account before the tab reveals anything. On success, restore the same step and focus, and announce “Form restored.” If expiry interrupted a submission whose outcome is unknown, check its status before enabling another attempt.
+3. If sign-in fails or is cancelled, keep the form locked and offer **Try again** beside the error. If a different account signs in, reveal no form details and offer sign-in with the original account. Confirm an explicit discard, then clear the draft. Explain before sign-in that closing or reloading the tab loses this memory-only draft. Recovery across either event would require a separate decision about approved storage.
+
+**Verification plan.** Expire a session midway through a populated form. Using keyboard and screen reader, verify immediate concealment, reachable recovery controls, same-account restoration of values and position, and zero automatic submissions. Repeat with failed, cancelled, and different-account sign-ins, then with discard, reload, and tab closure. Inspect browser storage, caches, history, and logs for test values. Simulate expiry after the server accepts a submission but before the tab receives its response, and verify recovery reports the existing result without duplicating it. Check that unrelated forms and saved records remain unchanged.
+
+No changes were made. These checks are proposed acceptance criteria and have not been run.

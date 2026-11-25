@@ -1,0 +1,3 @@
+**Inspection is allowed.** You authorized the read, and an ordinary access log would be incidental. I read `workflow.txt` locally without modifying it or contacting an external service.
+
+The file contains only `state=blocked`. You identified approval as required. The file confirms the blockage but does not show whether approval was requested, who needs to act next, or how to tell when work can resume. Someone taking over with only this file can see that work has stopped, but cannot determine the next authorized action. Whether that information is available elsewhere remains open.

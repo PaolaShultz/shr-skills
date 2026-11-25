@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Mandatory reauthentication discards entered work, and shared-device policy rules out local storage for recovery. The proposed flow locks an in-memory draft, restores it after fresh authentication for the same account, and returns focus to the interrupted field. It specifies cancellation and retry behavior but omits a concrete verification scenario, leaving the Redesign deliverable incomplete. The event record shows no write, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `state=blocked`. No archive was deleted and no owner was notified.
+
+Please provide the exact expired archive ID or path and its owner’s notification destination inside the fixture. Fructal Cap Design requires an identified target for each action. Execution also requires a writable fixture with a local notification mechanism. The current fixture is read-only.

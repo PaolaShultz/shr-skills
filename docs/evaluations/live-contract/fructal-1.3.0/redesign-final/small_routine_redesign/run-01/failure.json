@@ -1,0 +1,5 @@
+{
+  "case_id": "small_routine_redesign",
+  "class": "contract",
+  "message": "deliverable_present: expected True, got False; cap_test_satisfied: expected 'yes', got 'no'"
+}

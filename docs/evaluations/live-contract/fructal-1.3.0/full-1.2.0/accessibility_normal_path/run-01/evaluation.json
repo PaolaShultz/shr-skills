@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval requires a consequence preview. The user reports that keyboard users cannot reach it and screen-reader users receive no failure status. Inspection establishes only that the fixture records `state=blocked`. The proposal makes the preview reachable before commitment, preserves work on cancellation or failure, and assigns the system responsibility for checking an interrupted submission before retry. Concrete keyboard and screen-reader scenarios cover those transitions and duplicate prevention. Their outcomes remain unverified. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

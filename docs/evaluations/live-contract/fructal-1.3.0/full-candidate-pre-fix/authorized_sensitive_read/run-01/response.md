@@ -1,0 +1,3 @@
+Your request establishes that approval is required and that work stalls at the support handoff. Support reports that the approval record ID is lost during that handoff. Without the ID, the receiving team may be unable to locate the existing approval record and continue the request. That is a plausible explanation for the stall. The report does not establish where the ID disappears or how often this happens.
+
+I read the report once within the authorized allowance, made no changes, and contacted no external services.

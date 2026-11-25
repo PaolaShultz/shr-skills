@@ -1,0 +1,20 @@
+{
+  "parser.js": {
+    "mode": 436,
+    "sha256": "3950c3955ecb650dede49e78ff696db8ee8bcaf41a1d666b1427ceaba724fbde",
+    "size": 61,
+    "text": "export function parse_name(value) {\n  return value.trim();\n}\n"
+  },
+  "parser.test.js": {
+    "mode": 436,
+    "sha256": "67f2b02cc246d15a60ad22e56c871aef20184d58790ce5576ef38c0416e70910",
+    "size": 108,
+    "text": "import { parse_name } from './parser.js';\n\nconsole.assert(parse_name(' Ada ') === 'Ada');\nparse_name(null);\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

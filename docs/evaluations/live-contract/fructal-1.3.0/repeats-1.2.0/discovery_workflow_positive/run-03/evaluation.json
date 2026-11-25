@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance approval remains required and takes place by email. The user reports that support loses sight of ownership across that handoff and that retries after a timeout can duplicate requests. The proposed flow preserves entered details under one reference, checks status before retrying, and records who owns each next action. The verification plan tests timeouts before and after the server saves a request, concurrent retries, email failure, and keyboard and screen-reader recovery. The events show only reads, and both fixture snapshots contain `state=blocked`. The response accurately presents the checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

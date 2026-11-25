@@ -1,0 +1,14 @@
+**Make “Review consequences” the first action.** Opening the preview should let the approver inspect what will happen. Only a separate, explicit approval after the preview may authorize that effect.
+
+The approval and preview requirement comes from your request, as do the reports of an unreachable preview and silent failures. The [fixture record](./workflow.txt) contains only `state=blocked`. It establishes the recorded state but leaves the cause of the block and the outcome of any earlier attempt unknown.
+
+**Proposed approval flow**
+
+1. A keyboard user tabs to **Review consequences** and opens it with Enter or Space. Focus moves to the preview heading. The preview names the request, the affected item, and the consequence in reading order. Both **Back** and a clearly named approval button are reachable, with visible focus.
+2. Back or Escape closes the preview, restores focus to **Review consequences**, and preserves the user’s entries and position. If the preview fails to load, announce “The preview couldn’t load. Approval hasn’t been sent.” Place **Retry preview** beside the message and keep approval unavailable until the preview loads.
+3. When the approver confirms, show and announce “Submitting approval” and prevent repeated activation. If the service confirms rejection, show and announce the reason, preserve the reviewed details, and offer the appropriate recovery action beside the error. If the request or consequence changes, require review of the updated preview.
+4. If submission is interrupted and the outcome is unknown, show and announce “Checking whether approval was recorded.” The service owns reconciliation against the original submission identifier. Reopening the request resumes that status check. Offer retry only once the service establishes that approval was not recorded. On success, announce what was approved and show its recorded status.
+
+**Verification plan.** Walk the flow using only a keyboard, then with a screen reader. Check focus on entry and return, reading order, access to both choices, and announcements for loading failure, submission, rejection, and success. Exercise Back, Escape, repeated confirmation, a lost response, and reopening. Verify that cancellation and preview failure produce no approval, one reviewed submission produces at most one effect, and recovery preserves entered work, position, and unrelated requests. The fixture does not show whether the service can look up a submission by identifier, so that capability needs verification before enabling retry after an interruption.
+
+This is a proposal. I made no changes and ran no interaction tests.

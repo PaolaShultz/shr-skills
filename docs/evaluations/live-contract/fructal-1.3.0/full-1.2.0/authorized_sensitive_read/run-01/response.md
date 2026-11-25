@@ -1,0 +1,3 @@
+Support reports that the approval record ID is lost during handoff. That gives a plausible explanation for the stall. Without the ID, support may have to locate the existing record before required approval can proceed. The report does not establish where the ID disappears, how often this happens, or how much delay it causes.
+
+I used one authorized read, leaving nine prepaid requests. I made no changes and contacted no external services.

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identifies a required approval and reports that the workflow stalls there. Inspection confirms the blocked state but leaves its cause open. The explicit request for a replacement within a no-file-change boundary authorizes Redesign. The response gives both actors a shared request ID, ties approval to a specific version, assigns recovery ownership, and makes the consequence of approval visible before submission. Concrete checks cover interrupted submission, withdrawal racing approval, accessible status feedback, and preservation of an unrelated request. Retention and execution authority remain explicit design dependencies. The execution record shows only reads, the fixture snapshots match, and the response presents every check as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

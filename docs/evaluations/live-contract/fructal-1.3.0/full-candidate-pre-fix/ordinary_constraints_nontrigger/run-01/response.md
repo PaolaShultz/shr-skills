@@ -1,0 +1,3 @@
+No correctness findings. `parse_ascii` accepts ASCII strings up to and including 64 characters, returns a length error for longer ASCII strings, and rejects non-ASCII input. [parser.py](/tmp/fructal-eval-ordinary_constraints_nontrigger-01-ydy5yzrp/fixture/parser.py:1)
+
+Both existing tests passed when called directly because pytest was unavailable. Additional checks confirmed that empty input and each of the 128 ASCII characters repeated 64 times were returned unchanged, and that 65 ASCII characters produced the expected error message.

@@ -5,7 +5,7 @@
 [Install](#install) · [Read the method](#read-the-method) · [Try it in ChatGPT](#demonstrate-it-in-chatgpt-web) · [Evidence](#real-world-usage-and-testing)
 
 Fructal Cap Design is an open engineering method for constrained workflows,
-packaged as a Codex skill. The current package version is **1.2.0**.
+packaged as a Codex skill. The current package version is **1.3.0**.
 
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
@@ -53,8 +53,9 @@ state model, or ownership structure belongs in Redesign. Mode labels are not
 required. Authorized sensitive or rate-limited reads are permitted within their
 limits. All six cap questions remain unchanged.
 
-Version 1.2.0 cuts the skill from 1,914 to 1,104 words (42%) and strengthens verification; see the
-[release notes](distribution/release-notes-1.2.0.md).
+Version 1.3.0 adds concrete trigger symptoms, a protected-property step,
+candidate design moves, and a per-mode report shape; see the
+[release notes](distribution/release-notes-1.3.0.md).
 
 </details>
 
@@ -73,9 +74,9 @@ skill with the skills.sh CLI:
     DISABLE_TELEMETRY=1 npx skills add PaolaShultz/shr-skills --skill fructal
 
 For GitHub Copilot, Codex, Claude Code, Cursor, and other agents supported by
-the current GitHub CLI preview, install the published 1.2.0 skill with:
+the current GitHub CLI preview, install the published 1.3.0 skill with:
 
-    gh skill install PaolaShultz/shr-skills fructal@v1.2.0 --agent AGENT --scope user
+    gh skill install PaolaShultz/shr-skills fructal@v1.3.0 --agent AGENT --scope user
 
 Replace <code>AGENT</code> with a value supported by
 <code>gh skill install</code>, such as <code>codex</code>,
@@ -137,7 +138,7 @@ GitHub skill search lists only the canonical <code>skills/fructal</code> entry.
 - [Adversarial workflow case form](https://github.com/PaolaShultz/shr-skills/issues/new?template=adversarial-workflow.yml)
 - [Privacy](https://paolashultz.github.io/shr-skills/privacy.html)
 - [Terms](https://paolashultz.github.io/shr-skills/terms.html)
-- [1.2.0 release notes](distribution/release-notes-1.2.0.md)
+- [1.3.0 release notes](distribution/release-notes-1.3.0.md)
 - [Submission test cases](distribution/submission-test-cases.json)
 - [Historical 1.1.1 distribution ledger](docs/distribution-report-1.1.1.md)
 
@@ -165,7 +166,7 @@ Fructal Cap Design, no Fructal Cap Design, and the then-current revision over
 the same repair brief authored by Fructal Cap Design. That replay supports a
 bounded implementation-stage workflow-integrity claim, not a discovery
 advantage or universal superiority claim. The public replay account does not
-identify the tested skill revisions and does not validate 1.2.0. The account
+identify the tested skill revisions and does not validate 1.3.0. The account
 also covers the
 [SHR Synth](https://github.com/PaolaShultz/shr-synth) convergent experimental
 workflow and its explicit claim boundaries. A
@@ -237,7 +238,12 @@ metadata, and a SHA-256 manifest for audit.
 `--judge-model MODEL` selects a different judge; the default uses the executor
 model. Current archives also retain failed fixture checks and frozen inputs.
 
-The [1.2.0 regression record](docs/evaluations/live-contract/fructal-1.2.0/)
+The [1.3.0 evaluation record](docs/evaluations/live-contract/fructal-1.3.0/)
+compares no skill, 1.2.0, and 1.3.0 on the same model, judge, and 29 cases:
+no skill passed 20, mostly lacking Redesign verification; 1.2.0 passed 28;
+the first 1.3.0 candidate passed 26, and repeats confirmed the fix for its one
+real regression. `--no-skill` reproduces that baseline. The
+[1.2.0 regression record](docs/evaluations/live-contract/fructal-1.2.0/)
 records the development matrix, discovered failures, and focused corrections.
 
 The historical 1.1.1 candidate passed the [complete 24-case release
@@ -245,8 +251,9 @@ matrix](docs/evaluations/live-contract/fructal-1.1.1/) and [21 repeated
 high-risk runs](docs/evaluations/live-contract/fructal-1.1.1-critical-repetitions/).
 Development-failure archives remain beside them so the published evidence does
 not hide the iterations that changed the contract and evaluator. These scores
-do not validate 1.2.0. The harness is a development regression suite, not a
-held-out benchmark or evidence of benefit over a no-skill baseline.
+do not validate 1.3.0. The harness is a development regression suite, not a
+held-out benchmark; its no-skill comparison is bounded development evidence,
+not a general benefit claim.
 
 ## Origin and independence
 

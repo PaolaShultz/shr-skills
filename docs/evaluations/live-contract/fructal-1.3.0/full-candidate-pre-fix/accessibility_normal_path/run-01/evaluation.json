@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval requires a consequence preview. Keyboard users reportedly cannot reach it, and screen-reader users receive no failure status to guide recovery. The fixture establishes only that the workflow is blocked. The proposal makes the preview reachable, reserves authorization for explicit approval, preserves work on cancellation or failure, and requires a status check before retrying an uncertain submission. It identifies status lookup support as unresolved and gives concrete keyboard and screen-reader verification scenarios. The execution events show only reads, the fixture snapshots match, and the response presents the checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

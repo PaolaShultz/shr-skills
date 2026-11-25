@@ -1,9 +1,9 @@
 ---
 name: fructal
-description: Use when a necessary rule or limit causes avoidable loss of progress, context, or ownership in a workflow. Preserve the constraint while improving completion, recovery, or handoff. Not for aesthetics, ordinary requirements, or local defects without that conflict.
+description: Use when a necessary rule or limit, such as approval, authentication, retention, scanning, a timeout, a permission, or a retry policy, makes people or systems lose entered work, repeat setup, duplicate effects, lose track of ownership, or stall at a handoff. Typical signs are re-entering data after a timeout or reauthentication, duplicate requests or charges after a retry, approvals stuck between teams or tools, and users recreating work they believe is gone. Not for aesthetics, ordinary requirements, or local defects without that conflict.
 license: MIT
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 ---
 
@@ -12,9 +12,10 @@ metadata:
 > A necessary constraint must guide the motion, never make the actor wrestle
 > with the system.
 
-Inspired by a tethered cap: preserve the constraint; redesign the motion.
-This is a design aim, not a promise that every burden can be removed. An actor
-may be a person, team, service, device, or software component.
+Inspired by a tethered cap: the cap must stay with the bottle, so the tether
+keeps it there while the hand moves freely. Preserve the constraint; redesign
+the motion. This is a design aim, not a promise that every burden can be
+removed. An actor may be a person, team, service, device, or software component.
 Use **Fructal Cap Design** publicly; `fructal` is the technical identifier.
 
 ## Decide whether it applies
@@ -85,6 +86,12 @@ Keep separate sources separate and mark assumptions. If constraints conflict,
 identify the competing outcomes and seek an authorized decision when needed;
 do not silently sacrifice one actor's safety, privacy, accessibility, or ownership.
 
+State each constraint as the property it protects: who must approve what before
+which effect, what must not persist where, which check must pass before
+release. That property is fixed. The mechanism that currently enforces it,
+such as where, when, and how the check interrupts, is open to redesign unless
+a source fixes the mechanism too. Most friction lives in the mechanism.
+
 Keep provenance and certainty distinct: `provided` identifies supplied material;
 `reported` is an attributed unverified claim; `observed` is direct inspection
 or measurement; `inference` is a derived conclusion; `open question` is an
@@ -107,6 +114,18 @@ not click count. Keep consequences and necessary choices legible before
 commitment; authentication or setup is not consent. Preserve work, context,
 position, ownership, and intent wherever safe. Put recovery beside failure.
 Give people accessible feedback and nonhuman actors inspectable state or events.
+
+These moves often keep a constraint while removing its friction. Treat them as
+candidates and check each against the constraint's source:
+
+| Friction | Candidate move |
+| --- | --- |
+| A gate interrupts and discards work | Preserve work before the gate, within the storage the constraint allows; resume at the same position after it |
+| A retry or unknown outcome may repeat an effect | Use an idempotency key or a status check before replay; show the pending state |
+| A request stalls between actors or channels | Give it one durable record and identifier that every channel shows, with a named current owner and next step |
+| A constraint appears after effort is spent | Surface it before the effort, where it applies |
+| A rule is enforced by destroying or hiding state | Use an honestly labelled reversible state with a restore path |
+| A slow required step blocks the actor | Acknowledge receipt at once, run the step asynchronously, and report the outcome where the actor will look |
 
 Before finalizing, apply all six questions to the affected motion:
 
@@ -135,6 +154,19 @@ status before replaying an action that could duplicate an effect. Check who
 owns recovery and what state survives; do not assume a timeout means failure.
 In Implement, revisit the six questions against observed results.
 
-Report the useful outcome, its evidence, and remaining uncertainty concisely.
+## Report
+
+Lead with the useful outcome, then its evidence and remaining uncertainty,
+concisely. Its parts follow the mode:
+
+- Review: findings ranked by consequence, each naming the retained constraint
+  and its source, the obstruction and its evidence, and who loses what.
+- Redesign: the protected properties, the new motion including its failure
+  and recovery paths for each affected actor, open questions, and a
+  verification plan with concrete checks of the changed paths and of
+  unrelated state that must stay untouched.
+- Implement: the change, checks run with their observed results, untouched
+  state confirmed, and what remains unverified.
+
 Distinguish proposals, attempted actions, verified changes, and untested paths.
 A passing automated check is not real-world or affected-actor acceptance.

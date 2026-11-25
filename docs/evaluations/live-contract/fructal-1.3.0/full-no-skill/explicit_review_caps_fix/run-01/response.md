@@ -1,0 +1,1 @@
+[workflow.txt](./workflow.txt) contains `state=blocked` on line 1. That state is consistent with the required approval constraint. Review mode was the maximum authorized action, so I left the file unchanged.

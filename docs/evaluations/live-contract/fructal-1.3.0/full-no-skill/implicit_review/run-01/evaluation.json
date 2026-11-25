@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "source_of_truth",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identified approval as mandatory and reported that it stalls progress. The read confirms `state=blocked`. The finding identifies gaps in the record: the required approval, its owner, and its decision. Whether approval caused the block remains unverified. The executor delivered findings only, and the events show a single read with identical fixture snapshots.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

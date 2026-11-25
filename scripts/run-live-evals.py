@@ -270,9 +270,12 @@ def prepare_isolated_state(
 
 
 def build_execution_prompt(
-    skill_text: str, case: dict[str, Any], first_turn: str
+    skill_text: str,
+    case: dict[str, Any],
+    first_turn: str,
+    executor_skill: bool = True,
 ) -> str:
-    if case.get("prompt_style", "embedded") == "discovery":
+    if not executor_skill or case.get("prompt_style", "embedded") == "discovery":
         return (
             "Complete the user request naturally. Work only inside the "
             "disposable fixture and do not access external services.\n\n"
@@ -758,6 +761,7 @@ def run_case(
     archive: Path | None,
     keep_failures: bool,
     judge_model: str | None = None,
+    executor_skill: bool = True,
 ) -> None:
     run_root = Path(
         tempfile.mkdtemp(prefix=f"fructal-eval-{case['id']}-{repetition:02d}-")
@@ -774,7 +778,7 @@ def run_case(
             run_root / "executor-state",
             repo,
             skill_text,
-            install_skill=prompt_style == "discovery",
+            install_skill=executor_skill and prompt_style == "discovery",
         )
         executor_env.update(
             {
@@ -785,7 +789,9 @@ def run_case(
             }
         )
         persistent = bool(case.get("follow_up_turns"))
-        first_prompt = build_execution_prompt(skill_text, case, case["task"])
+        first_prompt = build_execution_prompt(
+            skill_text, case, case["task"], executor_skill
+        )
         executed = invoke(
             executor_command(
                 runner,
@@ -838,7 +844,11 @@ def run_case(
         validate_fixture(
             case, case_dir, before, after, response, executor_events
         )
-        expected_read = case.get("expected_skill_read", "not_applicable")
+        expected_read = (
+            case.get("expected_skill_read", "not_applicable")
+            if executor_skill
+            else "not_applicable"
+        )
         observed_read = skill_read_observed(executor_events, skill_text)
         if expected_read == "yes" and not observed_read:
             raise EvaluationFailure(
@@ -966,6 +976,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--repetitions", type=int, default=1)
     parser.add_argument("--archive-dir", type=Path)
+    parser.add_argument(
+        "--no-skill",
+        action="store_true",
+        help="baseline: give the executor no skill; the judge still uses the contract",
+    )
     return parser.parse_args()
 
 
@@ -1039,6 +1054,7 @@ def main() -> None:
     print(
         f"RUNNER: {version}; MODEL: {args.model}; "
         f"CASES: {len(selected_ids)}; REPETITIONS: {args.repetitions}"
+        f"{'; EXECUTOR SKILL: none' if args.no_skill else ''}"
     )
     failures = 0
     for repetition in range(1, args.repetitions + 1):
@@ -1057,6 +1073,7 @@ def main() -> None:
                     archive,
                     args.keep_failures,
                     judge_model=args.judge_model,
+                    executor_skill=not args.no_skill,
                 )
             except EvaluationFailure as error:
                 failures += 1
@@ -1076,6 +1093,7 @@ def main() -> None:
                 "repetitions": args.repetitions,
                 "runner": version,
                 "skill_git_ref": args.skill_git_ref,
+                "executor_skill": not args.no_skill,
                 "skill_sha256": hashlib.sha256(
                     skill_text.encode()
                 ).hexdigest(),

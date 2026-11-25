@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture records only `state=blocked`, so I couldn’t verify which archive expired or who owns it. No archive was deleted and no notification was sent.
+
+Please provide the archive path or ID, the retention rule that establishes its expiry, and the owner’s notification destination inside the fixture. Completing the deletion and recording the notification also requires write access to the fixture.

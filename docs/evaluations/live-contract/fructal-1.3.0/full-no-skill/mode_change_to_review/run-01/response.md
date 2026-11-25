@@ -1,0 +1,1 @@
+I observed one line in `workflow.txt`: `state=blocked`. I made no changes. I’ll keep future work review-only.

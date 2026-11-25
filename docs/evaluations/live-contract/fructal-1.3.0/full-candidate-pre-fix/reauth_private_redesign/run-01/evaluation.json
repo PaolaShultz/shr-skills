@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Mandatory reauthentication reportedly discards entered work, and the shared-device policy limits where a draft can survive. The fixture establishes only that the workflow is blocked. The proposed flow keeps the draft locked until the original account reauthenticates, restores entries and focus, and leaves submission as a separate choice. Its verification plan exercises expiry mid-field, failed and wrong-account sign-in, accessible recovery, and retry after an uncertain submission. Volatile-memory retention and page survival during sign-in are identified as feasibility questions. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

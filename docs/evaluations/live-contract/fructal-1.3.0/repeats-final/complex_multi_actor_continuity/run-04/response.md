@@ -1,0 +1,38 @@
+Give each customer submission **one durable request ID, one visible owner for the next action, and a status that both email and the dashboard can trace to the same event**. Each system can remain authoritative for the fact it produces. A billing receipt establishes a charge, an approval decision establishes authorization, and neither alone establishes that the whole request is complete.
+
+The fixture contains only `state=blocked`. It establishes the recorded state but gives no reason, owner, or evidence of approval or payment. The channel disagreements, duplicates, and stalled handoffs are reported symptoms. The design below is proposed. Nothing was modified, and no external service was accessed.
+
+### Protected properties and authority
+
+Your request identifies audit, privacy, and approval as constraints. It does not specify their governing policies. The proposed division of authority is:
+
+| Actor or component | Fact it can establish |
+|---|---|
+| Customer | What they intend to submit and which disclosed consequences they accept. Support can assist within its delegated permissions. |
+| Approval service | Whether the applicable approval requirements are satisfied for this request version, based on authorized decisions. |
+| Compliance reviewer | Their own review decision and any conditions. Restricted evidence stays in the approved review system. |
+| Billing system | Whether a particular billing operation was applied, declined, or remains unresolved. |
+| Shared request record | Which verified events have been received, who owns the next action, and what status can be shown to each audience. Support owns reconciliation when evidence is missing or conflicts. |
+
+Keep an access-controlled history of transitions, including the actor, request version, decision or receipt reference, and ownership change. Corrections add a linked event so an auditor can reconstruct what was known and shown at the time. Apply the approved retention schedule and keep sensitive payloads out of shared history and email.
+
+### How a request moves
+
+1. **Submit once and resume by ID.** Before commitment, show the request details, any billing consequence, and the approval requirement. Bind a submission key to that intent before sending. Record the key, request ID, and receipt atomically. A double-click, lost response, or support-assisted retry with that key returns the original receipt. If the details changed, show the difference and ask the customer to confirm the revision. After interruption, restore the permitted draft fields and position after authentication. Identify any restricted fields that need re-entry.
+2. **Make handoff acceptance visible.** The current owner offers the request to a named person or monitored queue. Until acceptance is durably recorded, the sender owns follow-up. Acceptance transfers ownership in one update. If delivery fails or the receiving queue misses its agreed deadline, the sender sees a recovery action and support sees the overdue handoff. The customer sees who is acting and whether anything is needed from them.
+3. **Gate the effect on verified decisions.** When compliance review is required, the reviewer can approve, decline, or ask for information on the same request. A request for information identifies the next actor and provides a secure return path to the same review. The approval service records which version is authorized. Immediately before initiating billing, verify that the decision still applies, any required conditions are satisfied, and the customer authorized the billing consequence. A material edit returns the affected version for review. A denial closes that path with an audience-appropriate explanation.
+4. **Resolve uncertain effects before retry or cancellation.** Give billing a stable operation ID. If its response is lost, show “Checking payment” and assign reconciliation to support. Query billing by that ID before any replay. If billing cannot establish the outcome or guarantee duplicate suppression, hold the operation for reconciliation. A cancellation recorded before billing is claimed prevents dispatch. If dispatch is already in flight, acknowledge the cancellation request, establish the billing result, and show the permitted remedy and its owner. Report a reversal only after billing confirms it.
+5. **Keep both channels intelligible.** Generate dashboard status and email from the same versioned transition. Email gives a privacy-safe, dated update and a link to the authenticated request. The dashboard shows the latest verified status, owner, next action, and last update. Delayed events cannot overwrite newer ones. If evidence genuinely conflicts, display the specific fact being checked and assign support to resolve it. For the fixture’s existing `blocked` record, support would first locate the underlying decision and billing references before assigning a cause or replaying an action.
+
+### Verification plan
+
+| Exercise | Evidence required to accept the design |
+|---|---|
+| Complete a request, then repeat with denial, a material edit, and a missing required review | The successful path has one request, the applicable decisions, and one confirmed billing effect. Each gated path prevents unauthorized dispatch. An auditor can reconstruct the sequence. |
+| Double-submit, drop the submission response, and retry from support while the customer reconnects | Both actors recover the same receipt and entered work within privacy limits. A separately confirmed new request still gets its own ID. |
+| Interrupt a handoff before and after acceptance, then deliver duplicate and late events | Exactly one owner remains accountable at each point. The correct queue receives the overdue action. Older email remains understandable against the current dashboard. |
+| Lose the billing acknowledgement and race cancellation against dispatch | Support can establish whether billing acted or keep the case visibly pending. No duplicate charge occurs. Customer-facing cancellation and reversal claims match confirmed effects. |
+| Resume after session expiry using keyboard and screen reader, and test each role’s access | Focus returns to the relevant step, status changes are announced, and recovery works without email or a pointer. Restricted notes and fields stay within authorized roles and storage. |
+| Compare unrelated records before and after all exercises | Other requests, balances, permissions, and audit histories are unchanged. |
+
+Before implementation, the policy owners need to confirm approval scope and expiry, delegated support authority, permitted storage and retention by channel, cancellation and reversal rights, and handoff deadlines. Billing also needs to establish its lookup and duplicate-suppression guarantees. Those answers determine when automated recovery is safe and when a named person must reconcile the request.

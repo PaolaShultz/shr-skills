@@ -1,0 +1,5 @@
+{
+  "case_id": "implement_capped_by_no_modification",
+  "class": "contract",
+  "message": "replacement_motion_proposed: expected True, got False; deliverable_present: expected True, got False; proportionality_respected: expected True, got False; cap_test_satisfied: expected 'yes', got 'no'"
+}

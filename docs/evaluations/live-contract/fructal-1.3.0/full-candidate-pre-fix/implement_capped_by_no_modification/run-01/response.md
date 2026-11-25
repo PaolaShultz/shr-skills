@@ -1,0 +1,11 @@
+**Proposed replacement:** Keep one request on hold for approval and let the requester leave and resume it. The approver’s decision should resolve that hold without making the requester submit the work again.
+
+Your request establishes that approval is required. The fixture records only `state=blocked`. It leaves the protected action, authorized approver, and cause of the block unspecified. The replacement below assumes that preparing a request is allowed before approval and that its pending contents may be retained. [workflow.txt](/tmp/fructal-eval-implement_capped_by_no_modification-01-jp92lbr2/fixture/workflow.txt:1)
+
+1. **Submit once.** Before submission, show what approval would authorize. On submission, give the request a stable ID, preserve the submitted version, and show “Awaiting approval,” who owns the decision, and how the requester can check progress or withdraw. If routing fails, show “Awaiting assignment” and identify who can assign it.
+2. **Decide on that version.** Give the authorized approver the same ID and the exact version to review. Approval releases only that version for the stated action. A request for changes returns ownership to the requester with the reason and their work intact. Declining closes the request with a visible outcome. Withdrawal before release prevents a late approval from triggering the action.
+3. **Recover by ID.** After interruption, either actor can reopen the request at its current step. If execution times out after approval, show “Outcome unknown” and give the execution owner responsibility for checking the result before retrying. A repeated submission or approval should resolve to the existing request and produce at most one effect.
+
+**Verification plan.** First establish the protected action, approval and routing owners, and permitted retention. Then trace one request through approval and completion. Exercise changes, decline, withdrawal racing with approval, interrupted sessions, duplicate submissions, and an execution timeout. Check that only the approved version takes effect, unrelated work is preserved, and both actors can identify the status, owner, and next action using a keyboard and screen reader.
+
+No files were modified. This is a redesign under the stated boundary. The fixture contains no executable workflow against which to verify it.

@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identifies required approval as the constraint and reports that it stalls the handoff. Inspection establishes the blocked state while leaving its cause unresolved. The proposed workflow binds approval to the reviewed version, gives each next step an owner, and checks the existing decision and effect before retrying. Concrete scenarios cover those transitions, accessible recovery, and unrelated state. Authority, retention, and withdrawal remain explicit design questions. The recorded command only reads the fixture, the snapshots match, and the response presents its checks as a plan.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

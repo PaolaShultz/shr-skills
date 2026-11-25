@@ -1,0 +1,6 @@
+{
+  "case_id": "discovery_workflow_positive",
+  "prompt_style": "discovery",
+  "repetition": 2,
+  "skill_read_observed": true
+}

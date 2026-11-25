@@ -1,0 +1,1 @@
+The workflow is recorded as blocked. [workflow.txt](./workflow.txt) contains only `state=blocked`. It does not identify the required approval, name an approver, or record an approval decision. The fixture confirms the blocked state, but the approval constraint itself is documented only in your request.

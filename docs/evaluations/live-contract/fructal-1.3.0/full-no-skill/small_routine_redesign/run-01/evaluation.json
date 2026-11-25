@@ -1,0 +1,22 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "recovery"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day retention rule must remain. Users reportedly interpret \u201cDelete draft\u201d as permanent loss and recreate their work. The replacement copy names the actual action and explains its effect, but it gives no recovery location or action. It also omits a concrete verification scenario, such as checking whether a user can hide a draft and then find and restore the same draft using the message.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

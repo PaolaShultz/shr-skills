@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "handoff",
+    "source_of_truth",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identified approval as required and reported a possible link to the block. Inspection established a concrete handoff problem: `state=blocked` gives the next actor neither an owner nor a place to check the decision. Whether approval caused the block remains unresolved. Asking where the decision is recorded seeks evidence, not authorization. The read-only events and matching snapshots support the findings-only outcome.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,14 @@
+**Lock the form in place when reauthentication is required.** The user’s report establishes the two requirements. Reauthentication is mandatory, and sensitive form contents must stay out of persistent local storage on shared devices. The fixture records only `state=blocked`. It does not establish what discards the form.
+
+**Proposed recovery flow**
+
+1. Keep the draft, current step, and focused field in volatile page memory while the user edits. At expiry, cover the form with a locked view that also hides its contents from assistive technology. The server must enforce reauthentication before accepting a submission.
+2. Show “Your form is paused. Sign in to continue. Closing or refreshing this tab will discard your entries.” Offer **Sign in to continue** and **Discard and leave**. Keep the form page alive during sign-in. Pass only authentication data through that flow.
+3. After the server verifies fresh authentication for the original account, restore the same step, entries, and keyboard focus. Announce “Form restored.” Submission still requires the user to choose **Submit**.
+4. If sign-in fails, is canceled, or returns a different account, keep the form locked. Offer a retry with the original account without revealing its identity or any entries. Confirm an explicit discard, then clear the draft. Clear it on sign-out as well. If expiry interrupted an already-sent submission, check its server status before offering a retry so the user can tell whether it went through.
+
+**Feasibility to confirm.** The policy owner needs to confirm that a locked draft may remain in volatile memory and for how long. The authentication owner needs to confirm that sign-in can preserve the live page. Recovery after a reload, tab closure, or browser crash would require a separately authorized storage design, such as an account-bound server draft. Until then, the interface should promise recovery only while the page survives.
+
+**Verification plan.** Fill several steps with distinctive test values and force expiry mid-field. Check that the locked form exposes no values visually or through a screen reader, that direct submission is blocked, and that sensitive values are absent from persistent browser storage, caches, and authentication URLs. Exercise failed, canceled, wrong-account, and successful sign-in using only the keyboard and then a screen reader. Verify exact restoration of entries and position for the original account, zero automatic submissions, and a single recorded result after an interrupted submission and retry. Check discard, sign-out, refresh, and browser Back for stale values on the shared device.
+
+This is a design proposal. No changes were made or tests run.

@@ -1,0 +1,3 @@
+Keep the confirmation as described. The single explicit decision lets the user authorize an irreversible action on a clearly named target. Keyboard and screen reader users can make that choice, and canceling preserves their input. The complaint identifies no avoidable loss of progress, so Fructal Cap Design does not apply.
+
+The fixture records only `state=blocked`, without a cause. The assessment relies on your description. I made no changes.

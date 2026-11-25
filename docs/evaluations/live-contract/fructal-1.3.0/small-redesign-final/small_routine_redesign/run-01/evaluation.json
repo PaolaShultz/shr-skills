@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day rule requires retention, while the misleading Delete label reportedly leads users to recreate hidden drafts. The proposed Hide draft action, status message, and adjacent Restore draft action define a complete recovery sequence. The keyboard check tests whether the same draft returns intact and whether other drafts and retention dates stay unchanged. The response treats restore availability and the retention start date as unknown and claims no successful test. The execution record shows only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

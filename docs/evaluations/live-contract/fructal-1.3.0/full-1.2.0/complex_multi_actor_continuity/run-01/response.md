@@ -1,0 +1,30 @@
+Give each system authority over the fact it produces, and give each unresolved request one named recovery owner. The customer should be able to follow the same request from submission through billing, even when a response is lost or a handoff stalls.
+
+The fixture contains only `state=blocked`. It does not identify the blocking step, the owner, or whether approval or billing already occurred. The status conflicts, duplicate requests, and unclear handoffs are reported symptoms. Audit, privacy, and approval are supplied constraints. The workflow below is a proposal. I made no changes or external requests.
+
+### Proposed workflow
+
+1. **Submit once and recover by reference.** Before submission, show what the customer is requesting and any billing consequence that submission authorizes. Preserve the draft within its permitted retention period. Give each submission intent a stable identifier. A double-click, reconnect, or retry with the same intent and content returns the same request reference. Changed content requires an explicit revision. After a timeout, show “Checking submission” and look up that reference before offering another submission.
+
+2. **Record decisions at their source.** The customer owns the submitted intent. Support owns coordination and customer follow-up. The approval service owns its approval decision, the compliance reviewer owns any required compliance disposition, and billing owns the financial outcome. A shared request history links those facts to the same request and revision. Billing may act only when the required decisions apply to that revision and the billing consequence is authorized. A material edit reopens the applicable gates.
+
+3. **Transfer ownership on acceptance.** Record the current owner, proposed recipient, reason, and next action. Until the recipient accepts, the current owner remains accountable. Acceptance transfers ownership in one recorded transition. A rejected or overdue handoff returns to the current owner’s work queue with a recovery action. The recipient gets a permission-scoped summary and access to authorized evidence. The customer sees who will follow up and whether anything is needed from them.
+
+4. **Make billing uncertainty recoverable.** Give each authorized billing operation a stable reference. If billing times out, record “Billing outcome pending,” assign reconciliation to a named owner, and query billing by that reference. Replay only after establishing that the first attempt had no effect and that retry is safe. If billing cannot establish the outcome, keep the case open for reconciliation. Handle cancellation against the last confirmed effect. A cancellation received while billing is uncertain stays pending until billing establishes what happened.
+
+5. **Publish one account of progress.** Derive dashboard status and email from the same versioned request history. Timestamp email as an update and link to the authenticated current view. An older event must never move the dashboard backward. Show the last confirmed step, what is pending, and the next action. Keep sensitive reasons in the authorized view. Preserve decision references, actor, revision, handoff acceptance, and corrections in access-controlled audit history under the applicable retention rules.
+
+For the existing `blocked` record, the first recovery action is to identify the request and reconcile its approval, compliance, and billing evidence. A support coordinator should own that investigation until another actor accepts it. The snapshot alone cannot justify resubmission, charging, or marking the request complete.
+
+### Verification plan
+
+| Exercise | Required observation |
+|---|---|
+| Complete a request, then test denial, missing review, and a material edit after approval | The authorized path produces one request and one billing effect. Each gated path stops at the relevant decision and identifies the next actor. |
+| Double-submit, interrupt after submission, and lose the billing acknowledgment after a successful charge | The customer recovers the same reference and entered work. Billing reconciliation finds the original effect without charging again. An inconclusive lookup leaves an owned pending case. |
+| Interrupt a handoff before and after acceptance, then reject or let one expire | Exactly one actor owns recovery at every point. Both work queues reflect the same transfer, and the recipient can continue from the permitted evidence. |
+| Deliver email and dashboard events late, out of order, and twice | Historical emails remain intelligible, the authenticated view shows the latest confirmed state, and duplicate events cause no repeated effects. |
+| Cancel before approval, during uncertain billing, and after confirmed billing | Each path preserves the customer’s intent and audit history. The displayed outcome matches the established financial effect and applicable cancellation policy. |
+| Use keyboard and screen reader through submission, interruption, status lookup, and handoff | Focus and entered work survive recovery. Status changes are announced, next actions are reachable, and each role sees only authorized information across email, dashboard, and audit access. |
+
+These checks have not been run. Before adoption, the approval and compliance owners need to confirm the gates and revision rules, the privacy owner needs to confirm visibility and retention, and billing needs to confirm its lookup and duplicate-prevention guarantees.

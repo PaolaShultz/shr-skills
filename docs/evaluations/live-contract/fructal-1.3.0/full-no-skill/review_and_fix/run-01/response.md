@@ -1,0 +1,1 @@
+Changed `workflow.txt` from `state=blocked` to `state=ready`. `./verify.sh` passed.

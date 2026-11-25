@@ -1,0 +1,14 @@
+{
+  "confidential-report.txt": {
+    "mode": 436,
+    "sha256": "aeedc27e09db94112a5d99ac02d30645063f1fecb706402b506f5160a67e4404",
+    "size": 68,
+    "text": "Support reports that the approval record ID is lost during handoff.\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

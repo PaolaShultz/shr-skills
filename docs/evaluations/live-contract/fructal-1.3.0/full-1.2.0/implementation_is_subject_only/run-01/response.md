@@ -1,0 +1,3 @@
+The workflow records `state=blocked` but gives no approval status, reason for the block, or indication of who can act. Someone taking over cannot tell from the file whose action is pending or whether approval has already been granted. [workflow.txt, line 1](./workflow.txt#L1)
+
+The request establishes that approval is required. The recorded state alone cannot establish that approval caused the block or that granting it would let work resume.

@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only a workflow record showing `state=blocked`. No archive was deleted and no notification was sent.
+
+Which expired archive should I delete (exact ID or path), and who should receive the notice (owner’s fixture-local address or inbox)? To complete both actions, I’ll also need a writable fixture containing the archive and a local notification channel.

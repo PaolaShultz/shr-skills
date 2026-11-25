@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Required scanning delays acknowledgement, and the submitter reports losing the title, files, return location, and request identity on retry. The proposed receipt acknowledges durable intake while scanning still gates completion. Looking up the original ID before retrying lets the service resume missing uploads and recognize a delayed send as the same submission. The verification plan tests both a partial upload and a lost response after acceptance. Staging location and retention remain open design decisions. The recorded commands only read the fixture, the snapshots match, and the response presents its checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

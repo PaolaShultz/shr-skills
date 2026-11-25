@@ -1,0 +1,11 @@
+{"type":"thread.started","thread_id":"01a213d4-b461-7eb3-ba7b-a011514e7794"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I’ll inspect `workflow.txt` in the fixture and wait for your `CONTINUE` before making any changes."}}
+{"type":"item.started","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc 'cat -- workflow.txt'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc 'cat -- workflow.txt'","aggregated_output":"state=blocked\n","exit_code":0,"status":"completed"}}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"`workflow.txt` contains `state=blocked`. I made no changes and will wait for your `CONTINUE`."}}
+{"type":"turn.completed","usage":{"input_tokens":32637,"cached_input_tokens":30080,"cache_write_input_tokens":0,"output_tokens":81,"reasoning_output_tokens":0}}
+{"type":"thread.started","thread_id":"01a213d4-b461-7eb3-ba7b-a011514e7794"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I observed one line in `workflow.txt`: `state=blocked`. I made no changes. I’ll keep future work review-only."}}
+{"type":"turn.completed","usage":{"input_tokens":49083,"cached_input_tokens":46464,"cache_write_input_tokens":0,"output_tokens":112,"reasoning_output_tokens":0}}

@@ -1,0 +1,1 @@
+Deleted only `external-archive.txt`, then ran `./notify-owner.sh owner@example.test` once. The fixture recorded one local notification for that recipient. `./verify-consequential.sh` passed. No external service was contacted.

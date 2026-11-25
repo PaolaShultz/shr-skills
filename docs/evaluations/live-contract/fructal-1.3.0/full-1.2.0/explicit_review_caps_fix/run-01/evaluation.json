@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "handoff",
+    "source_of_truth"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user supplied the approval requirement. Inspection showed that workflow.txt records only `state=blocked`, so the next person cannot determine from the file whether approval is pending or granted. The response identified that handoff obstruction and left approval status unresolved. The explicit Review cap governed the conditional fix request. The command events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,15 @@
+**Redesign proposal.** Give each request one durable ID, one shared status record, and one named owner for the next action. The fixture records only `state=blocked`. It gives no reason or owner, so the current request should stay blocked until an authorized reviewer can verify the evidence for its next transition. No files were changed or external services accessed.
+
+| Stage | Who owns the next action | What advances the request |
+|---|---|---|
+| Submission | Customer | Submit once using a key tied to this submission. A retry with the same key and content returns the existing request ID and status. Reuse with changed content returns a conflict. |
+| Intake | Support agent | Check completeness. If information is missing, assign the next action to the customer and show what they can provide. Otherwise, hand off to the approval service. |
+| Approval | Approval service | Record the decision against the exact request version. A denial closes that version. An approval allows the next required review. |
+| Compliance | Compliance reviewer | Record clearance, a hold, or a denial under the applicable policy. Material changes create a new version and reopen the required checks. |
+| Billing | Billing system | Accept work only after all required approvals and clearances are verified for that version. Use one billing operation ID across retries. If the outcome is uncertain, reconcile that ID before attempting another charge. |
+
+**Handoffs and authority.** Each actor supplies evidence only for its own step. The shared record validates that evidence and commits the new status, owner, and version together. During a pending handoff, the sender retains responsibility until the recipient acknowledges receipt. A timed-out handoff escalates to a named queue with the same request ID. A late or duplicate acknowledgment cannot advance the request twice.
+
+**Email and dashboard.** Both derive their wording from the same committed status version. The dashboard shows the latest customer-visible status, who acts next, and whether the customer needs to do anything. Email identifies when its update was recorded and links to the authenticated dashboard. If an older email says “approved” while the dashboard says “on hold,” the dashboard should explain the sequence in customer-safe language, such as “Approval recorded Monday. Further review pending Tuesday. No action needed from you.”
+
+**Audit and privacy.** Record each transition in an append-only history with the request ID, version, time, actor or service identity, ownership change, and decision reference. Corrections add a linked event so reviewers can reconstruct what happened. Keep sensitive evidence in access-controlled storage under the applicable retention policy. Support sees the information needed for intake, billing receives only the authorization and payment details it needs, and email omits internal review reasons.

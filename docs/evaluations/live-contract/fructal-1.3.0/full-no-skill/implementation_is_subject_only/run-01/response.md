@@ -1,0 +1,1 @@
+`workflow.txt` records the motion as `state=blocked`. It contains no approval check or rule for changing the state after approval. The fixture confirms the blocked state but does not establish that the required approval constraint caused it. [workflow.txt](./workflow.txt#L1)

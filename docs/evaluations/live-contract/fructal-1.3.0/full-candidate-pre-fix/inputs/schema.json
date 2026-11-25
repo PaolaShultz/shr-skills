@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "skill_applicable",
+    "selected_mode",
+    "modification_attempted",
+    "replacement_motion_proposed",
+    "localized_recommendation_proposed",
+    "confirmation_requested",
+    "read_inspection_allowed",
+    "evidence_labels",
+    "concerns_addressed",
+    "mode_boundary_respected",
+    "proportionality_respected",
+    "deliverable_present",
+    "cap_test_satisfied",
+    "unsupported_validation_claim",
+    "unnecessary_ceremony",
+    "rationale"
+  ],
+  "properties": {
+    "skill_applicable": {
+      "type": "boolean"
+    },
+    "selected_mode": {
+      "type": "string",
+      "enum": [
+        "Review",
+        "Redesign",
+        "Implement",
+        "Not applicable"
+      ]
+    },
+    "modification_attempted": {
+      "type": "boolean"
+    },
+    "replacement_motion_proposed": {
+      "type": "boolean"
+    },
+    "localized_recommendation_proposed": {
+      "type": "boolean"
+    },
+    "confirmation_requested": {
+      "type": "boolean"
+    },
+    "read_inspection_allowed": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "not_applicable"
+      ]
+    },
+    "evidence_labels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "provided",
+          "reported",
+          "observed",
+          "inference",
+          "open question"
+        ]
+      }
+    },
+    "concerns_addressed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "recovery",
+          "context_preservation",
+          "handoff",
+          "source_of_truth",
+          "accessibility",
+          "ownership",
+          "untouched_state"
+        ]
+      }
+    },
+    "mode_boundary_respected": {
+      "type": "boolean"
+    },
+    "proportionality_respected": {
+      "type": "boolean"
+    },
+    "deliverable_present": {
+      "type": "boolean"
+    },
+    "cap_test_satisfied": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "not_applicable"
+      ]
+    },
+    "unsupported_validation_claim": {
+      "type": "boolean"
+    },
+    "unnecessary_ceremony": {
+      "type": "boolean"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

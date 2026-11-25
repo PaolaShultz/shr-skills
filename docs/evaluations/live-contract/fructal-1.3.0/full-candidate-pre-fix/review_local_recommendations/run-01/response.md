@@ -1,0 +1,3 @@
+**Highest-priority finding — The recorded block gives the person waiting no actionable feedback.** You identified approval as required and reported that it is holding up the work. The fixture confirms only `state=blocked`. From that record alone, the person waiting cannot tell which approval is outstanding or whether they need to act. The record also leaves the cause and duration of the block unverified. [workflow.txt, line 1](/tmp/fructal-eval-review_local_recommendations-01-l2b79f77/fixture/workflow.txt:1)
+
+**Recommendation.** Keep the approval requirement. At the point where the blocked status appears, identify the outstanding approval once confirmed and clarify whether the person viewing it needs to act.

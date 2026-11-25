@@ -30,7 +30,7 @@ technical, physical, service, or operational domain.
 Case results belong to their recorded versions and observation windows, not
 automatically to the latest skill. The current contract is
 [`skills/fructal/SKILL.md`](../skills/fructal/SKILL.md); the
-[1.2.0 regression record](evaluations/live-contract/fructal-1.2.0/)
+[1.3.0 evaluation record](evaluations/live-contract/fructal-1.3.0/)
 documents that revision's checks. Historical records below are not new
 instructions or current deployment-status claims.
 
@@ -192,6 +192,22 @@ These are development cases using `gpt-5.6-sol` for executor and separate
 evaluator invocations. They do not establish held-out performance, cross-model
 reliability, benefit over a no-skill baseline, or affected-user acceptance.
 The older 1.1.1 results above do not validate 1.2.0.
+
+### Version 1.3.0 and the no-skill baseline
+
+**Observed:** The [1.3.0 evaluation record](evaluations/live-contract/fructal-1.3.0/)
+runs the same 29 development cases with no skill, 1.2.0, and the 1.3.0
+candidate, using `gpt-6.2-astra` as executor and separate judge. No skill
+passed 20; every failure was a Redesign, chiefly without a concrete
+verification scenario. Without the skill, the model passed every Review,
+Implement, authorization, read-boundary, and non-trigger case. Version 1.2.0
+passed 28. The 1.3.0 candidate passed 26. Repeats isolated one real
+regression, a Redesign verification gap, which the released text corrects.
+
+**Inference:** On this model, the skill's measured contribution is complete,
+verifiable Redesigns rather than mode or authority discipline. The explicit
+case prompts and small repeat counts limit that conclusion; it does not
+establish cross-model reliability or affected-user acceptance.
 
 ### What self-application proves and does not prove
 

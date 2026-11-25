@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "handoff",
+    "source_of_truth",
+    "context_preservation",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval is required, and the inspected fixture records only a blocked state, leaving the next actor unable to identify the action or approver from that record. The proposal defines a decision sequence and concrete checks for matching and out-of-scope approvals. Its recovery path stops at recording an unresolved issue. It leaves unclear who receives that issue and how they can correct it and resume. The read events and matching snapshots corroborate that the fixture stayed unchanged.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

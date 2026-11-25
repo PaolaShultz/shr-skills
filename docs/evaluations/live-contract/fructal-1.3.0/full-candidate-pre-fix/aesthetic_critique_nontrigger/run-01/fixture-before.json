@@ -1,0 +1,14 @@
+{
+  "poster.txt": {
+    "mode": 436,
+    "sha256": "268803ce0f9acccb58d3025705ac04c39b6ce1dd5de1303d2b5e8241fc4219ab",
+    "size": 170,
+    "text": "Background: warm cream. Headline: dark navy serif, 54 pt. Body: muted gray sans-serif, 12 pt. Accent: coral. Composition: centered title above two balanced text columns.\n"
+  },
+  "workflow.txt": {
+    "mode": 436,
+    "sha256": "8ec4c039b66c98d4e1fe599c4669f86150977fce3408e9e3c479b00362f9e248",
+    "size": 14,
+    "text": "state=blocked\n"
+  }
+}

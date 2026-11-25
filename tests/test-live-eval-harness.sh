@@ -60,6 +60,28 @@ expect_success "full fake live matrix" \
 expect_success "historical skill selection" \
   "${evaluator}" --codex-bin "${fake_codex}" \
   --skill-git-ref HEAD --case implicit_review
+prompt_log="${temporary_root}/no-skill-prompt.txt"
+no_skill_archive="${temporary_root}/no-skill-archive"
+expect_success "no-skill baseline" \
+  env FAKE_CODEX_PROMPT_LOG="${prompt_log}" \
+  "${evaluator}" --codex-bin "${fake_codex}" --no-skill \
+  --archive-dir "${no_skill_archive}" --case implicit_review
+if [[ ! -s "${prompt_log}" ]] || grep -qx 'SKILL' "${prompt_log}" ||
+  grep -q 'name: fructal' "${prompt_log}" ||
+  ! grep -q '"executor_skill": false' "${no_skill_archive}/run-metadata.json"; then
+  record_failure "no-skill baseline exposed the skill or omitted its metadata"
+else
+  printf '%s\n' "PASS: no-skill baseline withholds the skill from the executor"
+fi
+skill_prompt_log="${temporary_root}/skill-prompt.txt"
+expect_success "embedded skill control" \
+  env FAKE_CODEX_PROMPT_LOG="${skill_prompt_log}" \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_review
+if ! grep -q 'name: fructal' "${skill_prompt_log}"; then
+  record_failure "embedded skill control did not send the skill"
+else
+  printf '%s\n' "PASS: embedded runs still send the skill"
+fi
 archive_dir="${temporary_root}/archive"
 expect_success "successful evidence archive" \
   "${evaluator}" --codex-bin "${fake_codex}" \

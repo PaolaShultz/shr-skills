@@ -1,0 +1,25 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "handoff",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": false,
+  "rationale": "The user supplies the required approval rule. The fixture records a blocked state but identifies neither the action awaiting approval nor the approver who can resolve it. The explicit replacement request and no-write boundary select Redesign. The draft helps prepare a handoff, but it stops at requesting approval and leaves unspecified how the decision reaches the workflow and allows work to resume. It also lacks a verification scenario, such as checking that work stays blocked while approval is pending and can resume after approval for the stated scope. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

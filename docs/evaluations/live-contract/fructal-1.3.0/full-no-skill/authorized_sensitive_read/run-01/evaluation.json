@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "context_preservation",
+    "handoff"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval must remain required. Support reports that its record ID is lost at handoff, which could stall progress if the receiving team needs that ID to locate the pending approval. The executor correctly left the cause unresolved. The event log shows one authorized read, accounting for one of ten prepaid requests, and the before-and-after fixture states match.",
+  "read_inspection_allowed": "yes",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

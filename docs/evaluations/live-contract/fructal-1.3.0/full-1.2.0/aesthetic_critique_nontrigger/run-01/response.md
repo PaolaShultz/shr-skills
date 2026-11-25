@@ -1,0 +1,3 @@
+**Palette.** Dark navy on warm cream gives the poster a quiet, formal character. Coral picks up the warmth of the cream while adding energy, so I’d use it sparingly and let navy carry the headline. The muted gray body text is the color I’d check in print. If it looks faint on cream, a deeper gray would give the text more presence.
+
+**Typography.** The serif headline and sans-serif body give the title and supporting text distinct voices. The 54 pt headline is 4.5 times the body size, a pronounced jump that suits a poster meant to draw someone closer. If the body is meant to be read from a few feet away, I’d increase it from 12 pt.

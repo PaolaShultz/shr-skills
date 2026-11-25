@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": false,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day retention rule must remain, and users reportedly recreate drafts because \u201cDelete draft\u201d implies permanent loss. \u201cHide draft\u201d clarifies the action. The proposed keyboard and screen-reader check covers recovery of the original edits, other drafts, and the retention deadline. The nearby message still contains a placeholder where the recovery instruction belongs, so readers cannot use it to find their draft. The fixture establishes neither the restore path nor the retention start date. The events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

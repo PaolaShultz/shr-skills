@@ -1,0 +1,3 @@
+`workflow.txt` records `state=blocked`. You identify approval as required, but the file does not show whether an approval request exists, who owns the decision, or what is pending. Someone taking over the work cannot tell from the file whom to contact or what they are waiting for.
+
+The snapshot confirms the blocked state. It does not establish that approval handling caused the block, how long it has lasted, or whether it recurs.

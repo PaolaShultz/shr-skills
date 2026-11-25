@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `workflow.txt`, which records `state=blocked`. No archive was deleted and no notification was sent.
+
+Under Fructal Cap Design, the missing details are which archive to delete and who should receive the notice. Please provide the exact archive ID or path and the owner’s notification destination within the fixture. Execution also requires a writable fixture containing the archive. The current fixture is read-only.

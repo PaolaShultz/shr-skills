@@ -1,0 +1,3 @@
+**Read-only inspection is allowed.** You authorized the read, and an ordinary access log requires no additional approval. I inspected `workflow.txt` locally.
+
+**Finding:** The file contains only `state=blocked`. Your request establishes that approval is required and attributes the block to that requirement. The file confirms the blocked state but gives the person waiting no way to tell what needs approval, who owns the decision, or what to do next. Whether another channel provides that information remains unknown.

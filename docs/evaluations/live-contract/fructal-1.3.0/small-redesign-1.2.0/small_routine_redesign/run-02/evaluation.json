@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day retention rule requires keeping drafts, and users reportedly recreate them because \u201cDelete draft\u201d implies permanent loss. \u201cHide draft\u201d describes the action before commitment. The proposed message explains retention and places \u201cRestore draft\u201d beside it. The verification plan checks recovery of the same draft and its contents after returning, along with screen-reader feedback and keyboard access. The fixture showed only `state=blocked`, so existing recovery remains an open question. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

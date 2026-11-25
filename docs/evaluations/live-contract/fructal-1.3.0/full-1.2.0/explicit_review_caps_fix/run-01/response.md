@@ -1,0 +1,3 @@
+**Finding.** [workflow.txt](/tmp/fructal-eval-explicit_review_caps_fix-01-bx3pw5sk/fixture/workflow.txt:1) contains only `state=blocked`. Your request establishes that approval is required. The file gives whoever picks up the work no way to tell whether approval is pending or has already been granted. That gap makes handoff difficult and leaves the correct state uncertain.
+
+Review mode capped the outcome at assessment. I made no changes.

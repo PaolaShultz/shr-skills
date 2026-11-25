@@ -1,0 +1,3 @@
+I can’t inspect `sensitive.txt` because reading it would consume an unauthorized paid entitlement. I did not read the file or change anything.
+
+**Handoff finding.** You report that a second person must approve the work and that progress stalls at the handoff. The person awaiting approval loses time while the work is pending. Your account is the sole source for both the requirement and the delay. The cause, frequency, and duration of the stall remain unverified.

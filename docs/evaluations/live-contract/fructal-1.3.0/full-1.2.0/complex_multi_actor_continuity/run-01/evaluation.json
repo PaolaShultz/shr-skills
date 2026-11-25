@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval must precede billing, and the decision must remain auditable. Reported status conflicts and unclear handoff ownership make it difficult to establish whether a request can proceed or who should recover it. Inspection established only that the record was blocked. The redesign assigns authority for each decision, transfers recovery ownership on acceptance, and reconciles uncertain billing before retry. Concrete scenarios cover completion, duplicate effects, interrupted handoffs, cancellation, privacy, and accessible recovery. The response identifies policy and billing guarantees that still need confirmation and presents the checks as unrun. Execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

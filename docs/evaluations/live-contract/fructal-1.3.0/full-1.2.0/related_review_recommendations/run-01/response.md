@@ -1,0 +1,4 @@
+The required approval should remain in place. The [fixture snapshot](./workflow.txt) confirms that the record is blocked. The two ID visibility issues and their connection to approval stalls come from your report. Both merit the same priority because each prevents someone from identifying the approval record.
+
+- **Status message.** Include the record ID as selectable text labeled “Record ID” beside the blocked status. This gives the person reading the message an exact reference they can quote.
+- **Support view.** Display the same ID value and label in the visible record details. This lets support match a quoted ID to the record even when several approvals have the same status.

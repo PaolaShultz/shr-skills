@@ -1,0 +1,9 @@
+{"type":"thread.started","thread_id":"01a21416-05d2-7322-b016-0df2e2aa34c0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I’ll use Fructal Cap Design to check the proposed wording against the fixture’s retention and recovery details."}}
+{"type":"item.started","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc \"pwd; rg --files --hidden -g '\"'!.git'\"'\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_1","type":"command_execution","command":"/bin/bash -lc \"pwd; rg --files --hidden -g '\"'!.git'\"'\"","aggregated_output":"/tmp/fructal-eval-small_routine_redesign-03-85igq1d0/fixture\nworkflow.txt\n","exit_code":0,"status":"completed"}}
+{"type":"item.started","item":{"id":"item_2","type":"command_execution","command":"/bin/bash -lc 'cat workflow.txt'","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_2","type":"command_execution","command":"/bin/bash -lc 'cat workflow.txt'","aggregated_output":"state=blocked\n","exit_code":0,"status":"completed"}}
+{"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"**Button:** Hide draft  \n**Message beside the button:** “This removes the draft from your list. We keep it for 30 days.”  \n**After hiding:** “Draft hidden.” Place a **Show draft again** action beside that message.\n\nThe recovery action is a proposal. Verify that it returns the same draft to the list with its contents intact, leaves other drafts untouched, and works with a keyboard and screen reader. Confirm when the 30-day period starts before publishing the timing copy.\n\nNothing was modified."}}
+{"type":"turn.completed","usage":{"input_tokens":55157,"cached_input_tokens":50560,"cache_write_input_tokens":0,"output_tokens":214,"reasoning_output_tokens":16}}

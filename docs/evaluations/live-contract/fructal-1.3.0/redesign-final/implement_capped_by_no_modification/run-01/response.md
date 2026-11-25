@@ -1,0 +1,11 @@
+**Proposed replacement workflow.** Give the requester a receipt when they submit work for approval. The receipt lets them leave, check progress, and resume the same request. The action requiring approval stays on hold until an authorized approver approves the submitted version.
+
+The approval requirement comes from your request. The fixture contains only `state=blocked`. It does not identify the action, the approver, or the cause of the block. The design assumes the system may retain the submitted work, or a reference to its exact version, while approval is pending.
+
+1. **Submit once.** Show the requester what they are asking to happen and whether approval will trigger it. On submission, give the requester and approver the same request ID. Show “Awaiting approval,” who owns the decision, and what happens next.
+2. **Make the handoff recoverable.** The approver can approve the exact version, decline with a reason, or return it for edits. A returned request takes the requester back to their saved work. Resubmitting keeps the ID and sends the revised version for a fresh decision. If routing fails, show who owns reassignment and keep the work available.
+3. **Resolve the outcome once.** Record approval before starting the protected action. After an interruption or timeout, look up the outcome by request ID before retrying. If it is still unknown, show “Checking outcome” and assign follow-up to the execution owner. If the requester withdraws a pending request, record which happened first so a late approval cannot execute a withdrawn request.
+
+**Verification plan.** Check that a requester can submit, leave, and return to the same ID and version. Exercise approval, decline, revision, and failed routing. Race withdrawal against approval and repeat submission after a timeout. Verify that only the approved version can execute, at most once, and that an unrelated request keeps its original contents and status. Using a keyboard and screen reader, check that each actor can identify the current owner, hear status changes, and reach the next action.
+
+The approver, retention rules, and whether approval itself authorizes execution remain open. This is a redesign only. No files were modified, no external services were accessed, and the proposed behavior was not executed or verified.

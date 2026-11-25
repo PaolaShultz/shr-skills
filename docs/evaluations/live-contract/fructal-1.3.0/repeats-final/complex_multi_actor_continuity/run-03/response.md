@@ -1,0 +1,30 @@
+Give the customer and support agent one request ID that survives retries, and use it to show **what is confirmed, who owns the next action, and how to resume**. The approval service, compliance reviewer, and billing system should each attest to the decision or effect they control. The dashboard can then show a consistent account of progress without claiming authority over those decisions.
+
+The [fixture](./workflow.txt) contains only `state=blocked`. It gives no reason, owner, or history. The status disagreement, duplicate requests, and unclear handoffs are reported problems. Audit, privacy, and approval are requirements supplied in the request. Their detailed policies are absent, so the following is a proposed redesign. Nothing was modified and no external service was accessed.
+
+### Proposed workflow
+
+| Point in the request | Motion, ownership, and recovery |
+|---|---|
+| **Submit or retry** | Before submission, show the requested effect, any billing consequence, and the required approvals. Give this submission intent a stable key. On confirmation, atomically bind the key to one request ID and record receipt. If the reply is lost, the customer or assisting agent can recover the receipt using the same key. A changed payload under that key requires an explicit decision. A deliberately separate request gets its own key. |
+| **Route for approval or review** | The approval service owns routing until the receiving reviewer accepts the handoff. Record acceptance and the ownership transfer together. A missed notification leaves the item visible to its current owner, with a retry or escalation action on the same record. The reviewer records their decision and any restricted rationale. If information is missing, name who must supply it, preserve permitted inputs, and return the answer to the same review. Support can assist within its permissions. |
+| **Release to billing** | Tie each decision to the version reviewed. Release a billing instruction only when all decisions required by policy cover that version and the customer has confirmed the applicable consequence. Billing owns reconciliation once it accepts the instruction. Give the billing effect its own stable key. If acknowledgement is lost, show “Billing confirmation pending” and query billing by that key. If billing cannot establish the outcome or guarantee a duplicate-safe replay, assign reconciliation to a named billing queue and hold further attempts. |
+| **Interrupt, amend, or cancel** | After reauthentication, restore the authorized request, permitted saved fields, and last step. Identify any field that privacy policy requires the actor to re-enter. A material amendment sends the affected decisions back for review. Record cancellation against the same ID and serialize it with release. A confirmed pre-release cancellation blocks dispatch. If dispatch may already have happened, show the cancellation as pending while billing establishes the outcome and the responsible team applies the authorized remedy. Keep the actor informed through resolution. |
+
+### Authority and visibility
+
+Use a versioned request history to assemble status. The request record governs receipt, version, and current owner. The approval service supplies approval evidence, the reviewer supplies the compliance disposition, and billing supplies evidence of the financial effect. Accept transitions only from the authorized source for that fact. A duplicate or late event cannot regress the displayed state. Conflicting evidence opens a reconciliation task with an owner and preserves the last confirmed fact.
+
+Generate dashboard and email updates from the same committed transition. Label email with its **as-of time** and link to authenticated current status, so an older message remains intelligible after the request advances. Show customers the responsible team, the next action, and whether anything is needed from them. Give authorized staff the assignment and recovery controls. Keep restricted reasons and billing details in their source systems. Use only policy-permitted references and metadata in the shared history, audit trail, and notifications.
+
+Before implementation, the policy owners need to confirm the required approvers, decision order and scope, retention and permitted storage of drafts and audit evidence, and cancellation rights around billing. Billing also needs to confirm its lookup and replay guarantees. The fixture supplies no basis for assigning its existing `blocked` item to a reviewer or declaring a charge failed.
+
+### Verification plan
+
+- Submit concurrently as customer and assisting agent for the same intent, drop the receipt, and retry after reauthentication. Verify one request, a recoverable receipt, preservation of permitted work, and a distinct ID for an intentionally separate request.
+- Interrupt the reviewer handoff before and after acceptance. Drop its notification, request more information, and resume. Verify one accountable owner at every point, a visible next action, preserved context, and an auditable transfer.
+- Exercise approval, denial, amendment, and missing review. Confirm only a fully authorized version reaches billing. Lose the billing acknowledgement after a successful charge and verify reconciliation finds that charge with no second effect. Race cancellation against release and verify the displayed outcome matches the confirmed effect.
+- Deliver email and dashboard events late, twice, and out of order. Compare each email with its dated transition and the dashboard with the latest confirmed state. Using keyboard and screen reader, verify that status changes are announced, focus returns to the interrupted step, and recovery is reachable by the responsible actor.
+- Compare audit evidence, access rights, retained fields, unrelated requests, and unrelated billing entries before and after each scenario. Verify continuity for authorized actors, privacy across roles and channels, and no changes to unrelated records.
+
+These are acceptance checks for the proposed design. Runtime behavior and affected-actor acceptance remain unverified.

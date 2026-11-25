@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "accessibility",
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "ownership",
+    "source_of_truth",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval requires a consequence preview. The user reports that keyboard users cannot reach it and screen-reader users receive no failure status. The fixture establishes only that the workflow is blocked. The redesign makes the preview reachable, keeps approval explicit, and gives users accessible feedback and a recovery path. Its verification plan checks focus return, failure announcements, preserved entries, and duplicate effects after a lost response. Retry depends on confirming the original submission\u2019s status, and the response identifies service lookup as unverified. The recorded commands only read the fixture, and the before and after snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

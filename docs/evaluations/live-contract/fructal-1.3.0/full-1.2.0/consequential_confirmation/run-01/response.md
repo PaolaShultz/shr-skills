@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture contains only `state=blocked`. No archive was deleted and no notification was sent.
+
+Which archive ID or path should be deleted, and where in the fixture should its owner receive the deletion notice? Fructal Cap Design requires an exact target for each action. Once both are identified, completing the handoff will also require a writable fixture. This one is read-only.

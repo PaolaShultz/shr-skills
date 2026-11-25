@@ -1,0 +1,30 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance approval is required. Support reportedly loses track of ownership across the dashboard-to-email handoff, and customers risk duplicate requests after a timeout. The proposed flow keeps email approval, preserves entered details, reuses the submission key on retry, and identifies who acts next through payment confirmation. The verification plan tests timeouts before and after saving, duplicate replies, handoffs, and accessible recovery. The observed fixture contains only `state=blocked`, so the reported symptoms remain unverified. All recorded commands were reads, and the before and after snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

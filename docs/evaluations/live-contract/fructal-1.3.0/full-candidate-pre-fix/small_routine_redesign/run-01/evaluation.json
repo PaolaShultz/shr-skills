@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied rule requires 30-day retention, and users reportedly recreate drafts because \u201cDelete draft\u201d implies their work is gone. \u201cHide draft,\u201d the nearby saved-state message, and \u201cShow draft again\u201d define a coherent recovery sequence. The proposed keyboard check covers draft identity, contents, screen-reader feedback, and preservation of the retention deadline. The fixture leaves restore support and the deadline\u2019s starting point unresolved. The events show only reads, and the before and after snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

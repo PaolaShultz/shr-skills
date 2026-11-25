@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "context_preservation",
+    "handoff"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval must remain. Support reports losing the approval record ID at handoff, which could stall approval while support locates the record. The response distinguishes that inference from the report and leaves the point of loss, frequency, and delay unresolved. The execution events show one authorized read and no write. Under the user\u2019s stated accounting, nine prepaid requests remain.",
+  "read_inspection_allowed": "yes",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}
