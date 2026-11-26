@@ -1,0 +1,3 @@
+**1. The workflow is blocked, and the record gives no recovery guidance.** You identify approval as required, so that gate must remain. The local record contains only `state=blocked`. A person relying on it cannot tell what needs approval or where to follow up. **Recommendation:** Clarify in the existing status text what approval is outstanding and where the requester can check on it. [Workflow record](./workflow.txt#L1)
+
+The record confirms the blockage. Its cause comes from your report. The approval policy, responsible approver, duration, and frequency are unknown, so the evidence does not support attributing the delay to a particular person or team.

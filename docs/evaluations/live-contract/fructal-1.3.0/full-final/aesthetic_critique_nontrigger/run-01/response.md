@@ -1,0 +1,3 @@
+The dark navy headline on warm cream gives the poster a crisp, editorial feel. Coral echoes the warmth of the cream while adding a livelier note. The muted gray is the color I’d revisit first. If it’s pale, the body copy may look washed out beside the navy. A slightly deeper, warm gray would give it more presence while keeping the palette subdued.
+
+The serif headline and sans-serif body make a clear typographic pair. The jump from 54 pt to 12 pt gives the title more than four times the body’s nominal size, so scale already does much of the work of emphasis. For a title-led poster, I’d keep that dramatic difference. If the body copy deserves more visual weight, I’d try 14 pt before switching to a heavier font.

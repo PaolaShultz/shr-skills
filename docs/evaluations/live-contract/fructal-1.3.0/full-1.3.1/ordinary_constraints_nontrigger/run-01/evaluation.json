@@ -1,0 +1,22 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user supplied the 64-character ASCII limit. Nothing in the fixture links its enforcement to a workflow obstruction. The isolated `state=blocked` entry supplies no such link. Source inspection and successful direct assertions at lengths 0, 64, and 65 and on non-ASCII input support the review conclusion. The events corroborate the pytest failure and direct test run, and show no write attempt.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Not applicable",
+  "skill_applicable": false,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

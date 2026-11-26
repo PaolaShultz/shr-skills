@@ -1,0 +1,3 @@
+**1. The blocked status gives the requester no recovery guidance.** You report that approval is required and that the workflow is blocked. The local record confirms the status with `state=blocked`. It gives no reason for the block and no indication whether the requester should act or wait. The record alone cannot confirm that approval caused the block, who owns the approval, or how often this occurs. [workflow.txt](/tmp/fructal-eval-review_local_recommendations-01-do5kdb5t/fixture/workflow.txt:1)
+
+**Recommendation.** Keep the approval requirement. Confirm the reason for this block with the approval owner, then clarify the existing status to say whether the requester needs to act.

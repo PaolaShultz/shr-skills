@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied rule requires 30-day retention. Users reportedly recreate drafts because the Delete label makes hiding look permanent. The proposed Hide draft label explains the effect before activation. The message offers immediate restoration and names a recovery path after dismissal. The fixture does not establish whether those controls exist, and the response explicitly calls for adding them if absent. Its verification scenario covers keyboard restoration, screen-reader feedback, draft contents and position, other drafts, and the retention schedule. The events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

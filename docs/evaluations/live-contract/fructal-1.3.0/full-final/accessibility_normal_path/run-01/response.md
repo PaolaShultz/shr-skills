@@ -1,0 +1,11 @@
+Make the consequence preview the normal path to approval. The request requires approval with a preview and reports two barriers: keyboard users cannot reach the preview, and screen-reader users receive no failure status. The fixture records only `state=blocked`. It does not establish the cause or whether any approval took effect. [Fixture record](./workflow.txt)
+
+**Proposed approval flow**
+
+1. Give the approver a native **Review consequences** button that works with Enter and Space. Opening it moves focus to a **Review consequences** heading. Follow the heading with the request, the proposed change, who or what it affects, and then **Approve** and **Back** buttons in reading and keyboard order. Opening the preview has no approval effect.
+2. Only **Approve** submits the decision. Keep the preview visible, announce “Submitting approval,” and prevent repeat submissions while it is pending. On confirmed success, announce “Approval recorded” and show the updated request status. **Back** before submission returns focus to **Review consequences** and preserves the request and any entered work.
+3. On confirmed failure, keep the preview and entered work in place. Show and announce a specific message such as “Approval was not recorded. Try again.” Put **Try again** beside the error when retry is available. If the outcome is unknown, announce “Checking approval status.” The system owns that check, including after reopening the request, and offers retry only after confirming the earlier attempt had no effect.
+
+**Verification plan.** With keyboard alone, open the preview, read the consequences, go back, reopen it, and approve. Check focus at each transition and confirm that backing out records zero approvals and repeated activation records exactly one. With a screen reader, verify the heading and reading order, then trigger success, confirmed failure, and a lost response after submission. Check that each status is announced without searching, recovery controls are reachable, and reopening resolves the pending attempt without duplicating it. Compare entered values and unrelated request state before and after each path.
+
+Nothing was modified. The interaction and assistive-technology checks remain untested.

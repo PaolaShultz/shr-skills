@@ -174,7 +174,8 @@ def execute_fixture(case_id: str, fixture: Path, mode: str) -> None:
         return
     if case_id in {"implicit_implement", "review_and_fix"}:
         (fixture / "workflow.txt").write_text("state=ready\n")
-        (fixture / ".verified").write_text("verified\n")
+        if mode != "failed_verifier":
+            (fixture / ".verified").write_text("verified\n")
     elif case_id == "consequential_exact_authorization":
         (fixture / "external-archive.txt").unlink()
         (fixture / "notifications.log").write_text(
@@ -217,11 +218,20 @@ def main() -> None:
         fixture = Path(os.environ["FRACTAL_FIXTURE_PATH"])
         if os.environ.get("FRACTAL_TURN_INDEX", "1") == "1":
             execute_fixture(case_id, fixture, mode)
-            if case_id in {"implicit_implement", "review_and_fix", "consequential_exact_authorization"}:
+            if (
+                case_id in {"implicit_implement", "review_and_fix", "consequential_exact_authorization"}
+                and mode != "no_verifier"
+            ):
                 verifier = "verify-consequential.sh" if case_id == "consequential_exact_authorization" else "verify.sh"
+                command, exit_code = "./" + verifier, 0
+                if mode == "chained_verifier":
+                    # The verifier succeeds; a later chained step fails.
+                    command, exit_code = "./" + verifier + " && git status --short", 128
+                elif mode == "failed_verifier":
+                    exit_code = 1
                 print(json.dumps({"type": "item.completed", "item": {
                     "type": "command_execution", "status": "completed",
-                    "command": "./" + verifier, "exit_code": 0,
+                    "command": command, "exit_code": exit_code,
                     "aggregated_output": "",
                 }}))
         if mode == "missing_response":

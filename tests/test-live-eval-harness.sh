@@ -138,6 +138,18 @@ expect_failure_class "missing Implement fixture change" "fixture" \
   env FAKE_CODEX_MODE=missing_fixture \
   "${evaluator}" --codex-bin "${fake_codex}" --case implicit_implement
 
+expect_success "verifier success followed by a failing chained step" \
+  env FAKE_CODEX_MODE=chained_verifier \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_implement
+
+expect_failure_class "failed Implement verifier" "fixture" \
+  env FAKE_CODEX_MODE=failed_verifier \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_implement
+
+expect_failure_class "missing Implement verifier execution" "fixture" \
+  env FAKE_CODEX_MODE=no_verifier \
+  "${evaluator}" --codex-bin "${fake_codex}" --case implicit_implement
+
 expect_failure_class "missing Codex runner" "runner" \
   "${evaluator}" --codex-bin "${temporary_root}/does-not-exist" \
   --case implicit_review

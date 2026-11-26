@@ -1,0 +1,1 @@
+Changed `workflow.txt` from `state=blocked` to `state=ready` based on your confirmation that approval was complete. The unchanged `./verify.sh` passed and wrote `verified` to `.verified`.

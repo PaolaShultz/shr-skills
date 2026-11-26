@@ -1,0 +1,1 @@
+`parse_name(null)` throws a `TypeError` because `value.trim()` tries to read the `trim` property from `null`. JavaScript throws on that property access, before it can call the method. [parser.js, line 2](/tmp/fructal-eval-discovery_isolated_defect_nontrigger-01-1nm0shsr/fixture/parser.js:2)

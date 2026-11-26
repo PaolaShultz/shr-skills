@@ -1,0 +1,3 @@
+`parse_name(null)` throws because `parse_name` reads `value.trim` before checking whether `value` is `null`. The failing expression is in [parser.js, line 2](/tmp/fructal-eval-isolated_defect_nontrigger-01-agzyu2fm/fixture/parser.js:2).
+
+I reproduced the TypeError and confirmed that `' Ada '` returns `'Ada'`. A guard before `.trim()` would handle the null case, but the test leaves the expected return value for `null` unspecified.

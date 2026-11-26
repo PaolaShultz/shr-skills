@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied rule requires 30-day retention. Users reportedly recreate drafts because the Delete label suggests that hiding erased their work. \u201cHide draft\u201d names the effect accurately, and \u201cShow draft again\u201d gives users a recovery path both immediately and after the message disappears. The unspecified retention start supports omitting a countdown. The verification plan covers keyboard recovery, screen-reader feedback, draft identity and contents, the existing deadline, and other drafts. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

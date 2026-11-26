@@ -1,0 +1,29 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Approval requires a consequence preview. The user reports that keyboard users cannot reach it and screen-reader users miss failure feedback. The inspected fixture establishes only a blocked state, leaving its cause and the prior approval outcome unresolved. The redesign makes the preview keyboard-accessible, requires explicit approval, preserves entered work, and assigns uncertain-outcome checks to the system before retry. Its verification scenarios cover focus, announcements, cancellation, duplicate prevention, and unrelated state. The executor presents these checks as planned. The events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

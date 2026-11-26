@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identifies required approval as the cause of the stall. Inspection establishes that the item records only `state=blocked`, leaving a requester unable to identify the decision owner or next step from the file. The redesign keeps approval tied to the reviewed version and gives both parties one trackable item through decision, recovery, and completion. Its verification plan includes concrete checks for stale approval, duplicate effects, accessible recovery, and preservation of an unrelated item. The authorized approver and gated action remain explicit policy questions. The events show only reads, the fixture snapshots match, and the response presents every behavioral check as proposed.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

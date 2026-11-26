@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Mandatory reauthentication reportedly discards entered work, and shared-device policy rules out local storage for recovery. The fixture establishes only a blocked state. The proposal keeps the draft locked in volatile memory, restores the editing position only to its authenticated owner, and keeps submission explicit. It identifies the memory-policy assumption and explains when recovery ends. Concrete checks cover account mismatch, accessible retry, in-flight submission status, sensitive-data persistence, and cleanup of unrelated state. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

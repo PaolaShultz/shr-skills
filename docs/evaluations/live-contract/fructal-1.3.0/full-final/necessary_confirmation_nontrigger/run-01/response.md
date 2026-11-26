@@ -1,0 +1,3 @@
+Keep the confirmation as described. It gives the user one explicit choice before an irreversible action and makes clear what will happen to which target. The reported keyboard and screen reader support makes that choice accessible, and canceling preserves the user’s input.
+
+On the supplied facts, the complaint identifies only the effort of making the necessary decision. That falls outside Fructal Cap Design. I assessed the description without independently testing the interaction. No changes were made.

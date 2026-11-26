@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance must approve the refund before payout. The user reports that support loses track of ownership across the dashboard-to-email handoff and that a retry after timeout can duplicate a request. The proposal links both channels to one record, preserves entered details across retries, assigns each handoff an owner, and requires reconciliation before an uncertain payout can be retried. Its verification plan specifies failure scenarios and expected results, including checks for accessibility and unrelated refunds. The execution events show only reads, and the fixture snapshots match. The observed `state=blocked` leaves the location of the stall unresolved.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

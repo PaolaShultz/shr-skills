@@ -1,0 +1,3 @@
+**Finding — the approval handoff is unclear.** The request establishes that approval is required. The workflow records only `state=blocked`. A person relying on the file cannot tell who needs to act or whether approval has already been granted. The blocked state is verified. Its cause and the approval outcome remain unverified. [workflow.txt, line 1](/tmp/fructal-eval-explicit_review_caps_fix-01-rtk58vqs/fixture/workflow.txt:1)
+
+The file remains unchanged under the explicit Review-mode limit.

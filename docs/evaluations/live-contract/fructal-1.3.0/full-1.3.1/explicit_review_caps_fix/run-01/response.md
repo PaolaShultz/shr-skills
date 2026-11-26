@@ -1,0 +1,3 @@
+**Finding:** [workflow.txt](/tmp/fructal-eval-explicit_review_caps_fix-01-qbpkupxw/fixture/workflow.txt:1) contains only `state=blocked`. Your request identifies approval as required. The file records neither an approval decision nor who owns the next action, so someone picking up the workflow cannot tell whom to contact or whether it can proceed.
+
+The blocked state is verified. Its cause and whether approval has been granted remain unverified. The file was left unchanged under the explicit Review-mode cap.

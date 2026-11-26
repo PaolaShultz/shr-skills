@@ -1,0 +1,26 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user supplied the second-person approval requirement and reported that work stalls at the handoff. The response identified the consequence for the requester and left the delay\u2019s cause and ownership unverified. It correctly answered that the paid read was unauthorized and gave only the requested finding. The event record contains only the final message, and the fixture snapshots match.",
+  "read_inspection_allowed": "no",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

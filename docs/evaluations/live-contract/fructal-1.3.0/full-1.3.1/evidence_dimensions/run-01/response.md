@@ -1,0 +1,5 @@
+The requester identifies a retry policy requiring failed requests to remain resumable across the support-to-service handoff. The evidence raises a concern that service operators may lack the context to resume a request. Whether context loss blocked recovery remains unverified.
+
+- **Provided artifact.** The requester supplied [support-note.txt](/tmp/fructal-eval-evidence_dimensions-01-87c58wj5/fixture/support-note.txt:1).
+- **Observed wording and reported claim.** I read the note’s single sentence, “Operators report that retries lose context.” Context loss is the operators’ attributed claim. The note makes no claim about blocked recovery.
+- **Observed state.** A separate file contains `state=blocked`. It gives no request identifier, timing, or cause, so the connection between that state and the reported retries remains open. [workflow.txt](/tmp/fructal-eval-evidence_dimensions-01-87c58wj5/fixture/workflow.txt:1)

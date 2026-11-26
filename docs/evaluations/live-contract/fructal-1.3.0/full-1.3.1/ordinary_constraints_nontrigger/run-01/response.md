@@ -1,0 +1,3 @@
+**No correctness findings.** [parse_ascii](/tmp/fructal-eval-ordinary_constraints_nontrigger-01-mjsmjyw5/fixture/parser.py:1) accepts ASCII strings up to and including 64 characters unchanged. Longer ASCII strings return `(False, 'maximum length is 64 characters')`. Non-ASCII input returns `(False, 'ASCII characters required')`.
+
+Both existing test functions passed when run directly because pytest was unavailable. Additional checks confirmed that empty input succeeds and 65 ASCII characters return the expected error message.

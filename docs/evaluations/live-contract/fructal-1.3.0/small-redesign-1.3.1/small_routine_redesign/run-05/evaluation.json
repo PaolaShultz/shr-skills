@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The 30-day retention rule must remain. Users report recreating drafts because \u201cDelete draft\u201d makes hiding look permanent. \u201cHide draft\u201d and the adjacent message explain the consequence before activation and give users a route back to the same draft. The fixture establishes no restore location, and the response identifies \u201cHidden drafts\u201d as a proposed destination that needs a working restore path. The verification scenario covers keyboard and screen-reader use, restored content, retention, and other drafts. The executor describes these as planned checks. The events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

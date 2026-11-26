@@ -30,8 +30,8 @@ technical, physical, service, or operational domain.
 Case results belong to their recorded versions and observation windows, not
 automatically to the latest skill. The current contract is
 [`skills/fructal/SKILL.md`](../skills/fructal/SKILL.md); the
-[1.3.0 evaluation record](evaluations/live-contract/fructal-1.3.0/)
-documents that revision's checks. Historical records below are not new
+[1.3.0 and 1.3.1 evaluation record](evaluations/live-contract/fructal-1.3.0/)
+documents the current revision's checks. Historical records below are not new
 instructions or current deployment-status claims.
 
 The [2026-07-24 workflow
@@ -203,6 +203,13 @@ verification scenario. Without the skill, the model passed every Review,
 Implement, authorization, read-boundary, and non-trigger case. Version 1.2.0
 passed 28. The 1.3.0 candidate passed 26. Repeats isolated one real
 regression, a Redesign verification gap, which the released text corrects.
+
+**Observed:** The full-matrix rerun of released 1.3.0 passed 28 of 29. Its
+failure made a proposed restore action conditional on unstated system support;
+1.3.0 passed that case 3/5 against 1.2.0's 4/4. Version 1.3.1 rewords the
+candidate-move lead-in so Redesigns propose a missing move as something to
+build. It passed that case 5/5 and 28 of 29 full-matrix cases; the one failure was a
+harness false negative, since corrected and rerun 6/6.
 
 **Inference:** On this model, the skill's measured contribution is complete,
 verifiable Redesigns rather than mode or authority discipline. The explicit

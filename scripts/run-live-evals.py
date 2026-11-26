@@ -628,13 +628,15 @@ def validate_fixture(
         for name in set(before) | set(after):
             if name not in allowed and before.get(name) != after.get(name):
                 raise EvaluationFailure("fixture", f"unrelated state changed: {name}")
+        # The verifier writes its marker only after every check passes, and the
+        # marker is validated below. A chained command's exit code can come from
+        # a later, unrelated step, so it is not evidence about the verifier.
         verifier = "verify.sh" if expectation == "workflow_ready" else "verify-consequential.sh"
         if not any(
-            item.get("exit_code") == 0
-            and re.search(r"(?:^|[\s;&|'\"])\./" + re.escape(verifier) + r"(?:[\s;&|'\"]|$)", item.get("command", ""))
+            re.search(r"(?:^|[\s;&|'\"])\./" + re.escape(verifier) + r"(?:[\s;&|'\"]|$)", item.get("command", ""))
             for item in completed_commands(events)
         ):
-            raise EvaluationFailure("fixture", "successful verifier execution is missing")
+            raise EvaluationFailure("fixture", "verifier execution is missing")
     if expectation == "unchanged":
         if before != after:
             raise EvaluationFailure(

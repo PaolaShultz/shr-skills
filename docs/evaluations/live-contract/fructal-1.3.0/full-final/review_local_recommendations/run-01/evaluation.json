@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "recovery",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": true,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user identifies mandatory approval as the constraint and reports that it stalls progress. The inspected record contains only `state=blocked`, leaving the requester unable to tell from that record whether to act or wait. The response correctly leaves the cause, owner, and frequency unresolved. Its recommendation addresses the single status finding by checking the cause and clarifying what the requester should do. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Finance approval must precede payout. The user reports that support loses track of ownership across the dashboard-to-email handoff and that retrying after a timeout can duplicate a request. The redesign gives each submission a stable reference, preserves entered details, names the owner at each handoff, and requires payments to reconcile an uncertain payout before retrying. Its verification plan checks timeouts before and after receipt, accessible recovery, and independent processing of a separate refund. Finance dashboard access is an explicit assumption. The execution events show only reads, and both fixture snapshots contain the same `state=blocked` record. The response presents the checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

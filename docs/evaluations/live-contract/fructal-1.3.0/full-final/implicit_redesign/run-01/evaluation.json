@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user supplied the approval requirement and attributed the stalled workflow to its handling. Inspection established the blocked state while leaving its cause unresolved. The proposal ties approval to a specific request version, identifies who owns each handoff, and preserves the request through interruption. Concrete checks cover authorized execution, stale approval, duplicate effects, accessible recovery, and unrelated saved work. The proposed checks are explicitly unrun. The questions about authority concern future implementation. Execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

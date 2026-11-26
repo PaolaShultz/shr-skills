@@ -1,0 +1,13 @@
+Make the consequence preview the first step of the normal approval flow. The requester can initiate review, but the protected action proceeds only after the authorized approver has been shown the consequences and explicitly chooses **Approve**.
+
+Your request establishes the approval requirement and reports two barriers. Keyboard users cannot reach the preview, and screen-reader users receive no failure status. The fixture records only `state=blocked`. It does not establish what caused that state or whether an earlier submission took effect. [Fixture record](./workflow.txt)
+
+**Proposed approval flow**
+
+1. **Review.** A keyboard-accessible **Review consequences** button opens the preview and moves focus to its heading. The preview identifies the request, the affected target, and what approval will do. Screen-reader users can read it in order, and keyboard users can scroll it and reach **Approve** and **Cancel**. If the preview fails to load, keep approval unavailable, announce the error, and offer **Reload preview** and **Cancel**.
+2. **Approve or cancel.** **Cancel** returns focus to **Review consequences** and preserves the request and entered work. **Approve** submits one decision for the version shown and announces “Submitting approval.” If the consequences have changed, show the updated preview and require a fresh decision.
+3. **Report the outcome where review began.** On success, show and announce confirmation that identifies the request. On confirmed failure, keep the preview and entered work, announce the reason through a live region, and put a keyboard-reachable recovery action beside the message. The approver owns the retry. If submission is interrupted and the outcome is unknown, show “Checking approval status.” The system must reconcile the original submission using its identifier before enabling another attempt. On return, both requester and approver should be able to see the status and who, if anyone, needs to act.
+
+**Verification plan.** Walk through the flow using only a keyboard, then with a screen reader. Check focus on entry and return, preview reading order, and that pending, success, and failure messages are announced without searching for them. Force a preview-load error, a changed preview, a rejected submission, and a lost response after the server accepts approval. Verify recovery from each, including closing and reopening during submission. Confirm that cancellation produces no approval, repeated activation produces one decision, and entered work and unrelated requests retain their original values.
+
+Nothing was modified. These checks are proposed acceptance criteria. The fixture contains no interactive approval flow on which to verify them.

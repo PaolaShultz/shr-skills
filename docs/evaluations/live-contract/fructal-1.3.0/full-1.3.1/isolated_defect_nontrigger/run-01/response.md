@@ -1,0 +1,3 @@
+`parse_name` calls `value.trim()` without checking for `null`. I reproduced both cases in the fixture. `parse_name(' Ada ')` returned `'Ada'`, and `parse_name(null)` threw `TypeError: Cannot read properties of null (reading 'trim')`. [parser.js](/tmp/fructal-eval-isolated_defect_nontrigger-01-6q37je9e/fixture/parser.js:2)
+
+A guard before `.trim()` would address the defect. The test leaves the expected return value for `null` unspecified. [parser.test.js](/tmp/fructal-eval-isolated_defect_nontrigger-01-6q37je9e/fixture/parser.test.js:4)

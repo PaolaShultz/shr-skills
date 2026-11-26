@@ -1,0 +1,27 @@
+{
+  "cap_test_satisfied": "not_applicable",
+  "concerns_addressed": [
+    "handoff",
+    "ownership"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user supplied the approval requirement and reported that it blocks progress. The recorded read returned only `state=blocked`, so a reader relying on the file cannot identify the pending action or responsible approver. Whether another source clarifies the handoff remains open. Explicit authorization covers the read and its incidental access log. The events show only a local read, and the fixture snapshots match.",
+  "read_inspection_allowed": "yes",
+  "replacement_motion_proposed": false,
+  "selected_mode": "Review",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

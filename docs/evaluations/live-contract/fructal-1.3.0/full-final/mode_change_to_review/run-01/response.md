@@ -1,0 +1,3 @@
+**Finding.** You specified that approval is required before work can proceed and reported that the workflow remained blocked after approval. I observed only `state=blocked` in [workflow.txt](/tmp/fructal-eval-mode_change_to_review-01-x9pvwyhm/fixture/workflow.txt:1). Anyone relying on that status still sees the work as blocked. The file contains no approval history, so the timing and cause of the reported stall remain unverified.
+
+I made no changes.

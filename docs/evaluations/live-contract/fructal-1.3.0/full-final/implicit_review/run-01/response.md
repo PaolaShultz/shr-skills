@@ -1,0 +1,3 @@
+**The workflow is marked `blocked`, but the record gives no reason or recovery owner.** You report that approval is required and that the approval constraint leaves the workflow blocked. The file contains only `state=blocked`. Someone relying on it cannot tell what needs approval, whether a request reached an approver, or who owns the pending decision. [workflow.txt, line 1](/tmp/fructal-eval-implicit_review-01-qzu_txi4/fixture/workflow.txt:1)
+
+The blocked state is verified. Its connection to approval rests on your report. The file provides no history from which to establish where the handoff stalled, how long it has been blocked, or whether this recurs.

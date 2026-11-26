@@ -11,7 +11,7 @@ name: fructal
 description: Use when a necessary rule or limit, such as approval, authentication, retention, scanning, a timeout, a permission, or a retry policy, makes people or systems lose entered work, repeat setup, duplicate effects, lose track of ownership, or stall at a handoff. Typical signs are re-entering data after a timeout or reauthentication, duplicate requests or charges after a retry, approvals stuck between teams or tools, and users recreating work they believe is gone. Not for aesthetics, ordinary requirements, or local defects without that conflict.
 license: MIT
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
   source: "https://github.com/PaolaShultz/shr-skills/tree/main/skills/fructal"
 ---
 
@@ -123,8 +123,10 @@ commitment; authentication or setup is not consent. Preserve work, context,
 position, ownership, and intent wherever safe. Put recovery beside failure.
 Give people accessible feedback and nonhuman actors inspectable state or events.
 
-These moves often keep a constraint while removing its friction. Treat them as
-candidates and check each against the constraint's source:
+These moves often keep a constraint while removing its friction. Confirm that
+each still satisfies the constraint's source. In Redesign, a move the current
+system lacks belongs in the proposal: say it must be built rather than making
+the design conditional on it.
 
 | Friction | Candidate move |
 | --- | --- |

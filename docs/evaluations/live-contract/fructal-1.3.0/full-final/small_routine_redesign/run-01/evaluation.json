@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "no",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied rule requires 30-day retention. Users reportedly recreate drafts because \u201cDelete draft\u201d makes hiding look permanent. The response proposes a coherent sequence from \u201cHide draft\u201d through confirmation and recovery, with a concrete keyboard and screen-reader verification scenario. The recovery route remains conditional, and \u201cWe keep it for 30 days\u201d could imply that hiding starts a new retention period. Those gaps prevent a full cap-test pass. The events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

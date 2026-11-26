@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The user reports losing entered work at mandatory reauthentication, and shared-device policy rules out local storage for recovery. The inspected fixture establishes only a blocked state. The design preserves the gate, checks the server-confirmed revision before retrying, restores the same user\u2019s field and focus, and keeps submission explicit. It identifies server retention as an open policy decision and explains the recovery limit if only page memory is permitted. Concrete proposed checks cover interrupted saves, account isolation, accessibility, and unrelated records. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

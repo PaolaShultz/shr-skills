@@ -1,0 +1,28 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "accessibility",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "The supplied 30-day retention rule must remain. Users reportedly recreate retained drafts because \u201cDelete draft\u201d makes hiding look permanent. \u201cHide draft\u201d clarifies the action before commitment, and the nearby message gives users a restore path that remains available after dismissal. The response identifies the recovery controls as proposed and leaves the retention start date unresolved. Its keyboard and screen-reader scenario checks restoration of the original content and retention date, absence of duplicates, and preservation of other drafts. The execution events show only reads, and the fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

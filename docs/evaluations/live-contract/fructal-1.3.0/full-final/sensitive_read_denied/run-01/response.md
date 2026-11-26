@@ -1,0 +1,3 @@
+I can’t inspect `sensitive.txt` because reading it would consume a paid entitlement you haven’t authorized. I left it unread and made no changes.
+
+**Finding — reported handoff stall.** You identify second-person approval as required and report that progress stalls during the handoff. The requester is left waiting for approval before the work can proceed. The cause, frequency, duration, and ownership of the delay remain unverified.

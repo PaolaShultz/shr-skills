@@ -1,0 +1,40 @@
+Give each submission one durable request ID. Email, the dashboard, and the support console should use that ID to answer three questions consistently: what has happened, who acts next, and what can the customer safely do now?
+
+The [fixture record](./workflow.txt) contains only `state=blocked`. It establishes neither the reason for the block nor its owner. The channel disagreement, duplicate requests, and unclear handoffs are reported problems. The design below is a proposal. Nothing was modified, and no external service was accessed.
+
+### Authority and protected decisions
+
+Use a shared request history to assemble status. Give each fact a designated source and record its source, request version, actor, and time. Corrections append an event that identifies the earlier event. Customer-facing channels receive only the fields the customer may see.
+
+| Actor | Proposed authority and responsibility |
+|---|---|
+| Customer | Confirms the request and any disclosed financial consequence. Can check progress or ask to withdraw using the same ID. |
+| Support agent | Owns intake exceptions and unresolved handoffs. Can correct intake through an audited amendment and explain the next step. |
+| Compliance reviewer | Records findings for a specific request version. Evidence and detailed reasoning stay in the restricted review system. |
+| Approval service | Records the approval decision for that version after checking the required reviewer evidence and authorization. |
+| Billing system | Records whether the authorized financial effect is pending, posted, or definitively failed, with a reference for reconciliation. |
+
+Audit, privacy, and approval are requirements supplied in the request. The precise rules are absent from the fixture. This proposal assumes that billing requires explicit customer authorization and a valid approval for the same terms. Before adoption, the policy owners must confirm who may approve, when independent review is required, which changes invalidate approval, when withdrawal takes effect, and which fields each role may access and retain. The audit history should hold the minimum permitted decision evidence and restricted references, with retention set by the applicable policy.
+
+### Submission, handoff, and recovery
+
+1. **Make submission safe to repeat.** Show the customer the terms, amount if applicable, and consequence before confirmation. Assign a stable submission key before sending. Atomically claim that key, create the request, and record receipt. A double-click, concurrent support retry, or reconnect with the same key and terms retrieves the same ID. Changed terms require fresh confirmation. After a timeout, show “Checking your submission” and look up the original key. After reauthentication, restore the permitted draft and position. Signing in must never submit it.
+2. **Keep one accountable owner through every transfer.** At intake, assign a named support agent or staffed queue. A transfer records the intended recipient and next action. The current owner remains responsible until the recipient accepts the same request version, at which point ownership changes atomically. A missed acknowledgement leaves a visible pending transfer with a deadline and escalation route. Apply this rule to review, approval, and billing. A request for customer information gives the customer a specific action while the assigned team remains responsible for follow-up.
+3. **Bind review and billing to the confirmed terms.** A reviewer can request information, clear the version, or record an adverse finding. Support can see what follow-up is permitted. The approval service records its decision against that version. An amendment affecting approved terms suspends release and routes the amended version for the required confirmation and review. Submit billing with a durable key for that authorized effect. If billing times out, its reconciliation owner queries that key before replay. While the outcome is unknown, show “Payment being confirmed” and suppress further charge attempts.
+4. **Make a delayed message understandable.** Build the dashboard and support views from the same versioned history, showing the last confirmed milestone, current owner or customer-safe team name, next action, and last update. Email identifies a milestone as of a stated time and links to authenticated current status. Exclude private findings and payment details. Duplicate or late events cannot move the displayed request backward. If sources disagree about an effect, display the last confirmed fact, assign reconciliation to the source owner, and expose a status-check action.
+5. **Handle withdrawal at the point of commitment.** Record a withdrawal request immediately and serialize it with authorization to release billing. If withdrawal wins and policy permits, close the request and block release. If billing is already in flight, acknowledge the withdrawal, identify who is checking the payment, and reconcile before promising cancellation or reversal. Preserve the request history and show the applicable remedy once the outcome is known. For the existing `blocked` record, route the missing reason and ownership to support for reconciliation before advancing it.
+
+### Verification plan
+
+Use synthetic requests and a simulated billing service. These checks are proposed and have not been run.
+
+| Exercise | Required observation |
+|---|---|
+| Complete a request across all five actors, then deliver old email and duplicate events | One request, one authorized charge, and a traceable decision for the confirmed terms. The email’s dated milestone and the dashboard’s current status are consistent. |
+| Double-submit, retry from support, interrupt receipt, and expire the customer session | All retries of the same intent recover one ID. Permitted work and position survive. Reauthentication alone produces no submission or charge. |
+| Drop a transfer acknowledgement, delay review, deny approval, and amend approved terms | Exactly one accountable owner remains visible through each handoff. Escalation reaches that owner. Denial and stale approval both prevent billing. |
+| Lose a billing response after posting, then race withdrawal against release in both orders | Reconciliation discovers the original effect without a second charge. Each withdrawal gets a truthful outcome, a recovery owner, and an audit entry. |
+| Check role access and complete recovery by keyboard and screen reader | Customers can find status, next action, and recovery without relying on color or email. Updates are announced and focus returns to the relevant control. Restricted findings stay within authorized views. |
+| Compare an unrelated request, its owner, permissions, billing entries, and retained evidence before and after each scenario | All remain unchanged. An authorized auditor can reconstruct the exercised request from permitted records. |
+
+Acceptance depends on policy-owner confirmation and walkthroughs with customers, support agents, and reviewers, alongside observed approval and billing reconciliation tests.

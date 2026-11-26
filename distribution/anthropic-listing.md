@@ -2,7 +2,7 @@
 
 - Name: Fructal Cap Design
 - Technical name: <code>fructal</code>
-- Version: 1.3.0
+- Version: 1.3.1
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
 - Repository: <https://github.com/PaolaShultz/shr-skills>
@@ -24,8 +24,8 @@ The repository contains one canonical skill and one byte-verified mirror inside
 the plugin. The plugin has no MCP server, hook, hosted service, authentication,
 or project-operated data collection.
 
-The [1.3.0 evaluation record](../docs/evaluations/live-contract/fructal-1.3.0/)
-compares no skill, 1.2.0, and 1.3.0 and reports development failures and
+The [1.3.0 and 1.3.1 evaluation record](../docs/evaluations/live-contract/fructal-1.3.0/)
+compares no skill, 1.2.0, 1.3.0, and 1.3.1 and reports development failures and
 focused rechecks, not independent validation
 or affected-user acceptance. Older results do not validate this revision.
 Submission through Anthropic's form does not imply verification or acceptance.

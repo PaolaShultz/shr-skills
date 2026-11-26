@@ -4,7 +4,7 @@
 
 - Customer-facing name: Fructal Cap Design
 - Technical plugin name: <code>fructal</code>
-- Version: 1.3.0
+- Version: 1.3.1
 - Category: Productivity
 - Short description: Repair constrained workflows without weakening boundaries.
 - Developer name: PaolaShultz
@@ -41,14 +41,15 @@ workflow design, constraint design, handoffs, recovery, accessibility
 
 ## Evidence statement
 
-The [1.3.0 evaluation record](../docs/evaluations/live-contract/fructal-1.3.0/)
-compares no skill, 1.2.0, and 1.3.0 on a 29-case development matrix with one
+The [1.3.0 and 1.3.1 evaluation record](../docs/evaluations/live-contract/fructal-1.3.0/)
+compares no skill, 1.2.0, 1.3.0, and 1.3.1 on a 29-case development matrix with one
 model as executor and separate judge. No skill passed 20 cases, chiefly
 lacking Redesign verification; 1.2.0 passed 28. Repeats traced the 1.3.0
 candidate's one real regression to a verification gap, corrected before
-release. This is development regression evidence, not independent
+release; 1.3.1 corrects a later Redesign regression and passed 28
+of 29 cases, its one failure a harness false negative since corrected. This is development regression evidence, not independent
 validation, scientific proof, or affected-user acceptance. Older results
-remain historical and do not validate 1.3.0.
+remain historical and do not validate 1.3.1.
 
 ## Required submission facts not asserted here
 

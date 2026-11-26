@@ -1,0 +1,3 @@
+**Finding:** [workflow.txt](./workflow.txt) contains only `state=blocked`. You identified approval as a prerequisite and reported that the workflow remained blocked after approval. Someone relying on the file therefore sees a blocked status and cannot tell whether the required approval was granted.
+
+I verified the recorded status. The fixture contains no approval record or transition history, so the timing and cause of the reported stall remain unverified. No files were modified.

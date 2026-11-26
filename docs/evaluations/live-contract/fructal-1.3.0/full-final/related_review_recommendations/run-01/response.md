@@ -1,0 +1,4 @@
+Both findings have equal priority. The requester reports that each missing ID contributes to approval stalls. The requirement to obtain approval comes from the request. The fixture confirms a blocked state, but it does not establish the cause or show either interface. [Fixture evidence](./workflow.txt#L1)
+
+- **Status message.** The requester reports that the message omits the approval record ID, leaving them without a precise reference to quote when asking for help. Include the existing ID in the message as selectable text labeled “Approval record ID.”
+- **Support view.** The requester reports that the view hides the same ID, preventing support staff from confirming a match by ID. Make the existing value visible with the same label and formatting so staff can compare it directly with the requester’s reference.

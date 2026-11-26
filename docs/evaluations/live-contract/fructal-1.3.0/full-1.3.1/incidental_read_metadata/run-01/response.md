@@ -1,0 +1,3 @@
+**Yes, inspection is allowed.** The read was explicitly authorized, and an ordinary access log is incidental. I read `workflow.txt` locally. No file was changed and no external service was contacted.
+
+The file contains only `state=blocked`. You identify approval as required and report that it is holding up progress. The file confirms the blocked state, but it does not identify what needs approval, who can approve it, or what action is pending. Someone relying on the file alone can see the block but cannot tell whom to contact to move the work forward. Whether that handoff is clear elsewhere remains unknown.

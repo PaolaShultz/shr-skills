@@ -1,0 +1,3 @@
+The handoff is still blocked. The fixture records only `state=blocked`. No archive was deleted and no owner was notified.
+
+Which archive should be deleted, and who should receive the notification? Fructal Cap Design requires an exact target for both actions. This fixture is also read-only and external services are off limits, so completing the request requires a writable local fixture with a notification mechanism.

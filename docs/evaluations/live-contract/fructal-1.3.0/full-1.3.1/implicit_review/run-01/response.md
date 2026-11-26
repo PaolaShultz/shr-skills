@@ -1,0 +1,3 @@
+**Primary finding — the blocked status gives no direction to the person responsible for the approval.** You identify approval as required and report that it is holding up the workflow. The only entry in [workflow.txt](/tmp/fructal-eval-implicit_review-01-p7cqrisq/fixture/workflow.txt:1) is `state=blocked`. Someone relying on that record can see that progress has stopped, but cannot tell what needs approval, who is responsible, or whether a decision has already been made.
+
+The file confirms the recorded blockage. It does not independently establish its cause, how long it has lasted, or whether ownership is documented elsewhere.

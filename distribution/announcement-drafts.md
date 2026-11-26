@@ -1,7 +1,7 @@
 # Fructal Cap Design 1.1.1 announcement drafts
 
 Historical preparation for 1.1.1, not current release copy or evidence that
-either announcement was posted. The results below do not validate 1.3.0.
+either announcement was posted. The results below do not validate 1.3.1.
 Before reuse, update the version and claims from the relevant release notes
 and regression record, and check for a substantially identical post.
 

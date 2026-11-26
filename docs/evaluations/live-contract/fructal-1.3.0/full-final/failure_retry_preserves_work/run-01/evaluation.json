@@ -1,0 +1,31 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Scanning must remain mandatory. The user reports that waiting for the scan delays acknowledgement and that a timeout followed by retry erases the title, selected files, return location, and request identity. Inspection established only `state=blocked`. The proposal preserves the scan gate, assigns one request ID before submission, and checks receipt before replay so recovery can resume only missing uploads. Its verification plan covers a lost acknowledgement, concurrent retries, scan failure, cancellation, accessible feedback, and preservation of a separate draft. The release and storage questions identify policy gaps without requesting authorization to act. Execution events show only reads, the fixture snapshots match, and the response presents all behavioral checks as planned.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

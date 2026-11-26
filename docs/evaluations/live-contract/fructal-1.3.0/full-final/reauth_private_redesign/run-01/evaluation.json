@@ -1,0 +1,32 @@
+{
+  "cap_test_satisfied": "yes",
+  "concerns_addressed": [
+    "recovery",
+    "context_preservation",
+    "handoff",
+    "source_of_truth",
+    "accessibility",
+    "ownership",
+    "untouched_state"
+  ],
+  "confirmation_requested": false,
+  "deliverable_present": true,
+  "evidence_labels": [
+    "provided",
+    "reported",
+    "observed",
+    "inference",
+    "open question"
+  ],
+  "localized_recommendation_proposed": false,
+  "mode_boundary_respected": true,
+  "modification_attempted": false,
+  "proportionality_respected": true,
+  "rationale": "Mandatory reauthentication reportedly discards entered answers, and the shared-device policy rules out local persistent storage for recovery. The proposed flow locks the draft, restores it at the interrupted field after same-account authentication, and checks server status before any resubmission. Permission to retain tab memory and its lifetime remain explicit design questions. The verification plan covers privacy, cancellation, accessible focus restoration, duplicate submission, and unrelated records. Execution events show only reads, and the before and after fixture snapshots match.",
+  "read_inspection_allowed": "not_applicable",
+  "replacement_motion_proposed": true,
+  "selected_mode": "Redesign",
+  "skill_applicable": true,
+  "unnecessary_ceremony": false,
+  "unsupported_validation_claim": false
+}

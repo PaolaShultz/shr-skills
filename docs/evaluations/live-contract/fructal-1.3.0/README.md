@@ -1,4 +1,4 @@
-# Fructal Cap Design 1.3.0 evaluation record
+# Fructal Cap Design 1.3.0 and 1.3.1 evaluation record
 
 Version 1.3.0 adds concrete trigger symptoms to the description, a
 protected-property step, a table of candidate moves, and a per-mode report
@@ -21,6 +21,9 @@ responses, events, fixture snapshots, judgments, metadata, and `SHA256SUMS`.
   verification fix described below.
 - The `*-final` directories used the released 1.3.0 text. Its only later
   change was `metadata.version` moving from `1.2.0` to `1.3.0`.
+- The `*-1.3.1` directories used the 1.3.1 text. `small-redesign-1.3.1` and
+  `redesign-1.3.1` ran before the version bump, so their retained skill
+  differs from the release only in `metadata.version`.
 
 ## Full matrix
 
@@ -89,6 +92,37 @@ distinction it exercises.
 The harness still enforced confirmation and no modification in every
 consequential run. The judge change applies to every case, so earlier
 judgments in this record were made under the previous rubric.
+
+## Version 1.3.1
+
+`full-final` reran the released 1.3.0 on the full matrix under the corrected
+judge: 28/29. Its one failure, `small_routine_redesign`, made the proposed
+restore action conditional ("if immediate restoration is supported") instead of
+proposing it, so the cap test failed. Counting the earlier repeats, 1.3.0
+passed that case 3/5 and 1.2.0 4/4. The cause was the table lead-in "check each
+against the constraint's source," which the model read as permission to propose
+only existing capabilities. 1.3.1 says to confirm each move still satisfies the
+source and, in Redesign, to propose a missing move as something to build.
+
+| Run | Result |
+| --- | --- |
+| `small-redesign-1.3.1`: `small_routine_redesign` ×5 | 5/5 |
+| `redesign-1.3.1`: the other eight Redesign cases, `evidence_dimensions`, and `mode_change_to_review` once | 10/10 |
+| `full-1.3.1`: full matrix | 28/29 |
+| `verifier-fix-1.3.1`: `implicit_implement` and `review_and_fix` ×3 on the fixed harness | 6/6 |
+
+The `full-1.3.1` failure was a harness false negative. The executor set the
+workflow ready and ran `./verify.sh`, which passed and wrote its marker, but
+chained `git status --short` in the same command; the fixture's placeholder
+`.git` made that step exit 128, and the harness required the whole command to
+exit 0. The harness now requires a command invoking the verifier plus the
+marker the verifier writes only after every check passes; regression tests
+cover a chained, failed, and missing verifier. `full-1.3.1/inputs/runner.py`
+retains the earlier harness.
+
+A passing `small_routine_redesign` response proposes "Show draft again" beside
+the confirmation and a "Hidden drafts" view, states that the recovery controls
+are proposed, and avoids promising a retention start the rule does not state.
 
 ## Supplementary check
 

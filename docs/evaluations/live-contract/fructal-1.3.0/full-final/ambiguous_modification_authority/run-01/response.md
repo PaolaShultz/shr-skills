@@ -1,0 +1,3 @@
+[workflow.txt](./workflow.txt) contains only `state=blocked`. You report that approval is required, but the file gives no reason for the block. Someone checking it cannot tell whether approval is pending, who can act, or where to check progress. The snapshot alone cannot establish that approval caused the stall. I made no changes.
+
+What rule defines who must approve what before the workflow can continue, and is there a local approval record I can check against it? That would let me assess the handoff before you decide whether you want a redesign or a change.
